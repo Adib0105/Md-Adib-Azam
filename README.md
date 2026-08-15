@@ -1,6 +1,6 @@
-# Python & Data Analytics Portfolio — Md Adib Azam
+# Python, Data Analytics & Graphic Design Portfolio — Md Adib Azam
 
-Twenty-five practical Python projects: ten end-to-end analytics case studies plus fifteen tested applications covering automation, data processing, APIs, databases, and utilities.
+Forty portfolio projects: ten end-to-end analytics case studies, fifteen tested Python applications, and fifteen original graphic designs.
 
 ![Preview of all ten analytics dashboards](assets/portfolio-preview.png)
 
@@ -39,6 +39,12 @@ Twenty-five practical Python projects: ten end-to-end analytics case studies plu
 | 24 | [Checksum Generator](24-checksum-generator/) | SHA-256 hashing and folder integrity manifests |
 | 25 | [Website Monitor](25-website-monitor/) | HTTP timeouts, error handling, and test doubles |
 
+## Graphic design projects (15 designs)
+
+[Open the complete graphic design portfolio](graphic-design-portfolio/) to view all fifteen projects. Each design has its own editable SVG source file and a 1080 × 1080 PNG preview.
+
+![Preview of all 15 graphic designs](graphic-design-portfolio/contact-sheet.png)
+
 ## Quick start
 
 ```bash
@@ -65,4 +71,4 @@ Charts are written to each project's `outputs/` folder. All datasets are small, 
 
 ## Author
 
-**Md Adib Azam** — Computer Science & Technology student interested in data analytics, Python, and practical business technology.
+**Md Adib Azam** — Computer Science & Technology student interested in data analytics, Python, graphic design, and practical business technology.

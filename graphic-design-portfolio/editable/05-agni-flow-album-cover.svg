@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs><radialGradient id="bg5" cx="50%" cy="55%" r="65%"><stop stop-color="#5b0b00"/><stop offset=".5" stop-color="#190300"/><stop offset="1" stop-color="#050505"/></radialGradient><linearGradient id="fire5" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#ff2d00"/><stop offset=".55" stop-color="#ff8a00"/><stop offset="1" stop-color="#ffe866"/></linearGradient><filter id="g5"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <rect width="1080" height="1080" fill="url(#bg5)"/>
+  <g opacity=".18" stroke="#ff6a00" fill="none"><circle cx="540" cy="530" r="360"/><circle cx="540" cy="530" r="300"/><circle cx="540" cy="530" r="240"/></g>
+  <path d="M540 820c-184-86-186-250-70-378 56-62 88-128 72-218 127 86 159 185 115 281 74-34 94-86 89-144 104 122 80 330-206 459z" fill="url(#fire5)" filter="url(#g5)"/>
+  <path d="M542 742c-84-55-90-130-36-196 36-44 48-90 32-136 87 64 103 126 64 185 35-9 55-35 62-72 36 91-3 173-122 219z" fill="#fff1a0" opacity=".8"/>
+  <text x="70" y="110" fill="#ff8b3d" font-size="23" font-family="Arial,sans-serif" font-weight="700" letter-spacing="8">ORIGINAL HIP-HOP CONCEPT</text>
+  <text x="540" y="920" text-anchor="middle" fill="#fff" font-size="118" font-family="Arial,sans-serif" font-weight="900" letter-spacing="5">AGNI FLOW</text>
+  <text x="540" y="976" text-anchor="middle" fill="#ff8238" font-size="27" font-family="Arial,sans-serif" font-weight="700" letter-spacing="9">HEAT • RHYTHM • RISE</text>
+  <text x="70" y="1035" fill="#9e6253" font-size="20" font-family="Arial,sans-serif">ALBUM ARTWORK 05 • MD ADIB AZAM</text>
+</svg>

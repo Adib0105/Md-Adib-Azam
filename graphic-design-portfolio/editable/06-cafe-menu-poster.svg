@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <rect width="1080" height="1080" fill="#f3ead9"/>
+  <path d="M0 0h1080v205C760 120 380 310 0 165z" fill="#244c3b"/>
+  <circle cx="920" cy="900" r="240" fill="#d8bd86" opacity=".35"/><path d="M930 1080c-70-170 10-300 155-360v360z" fill="#244c3b" opacity=".9"/>
+  <text x="70" y="105" fill="#f7e7c0" font-size="26" font-family="Arial,sans-serif" font-weight="700" letter-spacing="6">ARSH CAFÉ • FRESH EVERY DAY</text>
+  <text x="70" y="295" fill="#244c3b" font-size="88" font-family="Georgia,serif" font-weight="700">Good food.</text><text x="70" y="382" fill="#a65c39" font-size="88" font-family="Georgia,serif" font-style="italic">Warm moments.</text>
+  <g transform="translate(70 470)" font-family="Arial,sans-serif"><text fill="#a65c39" font-size="25" font-weight="800" letter-spacing="4">TODAY'S FAVOURITES</text>
+    <g fill="#244c3b" font-size="28"><text y="75" font-weight="700">Classic Masala Chai</text><text x="600" y="75" text-anchor="end">₹40</text><text y="126" fill="#6d7168" font-size="20">Slow-brewed with aromatic spices</text>
+    <text y="200" font-weight="700">Grilled Veg Sandwich</text><text x="600" y="200" text-anchor="end">₹120</text><text y="251" fill="#6d7168" font-size="20">Fresh vegetables, cheese and house spread</text>
+    <text y="325" font-weight="700">Cold Coffee Cloud</text><text x="600" y="325" text-anchor="end">₹110</text><text y="376" fill="#6d7168" font-size="20">Creamy, chilled and lightly sweet</text>
+    <text y="450" font-weight="700">Chocolate Brownie</text><text x="600" y="450" text-anchor="end">₹90</text><text y="501" fill="#6d7168" font-size="20">Rich cocoa with a soft centre</text></g></g>
+  <g transform="translate(735 470)"><ellipse cx="110" cy="300" rx="145" ry="45" fill="#b89561" opacity=".35"/><path d="M20 160h200v160c0 80-200 80-200 0z" fill="#fff" stroke="#244c3b" stroke-width="10"/><path d="M220 205h34c70 0 70 100 0 100h-34" fill="none" stroke="#244c3b" stroke-width="18"/><path d="M70 150c-40-55 20-70-5-120M130 150c-40-55 20-70-5-120M190 150c-40-55 20-70-5-120" fill="none" stroke="#a65c39" stroke-width="10" stroke-linecap="round"/><path d="M50 290c50-70 90 70 145-25" fill="none" stroke="#d8bd86" stroke-width="18"/></g>
+  <rect x="70" y="980" width="420" height="58" rx="29" fill="#244c3b"/><text x="280" y="1018" text-anchor="middle" fill="#f7e7c0" font-size="22" font-family="Arial,sans-serif" font-weight="700">OPEN 8 AM — 9 PM • VISIT TODAY</text>
+</svg>
