@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" role="img" aria-label="Arsh Café — Promotional Post">
+  <title>Arsh Café — Promotional Post</title>
+  <defs>
+  <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07152f"/><stop offset="1" stop-color="#162c61"/></linearGradient>
+  <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#18e0d0"/><stop offset="1" stop-color="#2f80ed"/></linearGradient>
+  <linearGradient id="sunset" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffcb52"/><stop offset=".55" stop-color="#ff6b6b"/><stop offset="1" stop-color="#7b2cff"/></linearGradient>
+  <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3c1d8f"/><stop offset="1" stop-color="#9b36f2"/></linearGradient>
+  <linearGradient id="forest" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0e3d36"/><stop offset="1" stop-color="#1e6b54"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#50fff0" stop-opacity=".9"/><stop offset="1" stop-color="#50fff0" stop-opacity="0"/></radialGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-opacity=".28"/></filter></defs>
+  <g id="layer-1-background"><rect width="1080" height="1080" fill="#f4ead7"/><path d="M0 0h1080v230c-240-70-390 30-650-20C250 175 140 130 0 90z" fill="#214f3e"/><circle cx="935" cy="900" r="260" fill="#d9c48e" opacity=".34"/><path d="M0 820c260-150 380 30 650-80 190-78 300-25 430 40v300H0z" fill="#2f6650"/></g>
+  <g id="layer-2-artwork"><g transform="translate(650 390)"><ellipse cx="145" cy="390" rx="180" ry="45" fill="#b69a64" opacity=".4"/><path d="M20 80h260v270c0 95-58 145-130 145S20 445 20 350z" fill="#fff" stroke="#214f3e" stroke-width="16"/><path d="M280 170h65c120 0 118 185 0 185h-66" fill="none" stroke="#214f3e" stroke-width="18"/><path d="M75 115c40 30 100 30 150 0" fill="none" stroke="#d4b56d" stroke-width="18"/><path d="M75 10c-35 50 20 80-5 130M150 0c-35 50 20 80-5 130M225 10c-35 50 20 80-5 130" fill="none" stroke="#a55d3a" stroke-width="12" stroke-linecap="round"/></g></g>
+  <g id="layer-3-typography"><text x="70" y="105" fill="#f6e8c9" font-size="22" font-family="Arial,sans-serif" font-weight="900" letter-spacing="6">ARSH CAFÉ • FRESH EVERY DAY</text><text x="72" y="340" fill="#214f3e" font-size="86" font-family="Georgia,serif" font-weight="900">SLOW</text><text x="72" y="425" fill="#a85f3d" font-size="86" font-family="Georgia,serif">MORNINGS.</text><text x="72" y="510" fill="#214f3e" font-size="86" font-family="Georgia,serif" font-weight="900">STRONG</text><text x="72" y="595" fill="#a85f3d" font-size="86" font-family="Georgia,serif">COFFEE.</text><text x="78" y="660" fill="#567162" font-size="24" font-family="Arial,sans-serif">Fresh brews • Warm bites • Good conversations</text><g transform="translate(72 720)"><rect width="240" height="62" rx="31" fill="#214f3e"/><text x="42" y="40" fill="#fff" font-size="20" font-family="Arial,sans-serif" font-weight="900">VISIT TODAY</text></g><text x="72" y="1010" fill="#c9dfcc" font-size="16" font-family="Arial,sans-serif">CANVA PROMO 05 • ORIGINAL CONCEPT</text></g>
+</svg>

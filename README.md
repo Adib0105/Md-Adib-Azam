@@ -1,10 +1,11 @@
 # Python, Data Analytics, Graphic Design & Technology Portfolio — Md Adib Azam
 
-    Sixty practical projects aligned with my Computer Science & Technology studies
+    Seventy-five practical projects aligned with my Computer Science & Technology studies
     and professional interests: ten data analytics case studies, fifteen tested
-    Python applications, fifteen original graphic designs, and twenty CV-aligned
-    projects across AI, customer support, databases, web development, digital
-    marketing, defensive security, design operations, C, Java and automation.
+    Python applications, fifteen original graphic designs, fifteen Canva,
+    Photoshop and Illustrator projects, and twenty CV-aligned projects across
+    AI, customer support, databases, web development, digital marketing,
+    defensive security, design operations, C, Java and automation.
 
     ![Preview of the analytics dashboards](assets/portfolio-preview.png)
 
@@ -50,6 +51,14 @@
     1080 x 1080 PNG preview.
 
     ![Preview of all 15 graphic designs](graphic-design-portfolio/contact-sheet.png)
+
+    ## Canva, Photoshop & Illustrator projects (15 designs)
+
+    [Open the creative-suite portfolio](creative-suite-projects/) to explore five
+    Canva-compatible templates, five layered Photoshop PSD projects, and five
+    editable Illustrator vector projects.
+
+    ![Preview of all 15 creative-suite projects](creative-suite-projects/contact-sheet.png)
 
     ## CV-aligned multidisciplinary projects (26-45)
 
@@ -99,6 +108,8 @@
     - Customer support, CRM and digital service workflows
     - Digital marketing, SEO and design-brief automation
     - Editable SVG brand, social, campaign and poster design assets
+    - Canva-compatible SVG/PDF templates and layered Photoshop PSD projects
+    - Illustrator-ready vector artwork and packaging/icon systems
     - Defensive configuration and access-log monitoring
     - C and Java fundamentals
     - GitHub Actions validation for projects 26-45

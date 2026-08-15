@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" role="img" aria-label="Level Up Fast — Gaming Thumbnail">
+  <title>Level Up Fast — Gaming Thumbnail</title>
+  <defs>
+  <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07152f"/><stop offset="1" stop-color="#162c61"/></linearGradient>
+  <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#18e0d0"/><stop offset="1" stop-color="#2f80ed"/></linearGradient>
+  <linearGradient id="sunset" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffcb52"/><stop offset=".55" stop-color="#ff6b6b"/><stop offset="1" stop-color="#7b2cff"/></linearGradient>
+  <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3c1d8f"/><stop offset="1" stop-color="#9b36f2"/></linearGradient>
+  <linearGradient id="forest" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0e3d36"/><stop offset="1" stop-color="#1e6b54"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#50fff0" stop-opacity=".9"/><stop offset="1" stop-color="#50fff0" stop-opacity="0"/></radialGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-opacity=".28"/></filter></defs>
+  <g id="layer-1-background"><rect width="1080" height="1080" fill="#090720"/><path d="M0 0h1080L760 1080H0z" fill="#142f76"/><path d="M1080 80L700 550l380 450z" fill="#f2239a" opacity=".68"/><circle cx="790" cy="440" r="320" fill="url(#glow)" opacity=".75"/><g stroke="#64f6e7" stroke-width="3" opacity=".18"><path d="M0 200h1080M0 400h1080M0 600h1080M0 800h1080"/><path d="M200 0v1080M400 0v1080M600 0v1080M800 0v1080"/></g></g>
+  <g id="layer-2-artwork"><g transform="translate(565 365) rotate(-8)"><path d="M60 75c45-75 300-75 345 0l90 250c28 95-82 150-145 70l-60-75H175l-60 75c-63 80-173 25-145-70z" fill="#f3f6ff" stroke="#10122c" stroke-width="24"/><circle cx="125" cy="205" r="65" fill="#1a2450"/><path d="M125 165v80M85 205h80" stroke="#61f5e6" stroke-width="24" stroke-linecap="round"/><circle cx="355" cy="180" r="22" fill="#ff2a9e"/><circle cx="405" cy="230" r="22" fill="#ffd34e"/><circle cx="355" cy="280" r="22" fill="#61f5e6"/><circle cx="305" cy="230" r="22" fill="#7f5cff"/></g><path d="M940 150L780 400h115L740 690" fill="none" stroke="#ffd44f" stroke-width="28" stroke-linejoin="round"/></g>
+  <g id="layer-3-typography"><g transform="translate(55 180) rotate(-4)"><text x="0" y="0" fill="#fff" font-size="98" font-family="Arial,sans-serif" font-weight="900">LEVEL UP</text><text x="0" y="105" fill="#62f5e6" font-size="128" font-family="Arial,sans-serif" font-weight="900">FAST.</text></g><rect x="70" y="390" width="350" height="66" rx="12" fill="#ff249b"/><text x="102" y="434" fill="#fff" font-size="25" font-family="Arial,sans-serif" font-weight="900">5 PRO SETTINGS</text><text x="72" y="510" fill="#c4d1f2" font-size="23" font-family="Arial,sans-serif">Sharper control. Smarter play.</text><text x="70" y="1010" fill="#8196c7" font-size="16" font-family="Arial,sans-serif">LAYERED PSD 04 • THUMBNAIL DESIGN</text></g>
+</svg>

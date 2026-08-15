@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" role="img" aria-label="Cyber Safe — Icon and Infographic Set">
+  <title>Cyber Safe — Icon and Infographic Set</title>
+  <defs>
+  <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07152f"/><stop offset="1" stop-color="#162c61"/></linearGradient>
+  <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#18e0d0"/><stop offset="1" stop-color="#2f80ed"/></linearGradient>
+  <linearGradient id="sunset" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffcb52"/><stop offset=".55" stop-color="#ff6b6b"/><stop offset="1" stop-color="#7b2cff"/></linearGradient>
+  <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3c1d8f"/><stop offset="1" stop-color="#9b36f2"/></linearGradient>
+  <linearGradient id="forest" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0e3d36"/><stop offset="1" stop-color="#1e6b54"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#50fff0" stop-opacity=".9"/><stop offset="1" stop-color="#50fff0" stop-opacity="0"/></radialGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-opacity=".28"/></filter></defs>
+  <g id="layer-1-background"><rect width="1080" height="1080" fill="#061e24"/><circle cx="910" cy="130" r="250" fill="#0d3940"/><path d="M0 880c230-100 390 50 610-40 190-78 320-25 470 45v195H0z" fill="#082c31"/></g>
+  <g id="layer-2-artwork"><g transform="translate(90 300)" fill="none" stroke="#4ef3c3" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><g><rect width="240" height="240" rx="44" fill="#0b3036"/><path d="M70 105l50-28 50 28v48c0 45-20 70-50 88-30-18-50-43-50-88z"/><path d="M95 148l20 20 40-48"/></g><g transform="translate(330)"><rect width="240" height="240" rx="44" fill="#0b3036"/><rect x="65" y="105" width="110" height="90" rx="18"/><path d="M88 105V80c0-45 64-45 64 0v25"/><circle cx="120" cy="145" r="9"/></g><g transform="translate(660)"><rect width="240" height="240" rx="44" fill="#0b3036"/><circle cx="120" cy="105" r="50"/><path d="M120 55v50l35 20M75 200h90M90 170h60"/></g><g transform="translate(165 330)"><rect width="240" height="240" rx="44" fill="#0b3036"/><path d="M58 160c50-15 70-70 62-112 45 20 80 65 58 120-20 50-90 58-120-8z"/><path d="M85 160c30-15 40-40 38-65 25 15 38 38 25 65-12 25-45 30-63 0z"/></g><g transform="translate(495 330)"><rect width="240" height="240" rx="44" fill="#0b3036"/><path d="M55 85h130M55 125h90M55 165h110"/><circle cx="180" cy="160" r="25"/><path d="M198 178l25 25"/></g></g></g>
+  <g id="layer-3-typography"><text x="70" y="105" fill="#4ef3c3" font-size="21" font-family="Arial,sans-serif" font-weight="900" letter-spacing="7">VECTOR ICON COLLECTION</text><text x="68" y="215" fill="#fff" font-size="76" font-family="Arial,sans-serif" font-weight="900">CYBER SAFE.</text><text x="72" y="260" fill="#89aaa9" font-size="22" font-family="Arial,sans-serif">Shield • Privacy • Time • Firewall • Search</text><text x="70" y="1010" fill="#527d7a" font-size="16" font-family="Arial,sans-serif">ILLUSTRATOR VECTOR 05 • ICON SYSTEM</text></g>
+</svg>

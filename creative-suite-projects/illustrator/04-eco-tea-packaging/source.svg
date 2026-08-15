@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" role="img" aria-label="Nirmal Leaf — Eco Tea Packaging">
+  <title>Nirmal Leaf — Eco Tea Packaging</title>
+  <defs>
+  <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07152f"/><stop offset="1" stop-color="#162c61"/></linearGradient>
+  <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#18e0d0"/><stop offset="1" stop-color="#2f80ed"/></linearGradient>
+  <linearGradient id="sunset" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffcb52"/><stop offset=".55" stop-color="#ff6b6b"/><stop offset="1" stop-color="#7b2cff"/></linearGradient>
+  <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3c1d8f"/><stop offset="1" stop-color="#9b36f2"/></linearGradient>
+  <linearGradient id="forest" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0e3d36"/><stop offset="1" stop-color="#1e6b54"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#50fff0" stop-opacity=".9"/><stop offset="1" stop-color="#50fff0" stop-opacity="0"/></radialGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-opacity=".28"/></filter></defs>
+  <g id="layer-1-background"><rect width="1080" height="1080" fill="#f5efe2"/><circle cx="160" cy="160" r="230" fill="#dce8cc"/><circle cx="960" cy="960" r="250" fill="#e7cfaa" opacity=".55"/></g>
+  <g id="layer-2-artwork"><g transform="translate(150 210)"><path d="M0 100L250 0l250 100v570L250 780 0 670z" fill="#275b44"/><path d="M0 100l250 105v575L0 670z" fill="#1f4938"/><path d="M500 100L250 205v575l250-110z" fill="#347154"/><path d="M0 100L250 0l250 100-250 105z" fill="#6f9d62"/><circle cx="250" cy="360" r="120" fill="#f3e6c9"/><path d="M250 420c-90-65-82-170 0-230 82 60 90 165 0 230z" fill="#4f8654"/><path d="M250 410V225" stroke="#2b5f3e" stroke-width="12"/><path d="M250 300c-45-25-70-10-95 8M250 350c50-30 75-20 105-5" fill="none" stroke="#2b5f3e" stroke-width="10"/></g><g transform="translate(720 285)"><circle cx="100" cy="100" r="100" fill="#2d654a"/><path d="M100 165c-70-50-64-132 0-180 64 48 70 130 0 180z" fill="#f2dfb6"/><path d="M100 155V15" stroke="#c5aa72" stroke-width="8"/></g></g>
+  <g id="layer-3-typography"><text x="70" y="105" fill="#28573f" font-size="21" font-family="Arial,sans-serif" font-weight="900" letter-spacing="7">SUSTAINABLE PACKAGING CONCEPT</text><text x="690" y="535" fill="#28573f" font-size="66" font-family="Georgia,serif" font-weight="900">NIRMAL</text><text x="690" y="600" fill="#8a673e" font-size="66" font-family="Georgia,serif">LEAF</text><text x="695" y="650" fill="#5e735f" font-size="20" font-family="Arial,sans-serif">Premium green tea</text><g transform="translate(690 700)"><rect width="265" height="60" rx="30" fill="#2d654a"/><text x="35" y="39" fill="#fff" font-size="19" font-family="Arial,sans-serif" font-weight="900">100% NATURAL</text></g><text x="70" y="1010" fill="#7f8e79" font-size="16" font-family="Arial,sans-serif">ILLUSTRATOR VECTOR 04 • PACKAGING STUDY</text></g>
+</svg>

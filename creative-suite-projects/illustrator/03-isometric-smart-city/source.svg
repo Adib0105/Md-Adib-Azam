@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" role="img" aria-label="Smart City — Isometric Illustration">
+  <title>Smart City — Isometric Illustration</title>
+  <defs>
+  <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07152f"/><stop offset="1" stop-color="#162c61"/></linearGradient>
+  <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#18e0d0"/><stop offset="1" stop-color="#2f80ed"/></linearGradient>
+  <linearGradient id="sunset" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffcb52"/><stop offset=".55" stop-color="#ff6b6b"/><stop offset="1" stop-color="#7b2cff"/></linearGradient>
+  <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3c1d8f"/><stop offset="1" stop-color="#9b36f2"/></linearGradient>
+  <linearGradient id="forest" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0e3d36"/><stop offset="1" stop-color="#1e6b54"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#50fff0" stop-opacity=".9"/><stop offset="1" stop-color="#50fff0" stop-opacity="0"/></radialGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-opacity=".28"/></filter></defs>
+  <g id="layer-1-background"><rect width="1080" height="1080" fill="#eaf2fb"/><path d="M120 760L540 520l420 240-420 240z" fill="#c7dcef"/><path d="M120 760v80l420 240v-80z" fill="#9dbbd4"/><path d="M960 760v80l-420 240v-80z" fill="#b2cde3"/></g>
+  <g id="layer-2-artwork"><g stroke="#163b5a" stroke-width="4" stroke-linejoin="round"><path d="M230 620l150-85 150 85-150 86z" fill="#54dccb"/><path d="M230 620v220l150 86V706z" fill="#2faeaa"/><path d="M530 620v220l-150 86V706z" fill="#3dc7bb"/><path d="M405 420l130-75 130 75-130 75z" fill="#ffcb55"/><path d="M405 420v300l130 75V495z" fill="#e49a36"/><path d="M665 420v300l-130 75V495z" fill="#f4b445"/><path d="M620 590l115-66 115 66-115 67z" fill="#668cff"/><path d="M620 590v180l115 67V657z" fill="#456bd6"/><path d="M850 590v180l-115 67V657z" fill="#557cec"/></g><g fill="#e8f8ff"><path d="M455 490l55 32v50l-55-32zM455 590l55 32v50l-55-32zM560 523l55-32v50l-55 32zM560 623l55-32v50l-55 32z"/><path d="M260 665l70 40v44l-70-40zM430 705l70-40v44l-70 40zM650 635l55 32v40l-55-32zM765 667l55-32v40l-55 32z"/></g><g fill="none" stroke="#1abaae" stroke-width="8"><path d="M235 465c30-30 70-30 100 0M250 480c22-20 48-20 70 0M270 495c10-8 20-8 30 0"/></g></g>
+  <g id="layer-3-typography"><text x="70" y="105" fill="#173d5b" font-size="21" font-family="Arial,sans-serif" font-weight="900" letter-spacing="7">ISOMETRIC ILLUSTRATION</text><text x="68" y="210" fill="#12344f" font-size="76" font-family="Arial,sans-serif" font-weight="900">SMART CITY.</text><text x="72" y="260" fill="#607e98" font-size="22" font-family="Arial,sans-serif">Connected buildings • Clean energy • Better living</text><text x="72" y="1010" fill="#6d8ba4" font-size="16" font-family="Arial,sans-serif">ILLUSTRATOR VECTOR 03 • ORIGINAL CONCEPT</text></g>
+</svg>

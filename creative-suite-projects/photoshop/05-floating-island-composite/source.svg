@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" role="img" aria-label="Above the Ordinary — Surreal Composite">
+  <title>Above the Ordinary — Surreal Composite</title>
+  <defs>
+  <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07152f"/><stop offset="1" stop-color="#162c61"/></linearGradient>
+  <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#18e0d0"/><stop offset="1" stop-color="#2f80ed"/></linearGradient>
+  <linearGradient id="sunset" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffcb52"/><stop offset=".55" stop-color="#ff6b6b"/><stop offset="1" stop-color="#7b2cff"/></linearGradient>
+  <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3c1d8f"/><stop offset="1" stop-color="#9b36f2"/></linearGradient>
+  <linearGradient id="forest" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0e3d36"/><stop offset="1" stop-color="#1e6b54"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#50fff0" stop-opacity=".9"/><stop offset="1" stop-color="#50fff0" stop-opacity="0"/></radialGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-opacity=".28"/></filter></defs>
+  <g id="layer-1-background"><rect width="1080" height="1080" fill="#bdddf1"/><circle cx="840" cy="180" r="120" fill="#fff1a6"/><g fill="#fff" opacity=".75"><ellipse cx="180" cy="230" rx="180" ry="65"/><ellipse cx="850" cy="420" rx="210" ry="72"/><ellipse cx="290" cy="870" rx="250" ry="75"/></g><path d="M0 790c260-120 420 40 650-55 160-65 290-45 430 20v325H0z" fill="#8bbbd0" opacity=".5"/></g>
+  <g id="layer-2-artwork"><g transform="translate(280 270)"><path d="M10 170c110-125 390-125 500 0-65 120-110 270-250 480C120 440 75 290 10 170z" fill="#6c4537"/><path d="M10 170c110-125 390-125 500 0-135 105-375 105-500 0z" fill="#2d8258"/><path d="M55 155c100-75 310-75 405 0-110 60-300 60-405 0z" fill="#67ae68"/><path d="M255 220c-10 140-35 285-35 365" fill="none" stroke="#d9f7ff" stroke-width="38"/><path d="M220 580c20 50 65 65 95 15" fill="none" stroke="#d9f7ff" stroke-width="18"/><rect x="170" y="25" width="180" height="120" fill="#f0bf6b"/><path d="M145 30L260-50 375 30" fill="#7a3d35"/><rect x="235" y="75" width="55" height="70" fill="#744539"/></g><g fill="#fff" opacity=".88"><ellipse cx="180" cy="560" rx="160" ry="55"/><ellipse cx="910" cy="720" rx="180" ry="65"/></g></g>
+  <g id="layer-3-typography"><text x="70" y="105" fill="#214e62" font-size="21" font-family="Arial,sans-serif" font-weight="900" letter-spacing="7">SURREAL COMPOSITE STUDY</text><text x="68" y="890" fill="#173a4c" font-size="76" font-family="Arial,sans-serif" font-weight="900">ABOVE THE</text><text x="68" y="972" fill="#28765d" font-size="76" font-family="Arial,sans-serif" font-weight="900">ORDINARY.</text><text x="755" y="1010" fill="#557f90" font-size="16" font-family="Arial,sans-serif">LAYERED PSD 05</text></g>
+</svg>

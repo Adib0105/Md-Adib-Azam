@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" role="img" aria-label="Beyond the Noise — Double Exposure Poster">
+  <title>Beyond the Noise — Double Exposure Poster</title>
+  <defs>
+  <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07152f"/><stop offset="1" stop-color="#162c61"/></linearGradient>
+  <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#18e0d0"/><stop offset="1" stop-color="#2f80ed"/></linearGradient>
+  <linearGradient id="sunset" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffcb52"/><stop offset=".55" stop-color="#ff6b6b"/><stop offset="1" stop-color="#7b2cff"/></linearGradient>
+  <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3c1d8f"/><stop offset="1" stop-color="#9b36f2"/></linearGradient>
+  <linearGradient id="forest" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0e3d36"/><stop offset="1" stop-color="#1e6b54"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#50fff0" stop-opacity=".9"/><stop offset="1" stop-color="#50fff0" stop-opacity="0"/></radialGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-opacity=".28"/></filter></defs>
+  <g id="layer-1-background"><rect width="1080" height="1080" fill="#eceff4"/><rect x="0" y="0" width="380" height="1080" fill="#111827"/><circle cx="890" cy="180" r="210" fill="#d6e2ef"/><path d="M0 850c230-120 430 70 620-10 210-90 310-45 460 30v210H0z" fill="#c9d8e6"/></g>
+  <g id="layer-2-artwork"><path d="M670 130c-165 15-270 140-270 310 0 115 48 185 95 245 35 45 52 105 45 180h360c-70-90-67-160-42-235 25-78 66-132 56-245-15-171-105-270-244-255z" fill="#172b3f"/><clipPath id="headclip"><path d="M670 130c-165 15-270 140-270 310 0 115 48 185 95 245 35 45 52 105 45 180h360c-70-90-67-160-42-235 25-78 66-132 56-245-15-171-105-270-244-255z"/></clipPath><g clip-path="url(#headclip)"><circle cx="700" cy="300" r="180" fill="#f9a15b"/><path d="M340 650l190-235 145 165 130-210 190 280z" fill="#355870"/><path d="M360 670l170-150 140 95 160-170 190 225z" fill="#183449"/><g fill="#f2c66d"><rect x="460" y="570" width="48" height="180"/><rect x="530" y="520" width="60" height="230"/><rect x="620" y="610" width="55" height="140"/><rect x="705" y="470" width="62" height="280"/><rect x="800" y="550" width="52" height="200"/></g></g></g>
+  <g id="layer-3-typography"><text transform="translate(115 810) rotate(-90)" fill="#7ce6d8" font-size="22" font-family="Arial,sans-serif" font-weight="900" letter-spacing="7">DOUBLE EXPOSURE STUDY</text><text x="70" y="170" fill="#fff" font-size="76" font-family="Arial,sans-serif" font-weight="900">BEYOND</text><text x="70" y="250" fill="#f4b75e" font-size="76" font-family="Arial,sans-serif" font-weight="900">THE NOISE.</text><text x="70" y="310" fill="#9aabc0" font-size="21" font-family="Arial,sans-serif">City. Nature. Imagination.</text><text x="70" y="1010" fill="#7890a4" font-size="16" font-family="Arial,sans-serif">LAYERED PSD 03 • ORIGINAL ARTWORK</text></g>
+</svg>
