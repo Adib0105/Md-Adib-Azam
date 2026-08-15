@@ -1,0 +1,6 @@
+task_id,task,owner,priority,status,due_date
+OP-01,Update customer records,Asha,High,Completed,2026-08-14
+OP-02,Verify application documents,Ravi,High,In progress,2026-08-15
+OP-03,Prepare weekly sales summary,Mina,Normal,In progress,2026-08-18
+OP-04,Follow up pending tickets,Ravi,High,Open,2026-08-16
+OP-05,Archive completed requests,Asha,Low,Open,2026-08-20

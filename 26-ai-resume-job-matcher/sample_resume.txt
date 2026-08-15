@@ -1,0 +1,3 @@
+Computer Science diploma student with projects in Python, SQL, HTML, CSS,
+JavaScript, data analytics, customer support, Git and digital marketing.
+Built dashboards, automation tools and SQLite applications.

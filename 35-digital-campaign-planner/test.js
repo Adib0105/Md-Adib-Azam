@@ -1,0 +1,10 @@
+const assert = require("assert");
+const logic = require("./logic.js");
+const result = logic.calculate({ budget: 1000, impressions: 10000, ctr: 2, leadRate: 10, closeRate: 25, orderValue: 500 });
+assert.strictEqual(result.clicks, 200);
+assert.strictEqual(result.leads, 20);
+assert.strictEqual(result.customers, 5);
+assert.strictEqual(result.revenue, 2500);
+assert.strictEqual(result.roas, 2.5);
+assert.strictEqual(result.breakEvenCustomers, 2);
+console.log("Campaign planner tests passed");

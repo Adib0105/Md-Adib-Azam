@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Digital Seva Workflow</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+  <h1>Digital service, clearly tracked.</h1><p class="intro">A simple workflow board for local service operations.</p>
+  <section class="grid">
+    <form id="request-form"><h2>New request</h2><label>Customer</label><input name="customer" placeholder="Customer name"><label>Service</label><select name="service"><option value="">Choose service</option><option>Document application</option><option>Online registration</option><option>Print and scan</option><option>Bill payment support</option></select><p id="error"></p><button>Add request</button></form>
+    <div class="panel"><input id="search" placeholder="Search customer, service or ID"><div id="summary"></div><div id="list"></div></div>
+  </section>
+</main><script src="logic.js"></script><script src="app.js"></script></body>
+</html>

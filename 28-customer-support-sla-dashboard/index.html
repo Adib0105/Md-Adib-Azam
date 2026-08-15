@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Support SLA Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div><h1>Support pulse</h1><p>Service-level performance at a glance.</p></div>
+      <label>Status <select id="filter"><option>All</option><option>Open</option><option>Pending</option><option>Resolved</option></select></label>
+    </header>
+    <section class="cards">
+      <article class="card"><span class="label">Tickets</span><strong class="value" id="total">0</strong></article>
+      <article class="card"><span class="label">Open</span><strong class="value" id="open">0</strong></article>
+      <article class="card"><span class="label">SLA breached</span><strong class="value" id="breached">0</strong></article>
+      <article class="card"><span class="label">Avg. response</span><strong class="value" id="response">0</strong></article>
+    </section>
+    <section class="table-wrap"><table><thead><tr><th>Ticket</th><th>Customer</th><th>Agent</th><th>Status</th><th>Age / SLA</th></tr></thead><tbody id="rows"></tbody></table></section>
+  </main>
+  <script src="logic.js"></script><script src="app.js"></script>
+</body>
+</html>
