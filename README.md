@@ -1,10 +1,10 @@
-# Data Analytics Portfolio — Md Adib Azam
+# Python & Data Analytics Portfolio — Md Adib Azam
 
-Ten end-to-end analytics projects built with Python, pandas, Matplotlib, and practical business questions. Every project contains a dataset, a reproducible analysis script, a chart, and concise findings.
+Twenty-five practical Python projects: ten end-to-end analytics case studies plus fifteen tested applications covering automation, data processing, APIs, databases, and utilities.
 
 ![Preview of all ten analytics dashboards](assets/portfolio-preview.png)
 
-## Projects
+## Data analytics projects (01–10)
 
 | # | Project | Business question | Skills |
 |---|---|---|---|
@@ -19,6 +19,26 @@ Ten end-to-end analytics projects built with Python, pandas, Matplotlib, and pra
 | 09 | [Weather Trends](09-weather-trends/) | How do temperature and rainfall change by month? | Trend analysis, dual-axis charting |
 | 10 | [Review Insights](10-review-insights/) | What themes appear in customer feedback? | Text cleaning, sentiment, optional AI summary |
 
+## Python application projects (11–25)
+
+| # | Project | What it demonstrates |
+|---|---|---|
+| 11 | [Password Strength Checker](11-password-checker/) | Regex validation and privacy-friendly security basics |
+| 12 | [Contact Book CLI](12-contact-book/) | JSON persistence and CRUD operations |
+| 13 | [Terminal Quiz App](13-quiz-app/) | Reusable quiz logic and input normalization |
+| 14 | [Task Manager CLI](14-task-manager/) | Persistent tasks and stable identifiers |
+| 15 | [Safe File Organizer](15-file-organizer/) | pathlib automation with preview-first safety |
+| 16 | [CSV Cleaner](16-csv-cleaner/) | Data cleaning and duplicate removal |
+| 17 | [Log Analyzer](17-log-analyzer/) | Regex parsing and operational summaries |
+| 18 | [SQLite Inventory Manager](18-inventory-manager/) | Database CRUD, transactions, and stock validation |
+| 19 | [Unit Converter](19-unit-converter/) | Tested conversion functions and validation |
+| 20 | [Text Summarizer](20-text-summarizer/) | Local extractive NLP and sentence ranking |
+| 21 | [Expense Tracker CLI](21-expense-tracker-cli/) | Decimal arithmetic and category reporting |
+| 22 | [Notes REST API](22-notes-rest-api/) | Dependency-free REST endpoints and real HTTP tests |
+| 23 | [Batch Image Resizer](23-image-resizer/) | Pillow image processing and aspect ratios |
+| 24 | [Checksum Generator](24-checksum-generator/) | SHA-256 hashing and folder integrity manifests |
+| 25 | [Website Monitor](25-website-monitor/) | HTTP timeouts, error handling, and test doubles |
+
 ## Quick start
 
 ```bash
@@ -26,6 +46,7 @@ python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\\Scripts\\activate
 pip install -r requirements.txt
 python run_all.py
+python run_python_tests.py
 ```
 
 Charts are written to each project's `outputs/` folder. All datasets are small, synthetic, and safe to publish.
@@ -38,6 +59,9 @@ Charts are written to each project's `outputs/` folder. All datasets are small, 
 - Reproducible analysis workflows
 - Markdown documentation
 - OpenAI Responses API as an optional extension in Project 10
+- REST APIs and SQLite databases
+- JSON/CSV automation, Pillow image processing, SHA-256 checksums, and HTTP monitoring
+- Automated tests for every project from 11–25
 
 ## Author
 
