@@ -1,6 +1,8 @@
 openai>=2.45.0
 python-dotenv>=1.0.1
 pyautogui>=0.9.54
+pyperclip>=1.9.0
+Pillow>=10.0.0
 pyttsx3>=2.98
 SpeechRecognition>=3.14.0
 PyAudio>=0.2.14
