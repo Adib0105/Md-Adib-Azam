@@ -7,6 +7,10 @@ load_dotenv(ROOT / ".env")
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-5.1")
+REASONING_EFFORT = os.getenv("REASONING_EFFORT", "high").lower().strip()
+if REASONING_EFFORT not in {"none", "low", "medium", "high"}:
+    REASONING_EFFORT = "high"
+
 JARVIS_NAME = os.getenv("JARVIS_NAME", "JARVIS")
 CREATOR_NAME = os.getenv("CREATOR_NAME", "Adib Azam")
 USER_NAME = os.getenv("USER_NAME", "Adib")
