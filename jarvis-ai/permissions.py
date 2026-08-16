@@ -15,7 +15,8 @@ class PermissionGate:
 
     JARVIS intentionally does not expose arbitrary shell execution, credential
     extraction, file deletion, software installation, or security-setting
-    changes as tools. Interactive desktop actions are confirmation-gated.
+    changes as tools. Interactive desktop and private-file actions are
+    confirmation-gated.
     """
 
     ALWAYS_ALLOWED = {
@@ -27,6 +28,7 @@ class PermissionGate:
         "remember_fact",
         "read_clipboard",
         "volume_control",
+        "list_local_roots",
     }
 
     CONFIRM_REQUIRED = {
@@ -37,6 +39,8 @@ class PermissionGate:
         "mouse_scroll",
         "write_clipboard",
         "lock_pc",
+        "search_local_files",
+        "read_local_text_file",
     }
 
     def __init__(self, confirm_callback: Callable[[str, dict], bool] | None = None):
