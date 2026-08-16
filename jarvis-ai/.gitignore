@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.pyc
+jarvis_memory.db
+latest_screenshot.png
+.venv/
+venv/
