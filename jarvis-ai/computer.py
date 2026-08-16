@@ -20,9 +20,6 @@ APP_COMMANDS = {
     "explorer": ["explorer.exe"],
     "task manager": ["taskmgr.exe"],
     "task_manager": ["taskmgr.exe"],
-    "powershell": ["powershell.exe"],
-    "command prompt": ["cmd.exe"],
-    "cmd": ["cmd.exe"],
 }
 
 
