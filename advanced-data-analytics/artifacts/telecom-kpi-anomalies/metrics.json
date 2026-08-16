@@ -1,0 +1,7 @@
+{
+  "degraded_cells_detected": 22,
+  "degraded_cells_total": 22,
+  "event_recall_at_capacity": 1.0,
+  "pr_auc": 0.999,
+  "precision_at_capacity": 0.489
+}

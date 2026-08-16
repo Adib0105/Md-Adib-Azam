@@ -1,0 +1,7 @@
+{
+  "mae_minutes": 8.33,
+  "on_time_rate_pct": 14.0,
+  "p90_absolute_error": 17.46,
+  "severe_delay_auc": 0.972,
+  "top_delay_driver": "turnaround"
+}

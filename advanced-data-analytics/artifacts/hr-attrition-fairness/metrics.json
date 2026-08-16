@@ -1,0 +1,7 @@
+{
+  "attrition_rate_pct": 17.6,
+  "demographic_parity_gap": 0.018,
+  "equal_opportunity_gap": 0.099,
+  "high_risk_recall": 0.443,
+  "roc_auc": 0.754
+}

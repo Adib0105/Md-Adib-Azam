@@ -1,0 +1,7 @@
+{
+  "luxury_error_gap_inr": 171056.0,
+  "mae_inr": 642446.0,
+  "mape_pct": 4.32,
+  "r2": 0.987,
+  "top_price_driver": "area_sqft"
+}

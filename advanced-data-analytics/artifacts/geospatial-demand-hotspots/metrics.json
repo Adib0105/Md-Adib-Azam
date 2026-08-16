@@ -1,0 +1,7 @@
+{
+  "covered_trips": 6035,
+  "hotspots": 4,
+  "largest_hotspot_share_pct": 39.49,
+  "noise_share_pct": 3.44,
+  "silhouette_score": 0.836
+}

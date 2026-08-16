@@ -1,0 +1,22 @@
+name: Advanced analytics portfolio
+
+on:
+  push:
+    paths:
+      - "advanced-data-analytics/**"
+      - ".github/workflows/advanced-analytics.yml"
+  pull_request:
+    paths:
+      - "advanced-data-analytics/**"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r advanced-data-analytics/requirements.txt
+      - run: pytest advanced-data-analytics/tests -q

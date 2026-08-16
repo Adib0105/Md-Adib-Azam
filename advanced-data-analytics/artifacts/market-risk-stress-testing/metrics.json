@@ -1,0 +1,7 @@
+{
+  "annualized_volatility_pct": 15.04,
+  "expected_shortfall_99_inr": 244067.0,
+  "historical_var_99_inr": 212315.0,
+  "monte_carlo_loss_probability_pct": 47.58,
+  "stress_loss_inr": 1088000.0
+}

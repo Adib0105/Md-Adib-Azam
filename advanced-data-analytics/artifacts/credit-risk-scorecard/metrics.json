@@ -1,0 +1,7 @@
+{
+  "brier_score": 0.098,
+  "expected_loss_inr": 15185020.0,
+  "high_risk_share_pct": 2.33,
+  "ks_statistic": 0.382,
+  "roc_auc": 0.727
+}

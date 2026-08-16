@@ -1,0 +1,7 @@
+{
+  "drift_alert": true,
+  "macro_f1": 1.0,
+  "negative_share_pct": 35.0,
+  "reviews_scored": 800,
+  "topic_distribution_drift": 0.17
+}

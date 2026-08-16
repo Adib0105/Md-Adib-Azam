@@ -1,0 +1,6 @@
+{
+  "fraud_amount_captured_pct": 18.47,
+  "pr_auc": 0.163,
+  "precision_at_2_pct": 0.237,
+  "recall_at_2_pct": 0.178
+}

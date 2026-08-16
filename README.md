@@ -10,7 +10,7 @@
 [![Cybersecurity](https://img.shields.io/badge/Cybersecurity-111827?style=flat-square&logo=hackthebox&logoColor=white)](categories/cybersecurity.md)
 [![Design](https://img.shields.io/badge/Creative%20Design-7C3AED?style=flat-square&logo=adobecreativecloud&logoColor=white)](categories/design-creative.md)
 
-**75 practical projects · 45 software/data projects · 30 original design projects**
+**95 practical projects · 65 software/data projects · 30 original design projects**
 
 </div>
 
@@ -36,6 +36,7 @@ This repository is a structured portfolio of projects aligned with my Computer S
 
 | Project | Why it stands out | Stack |
 |---|---|---|
+| [Advanced Data Analytics Portfolio](advanced-data-analytics/) | 20 industry-style ML, risk and experimentation case studies | Python, pandas, scikit-learn, SciPy |
 | [AI Resume & Job Matcher](26-ai-resume-job-matcher/) | Explainable resume-to-job matching workflow | Python, NLP |
 | [Customer Support SLA Dashboard](28-customer-support-sla-dashboard/) | Business-focused service KPI dashboard | HTML, CSS, JavaScript |
 | [Retail Sales Dashboard](01-retail-sales/) | Revenue, category and monthly trend analysis | Python, pandas, Matplotlib |
@@ -49,7 +50,8 @@ This repository is a structured portfolio of projects aligned with my Computer S
 
 | Collection | Projects | Focus |
 |---|---:|---|
-| [Data Analytics](categories/data-analytics.md) | 10 core case studies | KPIs, trends, segmentation and reporting |
+| [Data Analytics](categories/data-analytics.md) | 32 case studies | KPIs, ML, experimentation, risk and reporting |
+| [Advanced Data Analytics](advanced-data-analytics/) | 20 projects | Forecasting, anomaly detection, causal analysis and responsible ML |
 | [Python Applications](categories/python-automation.md) | 15 core applications | CLI tools, APIs, files, testing and automation |
 | [CV-Aligned Technology](CV_PROJECTS.md) | 20 projects | AI, support, databases, web, security, C and Java |
 | [Graphic Design Portfolio](graphic-design-portfolio/) | 15 designs | Brand, social, poster, product and campaign design |
@@ -79,7 +81,8 @@ This repository is a structured portfolio of projects aligned with my Computer S
 ## Repository map
 
 ~~~text
-01–10   Data analytics case studies
+01–10   Core data analytics case studies
+advanced-data-analytics/   20 advanced industry analytics projects
 11–25   Python application projects
 26–45   CV-aligned multidisciplinary projects
 graphic-design-portfolio/   15 editable graphic designs
@@ -96,6 +99,7 @@ pip install -r requirements.txt
 python run_all.py
 python run_python_tests.py
 python run_cv_project_tests.py
+python advanced-data-analytics/run_all.py
 ~~~
 
 On Windows, activate the environment with **.venv\Scripts\activate**.

@@ -1,0 +1,7 @@
+{
+  "brier_score": 0.086,
+  "flagged_risk_gap_by_age": 0.067,
+  "readmission_rate_pct": 10.18,
+  "recall_at_20_pct_capacity": 0.473,
+  "roc_auc": 0.708
+}

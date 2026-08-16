@@ -1,0 +1,7 @@
+{
+  "estimated_net_savings_inr": 1845200.0,
+  "machines_prioritized": 140,
+  "pr_auc": 0.72,
+  "recall_at_10_pct_capacity": 0.24,
+  "roc_auc": 0.816
+}
