@@ -15,7 +15,7 @@ class PermissionGate:
 
     JARVIS intentionally does not expose arbitrary shell execution, credential
     extraction, file deletion, software installation, or security-setting
-    changes as tools. Interactive desktop and private-file actions are
+    changes as tools. Interactive and privacy-sensitive actions are
     confirmation-gated.
     """
 
@@ -23,10 +23,8 @@ class PermissionGate:
         "get_system_info",
         "open_app",
         "screenshot",
-        "inspect_screen",
         "recall_memory",
         "remember_fact",
-        "read_clipboard",
         "volume_control",
         "list_local_roots",
     }
@@ -37,7 +35,9 @@ class PermissionGate:
         "press_hotkey",
         "mouse_click",
         "mouse_scroll",
+        "read_clipboard",
         "write_clipboard",
+        "inspect_screen",
         "lock_pc",
         "search_local_files",
         "read_local_text_file",
