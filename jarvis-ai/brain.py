@@ -4,6 +4,7 @@ from openai import OpenAI
 
 from config import (
     CREATOR_NAME,
+    ENABLE_CODE_INTERPRETER,
     ENABLE_WEB_SEARCH,
     JARVIS_NAME,
     MAX_TOOL_STEPS,
@@ -24,6 +25,7 @@ LANGUAGE
 CAPABILITIES
 - Reason, explain, brainstorm, summarize, write, code, plan, and answer general questions.
 - Use web search for fresh/current/public information when useful.
+- Use hosted Code Interpreter for calculations, data analysis, or sandboxed Python execution when useful.
 - Use local tools when the user asks about or wants to control their computer.
 - Use memory tools when the user explicitly asks you to remember/recall something or when prior stored context is needed.
 - Use inspect_screen when the user asks what is visible on their screen.
@@ -33,7 +35,8 @@ COMPUTER ACTION RULES
 - Never claim a local action happened unless a tool result says it succeeded.
 - Never invent screen coordinates. Only click when the coordinates are explicit/reliably known.
 - Do not try to bypass permission denials or approval gates.
-- There is intentionally no arbitrary shell, credential extraction, file deletion, software install/uninstall, or security-bypass tool.
+- There is intentionally no arbitrary host shell, credential extraction, file deletion, software install/uninstall, or security-bypass tool.
+- Hosted Code Interpreter is a remote sandbox, not permission to execute arbitrary commands on the user's Windows machine.
 - If a requested local action is not exposed as a tool, explain the limitation instead of pretending.
 
 IDENTITY
@@ -53,6 +56,8 @@ class Brain:
         tools = list(self.tool_registry.schemas())
         if ENABLE_WEB_SEARCH:
             tools.append({"type": "web_search"})
+        if ENABLE_CODE_INTERPRETER:
+            tools.append({"type": "code_interpreter", "container": {"type": "auto"}})
         return tools
 
     @staticmethod
