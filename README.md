@@ -1,120 +1,113 @@
-# Python, Data Analytics, Graphic Design & Technology Portfolio — Md Adib Azam
+<div align="center">
 
-    Seventy-five practical projects aligned with my Computer Science & Technology studies
-    and professional interests: ten data analytics case studies, fifteen tested
-    Python applications, fifteen original graphic designs, fifteen Canva,
-    Photoshop and Illustrator projects, and twenty CV-aligned projects across
-    AI, customer support, databases, web development, digital marketing,
-    defensive security, design operations, C, Java and automation.
+# Md Adib Azam — Technology & Creative Portfolio
 
-    ![Preview of the analytics dashboards](assets/portfolio-preview.png)
+**Computer Science & Technology Student · Python Developer · Data Analyst · Digital Marketer · Graphic Designer**
 
-    ## Data analytics projects (01-10)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)](categories/python-automation.md)
+[![Data Analytics](https://img.shields.io/badge/Data%20Analytics-0F766E?style=flat-square&logo=googleanalytics&logoColor=white)](categories/data-analytics.md)
+[![Web](https://img.shields.io/badge/Web-0EA5E9?style=flat-square&logo=html5&logoColor=white)](categories/web-marketing.md)
+[![Cybersecurity](https://img.shields.io/badge/Cybersecurity-111827?style=flat-square&logo=hackthebox&logoColor=white)](categories/cybersecurity.md)
+[![Design](https://img.shields.io/badge/Creative%20Design-7C3AED?style=flat-square&logo=adobecreativecloud&logoColor=white)](categories/design-creative.md)
 
-    | # | Project | Business question | Skills |
-    |---|---|---|---|
-    | 01 | [Retail Sales Dashboard](01-retail-sales/) | Which categories and months drive revenue? | KPI analysis, aggregation, time series |
-    | 02 | [Customer Churn Analysis](02-customer-churn/) | Which customer groups are most likely to leave? | Segmentation, churn rate, risk signals |
-    | 03 | [E-commerce Funnel](03-ecommerce-funnel/) | Where do shoppers drop out? | Funnel metrics, conversion analysis |
-    | 04 | [Marketing ROI](04-marketing-roi/) | Which channel produces the strongest return? | CAC, ROAS, campaign comparison |
-    | 05 | [Expense Analysis](05-expense-analysis/) | Where is monthly spending concentrated? | Budget variance, category analysis |
-    | 06 | [HR Workforce Analytics](06-hr-workforce/) | What patterns appear in attrition and satisfaction? | HR KPIs, grouped analysis |
-    | 07 | [Supply Chain Delivery](07-supply-chain/) | Which regions and carriers miss delivery targets? | SLA analysis, operational KPIs |
-    | 08 | [Student Performance](08-student-performance/) | Which study patterns are linked with better results? | Correlation, cohort comparison |
-    | 09 | [Weather Trends](09-weather-trends/) | How do temperature and rainfall change by month? | Trend analysis, dual-axis charting |
-    | 10 | [Review Insights](10-review-insights/) | What themes appear in customer feedback? | Text cleaning, sentiment, optional AI summary |
+**75 practical projects · 45 software/data projects · 30 original design projects**
 
-    ## Python application projects (11-25)
+</div>
 
-    | # | Project | What it demonstrates |
-    |---|---|---|
-    | 11 | [Password Strength Checker](11-password-checker/) | Regex validation and privacy-friendly security basics |
-    | 12 | [Contact Book CLI](12-contact-book/) | JSON persistence and CRUD operations |
-    | 13 | [Terminal Quiz App](13-quiz-app/) | Reusable quiz logic and input normalization |
-    | 14 | [Task Manager CLI](14-task-manager/) | Persistent tasks and stable identifiers |
-    | 15 | [Safe File Organizer](15-file-organizer/) | pathlib automation with preview-first safety |
-    | 16 | [CSV Cleaner](16-csv-cleaner/) | Data cleaning and duplicate removal |
-    | 17 | [Log Analyzer](17-log-analyzer/) | Regex parsing and operational summaries |
-    | 18 | [SQLite Inventory Manager](18-inventory-manager/) | Database CRUD, transactions and stock validation |
-    | 19 | [Unit Converter](19-unit-converter/) | Tested conversion functions and validation |
-    | 20 | [Text Summarizer](20-text-summarizer/) | Local extractive NLP and sentence ranking |
-    | 21 | [Expense Tracker CLI](21-expense-tracker-cli/) | Decimal arithmetic and category reporting |
-    | 22 | [Notes REST API](22-notes-rest-api/) | Dependency-free REST endpoints and HTTP tests |
-    | 23 | [Batch Image Resizer](23-image-resizer/) | Pillow image processing and aspect ratios |
-    | 24 | [Checksum Generator](24-checksum-generator/) | SHA-256 hashing and folder integrity manifests |
-    | 25 | [Website Monitor](25-website-monitor/) | HTTP timeouts, error handling and test doubles |
+![Portfolio dashboard preview](assets/portfolio-preview.png)
 
-    ## Graphic design projects (15 designs)
+## Start here
 
-    [Open the complete graphic design portfolio](graphic-design-portfolio/) to view
-    all fifteen projects. Each design has its own editable SVG source file and a
-    1080 x 1080 PNG preview.
+This repository is a structured portfolio of projects aligned with my Computer Science & Technology studies and career interests. Use the category guide below to quickly find the most relevant work.
 
-    ![Preview of all 15 graphic designs](graphic-design-portfolio/contact-sheet.png)
+| Career path | Curated portfolio |
+|---|---|
+| Data Analyst / MIS | [Data Analytics & Business Intelligence](categories/data-analytics.md) |
+| Python Developer / Automation | [Python Applications & Automation](categories/python-automation.md) |
+| AI / Database Roles | [AI, NLP & Data Systems](categories/ai-databases.md) |
+| Digital Marketing / Web | [Web Development & Digital Marketing](categories/web-marketing.md) |
+| Cybersecurity Learner | [Defensive Cybersecurity](categories/cybersecurity.md) |
+| Graphic Designer | [Design & Creative Suite](categories/design-creative.md) |
+| Software Fundamentals | [C, Java & Core Programming](categories/core-programming.md) |
 
-    ## Canva, Photoshop & Illustrator projects (15 designs)
+[Open the complete category hub →](categories/README.md)
 
-    [Open the creative-suite portfolio](creative-suite-projects/) to explore five
-    Canva-compatible templates, five layered Photoshop PSD projects, and five
-    editable Illustrator vector projects.
+## Featured projects
 
-    ![Preview of all 15 creative-suite projects](creative-suite-projects/contact-sheet.png)
-
-    ## CV-aligned multidisciplinary projects (26-45)
-
-    | # | Project | Skills demonstrated |
+| Project | Why it stands out | Stack |
 |---|---|---|
-| 26 | [AI Resume and Job Matcher](26-ai-resume-job-matcher/) | Python, NLP, explainable scoring |
-| 27 | [Customer Support Ticket Intelligence](27-support-ticket-intelligence/) | Python, support automation, CSV |
-| 28 | [Customer Support SLA Dashboard](28-customer-support-sla-dashboard/) | HTML, CSS, JavaScript, service KPIs |
-| 29 | [Student Records and Attendance System](29-student-records-sqlite/) | Python, SQLite, CRUD |
-| 30 | [Digital Seva Request Workflow](30-digital-seva-workflow/) | HTML, CSS, JavaScript, local storage |
-| 31 | [Mini CRM and Lead Manager](31-mini-crm-lead-manager/) | Python, SQLite, sales operations |
-| 32 | [Excel CSV Data Quality Auditor](32-excel-csv-quality-auditor/) | Python, spreadsheet cleaning |
-| 33 | [Social Media Content Calendar](33-social-content-calendar/) | JavaScript, digital marketing |
-| 34 | [SEO Page Auditor](34-seo-page-auditor/) | Python, HTML parsing, SEO |
-| 35 | [Digital Campaign ROI Planner](35-digital-campaign-planner/) | JavaScript, funnel analytics |
-| 36 | [Sales Forecast Studio](36-sales-forecast-studio/) | Python, forecasting, validation |
-| 37 | [MySQL Helpdesk Database](37-mysql-helpdesk-schema/) | MySQL, schema design, SLA reporting |
-| 38 | [Defensive Security Header Auditor](38-security-header-auditor/) | Python, defensive security |
-| 39 | [Access Log Threat Monitor](39-access-log-threat-monitor/) | Python, log analysis, monitoring |
-| 40 | [Responsive Developer Portfolio](40-responsive-portfolio-site/) | HTML, CSS, JavaScript |
-| 41 | [Graphic Design Brief Generator](41-design-brief-generator/) | Python, design workflow |
-| 42 | [Media File Cataloger](42-media-file-cataloger/) | Python, file automation, checksums |
-| 43 | [C Employee Records Analyzer](43-c-employee-records/) | C, structs, file handling |
-| 44 | [Java Customer Feedback Analyzer](44-java-feedback-analyzer/) | Java, text and CX analysis |
-| 45 | [Operations Automation Report Generator](45-automation-report-generator/) | Python, HTML reports |
+| [AI Resume & Job Matcher](26-ai-resume-job-matcher/) | Explainable resume-to-job matching workflow | Python, NLP |
+| [Customer Support SLA Dashboard](28-customer-support-sla-dashboard/) | Business-focused service KPI dashboard | HTML, CSS, JavaScript |
+| [Retail Sales Dashboard](01-retail-sales/) | Revenue, category and monthly trend analysis | Python, pandas, Matplotlib |
+| [Mini CRM & Lead Manager](31-mini-crm-lead-manager/) | Practical lead and sales operations system | Python, SQLite |
+| [SEO Page Auditor](34-seo-page-auditor/) | Automated on-page SEO checks | Python, HTML parsing |
+| [Security Header Auditor](38-security-header-auditor/) | Defensive website configuration review | Python, HTTP |
+| [Responsive Developer Portfolio](40-responsive-portfolio-site/) | Mobile-friendly portfolio website | HTML, CSS, JavaScript |
+| [Creative Suite Portfolio](creative-suite-projects/) | Canva, Photoshop and Illustrator-ready assets | SVG, PSD, PDF |
 
-    See [the portfolio strategy and validation guide](CV_PROJECTS.md).
+## Portfolio collections
 
-    ## Quick start
+| Collection | Projects | Focus |
+|---|---:|---|
+| [Data Analytics](categories/data-analytics.md) | 10 core case studies | KPIs, trends, segmentation and reporting |
+| [Python Applications](categories/python-automation.md) | 15 core applications | CLI tools, APIs, files, testing and automation |
+| [CV-Aligned Technology](CV_PROJECTS.md) | 20 projects | AI, support, databases, web, security, C and Java |
+| [Graphic Design Portfolio](graphic-design-portfolio/) | 15 designs | Brand, social, poster, product and campaign design |
+| [Canva, Photoshop & Illustrator](creative-suite-projects/) | 15 designs | Editable SVG, PSD and PDF assets |
 
-        python -m venv .venv
-        source .venv/bin/activate
-        pip install -r requirements.txt
-        python run_all.py
-        python run_python_tests.py
-        python run_cv_project_tests.py
+## Skills and tools
 
-    On Windows, activate the environment with .venv\Scripts\activate.
-    All datasets are small, synthetic and safe to publish.
+<p>
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+<img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="pandas">
+<img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite">
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=111827" alt="JavaScript">
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+</p>
 
-    ## Tools demonstrated
+- Data cleaning, KPI design, forecasting and business reporting
+- REST APIs, SQLite CRUD, file automation and testable Python applications
+- Customer support, CRM, digital service and operations workflows
+- SEO, campaign planning, social content and responsive web development
+- Defensive security configuration and access-log monitoring
+- Editable vector, social, brand, poster and campaign design assets
+- C, Java, SQL and software-development fundamentals
 
-    - Python, pandas, NumPy, Matplotlib and SQLite
-    - HTML, CSS, JavaScript and responsive interface design
-    - MySQL database design and analytical SQL
-    - Data cleaning, KPI design, forecasting and business reporting
-    - Customer support, CRM and digital service workflows
-    - Digital marketing, SEO and design-brief automation
-    - Editable SVG brand, social, campaign and poster design assets
-    - Canva-compatible SVG/PDF templates and layered Photoshop PSD projects
-    - Illustrator-ready vector artwork and packaging/icon systems
-    - Defensive configuration and access-log monitoring
-    - C and Java fundamentals
-    - GitHub Actions validation for projects 26-45
+## Repository map
 
-    ## Author
+~~~text
+01–10   Data analytics case studies
+11–25   Python application projects
+26–45   CV-aligned multidisciplinary projects
+graphic-design-portfolio/   15 editable graphic designs
+creative-suite-projects/    15 Canva, Photoshop and Illustrator projects
+categories/                 Career-focused navigation guides
+~~~
 
-    **Md Adib Azam** — Computer Science & Technology student interested in Python,
-    data analytics, AI, web development, automation and practical business technology.
+## Quick start
+
+~~~bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python run_all.py
+python run_python_tests.py
+python run_cv_project_tests.py
+~~~
+
+On Windows, activate the environment with **.venv\Scripts\activate**.
+
+All included datasets are small and synthetic. Project-specific setup instructions are available inside each project folder.
+
+## About me
+
+I am **Md Adib Azam**, a Computer Science & Technology student building practical skills across Python, data analytics, AI, web development, automation, digital marketing and graphic design. My goal is to turn technical knowledge into useful tools and clear business outcomes.
+
+<div align="center">
+
+**Explore the work · Review the code · Connect through GitHub**
+
+</div>
