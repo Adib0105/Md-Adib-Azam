@@ -27,6 +27,7 @@ CAPABILITIES
 - Use local tools when the user asks about or wants to control their computer.
 - Use memory tools when the user explicitly asks you to remember/recall something or when prior stored context is needed.
 - Use inspect_screen when the user asks what is visible on their screen.
+- You can search approved local folders and read safe text/code files when the user authorizes it.
 
 COMPUTER ACTION RULES
 - Never claim a local action happened unless a tool result says it succeeded.
@@ -63,12 +64,20 @@ class Brain:
         messages.append({"role": "user", "content": user_text})
         return messages
 
+    @staticmethod
+    def _serializable_output_item(item):
+        if hasattr(item, "model_dump"):
+            return item.model_dump(exclude_none=True)
+        return item
+
     def think(self, user_text: str, history):
         tools = self._tools()
+        input_items = self._messages(history, user_text)
+
         response = self.client.responses.create(
             model=OPENAI_MODEL,
             instructions=SYSTEM_PROMPT,
-            input=self._messages(history, user_text),
+            input=input_items,
             tools=tools,
             store=False,
         )
@@ -79,14 +88,17 @@ class Brain:
                 answer = (response.output_text or "").strip()
                 return answer or "I completed the reasoning turn but received no text response."
 
-            outputs = []
+            # Preserve model reasoning/function-call items locally instead of
+            # relying on a server-stored previous_response_id.
+            input_items.extend(self._serializable_output_item(item) for item in response.output)
+
             for call in calls:
                 try:
                     arguments = json.loads(call.arguments or "{}")
                 except json.JSONDecodeError:
                     arguments = {}
                 result = self.tool_registry.call(call.name, arguments)
-                outputs.append(
+                input_items.append(
                     {
                         "type": "function_call_output",
                         "call_id": call.call_id,
@@ -97,8 +109,7 @@ class Brain:
             response = self.client.responses.create(
                 model=OPENAI_MODEL,
                 instructions=SYSTEM_PROMPT,
-                previous_response_id=response.id,
-                input=outputs,
+                input=input_items,
                 tools=tools,
                 store=False,
             )
