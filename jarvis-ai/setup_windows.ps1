@@ -10,11 +10,21 @@ $PythonLauncher = if (Get-Command py -ErrorAction SilentlyContinue) { "py" } els
 
 if (-not (Test-Path ".venv")) {
     & $PythonLauncher -m venv .venv
+    if ($LASTEXITCODE -ne 0) { throw "Failed to create .venv." }
 }
 
 $VenvPython = Join-Path $PWD ".venv\Scripts\python.exe"
+if (-not (Test-Path $VenvPython)) {
+    throw "Virtual environment Python was not found at $VenvPython"
+}
+
 & $VenvPython -m pip install --upgrade pip
+if ($LASTEXITCODE -ne 0) { throw "pip upgrade failed." }
+
 & $VenvPython -m pip install -r requirements.txt
+if ($LASTEXITCODE -ne 0) {
+    throw "Dependency installation failed. Setup stopped; fix the error above and run this script again."
+}
 
 if (-not (Test-Path ".env")) {
     Copy-Item ".env.example" ".env"
