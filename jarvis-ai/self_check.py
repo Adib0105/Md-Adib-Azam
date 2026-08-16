@@ -30,9 +30,10 @@ def main():
         results.append(check("Desktop automation", False, str(exc)))
 
     try:
-        import speech_recognition as sr
-        microphones = sr.Microphone.list_microphone_names()
-        results.append(check("Microphone detection", bool(microphones), f"{len(microphones)} device(s)"))
+        import sounddevice as sd
+        devices = sd.query_devices()
+        inputs = [d for d in devices if d.get("max_input_channels", 0) > 0]
+        results.append(check("Microphone detection", bool(inputs), f"{len(inputs)} input device(s)"))
     except Exception as exc:
         results.append(check("Microphone detection", False, str(exc)))
 
