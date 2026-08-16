@@ -18,6 +18,7 @@ SCREENSHOT_DIR.mkdir(exist_ok=True)
 REQUIRE_CONFIRMATION = os.getenv("REQUIRE_CONFIRMATION", "true").lower() == "true"
 ENABLE_WEB_SEARCH = os.getenv("ENABLE_WEB_SEARCH", "true").lower() == "true"
 ENABLE_SCREEN_VISION = os.getenv("ENABLE_SCREEN_VISION", "true").lower() == "true"
+ENABLE_CODE_INTERPRETER = os.getenv("ENABLE_CODE_INTERPRETER", "true").lower() == "true"
 MAX_TOOL_STEPS = int(os.getenv("MAX_TOOL_STEPS", "8"))
 WAKE_WORDS = tuple(
     w.strip().lower()
