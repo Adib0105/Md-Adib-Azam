@@ -1,6 +1,7 @@
 import json
 
 from config import ENABLE_SCREEN_VISION
+from local_files import LocalFileAccess
 from permissions import PermissionGate
 from vision import ScreenVision
 
@@ -11,6 +12,7 @@ class ToolRegistry:
         self.memory = memory
         self.permissions = PermissionGate(confirm_callback)
         self.vision = ScreenVision() if ENABLE_SCREEN_VISION else None
+        self.local_files = LocalFileAccess()
 
     def schemas(self):
         return [
@@ -69,7 +71,7 @@ class ToolRegistry:
             {
                 "type": "function",
                 "name": "mouse_click",
-                "description": "Click an exact screen coordinate. Use screen inspection first when location is uncertain. Requires approval.",
+                "description": "Click an exact screen coordinate. Never use guessed coordinates. Requires approval.",
                 "parameters": {
                     "type": "object",
                     "properties": {
@@ -161,6 +163,40 @@ class ToolRegistry:
             },
             {
                 "type": "function",
+                "name": "list_local_roots",
+                "description": "List the local folders JARVIS is permitted to search/read.",
+                "parameters": {"type": "object", "properties": {}, "additionalProperties": False},
+            },
+            {
+                "type": "function",
+                "name": "search_local_files",
+                "description": "Search approved Desktop/Documents/Downloads roots by filename. Read-only and approval-gated.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "query": {"type": "string"},
+                        "max_results": {"type": "integer", "minimum": 1, "maximum": 50},
+                    },
+                    "required": ["query", "max_results"],
+                    "additionalProperties": False,
+                },
+            },
+            {
+                "type": "function",
+                "name": "read_local_text_file",
+                "description": "Read a safe text/code file inside an approved local root. Secret-like paths and binary docs are blocked. Requires approval.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "file_path": {"type": "string"},
+                        "max_chars": {"type": "integer", "minimum": 1000, "maximum": 50000},
+                    },
+                    "required": ["file_path", "max_chars"],
+                    "additionalProperties": False,
+                },
+            },
+            {
+                "type": "function",
                 "name": "lock_pc",
                 "description": "Lock the Windows workstation. Requires user approval.",
                 "parameters": {"type": "object", "properties": {}, "additionalProperties": False},
@@ -188,6 +224,9 @@ class ToolRegistry:
                 "write_clipboard": lambda: self.computer.write_clipboard(arguments["text"]),
                 "remember_fact": lambda: self.memory.remember_fact(arguments["fact"]),
                 "recall_memory": lambda: self.memory.recall(arguments["query"]),
+                "list_local_roots": lambda: self.local_files.roots_info(),
+                "search_local_files": lambda: self.local_files.search(arguments["query"], arguments["max_results"]),
+                "read_local_text_file": lambda: self.local_files.read_text(arguments["file_path"], arguments["max_chars"]),
                 "lock_pc": lambda: self.computer.lock_pc(),
             }
             handler = handlers.get(name)
