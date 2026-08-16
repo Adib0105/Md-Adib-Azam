@@ -10,6 +10,7 @@ from config import (
     MAX_TOOL_STEPS,
     OPENAI_API_KEY,
     OPENAI_MODEL,
+    REASONING_EFFORT,
     USER_NAME,
 )
 
@@ -75,17 +76,20 @@ class Brain:
             return item.model_dump(exclude_none=True)
         return item
 
-    def think(self, user_text: str, history):
-        tools = self._tools()
-        input_items = self._messages(history, user_text)
-
-        response = self.client.responses.create(
+    def _create_response(self, input_items, tools):
+        return self.client.responses.create(
             model=OPENAI_MODEL,
+            reasoning={"effort": REASONING_EFFORT},
             instructions=SYSTEM_PROMPT,
             input=input_items,
             tools=tools,
             store=False,
         )
+
+    def think(self, user_text: str, history):
+        tools = self._tools()
+        input_items = self._messages(history, user_text)
+        response = self._create_response(input_items, tools)
 
         for _step in range(MAX_TOOL_STEPS):
             calls = [item for item in response.output if getattr(item, "type", None) == "function_call"]
@@ -111,12 +115,6 @@ class Brain:
                     }
                 )
 
-            response = self.client.responses.create(
-                model=OPENAI_MODEL,
-                instructions=SYSTEM_PROMPT,
-                input=input_items,
-                tools=tools,
-                store=False,
-            )
+            response = self._create_response(input_items, tools)
 
         return "Tool-step limit reached. I stopped safely instead of continuing an uncontrolled action chain."
