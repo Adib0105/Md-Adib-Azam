@@ -24,3 +24,9 @@ WAKE_WORDS = tuple(
     for w in os.getenv("WAKE_WORDS", "jarvis,hey jarvis,ok jarvis").split(",")
     if w.strip()
 )
+
+_raw_roots = os.getenv("ALLOWED_FILE_ROOTS", "").strip()
+if _raw_roots:
+    ALLOWED_FILE_ROOTS = tuple(Path(p.strip()).expanduser() for p in _raw_roots.split(";") if p.strip())
+else:
+    ALLOWED_FILE_ROOTS = tuple(Path.home() / name for name in ("Desktop", "Documents", "Downloads"))
