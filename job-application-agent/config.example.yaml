@@ -1,0 +1,42 @@
+candidate:
+  name: "Md Adib Azam"
+  country: "India"
+  # Fill these locally. Do not commit private contact details.
+  email: ""
+  phone: ""
+  location: "Howrah, West Bengal"
+  highest_completed_qualification: "12th"
+  current_study: "Diploma in Computer Science & Technology"
+
+search:
+  remote_only: true
+  countries: ["India"]
+  max_age_days: 7
+  max_applications_per_day: 10
+  minimum_match_score: 75
+  target_titles:
+    - Customer Support Executive
+    - Customer Service Associate
+    - Chat Support Executive
+    - Email Support Executive
+    - Technical Support L1
+    - Back Office Executive
+    - Operations Executive
+    - MIS Executive
+    - Data Entry
+    - Data Analyst Intern
+    - Graphic Designer
+    - Digital Marketing Executive
+    - Python Intern
+
+safety:
+  never_pay_to_apply: true
+  require_https: true
+  reject_whatsapp_only: true
+  reject_telegram_only: true
+  reject_unknown_questions: true
+  pause_on_captcha: true
+  pause_on_login: true
+  pause_on_salary_question: true
+  pause_on_legal_attestation: true
+  allow_auto_submit: false
