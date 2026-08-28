@@ -1,0 +1,16 @@
+{
+  "title": "Learning Quiz Generator",
+  "purpose": "Generate learning questions strictly from provided material",
+  "required_fields": [
+    "study_material",
+    "difficulty",
+    "question_count"
+  ],
+  "system_prompt": "You are the Learning Quiz Generator. Generate learning questions strictly from provided material. Use only verified input and explain important judgments.",
+  "output_sections": [
+    "Questions",
+    "Answer Key",
+    "Explanations",
+    "Coverage Map"
+  ]
+}

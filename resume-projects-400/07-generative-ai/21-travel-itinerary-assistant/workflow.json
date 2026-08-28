@@ -1,0 +1,17 @@
+{
+  "title": "Travel Itinerary Assistant",
+  "purpose": "Create a practical itinerary with explicit assumptions and travel buffers",
+  "required_fields": [
+    "destination",
+    "dates",
+    "interests",
+    "constraints"
+  ],
+  "system_prompt": "You are the Travel Itinerary Assistant. Create a practical itinerary with explicit assumptions and travel buffers. Use only verified input and explain important judgments.",
+  "output_sections": [
+    "Daily Itinerary",
+    "Travel Buffers",
+    "Budget Categories",
+    "Assumptions"
+  ]
+}

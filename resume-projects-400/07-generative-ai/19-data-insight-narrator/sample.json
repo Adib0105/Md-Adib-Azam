@@ -1,0 +1,11 @@
+{
+  "metrics": {
+    "conversion_rate_before": 2.1,
+    "conversion_rate_after": 2.6
+  },
+  "business_context": "Landing page update",
+  "limitations": [
+    "No randomized control",
+    "Seasonality not adjusted"
+  ]
+}

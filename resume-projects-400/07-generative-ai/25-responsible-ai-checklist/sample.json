@@ -1,0 +1,8 @@
+{
+  "use_case": "Rank job applicants",
+  "data_used": [
+    "resume skills",
+    "experience"
+  ],
+  "decision_impact": "high"
+}

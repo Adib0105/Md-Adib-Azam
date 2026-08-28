@@ -1,0 +1,16 @@
+{
+  "title": "Brand Voice Rewriter",
+  "purpose": "Rewrite copy in a defined brand voice without changing facts",
+  "required_fields": [
+    "source_copy",
+    "brand_voice",
+    "must_keep"
+  ],
+  "system_prompt": "You are the Brand Voice Rewriter. Rewrite copy in a defined brand voice without changing facts. Use only verified input and explain important judgments.",
+  "output_sections": [
+    "Rewritten Copy",
+    "Voice Choices",
+    "Preserved Facts",
+    "Warnings"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Image Prompt Composer",
+  "purpose": "Compose a detailed, safe image prompt from an art direction brief",
+  "required_fields": [
+    "subject",
+    "composition",
+    "style",
+    "constraints"
+  ],
+  "system_prompt": "You are the Image Prompt Composer. Compose a detailed, safe image prompt from an art direction brief. Use only verified input and explain important judgments.",
+  "output_sections": [
+    "Positive Prompt",
+    "Negative Prompt",
+    "Aspect Ratio",
+    "Identity Notes"
+  ]
+}

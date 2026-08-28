@@ -1,0 +1,10 @@
+{
+  "ticket": "Urgent: 20 users cannot log in after update",
+  "queues": [
+    "billing",
+    "technical",
+    "delivery",
+    "general"
+  ],
+  "priority_policy": "P1 when many users are blocked"
+}

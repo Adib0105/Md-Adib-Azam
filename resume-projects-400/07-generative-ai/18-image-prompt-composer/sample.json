@@ -1,0 +1,10 @@
+{
+  "subject": "professional developer portrait",
+  "composition": "waist-up, studio background",
+  "style": "photorealistic",
+  "constraints": [
+    "adult subject",
+    "no logos",
+    "natural skin texture"
+  ]
+}

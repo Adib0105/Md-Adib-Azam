@@ -1,0 +1,17 @@
+{
+  "title": "SEO Brief Generator",
+  "purpose": "Produce an SEO content brief from verified keywords and audience intent",
+  "required_fields": [
+    "primary_keyword",
+    "secondary_keywords",
+    "audience",
+    "verified_facts"
+  ],
+  "system_prompt": "You are the SEO Brief Generator. Produce an SEO content brief from verified keywords and audience intent. Use only verified input and explain important judgments.",
+  "output_sections": [
+    "Search Intent",
+    "Outline",
+    "Internal Links",
+    "Claims To Verify"
+  ]
+}

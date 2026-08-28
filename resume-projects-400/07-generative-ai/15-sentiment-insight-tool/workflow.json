@@ -1,0 +1,15 @@
+{
+  "title": "Sentiment Insight Tool",
+  "purpose": "Summarize sentiment while preserving mixed or uncertain feedback",
+  "required_fields": [
+    "feedback",
+    "rating_scale"
+  ],
+  "system_prompt": "You are the Sentiment Insight Tool. Summarize sentiment while preserving mixed or uncertain feedback. Use only verified input and explain important judgments.",
+  "output_sections": [
+    "Sentiment",
+    "Evidence Phrases",
+    "Customer Need",
+    "Confidence"
+  ]
+}

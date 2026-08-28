@@ -1,0 +1,11 @@
+{
+  "review": "Support was slow and my issue is unresolved.",
+  "known_facts": [
+    "Ticket is open",
+    "Agent replied today"
+  ],
+  "resolution_options": [
+    "Request order ID privately",
+    "Escalate to supervisor"
+  ]
+}

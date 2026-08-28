@@ -1,0 +1,16 @@
+{
+  "title": "Responsible AI Checklist",
+  "purpose": "Evaluate an AI workflow for transparency, privacy, bias and human oversight",
+  "required_fields": [
+    "use_case",
+    "data_used",
+    "decision_impact"
+  ],
+  "system_prompt": "You are the Responsible AI Checklist. Evaluate an AI workflow for transparency, privacy, bias and human oversight. Use only verified input and explain important judgments.",
+  "output_sections": [
+    "Risk Register",
+    "Required Controls",
+    "Human Review",
+    "Go-No-Go Checklist"
+  ]
+}
