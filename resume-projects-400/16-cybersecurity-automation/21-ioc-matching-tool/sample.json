@@ -1,0 +1,26 @@
+{
+  "watchlist": [
+    {
+      "id": "IOC-1",
+      "type": "sha256",
+      "value": "abc123",
+      "confidence": "medium"
+    },
+    {
+      "id": "IOC-2",
+      "type": "domain",
+      "value": "bad.example",
+      "confidence": "high"
+    }
+  ],
+  "observables": [
+    {
+      "type": "sha256",
+      "value": "ABC123"
+    },
+    {
+      "type": "domain",
+      "value": "safe.example"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "findings": [
+    {
+      "id": "F1",
+      "title": "MFA missing",
+      "severity": "high",
+      "status": "open",
+      "due": "2026-09-01"
+    },
+    {
+      "id": "F2",
+      "title": "Old backup",
+      "severity": "medium",
+      "status": "closed",
+      "due": "2026-08-25"
+    },
+    {
+      "id": "F3",
+      "title": "TLS expiry",
+      "severity": "critical",
+      "status": "open",
+      "due": "2026-08-29"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "baseline": {
+    "server": {
+      "debug": false,
+      "tls_min": "1.2"
+    },
+    "logging": {
+      "enabled": true
+    }
+  },
+  "current": {
+    "server": {
+      "debug": true,
+      "tls_min": "1.2"
+    },
+    "logging": {
+      "enabled": true
+    },
+    "feature": {
+      "beta": true
+    }
+  }
+}

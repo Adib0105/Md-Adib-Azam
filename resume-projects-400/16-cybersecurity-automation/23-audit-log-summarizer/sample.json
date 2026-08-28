@@ -1,0 +1,19 @@
+{
+  "events": [
+    {
+      "actor": "adib",
+      "action": "login",
+      "outcome": "success"
+    },
+    {
+      "actor": "service",
+      "action": "export",
+      "outcome": "success"
+    },
+    {
+      "actor": "unknown",
+      "action": "login",
+      "outcome": "failure"
+    }
+  ]
+}
