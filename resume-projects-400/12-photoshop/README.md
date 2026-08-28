@@ -1,6 +1,6 @@
 # Photoshop - 25 Manual Upload Slots
 
-**No AI-generated or placeholder creative work has been added.** Each numbered folder is intentionally empty except for the .gitkeep marker, so Md Adib Azam can upload his own original project file.
+Each numbered folder is a clean space reserved for Md Adib Azam's finished Photoshop project file. Until that file is added, the folder contains only its .gitkeep marker.
 
 | # | Folder | Status |
 |---:|---|---|

@@ -1,27 +1,27 @@
 <div align="center">
 
-# Resume Skills Portfolio
+# Md Adib Azam — Resume Project Collection
 
-### 275 implemented technical projects + 125 owner-upload slots
+### 400 organized projects across 16 skill tracks
 
-![Technical Projects](https://img.shields.io/badge/Implemented_&_Tested-275-16A34A?style=for-the-badge)
-![Manual Slots](https://img.shields.io/badge/Manual_Upload_Slots-125-2563EB?style=for-the-badge)
-![Tracks](https://img.shields.io/badge/Resume_Tracks-16-7C3AED?style=for-the-badge)
+![Technical Projects](https://img.shields.io/badge/Working_&_Tested-275-16A34A?style=for-the-badge)
+![Creative Spaces](https://img.shields.io/badge/Creative_Upload_Spaces-125-E11D48?style=for-the-badge)
+![Tracks](https://img.shields.io/badge/Skill_Tracks-16-7C3AED?style=for-the-badge)
 
-Built from the project-capable skills and certifications listed in **Md Adib Azam's resume**.
+My hands-on collection for the skills and certifications listed in my resume.
 
 [Complete 400-item index](PROJECT_INDEX.md) · [Verification guide](QUALITY_REPORT.md)
 
 </div>
 
-## Honest scope
+## How the collection is organized
 
-- Tracks 01-10 and 16 contain **275 implemented mini-projects** with title-specific code, data, formulas, tests or evaluation packs.
-- Tracks 11-15 contain **125 intentionally empty upload folders**. Md Adib Azam will add his original Canva, Photoshop, Illustrator, video-editing and digital-marketing files.
-- The creative upload slots contain no generated artwork, campaign copy or fake case studies.
-- Earlier repository projects outside this collection remain untouched.
+- Tracks 01-10 and 16 contain **275 working mini-projects** with project-specific code, data, formulas, tests or evaluation packs.
+- Tracks 11-15 contain **125 clean upload folders** reserved for my Canva, Photoshop, Illustrator, video-editing and digital-marketing files.
+- Each technical track includes its own project list and run instructions.
+- The collection-wide checker validates the structure, links and technical evidence.
 
-## All resume tracks
+## Explore all tracks
 
 | # | Track | Items | Status | Verification |
 |---:|---|---:|---|---|
@@ -42,7 +42,7 @@ Built from the project-capable skills and certifications listed in **Md Adib Aza
 | 15 | [Digital Marketing](15-digital-marketing/) | 25 | Manual upload slot | Original files supplied by owner |
 | 16 | [Cybersecurity & Automation](16-cybersecurity-automation/) | 25 | Implemented & tested | 25 offline tests + 25 CLI runs |
 
-## Verification highlights
+## Technical highlights
 
 - Python: 25 unique standard-library applications, samples and unit tests
 - C: 25 distinct programs compiled with strict C11 warnings enabled
@@ -56,8 +56,18 @@ Built from the project-capable skills and certifications listed in **Md Adib Aza
 - Excel/MS Office: 25 real XLSX workbooks, 900 formulas, 25 native charts and 50 rendered sheet checks
 - Cybersecurity: 25 defensive, offline tools with automated tests; no exploitation or unauthorized scanning
 
-## Start
+## Check the collection
 
     python verify_portfolio.py
 
 Open any track README for its exact project list and run instructions.
+
+---
+
+<div align="center">
+
+**Personal project collection of Md Adib Azam**
+
+[Back to main portfolio](../README.md) · [Open all 400 items](PROJECT_INDEX.md)
+
+</div>
