@@ -1,0 +1,2504 @@
+{
+  "author": "Md Adib Azam",
+  "implemented_projects": 275,
+  "manual_upload_slots": 125,
+  "total_organized_items": 400,
+  "tracks": {
+    "01-python": {
+      "label": "Python",
+      "status": "Implemented & tested",
+      "projects": [
+        {
+          "number": 1,
+          "title": "Expense Tracker CLI",
+          "path": "01-python/01-expense-tracker-cli",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 2,
+          "title": "Smart File Organizer",
+          "path": "01-python/02-smart-file-organizer",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 3,
+          "title": "Invoice Generator",
+          "path": "01-python/03-invoice-generator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 4,
+          "title": "Attendance Manager",
+          "path": "01-python/04-attendance-manager",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 5,
+          "title": "Contact Book",
+          "path": "01-python/05-contact-book",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 6,
+          "title": "Password Strength Checker",
+          "path": "01-python/06-password-strength-checker",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 7,
+          "title": "Weather Data Parser",
+          "path": "01-python/07-weather-data-parser",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 8,
+          "title": "Bulk File Renamer",
+          "path": "01-python/08-bulk-file-renamer",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 9,
+          "title": "Web Log Analyzer",
+          "path": "01-python/09-web-log-analyzer",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 10,
+          "title": "Quiz Engine",
+          "path": "01-python/10-quiz-engine",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 11,
+          "title": "Inventory Manager",
+          "path": "01-python/11-inventory-manager",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 12,
+          "title": "URL Health Monitor",
+          "path": "01-python/12-url-health-monitor",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 13,
+          "title": "Duplicate File Finder",
+          "path": "01-python/13-duplicate-file-finder",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 14,
+          "title": "CSV Cleaner",
+          "path": "01-python/14-csv-cleaner",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 15,
+          "title": "Task Scheduler",
+          "path": "01-python/15-task-scheduler",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 16,
+          "title": "Extractive Text Summarizer",
+          "path": "01-python/16-extractive-text-summarizer",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 17,
+          "title": "Personal Budget Planner",
+          "path": "01-python/17-personal-budget-planner",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 18,
+          "title": "Email Template Builder",
+          "path": "01-python/18-email-template-builder",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 19,
+          "title": "Library Management System",
+          "path": "01-python/19-library-management-system",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 20,
+          "title": "Student Grade Calculator",
+          "path": "01-python/20-student-grade-calculator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 21,
+          "title": "Backup Utility",
+          "path": "01-python/21-backup-utility",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 22,
+          "title": "API Response Validator",
+          "path": "01-python/22-api-response-validator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 23,
+          "title": "Resume Keyword Scanner",
+          "path": "01-python/23-resume-keyword-scanner",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 24,
+          "title": "Helpdesk Ticket Router",
+          "path": "01-python/24-helpdesk-ticket-router",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 25,
+          "title": "Automation Report Generator",
+          "path": "01-python/25-automation-report-generator",
+          "status": "Implemented & tested"
+        }
+      ]
+    },
+    "02-c-language": {
+      "label": "C Language",
+      "status": "Implemented & tested",
+      "projects": [
+        {
+          "number": 1,
+          "title": "Employee Record System",
+          "path": "02-c-language/01-employee-record-system",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 2,
+          "title": "Bank Account Simulator",
+          "path": "02-c-language/02-bank-account-simulator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 3,
+          "title": "Student Result Manager",
+          "path": "02-c-language/03-student-result-manager",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 4,
+          "title": "Inventory Console",
+          "path": "02-c-language/04-inventory-console",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 5,
+          "title": "Library Catalog",
+          "path": "02-c-language/05-library-catalog",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 6,
+          "title": "Hospital Queue Manager",
+          "path": "02-c-language/06-hospital-queue-manager",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 7,
+          "title": "Matrix Calculator",
+          "path": "02-c-language/07-matrix-calculator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 8,
+          "title": "Caesar Cipher Demo",
+          "path": "02-c-language/08-caesar-cipher-demo",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 9,
+          "title": "Contact Directory",
+          "path": "02-c-language/09-contact-directory",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 10,
+          "title": "Expense Ledger",
+          "path": "02-c-language/10-expense-ledger",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 11,
+          "title": "Voting System",
+          "path": "02-c-language/11-voting-system",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 12,
+          "title": "Bus Reservation System",
+          "path": "02-c-language/12-bus-reservation-system",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 13,
+          "title": "Payroll Calculator",
+          "path": "02-c-language/13-payroll-calculator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 14,
+          "title": "Number Base Converter",
+          "path": "02-c-language/14-number-base-converter",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 15,
+          "title": "Text Statistics Tool",
+          "path": "02-c-language/15-text-statistics-tool",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 16,
+          "title": "Quiz Game",
+          "path": "02-c-language/16-quiz-game",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 17,
+          "title": "Calendar Generator",
+          "path": "02-c-language/17-calendar-generator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 18,
+          "title": "Unit Converter",
+          "path": "02-c-language/18-unit-converter",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 19,
+          "title": "Sorting Benchmark",
+          "path": "02-c-language/19-sorting-benchmark",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 20,
+          "title": "Sparse Matrix Toolkit",
+          "path": "02-c-language/20-sparse-matrix-toolkit",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 21,
+          "title": "Stack Expression Evaluator",
+          "path": "02-c-language/21-stack-expression-evaluator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 22,
+          "title": "Linked List Playlist",
+          "path": "02-c-language/22-linked-list-playlist",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 23,
+          "title": "Binary Search Directory",
+          "path": "02-c-language/23-binary-search-directory",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 24,
+          "title": "Command Parser",
+          "path": "02-c-language/24-command-parser",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 25,
+          "title": "Data Structure Benchmark",
+          "path": "02-c-language/25-data-structure-benchmark",
+          "status": "Implemented & tested"
+        }
+      ]
+    },
+    "03-java": {
+      "label": "Java",
+      "status": "Implemented & tested",
+      "projects": [
+        {
+          "number": 1,
+          "title": "Customer Feedback Analyzer",
+          "path": "03-java/01-customer-feedback-analyzer",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 2,
+          "title": "Banking Console",
+          "path": "03-java/02-banking-console",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 3,
+          "title": "Student Registry",
+          "path": "03-java/03-student-registry",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 4,
+          "title": "Inventory Service",
+          "path": "03-java/04-inventory-service",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 5,
+          "title": "Employee Payroll",
+          "path": "03-java/05-employee-payroll",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 6,
+          "title": "Library Lending System",
+          "path": "03-java/06-library-lending-system",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 7,
+          "title": "Hotel Booking Console",
+          "path": "03-java/07-hotel-booking-console",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 8,
+          "title": "Expense Manager",
+          "path": "03-java/08-expense-manager",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 9,
+          "title": "Quiz Application",
+          "path": "03-java/09-quiz-application",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 10,
+          "title": "Contact Manager",
+          "path": "03-java/10-contact-manager",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 11,
+          "title": "Ticket Priority Engine",
+          "path": "03-java/11-ticket-priority-engine",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 12,
+          "title": "Ecommerce Cart",
+          "path": "03-java/12-ecommerce-cart",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 13,
+          "title": "Password Policy Validator",
+          "path": "03-java/13-password-policy-validator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 14,
+          "title": "Text Search Engine",
+          "path": "03-java/14-text-search-engine",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 15,
+          "title": "CSV Report Builder",
+          "path": "03-java/15-csv-report-builder",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 16,
+          "title": "Attendance Tracker",
+          "path": "03-java/16-attendance-tracker",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 17,
+          "title": "Vehicle Rental System",
+          "path": "03-java/17-vehicle-rental-system",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 18,
+          "title": "Restaurant Order Manager",
+          "path": "03-java/18-restaurant-order-manager",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 19,
+          "title": "Task Board",
+          "path": "03-java/19-task-board",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 20,
+          "title": "File Organizer",
+          "path": "03-java/20-file-organizer",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 21,
+          "title": "Chat Message Model",
+          "path": "03-java/21-chat-message-model",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 22,
+          "title": "URL Validator",
+          "path": "03-java/22-url-validator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 23,
+          "title": "Sales Commission Calculator",
+          "path": "03-java/23-sales-commission-calculator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 24,
+          "title": "Support SLA Calculator",
+          "path": "03-java/24-support-sla-calculator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 25,
+          "title": "Digital Service Registry",
+          "path": "03-java/25-digital-service-registry",
+          "status": "Implemented & tested"
+        }
+      ]
+    },
+    "04-web-development": {
+      "label": "Web Development",
+      "status": "Implemented & tested",
+      "projects": [
+        {
+          "number": 1,
+          "title": "Responsive Portfolio",
+          "path": "04-web-development/01-responsive-portfolio",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 2,
+          "title": "Customer Support Dashboard",
+          "path": "04-web-development/02-customer-support-dashboard",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 3,
+          "title": "Digital Seva Portal",
+          "path": "04-web-development/03-digital-seva-portal",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 4,
+          "title": "Weather Dashboard",
+          "path": "04-web-development/04-weather-dashboard",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 5,
+          "title": "Expense Tracker UI",
+          "path": "04-web-development/05-expense-tracker-ui",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 6,
+          "title": "Job Application Tracker",
+          "path": "04-web-development/06-job-application-tracker",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 7,
+          "title": "Product Landing Page",
+          "path": "04-web-development/07-product-landing-page",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 8,
+          "title": "Restaurant Website",
+          "path": "04-web-development/08-restaurant-website",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 9,
+          "title": "Education Portal",
+          "path": "04-web-development/09-education-portal",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 10,
+          "title": "Event Registration Page",
+          "path": "04-web-development/10-event-registration-page",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 11,
+          "title": "Admin Dashboard",
+          "path": "04-web-development/11-admin-dashboard",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 12,
+          "title": "Ecommerce Product Page",
+          "path": "04-web-development/12-ecommerce-product-page",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 13,
+          "title": "Blog Reader",
+          "path": "04-web-development/13-blog-reader",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 14,
+          "title": "Quiz Web App",
+          "path": "04-web-development/14-quiz-web-app",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 15,
+          "title": "Todo Kanban Board",
+          "path": "04-web-development/15-todo-kanban-board",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 16,
+          "title": "BMI Calculator",
+          "path": "04-web-development/16-bmi-calculator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 17,
+          "title": "Currency Converter",
+          "path": "04-web-development/17-currency-converter",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 18,
+          "title": "Accessible Image Gallery",
+          "path": "04-web-development/18-accessible-image-gallery",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 19,
+          "title": "FAQ Search Interface",
+          "path": "04-web-development/19-faq-search-interface",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 20,
+          "title": "CRM Lead Board",
+          "path": "04-web-development/20-crm-lead-board",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 21,
+          "title": "Analytics KPI Dashboard",
+          "path": "04-web-development/21-analytics-kpi-dashboard",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 22,
+          "title": "Cybersecurity Awareness Site",
+          "path": "04-web-development/22-cybersecurity-awareness-site",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 23,
+          "title": "Resume Builder UI",
+          "path": "04-web-development/23-resume-builder-ui",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 24,
+          "title": "Appointment Booking Page",
+          "path": "04-web-development/24-appointment-booking-page",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 25,
+          "title": "Agency Service Website",
+          "path": "04-web-development/25-agency-service-website",
+          "status": "Implemented & tested"
+        }
+      ]
+    },
+    "05-wordpress": {
+      "label": "WordPress",
+      "status": "Implemented & tested",
+      "projects": [
+        {
+          "number": 1,
+          "title": "Local Business Toolkit",
+          "path": "05-wordpress/01-local-business-toolkit",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 2,
+          "title": "Digital Agency Lead Form",
+          "path": "05-wordpress/02-digital-agency-lead-form",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 3,
+          "title": "Education Course Cards",
+          "path": "05-wordpress/03-education-course-cards",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 4,
+          "title": "News Magazine Grid",
+          "path": "05-wordpress/04-news-magazine-grid",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 5,
+          "title": "Job Listing Board",
+          "path": "05-wordpress/05-job-listing-board",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 6,
+          "title": "Service Booking Form",
+          "path": "05-wordpress/06-service-booking-form",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 7,
+          "title": "Restaurant Menu Manager",
+          "path": "05-wordpress/07-restaurant-menu-manager",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 8,
+          "title": "Portfolio Project Grid",
+          "path": "05-wordpress/08-portfolio-project-grid",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 9,
+          "title": "WooCommerce Offer Banner",
+          "path": "05-wordpress/09-woocommerce-offer-banner",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 10,
+          "title": "Travel Itinerary Cards",
+          "path": "05-wordpress/10-travel-itinerary-cards",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 11,
+          "title": "Real Estate Listings",
+          "path": "05-wordpress/11-real-estate-listings",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 12,
+          "title": "NGO Donation CTA",
+          "path": "05-wordpress/12-ngo-donation-cta",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 13,
+          "title": "Online Course Hub",
+          "path": "05-wordpress/13-online-course-hub",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 14,
+          "title": "Clinic Appointment Request",
+          "path": "05-wordpress/14-clinic-appointment-request",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 15,
+          "title": "Photography Gallery",
+          "path": "05-wordpress/15-photography-gallery",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 16,
+          "title": "Community Notice Board",
+          "path": "05-wordpress/16-community-notice-board",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 17,
+          "title": "Membership Content Gate",
+          "path": "05-wordpress/17-membership-content-gate",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 18,
+          "title": "Event Registration Widget",
+          "path": "05-wordpress/18-event-registration-widget",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 19,
+          "title": "Multilingual Business Notice",
+          "path": "05-wordpress/19-multilingual-business-notice",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 20,
+          "title": "Affiliate Disclosure Box",
+          "path": "05-wordpress/20-affiliate-disclosure-box",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 21,
+          "title": "Customer Knowledge Base",
+          "path": "05-wordpress/21-customer-knowledge-base",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 22,
+          "title": "Lead Generation Calculator",
+          "path": "05-wordpress/22-lead-generation-calculator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 23,
+          "title": "Local Directory Cards",
+          "path": "05-wordpress/23-local-directory-cards",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 24,
+          "title": "Podcast Episode List",
+          "path": "05-wordpress/24-podcast-episode-list",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 25,
+          "title": "SEO Content Index",
+          "path": "05-wordpress/25-seo-content-index",
+          "status": "Implemented & tested"
+        }
+      ]
+    },
+    "06-mysql": {
+      "label": "MySQL",
+      "status": "Implemented & tested",
+      "projects": [
+        {
+          "number": 1,
+          "title": "Helpdesk Database",
+          "path": "06-mysql/01-helpdesk-database",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 2,
+          "title": "Student Information System",
+          "path": "06-mysql/02-student-information-system",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 3,
+          "title": "Retail Sales Warehouse",
+          "path": "06-mysql/03-retail-sales-warehouse",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 4,
+          "title": "Inventory Database",
+          "path": "06-mysql/04-inventory-database",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 5,
+          "title": "CRM Lead Database",
+          "path": "06-mysql/05-crm-lead-database",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 6,
+          "title": "Employee Attendance Database",
+          "path": "06-mysql/06-employee-attendance-database",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 7,
+          "title": "Library Lending Database",
+          "path": "06-mysql/07-library-lending-database",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 8,
+          "title": "Hospital Appointment Database",
+          "path": "06-mysql/08-hospital-appointment-database",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 9,
+          "title": "Ecommerce Order Database",
+          "path": "06-mysql/09-ecommerce-order-database",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 10,
+          "title": "Hotel Reservation Database",
+          "path": "06-mysql/10-hotel-reservation-database",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 11,
+          "title": "Expense Ledger Database",
+          "path": "06-mysql/11-expense-ledger-database",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 12,
+          "title": "Digital Service Database",
+          "path": "06-mysql/12-digital-service-database",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 13,
+          "title": "Job Application Database",
+          "path": "06-mysql/13-job-application-database",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 14,
+          "title": "Marketing Campaign Database",
+          "path": "06-mysql/14-marketing-campaign-database",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 15,
+          "title": "Customer Feedback Database",
+          "path": "06-mysql/15-customer-feedback-database",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 16,
+          "title": "Restaurant Order Database",
+          "path": "06-mysql/16-restaurant-order-database",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 17,
+          "title": "Course Enrollment Database",
+          "path": "06-mysql/17-course-enrollment-database",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 18,
+          "title": "Vehicle Rental Database",
+          "path": "06-mysql/18-vehicle-rental-database",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 19,
+          "title": "Event Registration Database",
+          "path": "06-mysql/19-event-registration-database",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 20,
+          "title": "Subscription Billing Database",
+          "path": "06-mysql/20-subscription-billing-database",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 21,
+          "title": "Warehouse Stock Database",
+          "path": "06-mysql/21-warehouse-stock-database",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 22,
+          "title": "Support SLA Analytics",
+          "path": "06-mysql/22-support-sla-analytics",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 23,
+          "title": "Product Review Database",
+          "path": "06-mysql/23-product-review-database",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 24,
+          "title": "Payroll Database",
+          "path": "06-mysql/24-payroll-database",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 25,
+          "title": "Data Quality Audit Database",
+          "path": "06-mysql/25-data-quality-audit-database",
+          "status": "Implemented & tested"
+        }
+      ]
+    },
+    "07-generative-ai": {
+      "label": "Generative AI",
+      "status": "Implemented & tested",
+      "projects": [
+        {
+          "number": 1,
+          "title": "AI Resume Builder",
+          "path": "07-generative-ai/01-ai-resume-builder",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 2,
+          "title": "Job Description Matcher",
+          "path": "07-generative-ai/02-job-description-matcher",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 3,
+          "title": "Customer Reply Assistant",
+          "path": "07-generative-ai/03-customer-reply-assistant",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 4,
+          "title": "FAQ Answer Generator",
+          "path": "07-generative-ai/04-faq-answer-generator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 5,
+          "title": "Marketing Copy Studio",
+          "path": "07-generative-ai/05-marketing-copy-studio",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 6,
+          "title": "Social Caption Generator",
+          "path": "07-generative-ai/06-social-caption-generator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 7,
+          "title": "Product Description Writer",
+          "path": "07-generative-ai/07-product-description-writer",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 8,
+          "title": "Email Draft Assistant",
+          "path": "07-generative-ai/08-email-draft-assistant",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 9,
+          "title": "Meeting Summary Assistant",
+          "path": "07-generative-ai/09-meeting-summary-assistant",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 10,
+          "title": "Study Plan Generator",
+          "path": "07-generative-ai/10-study-plan-generator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 11,
+          "title": "Interview Question Coach",
+          "path": "07-generative-ai/11-interview-question-coach",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 12,
+          "title": "Prompt Safety Checker",
+          "path": "07-generative-ai/12-prompt-safety-checker",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 13,
+          "title": "Document Tagging Assistant",
+          "path": "07-generative-ai/13-document-tagging-assistant",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 14,
+          "title": "Ticket Classification Assistant",
+          "path": "07-generative-ai/14-ticket-classification-assistant",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 15,
+          "title": "Sentiment Insight Tool",
+          "path": "07-generative-ai/15-sentiment-insight-tool",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 16,
+          "title": "Brand Voice Rewriter",
+          "path": "07-generative-ai/16-brand-voice-rewriter",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 17,
+          "title": "SEO Brief Generator",
+          "path": "07-generative-ai/17-seo-brief-generator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 18,
+          "title": "Image Prompt Composer",
+          "path": "07-generative-ai/18-image-prompt-composer",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 19,
+          "title": "Data Insight Narrator",
+          "path": "07-generative-ai/19-data-insight-narrator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 20,
+          "title": "Code Explanation Assistant",
+          "path": "07-generative-ai/20-code-explanation-assistant",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 21,
+          "title": "Travel Itinerary Assistant",
+          "path": "07-generative-ai/21-travel-itinerary-assistant",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 22,
+          "title": "Learning Quiz Generator",
+          "path": "07-generative-ai/22-learning-quiz-generator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 23,
+          "title": "Proposal Draft Assistant",
+          "path": "07-generative-ai/23-proposal-draft-assistant",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 24,
+          "title": "Review Response Assistant",
+          "path": "07-generative-ai/24-review-response-assistant",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 25,
+          "title": "Responsible AI Checklist",
+          "path": "07-generative-ai/25-responsible-ai-checklist",
+          "status": "Implemented & tested"
+        }
+      ]
+    },
+    "08-data-analytics": {
+      "label": "Data Analytics",
+      "status": "Implemented & tested",
+      "projects": [
+        {
+          "number": 1,
+          "title": "Retail Sales Analysis",
+          "path": "08-data-analytics/01-retail-sales-analysis",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 2,
+          "title": "Customer Churn Analysis",
+          "path": "08-data-analytics/02-customer-churn-analysis",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 3,
+          "title": "Ecommerce Funnel Analysis",
+          "path": "08-data-analytics/03-ecommerce-funnel-analysis",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 4,
+          "title": "Marketing ROI Dashboard",
+          "path": "08-data-analytics/04-marketing-roi-dashboard",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 5,
+          "title": "Expense Pattern Analysis",
+          "path": "08-data-analytics/05-expense-pattern-analysis",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 6,
+          "title": "HR Workforce Analytics",
+          "path": "08-data-analytics/06-hr-workforce-analytics",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 7,
+          "title": "Supply Chain Analysis",
+          "path": "08-data-analytics/07-supply-chain-analysis",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 8,
+          "title": "Student Performance Study",
+          "path": "08-data-analytics/08-student-performance-study",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 9,
+          "title": "Weather Trend Analysis",
+          "path": "08-data-analytics/09-weather-trend-analysis",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 10,
+          "title": "Customer Review Insights",
+          "path": "08-data-analytics/10-customer-review-insights",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 11,
+          "title": "Call Center KPI Analysis",
+          "path": "08-data-analytics/11-call-center-kpi-analysis",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 12,
+          "title": "Delivery SLA Analysis",
+          "path": "08-data-analytics/12-delivery-sla-analysis",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 13,
+          "title": "Inventory ABC Analysis",
+          "path": "08-data-analytics/13-inventory-abc-analysis",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 14,
+          "title": "Cohort Retention Study",
+          "path": "08-data-analytics/14-cohort-retention-study",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 15,
+          "title": "Pricing Sensitivity Analysis",
+          "path": "08-data-analytics/15-pricing-sensitivity-analysis",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 16,
+          "title": "Campaign Attribution",
+          "path": "08-data-analytics/16-campaign-attribution",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 17,
+          "title": "Fraud Pattern Detection",
+          "path": "08-data-analytics/17-fraud-pattern-detection",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 18,
+          "title": "Demand Forecast",
+          "path": "08-data-analytics/18-demand-forecast",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 19,
+          "title": "AB Test Analyzer",
+          "path": "08-data-analytics/19-ab-test-analyzer",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 20,
+          "title": "RFM Customer Segmentation",
+          "path": "08-data-analytics/20-rfm-customer-segmentation",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 21,
+          "title": "Product Basket Analysis",
+          "path": "08-data-analytics/21-product-basket-analysis",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 22,
+          "title": "Employee Attrition Study",
+          "path": "08-data-analytics/22-employee-attrition-study",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 23,
+          "title": "Support Ticket Analytics",
+          "path": "08-data-analytics/23-support-ticket-analytics",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 24,
+          "title": "Website Traffic Analysis",
+          "path": "08-data-analytics/24-website-traffic-analysis",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 25,
+          "title": "Executive KPI Scorecard",
+          "path": "08-data-analytics/25-executive-kpi-scorecard",
+          "status": "Implemented & tested"
+        }
+      ]
+    },
+    "09-prompt-engineering": {
+      "label": "Prompt Engineering",
+      "status": "Implemented & tested",
+      "projects": [
+        {
+          "number": 1,
+          "title": "Customer Support Prompt",
+          "path": "09-prompt-engineering/01-customer-support-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 2,
+          "title": "Data Analyst Prompt",
+          "path": "09-prompt-engineering/02-data-analyst-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 3,
+          "title": "Resume Reviewer Prompt",
+          "path": "09-prompt-engineering/03-resume-reviewer-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 4,
+          "title": "SQL Generator Prompt",
+          "path": "09-prompt-engineering/04-sql-generator-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 5,
+          "title": "SEO Strategist Prompt",
+          "path": "09-prompt-engineering/05-seo-strategist-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 6,
+          "title": "Graphic Design Brief Prompt",
+          "path": "09-prompt-engineering/06-graphic-design-brief-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 7,
+          "title": "Image Generation Prompt",
+          "path": "09-prompt-engineering/07-image-generation-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 8,
+          "title": "Code Review Prompt",
+          "path": "09-prompt-engineering/08-code-review-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 9,
+          "title": "Cybersecurity Triage Prompt",
+          "path": "09-prompt-engineering/09-cybersecurity-triage-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 10,
+          "title": "Meeting Summarizer Prompt",
+          "path": "09-prompt-engineering/10-meeting-summarizer-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 11,
+          "title": "Interview Coach Prompt",
+          "path": "09-prompt-engineering/11-interview-coach-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 12,
+          "title": "Marketing Campaign Prompt",
+          "path": "09-prompt-engineering/12-marketing-campaign-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 13,
+          "title": "Email Writer Prompt",
+          "path": "09-prompt-engineering/13-email-writer-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 14,
+          "title": "Research Assistant Prompt",
+          "path": "09-prompt-engineering/14-research-assistant-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 15,
+          "title": "Tutor Prompt",
+          "path": "09-prompt-engineering/15-tutor-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 16,
+          "title": "Translation QA Prompt",
+          "path": "09-prompt-engineering/16-translation-qa-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 17,
+          "title": "Sentiment Classifier Prompt",
+          "path": "09-prompt-engineering/17-sentiment-classifier-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 18,
+          "title": "Ticket Router Prompt",
+          "path": "09-prompt-engineering/18-ticket-router-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 19,
+          "title": "Product Description Prompt",
+          "path": "09-prompt-engineering/19-product-description-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 20,
+          "title": "Brand Voice Prompt",
+          "path": "09-prompt-engineering/20-brand-voice-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 21,
+          "title": "Spreadsheet Formula Prompt",
+          "path": "09-prompt-engineering/21-spreadsheet-formula-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 22,
+          "title": "WordPress Assistant Prompt",
+          "path": "09-prompt-engineering/22-wordpress-assistant-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 23,
+          "title": "Video Storyboard Prompt",
+          "path": "09-prompt-engineering/23-video-storyboard-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 24,
+          "title": "Fact Checking Prompt",
+          "path": "09-prompt-engineering/24-fact-checking-prompt",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 25,
+          "title": "Multi-Step Workflow Prompt",
+          "path": "09-prompt-engineering/25-multi-step-workflow-prompt",
+          "status": "Implemented & tested"
+        }
+      ]
+    },
+    "10-excel-ms-office": {
+      "label": "Excel & MS Office",
+      "status": "Implemented & tested",
+      "projects": [
+        {
+          "number": 1,
+          "title": "Sales Dashboard Workbook",
+          "path": "10-excel-ms-office/01-sales-dashboard-workbook",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 2,
+          "title": "Attendance Tracker",
+          "path": "10-excel-ms-office/02-attendance-tracker",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 3,
+          "title": "Expense Budget Workbook",
+          "path": "10-excel-ms-office/03-expense-budget-workbook",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 4,
+          "title": "Inventory Reorder Model",
+          "path": "10-excel-ms-office/04-inventory-reorder-model",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 5,
+          "title": "Customer Support SLA Tracker",
+          "path": "10-excel-ms-office/05-customer-support-sla-tracker",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 6,
+          "title": "Lead Pipeline Tracker",
+          "path": "10-excel-ms-office/06-lead-pipeline-tracker",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 7,
+          "title": "Payroll Calculator",
+          "path": "10-excel-ms-office/07-payroll-calculator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 8,
+          "title": "Invoice Register",
+          "path": "10-excel-ms-office/08-invoice-register",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 9,
+          "title": "Project Gantt Tracker",
+          "path": "10-excel-ms-office/09-project-gantt-tracker",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 10,
+          "title": "Marketing ROI Workbook",
+          "path": "10-excel-ms-office/10-marketing-roi-workbook",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 11,
+          "title": "Student Result Dashboard",
+          "path": "10-excel-ms-office/11-student-result-dashboard",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 12,
+          "title": "Cash Flow Forecast",
+          "path": "10-excel-ms-office/12-cash-flow-forecast",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 13,
+          "title": "Employee Shift Roster",
+          "path": "10-excel-ms-office/13-employee-shift-roster",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 14,
+          "title": "Data Cleaning Checklist",
+          "path": "10-excel-ms-office/14-data-cleaning-checklist",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 15,
+          "title": "KPI Scorecard",
+          "path": "10-excel-ms-office/15-kpi-scorecard",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 16,
+          "title": "Purchase Order Log",
+          "path": "10-excel-ms-office/16-purchase-order-log",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 17,
+          "title": "Customer Feedback Tracker",
+          "path": "10-excel-ms-office/17-customer-feedback-tracker",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 18,
+          "title": "Job Application Tracker",
+          "path": "10-excel-ms-office/18-job-application-tracker",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 19,
+          "title": "Training Compliance Matrix",
+          "path": "10-excel-ms-office/19-training-compliance-matrix",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 20,
+          "title": "Asset Register",
+          "path": "10-excel-ms-office/20-asset-register",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 21,
+          "title": "Event Budget Planner",
+          "path": "10-excel-ms-office/21-event-budget-planner",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 22,
+          "title": "Survey Analysis Workbook",
+          "path": "10-excel-ms-office/22-survey-analysis-workbook",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 23,
+          "title": "Break Even Calculator",
+          "path": "10-excel-ms-office/23-break-even-calculator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 24,
+          "title": "Monthly MIS Report",
+          "path": "10-excel-ms-office/24-monthly-mis-report",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 25,
+          "title": "Executive Presentation Planner",
+          "path": "10-excel-ms-office/25-executive-presentation-planner",
+          "status": "Implemented & tested"
+        }
+      ]
+    },
+    "11-canva": {
+      "label": "Canva",
+      "status": "Manual upload slot",
+      "projects": [
+        {
+          "number": 1,
+          "title": "Canva upload slot 01",
+          "path": "11-canva/01-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 2,
+          "title": "Canva upload slot 02",
+          "path": "11-canva/02-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 3,
+          "title": "Canva upload slot 03",
+          "path": "11-canva/03-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 4,
+          "title": "Canva upload slot 04",
+          "path": "11-canva/04-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 5,
+          "title": "Canva upload slot 05",
+          "path": "11-canva/05-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 6,
+          "title": "Canva upload slot 06",
+          "path": "11-canva/06-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 7,
+          "title": "Canva upload slot 07",
+          "path": "11-canva/07-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 8,
+          "title": "Canva upload slot 08",
+          "path": "11-canva/08-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 9,
+          "title": "Canva upload slot 09",
+          "path": "11-canva/09-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 10,
+          "title": "Canva upload slot 10",
+          "path": "11-canva/10-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 11,
+          "title": "Canva upload slot 11",
+          "path": "11-canva/11-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 12,
+          "title": "Canva upload slot 12",
+          "path": "11-canva/12-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 13,
+          "title": "Canva upload slot 13",
+          "path": "11-canva/13-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 14,
+          "title": "Canva upload slot 14",
+          "path": "11-canva/14-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 15,
+          "title": "Canva upload slot 15",
+          "path": "11-canva/15-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 16,
+          "title": "Canva upload slot 16",
+          "path": "11-canva/16-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 17,
+          "title": "Canva upload slot 17",
+          "path": "11-canva/17-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 18,
+          "title": "Canva upload slot 18",
+          "path": "11-canva/18-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 19,
+          "title": "Canva upload slot 19",
+          "path": "11-canva/19-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 20,
+          "title": "Canva upload slot 20",
+          "path": "11-canva/20-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 21,
+          "title": "Canva upload slot 21",
+          "path": "11-canva/21-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 22,
+          "title": "Canva upload slot 22",
+          "path": "11-canva/22-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 23,
+          "title": "Canva upload slot 23",
+          "path": "11-canva/23-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 24,
+          "title": "Canva upload slot 24",
+          "path": "11-canva/24-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 25,
+          "title": "Canva upload slot 25",
+          "path": "11-canva/25-upload-slot",
+          "status": "Manual upload slot"
+        }
+      ]
+    },
+    "12-photoshop": {
+      "label": "Adobe Photoshop",
+      "status": "Manual upload slot",
+      "projects": [
+        {
+          "number": 1,
+          "title": "Adobe Photoshop upload slot 01",
+          "path": "12-photoshop/01-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 2,
+          "title": "Adobe Photoshop upload slot 02",
+          "path": "12-photoshop/02-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 3,
+          "title": "Adobe Photoshop upload slot 03",
+          "path": "12-photoshop/03-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 4,
+          "title": "Adobe Photoshop upload slot 04",
+          "path": "12-photoshop/04-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 5,
+          "title": "Adobe Photoshop upload slot 05",
+          "path": "12-photoshop/05-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 6,
+          "title": "Adobe Photoshop upload slot 06",
+          "path": "12-photoshop/06-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 7,
+          "title": "Adobe Photoshop upload slot 07",
+          "path": "12-photoshop/07-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 8,
+          "title": "Adobe Photoshop upload slot 08",
+          "path": "12-photoshop/08-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 9,
+          "title": "Adobe Photoshop upload slot 09",
+          "path": "12-photoshop/09-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 10,
+          "title": "Adobe Photoshop upload slot 10",
+          "path": "12-photoshop/10-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 11,
+          "title": "Adobe Photoshop upload slot 11",
+          "path": "12-photoshop/11-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 12,
+          "title": "Adobe Photoshop upload slot 12",
+          "path": "12-photoshop/12-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 13,
+          "title": "Adobe Photoshop upload slot 13",
+          "path": "12-photoshop/13-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 14,
+          "title": "Adobe Photoshop upload slot 14",
+          "path": "12-photoshop/14-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 15,
+          "title": "Adobe Photoshop upload slot 15",
+          "path": "12-photoshop/15-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 16,
+          "title": "Adobe Photoshop upload slot 16",
+          "path": "12-photoshop/16-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 17,
+          "title": "Adobe Photoshop upload slot 17",
+          "path": "12-photoshop/17-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 18,
+          "title": "Adobe Photoshop upload slot 18",
+          "path": "12-photoshop/18-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 19,
+          "title": "Adobe Photoshop upload slot 19",
+          "path": "12-photoshop/19-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 20,
+          "title": "Adobe Photoshop upload slot 20",
+          "path": "12-photoshop/20-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 21,
+          "title": "Adobe Photoshop upload slot 21",
+          "path": "12-photoshop/21-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 22,
+          "title": "Adobe Photoshop upload slot 22",
+          "path": "12-photoshop/22-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 23,
+          "title": "Adobe Photoshop upload slot 23",
+          "path": "12-photoshop/23-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 24,
+          "title": "Adobe Photoshop upload slot 24",
+          "path": "12-photoshop/24-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 25,
+          "title": "Adobe Photoshop upload slot 25",
+          "path": "12-photoshop/25-upload-slot",
+          "status": "Manual upload slot"
+        }
+      ]
+    },
+    "13-illustrator": {
+      "label": "Adobe Illustrator",
+      "status": "Manual upload slot",
+      "projects": [
+        {
+          "number": 1,
+          "title": "Adobe Illustrator upload slot 01",
+          "path": "13-illustrator/01-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 2,
+          "title": "Adobe Illustrator upload slot 02",
+          "path": "13-illustrator/02-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 3,
+          "title": "Adobe Illustrator upload slot 03",
+          "path": "13-illustrator/03-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 4,
+          "title": "Adobe Illustrator upload slot 04",
+          "path": "13-illustrator/04-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 5,
+          "title": "Adobe Illustrator upload slot 05",
+          "path": "13-illustrator/05-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 6,
+          "title": "Adobe Illustrator upload slot 06",
+          "path": "13-illustrator/06-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 7,
+          "title": "Adobe Illustrator upload slot 07",
+          "path": "13-illustrator/07-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 8,
+          "title": "Adobe Illustrator upload slot 08",
+          "path": "13-illustrator/08-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 9,
+          "title": "Adobe Illustrator upload slot 09",
+          "path": "13-illustrator/09-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 10,
+          "title": "Adobe Illustrator upload slot 10",
+          "path": "13-illustrator/10-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 11,
+          "title": "Adobe Illustrator upload slot 11",
+          "path": "13-illustrator/11-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 12,
+          "title": "Adobe Illustrator upload slot 12",
+          "path": "13-illustrator/12-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 13,
+          "title": "Adobe Illustrator upload slot 13",
+          "path": "13-illustrator/13-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 14,
+          "title": "Adobe Illustrator upload slot 14",
+          "path": "13-illustrator/14-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 15,
+          "title": "Adobe Illustrator upload slot 15",
+          "path": "13-illustrator/15-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 16,
+          "title": "Adobe Illustrator upload slot 16",
+          "path": "13-illustrator/16-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 17,
+          "title": "Adobe Illustrator upload slot 17",
+          "path": "13-illustrator/17-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 18,
+          "title": "Adobe Illustrator upload slot 18",
+          "path": "13-illustrator/18-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 19,
+          "title": "Adobe Illustrator upload slot 19",
+          "path": "13-illustrator/19-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 20,
+          "title": "Adobe Illustrator upload slot 20",
+          "path": "13-illustrator/20-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 21,
+          "title": "Adobe Illustrator upload slot 21",
+          "path": "13-illustrator/21-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 22,
+          "title": "Adobe Illustrator upload slot 22",
+          "path": "13-illustrator/22-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 23,
+          "title": "Adobe Illustrator upload slot 23",
+          "path": "13-illustrator/23-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 24,
+          "title": "Adobe Illustrator upload slot 24",
+          "path": "13-illustrator/24-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 25,
+          "title": "Adobe Illustrator upload slot 25",
+          "path": "13-illustrator/25-upload-slot",
+          "status": "Manual upload slot"
+        }
+      ]
+    },
+    "14-video-editing": {
+      "label": "Video Editing",
+      "status": "Manual upload slot",
+      "projects": [
+        {
+          "number": 1,
+          "title": "Video Editing upload slot 01",
+          "path": "14-video-editing/01-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 2,
+          "title": "Video Editing upload slot 02",
+          "path": "14-video-editing/02-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 3,
+          "title": "Video Editing upload slot 03",
+          "path": "14-video-editing/03-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 4,
+          "title": "Video Editing upload slot 04",
+          "path": "14-video-editing/04-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 5,
+          "title": "Video Editing upload slot 05",
+          "path": "14-video-editing/05-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 6,
+          "title": "Video Editing upload slot 06",
+          "path": "14-video-editing/06-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 7,
+          "title": "Video Editing upload slot 07",
+          "path": "14-video-editing/07-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 8,
+          "title": "Video Editing upload slot 08",
+          "path": "14-video-editing/08-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 9,
+          "title": "Video Editing upload slot 09",
+          "path": "14-video-editing/09-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 10,
+          "title": "Video Editing upload slot 10",
+          "path": "14-video-editing/10-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 11,
+          "title": "Video Editing upload slot 11",
+          "path": "14-video-editing/11-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 12,
+          "title": "Video Editing upload slot 12",
+          "path": "14-video-editing/12-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 13,
+          "title": "Video Editing upload slot 13",
+          "path": "14-video-editing/13-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 14,
+          "title": "Video Editing upload slot 14",
+          "path": "14-video-editing/14-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 15,
+          "title": "Video Editing upload slot 15",
+          "path": "14-video-editing/15-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 16,
+          "title": "Video Editing upload slot 16",
+          "path": "14-video-editing/16-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 17,
+          "title": "Video Editing upload slot 17",
+          "path": "14-video-editing/17-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 18,
+          "title": "Video Editing upload slot 18",
+          "path": "14-video-editing/18-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 19,
+          "title": "Video Editing upload slot 19",
+          "path": "14-video-editing/19-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 20,
+          "title": "Video Editing upload slot 20",
+          "path": "14-video-editing/20-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 21,
+          "title": "Video Editing upload slot 21",
+          "path": "14-video-editing/21-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 22,
+          "title": "Video Editing upload slot 22",
+          "path": "14-video-editing/22-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 23,
+          "title": "Video Editing upload slot 23",
+          "path": "14-video-editing/23-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 24,
+          "title": "Video Editing upload slot 24",
+          "path": "14-video-editing/24-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 25,
+          "title": "Video Editing upload slot 25",
+          "path": "14-video-editing/25-upload-slot",
+          "status": "Manual upload slot"
+        }
+      ]
+    },
+    "15-digital-marketing": {
+      "label": "Digital Marketing",
+      "status": "Manual upload slot",
+      "projects": [
+        {
+          "number": 1,
+          "title": "Digital Marketing upload slot 01",
+          "path": "15-digital-marketing/01-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 2,
+          "title": "Digital Marketing upload slot 02",
+          "path": "15-digital-marketing/02-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 3,
+          "title": "Digital Marketing upload slot 03",
+          "path": "15-digital-marketing/03-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 4,
+          "title": "Digital Marketing upload slot 04",
+          "path": "15-digital-marketing/04-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 5,
+          "title": "Digital Marketing upload slot 05",
+          "path": "15-digital-marketing/05-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 6,
+          "title": "Digital Marketing upload slot 06",
+          "path": "15-digital-marketing/06-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 7,
+          "title": "Digital Marketing upload slot 07",
+          "path": "15-digital-marketing/07-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 8,
+          "title": "Digital Marketing upload slot 08",
+          "path": "15-digital-marketing/08-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 9,
+          "title": "Digital Marketing upload slot 09",
+          "path": "15-digital-marketing/09-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 10,
+          "title": "Digital Marketing upload slot 10",
+          "path": "15-digital-marketing/10-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 11,
+          "title": "Digital Marketing upload slot 11",
+          "path": "15-digital-marketing/11-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 12,
+          "title": "Digital Marketing upload slot 12",
+          "path": "15-digital-marketing/12-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 13,
+          "title": "Digital Marketing upload slot 13",
+          "path": "15-digital-marketing/13-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 14,
+          "title": "Digital Marketing upload slot 14",
+          "path": "15-digital-marketing/14-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 15,
+          "title": "Digital Marketing upload slot 15",
+          "path": "15-digital-marketing/15-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 16,
+          "title": "Digital Marketing upload slot 16",
+          "path": "15-digital-marketing/16-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 17,
+          "title": "Digital Marketing upload slot 17",
+          "path": "15-digital-marketing/17-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 18,
+          "title": "Digital Marketing upload slot 18",
+          "path": "15-digital-marketing/18-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 19,
+          "title": "Digital Marketing upload slot 19",
+          "path": "15-digital-marketing/19-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 20,
+          "title": "Digital Marketing upload slot 20",
+          "path": "15-digital-marketing/20-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 21,
+          "title": "Digital Marketing upload slot 21",
+          "path": "15-digital-marketing/21-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 22,
+          "title": "Digital Marketing upload slot 22",
+          "path": "15-digital-marketing/22-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 23,
+          "title": "Digital Marketing upload slot 23",
+          "path": "15-digital-marketing/23-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 24,
+          "title": "Digital Marketing upload slot 24",
+          "path": "15-digital-marketing/24-upload-slot",
+          "status": "Manual upload slot"
+        },
+        {
+          "number": 25,
+          "title": "Digital Marketing upload slot 25",
+          "path": "15-digital-marketing/25-upload-slot",
+          "status": "Manual upload slot"
+        }
+      ]
+    },
+    "16-cybersecurity-automation": {
+      "label": "Cybersecurity & Automation",
+      "status": "Implemented & tested",
+      "projects": [
+        {
+          "number": 1,
+          "title": "Security Header Auditor",
+          "path": "16-cybersecurity-automation/01-security-header-auditor",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 2,
+          "title": "Access Log Threat Monitor",
+          "path": "16-cybersecurity-automation/02-access-log-threat-monitor",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 3,
+          "title": "Password Policy Auditor",
+          "path": "16-cybersecurity-automation/03-password-policy-auditor",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 4,
+          "title": "File Integrity Monitor",
+          "path": "16-cybersecurity-automation/04-file-integrity-monitor",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 5,
+          "title": "Phishing URL Heuristic Checker",
+          "path": "16-cybersecurity-automation/05-phishing-url-heuristic-checker",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 6,
+          "title": "Port Scan Report Parser",
+          "path": "16-cybersecurity-automation/06-port-scan-report-parser",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 7,
+          "title": "Failed Login Detector",
+          "path": "16-cybersecurity-automation/07-failed-login-detector",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 8,
+          "title": "Hash Verification Tool",
+          "path": "16-cybersecurity-automation/08-hash-verification-tool",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 9,
+          "title": "Secure Backup Verifier",
+          "path": "16-cybersecurity-automation/09-secure-backup-verifier",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 10,
+          "title": "PII Data Scanner",
+          "path": "16-cybersecurity-automation/10-pii-data-scanner",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 11,
+          "title": "Dependency Risk Reporter",
+          "path": "16-cybersecurity-automation/11-dependency-risk-reporter",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 12,
+          "title": "HTTP Configuration Checker",
+          "path": "16-cybersecurity-automation/12-http-configuration-checker",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 13,
+          "title": "Rate Limit Log Analyzer",
+          "path": "16-cybersecurity-automation/13-rate-limit-log-analyzer",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 14,
+          "title": "Suspicious Process Reporter",
+          "path": "16-cybersecurity-automation/14-suspicious-process-reporter",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 15,
+          "title": "Firewall Rule Auditor",
+          "path": "16-cybersecurity-automation/15-firewall-rule-auditor",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 16,
+          "title": "DNS Record Checker",
+          "path": "16-cybersecurity-automation/16-dns-record-checker",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 17,
+          "title": "TLS Expiry Monitor",
+          "path": "16-cybersecurity-automation/17-tls-expiry-monitor",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 18,
+          "title": "Email Header Analyzer",
+          "path": "16-cybersecurity-automation/18-email-header-analyzer",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 19,
+          "title": "Security Checklist Generator",
+          "path": "16-cybersecurity-automation/19-security-checklist-generator",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 20,
+          "title": "Incident Timeline Builder",
+          "path": "16-cybersecurity-automation/20-incident-timeline-builder",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 21,
+          "title": "IOC Matching Tool",
+          "path": "16-cybersecurity-automation/21-ioc-matching-tool",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 22,
+          "title": "Configuration Drift Monitor",
+          "path": "16-cybersecurity-automation/22-configuration-drift-monitor",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 23,
+          "title": "Audit Log Summarizer",
+          "path": "16-cybersecurity-automation/23-audit-log-summarizer",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 24,
+          "title": "Backup Automation Runner",
+          "path": "16-cybersecurity-automation/24-backup-automation-runner",
+          "status": "Implemented & tested"
+        },
+        {
+          "number": 25,
+          "title": "Defensive Security Dashboard",
+          "path": "16-cybersecurity-automation/25-defensive-security-dashboard",
+          "status": "Implemented & tested"
+        }
+      ]
+    }
+  }
+}
