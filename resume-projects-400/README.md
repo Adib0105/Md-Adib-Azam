@@ -10,7 +10,7 @@
 
 My hands-on collection for the skills and certifications listed in my resume.
 
-[Complete 400-item index](PROJECT_INDEX.md) · [Verification guide](QUALITY_REPORT.md)
+[Flagship case studies](../PORTFOLIO_SHOWCASE.md) · [Complete 400-item index](PROJECT_INDEX.md) · [Verification guide](QUALITY_REPORT.md)
 
 </div>
 

@@ -1,6 +1,6 @@
 # Complete 400-Item Portfolio Index
 
-**Implemented & tested:** 275 · **Owner-upload slots:** 125
+**Working & tested:** 275 · **Personal creative upload spaces:** 125
 
 | # | Track | Project / Slot | Status |
 |---:|---|---|---|

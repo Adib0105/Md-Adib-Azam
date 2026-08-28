@@ -96,11 +96,25 @@ def main()->None:
     assert manifest["implemented_projects"]==275 and manifest["manual_upload_slots"]==125 and manifest["total_organized_items"]==400
     index=(ROOT/"PROJECT_INDEX.md").read_text();assert len(re.findall(r"^\| \d{3} \|",index,re.M))==400
 
-    for markdown in [ROOT/"README.md",ROOT/"PROJECT_INDEX.md",ROOT.parent/"README.md"]:
+    public_docs=[
+        ROOT/"README.md",
+        ROOT/"PROJECT_INDEX.md",
+        ROOT/"QUALITY_REPORT.md",
+        ROOT.parent/"README.md",
+        ROOT.parent/"PORTFOLIO_SHOWCASE.md",
+        ROOT.parent/"CV_PROJECTS.md",
+    ]
+    for markdown in public_docs:
         text=markdown.read_text()
-        for target in re.findall(r"\[[^\]]+\]\(([^)]+)\)",text):
+        targets=re.findall(r"\[[^\]]+\]\(([^)]+)\)",text)
+        targets+=re.findall(r'<(?:a|img)\b[^>]*(?:href|src)="([^"]+)"',text,re.I)
+        for target in targets:
             if "://" in target or target.startswith("#"):continue
             assert (markdown.parent/target.split("#",1)[0]).resolve().exists(),(markdown,target)
+
+    presentation="\n".join(path.read_text().lower() for path in public_docs)
+    for marker in ["google-gemini","aistudio-repository-template","generated from"]:
+        assert marker not in presentation,marker
 
     print("PASS: 275 implemented projects, 125 clean upload slots, 400 indexed items")
     print("PASS: unique code, tests/builds, SQL integrity, XLSX formulas/charts, output and link checks")

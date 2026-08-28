@@ -1,0 +1,44 @@
+name: Portfolio quality gate
+
+on:
+  push:
+    paths:
+      - "README.md"
+      - "PORTFOLIO_SHOWCASE.md"
+      - "assets/**"
+      - "resume-projects-400/**"
+      - ".github/workflows/resume-portfolio.yml"
+  pull_request:
+    paths:
+      - "README.md"
+      - "PORTFOLIO_SHOWCASE.md"
+      - "assets/**"
+      - "resume-projects-400/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Verify 400-item portfolio
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Run portfolio verification
+        run: python resume-projects-400/verify_portfolio.py

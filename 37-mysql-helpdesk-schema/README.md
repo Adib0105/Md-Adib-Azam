@@ -1,31 +1,41 @@
 # MySQL Helpdesk Database
 
-A normalized MySQL 8 database design for customers, support agents, tickets, messages, tags, and service-level reporting.
+A normalized MySQL 8 design for customer-support tickets, conversations, tagging and SLA reporting.
 
-## Why this belongs in my portfolio
+## Data model
 
-This project connects directly to the skills and practical experience listed in my CV.
+| Table | Purpose |
+|---|---|
+| `customers` | Customer identity and unique email |
+| `agents` | Support staff, team and active status |
+| `tickets` | Priority, status, ownership and SLA timestamps |
+| `ticket_messages` | Time-ordered customer, agent and system messages |
+| `tags` | Reusable classification labels |
+| `ticket_tags` | Many-to-many ticket classification |
 
-## Features
+## Design decisions
 
-- Foreign keys, constraints, indexes, and audit timestamps
-- Many-to-many ticket tagging
-- SLA and agent-performance views
-- Documented analytical queries
+- Foreign keys protect customer, agent, message and tag relationships.
+- Cascading cleanup removes dependent messages and tag links with a ticket.
+- A check constraint prevents resolution timestamps before opening time.
+- Queue and agent indexes support common operational filters.
+- `ticket_sla_status` and `agent_performance` views centralize reporting logic.
 
-## Skills demonstrated
+## Run and verify
 
-MySQL, database design, customer support, SQL analytics
+```bash
+mysql -u root -p your_database < schema.sql
+python validate_schema.py
+```
 
-## Run
+The static validator checks six required tables, at least five foreign keys, both reporting views and analytical grouping/sorting queries.
 
-    mysql -u root -p your_database < schema.sql
-    python validate_schema.py
+## Files
 
-## Project structure
+- `schema.sql` — tables, constraints, indexes and views
+- `queries.sql` — operational and analytical examples
+- `validate_schema.py` — repeatable structure checks
 
-- schema.sql
-- queries.sql
-- validate_schema.py
+All included records are synthetic.
 
-All included sample data is synthetic and safe to publish.
+[Back to flagship case studies](../PORTFOLIO_SHOWCASE.md)

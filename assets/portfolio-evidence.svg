@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title description">
+  <title id="title">Md Adib Azam portfolio evidence summary</title>
+  <desc id="description">Verified project, analytics, Excel, MySQL and prompt evaluation counts from the portfolio.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset="0.55" stop-color="#102547"/>
+      <stop offset="1" stop-color="#25143f"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#fb7185"/>
+    </linearGradient>
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#ffffff" opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="520" rx="30" fill="url(#bg)"/>
+  <rect width="1200" height="520" rx="30" fill="url(#dots)"/>
+  <rect x="56" y="104" width="1088" height="5" rx="2.5" fill="url(#line)"/>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="56" y="62" fill="#ffffff" font-size="34" font-weight="800">Proof of Work</text>
+    <text x="1144" y="62" text-anchor="end" fill="#a5b4fc" font-size="18">Md Adib Azam · verified portfolio snapshot</text>
+
+    <g transform="translate(56 142)">
+      <rect width="336" height="126" rx="20" fill="#0b3144" stroke="#22d3ee" stroke-opacity="0.7"/>
+      <text x="24" y="52" fill="#67e8f9" font-size="38" font-weight="800">275</text>
+      <text x="24" y="84" fill="#ffffff" font-size="18" font-weight="700">working technical projects</text>
+      <text x="24" y="108" fill="#a5c9d3" font-size="14">code, tests, data or build evidence</text>
+    </g>
+
+    <g transform="translate(432 142)">
+      <rect width="336" height="126" rx="20" fill="#20265f" stroke="#818cf8" stroke-opacity="0.8"/>
+      <text x="24" y="52" fill="#a5b4fc" font-size="38" font-weight="800">20</text>
+      <text x="24" y="84" fill="#ffffff" font-size="18" font-weight="700">advanced analytics pipelines</text>
+      <text x="24" y="108" fill="#b9c0e8" font-size="14">metrics plus decision briefs</text>
+    </g>
+
+    <g transform="translate(808 142)">
+      <rect width="336" height="126" rx="20" fill="#42204d" stroke="#c084fc" stroke-opacity="0.8"/>
+      <text x="24" y="52" fill="#d8b4fe" font-size="38" font-weight="800">900+</text>
+      <text x="24" y="84" fill="#ffffff" font-size="18" font-weight="700">Excel workbook formulas</text>
+      <text x="24" y="108" fill="#dbc4e2" font-size="14">25 workbooks with native charts</text>
+    </g>
+
+    <g transform="translate(56 298)">
+      <rect width="336" height="126" rx="20" fill="#153b35" stroke="#34d399" stroke-opacity="0.8"/>
+      <text x="24" y="52" fill="#6ee7b7" font-size="38" font-weight="800">50</text>
+      <text x="24" y="84" fill="#ffffff" font-size="18" font-weight="700">unique MySQL tables</text>
+      <text x="24" y="108" fill="#b7d9d0" font-size="14">keys, checks, indexes and views</text>
+    </g>
+
+    <g transform="translate(432 298)">
+      <rect width="336" height="126" rx="20" fill="#46351d" stroke="#fbbf24" stroke-opacity="0.8"/>
+      <text x="24" y="52" fill="#fde68a" font-size="38" font-weight="800">75</text>
+      <text x="24" y="84" fill="#ffffff" font-size="18" font-weight="700">prompt evaluation cases</text>
+      <text x="24" y="108" fill="#e5d3aa" font-size="14">structured quality checks</text>
+    </g>
+
+    <g transform="translate(808 298)">
+      <rect width="336" height="126" rx="20" fill="#4c2131" stroke="#fb7185" stroke-opacity="0.8"/>
+      <text x="24" y="52" fill="#fda4af" font-size="38" font-weight="800">400</text>
+      <text x="24" y="84" fill="#ffffff" font-size="18" font-weight="700">organized portfolio items</text>
+      <text x="24" y="108" fill="#e7c0cb" font-size="14">16 resume-aligned tracks</text>
+    </g>
+
+    <text x="600" y="478" text-anchor="middle" fill="#cbd5e1" font-size="16">Reproducible check: python resume-projects-400/verify_portfolio.py</text>
+  </g>
+</svg>

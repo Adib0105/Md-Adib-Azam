@@ -1,12 +1,11 @@
-# CV-aligned multidisciplinary portfolio
+# CV-Aligned Multidisciplinary Portfolio
 
-    These twenty projects were selected to provide direct evidence for the skills in
-    Md Adib Azam's CV: Python, C, basic Java, HTML, CSS, JavaScript, MySQL, AI and
-    data analytics, customer support, digital marketing, graphic design workflows,
-    GitHub, automation, problem solving and communication.
+These twenty multi-file projects provide focused evidence for the skills in Md Adib Azam's CV: Python, C, Java, HTML, CSS, JavaScript, MySQL, analytics, customer support, digital operations, automation, problem solving and communication.
 
-    | # | Project | Skills demonstrated |
-|---|---|---|
+[Start with the flagship case studies](PORTFOLIO_SHOWCASE.md) · [Return to the main portfolio](README.md)
+
+| # | Project | Skills demonstrated |
+|---:|---|---|
 | 26 | [AI Resume and Job Matcher](26-ai-resume-job-matcher/) | Python, NLP, explainable scoring |
 | 27 | [Customer Support Ticket Intelligence](27-support-ticket-intelligence/) | Python, support automation, CSV |
 | 28 | [Customer Support SLA Dashboard](28-customer-support-sla-dashboard/) | HTML, CSS, JavaScript, service KPIs |
@@ -28,18 +27,20 @@
 | 44 | [Java Customer Feedback Analyzer](44-java-feedback-analyzer/) | Java, text and CX analysis |
 | 45 | [Operations Automation Report Generator](45-automation-report-generator/) | Python, HTML reports |
 
-    ## Validation
+## Validation
 
-        python run_cv_project_tests.py
+```bash
+python run_cv_project_tests.py
+```
 
-    The test runner validates Python and JavaScript logic, the MySQL schema, the
-    responsive website structure, the C program, and the Java application. Every
-    sample dataset is synthetic and safe to publish.
+The runner validates Python and JavaScript logic, the MySQL schema, responsive website structure, the C program and the Java application. The current result is **20/20 projects passed**.
 
-    ## Portfolio strategy
+## Review by interest
 
-    - Projects 26-32 show AI, support operations, database and spreadsheet skills.
-    - Projects 33-36 show digital marketing, SEO and analytics.
-    - Projects 37-39 show SQL and defensive cyber-security fundamentals.
-    - Projects 40-42 show web, graphic-design workflow and file automation.
-    - Projects 43-45 show C, Java and office/operations automation.
+- **AI, support and data operations:** Projects 26–32
+- **Digital marketing, SEO and analytics:** Projects 33–36
+- **SQL and defensive cybersecurity:** Projects 37–39
+- **Web and workflow automation:** Projects 40–42
+- **C, Java and operations reporting:** Projects 43–45
+
+All sample datasets are synthetic and safe to publish.

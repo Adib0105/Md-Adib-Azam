@@ -2,79 +2,116 @@
 
 ![Md Adib Azam — Personal Portfolio](assets/md-adib-azam-banner.svg)
 
+[![Portfolio quality gate](https://github.com/Adib0105/Md-Adib-Azam/actions/workflows/resume-portfolio.yml/badge.svg)](https://github.com/Adib0105/Md-Adib-Azam/actions/workflows/resume-portfolio.yml)
 [![GitHub](https://img.shields.io/badge/GitHub-Adib0105-0F172A?style=for-the-badge&logo=github)](https://github.com/Adib0105)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Md_Adib_Azam-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/mdadibazam)
-[![Portfolio](https://img.shields.io/badge/Explore-400_Projects-7C3AED?style=for-the-badge&logo=files)](resume-projects-400/)
+[![Case Studies](https://img.shields.io/badge/Start_Here-Flagship_Case_Studies-7C3AED?style=for-the-badge)](PORTFOLIO_SHOWCASE.md)
 
 </div>
 
 ## Hello, I am Md Adib Azam 👋
 
-I am a Computer Science & Technology diploma student from Durgapur. I enjoy turning ideas into working programs, clear data stories, useful web experiences and practical digital work. This repository is my personal project space—organized around the skills I am learning and applying.
+I am a Computer Science & Technology diploma student from Durgapur. I build practical tools across programming, data analytics, web development, databases, automation and digital operations.
 
-> **My approach:** understand the problem, build a usable solution, test the important parts and improve it step by step.
+My project workflow is simple: **understand the problem → build a usable solution → verify the important behaviour → explain the result clearly.**
 
-## Portfolio at a glance
+## Recruiter quick tour
 
-| | Area | What you will find |
+| Time | Start here | What it shows |
+|---:|---|---|
+| 5 min | [Flagship Project Showcase](PORTFOLIO_SHOWCASE.md) | Eight concise case studies with problems, implementation details, metrics and test commands |
+| 10 min | [Advanced Data Analytics](advanced-data-analytics/) | 20 end-to-end analytical pipelines with decision briefs |
+| 10 min | [CV-Aligned Applications](CV_PROJECTS.md) | 20 multi-file projects across Python, web, SQL, C and Java |
+| Deep dive | [Complete 400-Item Collection](resume-projects-400/) | 16 resume-aligned tracks with a reproducible quality gate |
+
+## Flagship work
+
+| Project | Problem solved | Evidence |
 |---|---|---|
-| 🐍 | **Programming** | Python applications, C programs and Java projects |
-| 📊 | **Data & Office** | Data analytics, MySQL databases and Excel workbooks |
-| 🌐 | **Web & CMS** | Responsive web projects and WordPress components |
-| 🛡️ | **Automation & Security** | Practical automation and defensive security utilities |
-| ✨ | **Generative AI** | Local workflows, structured outputs and prompt systems |
-| 🎨 | **Creative & Growth** | Dedicated spaces for my Canva, Adobe, video and marketing work |
+| [Advanced Analytics Portfolio](advanced-data-analytics/) | Turns business questions into reproducible analytical decisions | 20 pipelines; metrics and decision briefs for every run |
+| [Customer Support SLA Dashboard](28-customer-support-sla-dashboard/) | Tracks open work, breaches, response time and agent load | Separate UI/logic modules with passing Node tests |
+| [Digital Seva Workflow](30-digital-seva-workflow/) | Controls a service request from receipt to delivery | Validation, ordered states, local persistence and tests |
+| [MySQL Helpdesk Database](37-mysql-helpdesk-schema/) | Models support operations and reusable SLA reporting | Six-table relational design, constraints, indexes and views |
+| [Sales Forecast Studio](36-sales-forecast-studio/) | Produces an understandable baseline sales forecast | Moving average, linear trend and holdout MAE |
+| [Security Header Auditor](38-security-header-auditor/) | Reviews saved web-security headers without live scanning | Five defensive checks with offline automated tests |
+| [Resume–Job Matcher](26-ai-resume-job-matcher/) | Explains keyword coverage instead of returning a mystery score | Local deterministic scoring, matched/missing terms and tests |
+| [Excel Sales Dashboard](resume-projects-400/10-excel-ms-office/01-sales-dashboard-workbook/) | Gives operational users a familiar KPI workbook | 45 formulas, structured table, two sheets and a native chart |
+
+[Read the full case studies and reproduce the results →](PORTFOLIO_SHOWCASE.md)
+
+## Verified portfolio evidence
+
+![Verified portfolio evidence: 275 technical projects, 20 analytics pipelines, 900+ Excel formulas, 50 MySQL tables, 75 prompt evaluations and 400 organized items](assets/portfolio-evidence.svg)
+
+The main quality gate checks unique implementations, Python tests, strict C builds, Java runs, web logic, WordPress safeguards, SQL integrity, generated analytics output, prompt evaluations, XLSX structure and defensive-security tests.
+
+```bash
+python resume-projects-400/verify_portfolio.py
+```
+
+Expected result:
+
+```text
+PASS: 275 implemented projects, 125 clean upload slots, 400 indexed items
+PASS: unique code, tests/builds, SQL integrity, XLSX formulas/charts, output and link checks
+```
+
+## Selected visual outputs
+
+<table>
+  <tr>
+    <td width="55%" valign="top">
+      <strong>Analytics project gallery</strong><br><br>
+      <img src="assets/portfolio-preview.png" alt="Ten analytics dashboards and charts" width="100%">
+    </td>
+    <td width="45%" valign="top">
+      <strong>Excel sales dashboard</strong><br><br>
+      <img src="resume-projects-400/10-excel-ms-office/01-sales-dashboard-workbook/preview.png" alt="Excel sales dashboard workbook preview" width="100%">
+    </td>
+  </tr>
+</table>
+
+## Technical toolkit
 
 <div align="center">
 
-![Technical Projects](https://img.shields.io/badge/Working_Technical_Projects-275-16A34A?style=flat-square)
-![Creative Slots](https://img.shields.io/badge/Creative_Upload_Spaces-125-E11D48?style=flat-square)
-![Skill Tracks](https://img.shields.io/badge/Skill_Tracks-16-2563EB?style=flat-square)
-![Total Items](https://img.shields.io/badge/Portfolio_Items-400-7C3AED?style=flat-square)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=111827)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=111827)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![WordPress](https://img.shields.io/badge/WordPress-21759B?style=flat-square&logo=wordpress&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
 
 </div>
 
-## Featured projects
+## Complete project library
 
-| Project | Built with | What it demonstrates |
-|---|---|---|
-| [Expense Tracker CLI](resume-projects-400/01-python/01-expense-tracker-cli/) | Python | Input validation, summaries, file output and unit tests |
-| [Customer Support Dashboard](resume-projects-400/04-web-development/02-customer-support-dashboard/) | HTML · CSS · JavaScript | Responsive interface with tested SLA, AHT and CSAT logic |
-| [Helpdesk Database](resume-projects-400/06-mysql/01-helpdesk-database/) | MySQL | Relational schema, sample data, indexes and reporting view |
-| [AI Resume Builder](resume-projects-400/07-generative-ai/01-ai-resume-builder/) | Python · Ollama | Local model workflow, evidence rules and structured output |
-| [Retail Sales Analysis](resume-projects-400/08-data-analytics/01-retail-sales-analysis/) | Python · CSV · SVG | Reproducible analysis with a readable visual result |
-| [Sales Dashboard Workbook](resume-projects-400/10-excel-ms-office/01-sales-dashboard-workbook/) | Excel | Formulas, table, KPI summary and native chart |
-| [Security Header Auditor](resume-projects-400/16-cybersecurity-automation/01-security-header-auditor/) | Python | Safe offline checks with automated test coverage |
+The collection contains **25 organized items in each of 16 skill tracks**:
 
-## See the complete collection
+- **275 working technical projects:** Python, C, Java, Web Development, WordPress, MySQL, Generative AI, Data Analytics, Prompt Engineering, Excel/MS Office and defensive Cybersecurity.
+- **125 clean creative upload spaces:** Canva, Photoshop, Illustrator, Video Editing and Digital Marketing. These remain intentionally empty until I add my finished media files.
 
-The main collection contains **25 items in each of 16 resume-aligned tracks**. Technical tracks contain working project files and verification material. The five visual/media tracks are clean upload spaces where I can add my finished original files.
+[Browse all 16 tracks](resume-projects-400/) · [Open the 400-item index](resume-projects-400/PROJECT_INDEX.md) · [Read the quality report](resume-projects-400/QUALITY_REPORT.md)
 
-| Open | Description |
-|---|---|
-| [Resume Project Collection](resume-projects-400/) | Browse all 16 skill tracks |
-| [Complete Project Index](resume-projects-400/PROJECT_INDEX.md) | Jump directly to any of the 400 items |
-| [Quality & Verification](resume-projects-400/QUALITY_REPORT.md) | See what was checked and how to reproduce it |
-| [Portfolio Checker](resume-projects-400/verify_portfolio.py) | Run the collection-wide validation script |
+## More work
 
-## Data work preview
-
-![Analytics project preview](assets/portfolio-preview.png)
-
-## More work in this repository
-
-- [Advanced Data Analytics](advanced-data-analytics/)
+- [Responsive Developer Portfolio](40-responsive-portfolio-site/)
 - [Graphic Design Portfolio](graphic-design-portfolio/)
 - [Creative Suite Projects](creative-suite-projects/)
-- [CV-Aligned Technology Projects](CV_PROJECTS.md)
 - [Career Category Hub](categories/)
 
 ---
 
 <div align="center">
 
-### Thanks for visiting my portfolio
+### Thanks for reviewing my work
 
 **Md Adib Azam** · Learn · Build · Test · Improve
+
+[GitHub](https://github.com/Adib0105) · [LinkedIn](https://linkedin.com/in/mdadibazam)
 
 </div>

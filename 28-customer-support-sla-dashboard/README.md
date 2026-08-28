@@ -1,33 +1,38 @@
 # Customer Support SLA Dashboard
 
-A responsive support-operations dashboard that calculates open tickets, SLA breaches, average first response, and agent workload.
+A responsive operations dashboard for reviewing ticket volume, SLA risk, first-response time and agent workload.
 
-## Why this belongs in my portfolio
+## What I built
 
-This project connects directly to the skills and practical experience listed in my CV.
+- KPI cards for total tickets, unresolved work, SLA breaches and average first response
+- Status filtering for fast queue review
+- Agent-level unresolved workload summary
+- Reusable business logic separated from DOM rendering
+- Responsive layout for desktop and mobile widths
 
-## Features
+## Metric rules
 
-- Live KPI cards and status filtering
-- SLA breach calculation from ticket data
-- Agent workload summary
-- Reusable business-logic module with Node tests
+- A ticket is **open** when its status is not `Resolved`.
+- An open ticket is **breached** when `ageHours > slaHours`.
+- Average first response is calculated across every supplied ticket and rounded to minutes.
+- Workload counts only unresolved tickets assigned to each agent.
 
-## Skills demonstrated
+## Run and verify
 
-HTML, CSS, JavaScript, customer support analytics
+```bash
+node test.js
+```
 
-## Run
+Then open `index.html` in a browser. The automated test covers open-ticket count, breach detection, response average and agent workload; the current result is `SLA dashboard tests passed`.
 
-    Open index.html in a browser
-    node test.js
+## Files
 
-## Project structure
+- `index.html` — semantic dashboard structure
+- `style.css` — responsive visual system
+- `logic.js` — testable KPI calculations
+- `app.js` — sample data, filters and rendering
+- `test.js` — Node assertions
 
-- logic.js
-- app.js
-- style.css
-- index.html
-- test.js
+All ticket records are synthetic.
 
-All included sample data is synthetic and safe to publish.
+[Back to flagship case studies](../PORTFOLIO_SHOWCASE.md)

@@ -1,31 +1,30 @@
 # Defensive Security Header Auditor
 
-An offline defensive checker that reviews a saved JSON object of HTTP response headers and recommends browser-security improvements.
+A safe offline checker for reviewing a saved set of HTTP response headers.
 
-## Why this belongs in my portfolio
+## What I built
 
-This project connects directly to the skills and practical experience listed in my CV.
+The tool normalizes header names and evaluates five browser-security controls:
 
-## Features
+1. Content Security Policy
+2. HTTP Strict Transport Security
+3. X-Content-Type-Options
+4. Referrer Policy
+5. Permissions Policy
 
-- Checks five common browser-security controls
-- Case-insensitive header handling
-- HSTS max-age validation
-- Clear remediation guidance without live scanning
+HSTS passes only when it contains a numeric `max-age` of at least 31,536,000 seconds, and X-Content-Type-Options passes only with `nosniff`. Missing or weak values receive a specific remediation message.
 
-## Skills demonstrated
+## Run and verify
 
-Python, cyber security, JSON, defensive auditing
+```bash
+python app.py sample_headers.json
+python test.py
+```
 
-## Run
+The included secure example scores **100/100 (5/5 checks)**. Tests also verify that weak HSTS and an incorrect content-type option fail.
 
-    python app.py sample_headers.json
-    python test.py
+## Safety boundary
 
-## Project structure
+This project reads a local JSON file only. It performs no live scanning, exploitation, credential collection or unauthorized network activity.
 
-- app.py
-- sample_headers.json
-- test.py
-
-All included sample data is synthetic and safe to publish.
+[Back to flagship case studies](../PORTFOLIO_SHOWCASE.md)

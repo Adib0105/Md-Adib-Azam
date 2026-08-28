@@ -1,32 +1,39 @@
-# AI Resume and Job Matcher
+# Explainable Resume–Job Matcher
 
-An explainable NLP tool that compares resume text with a job description, reports keyword coverage, and suggests missing skills.
+A local Python tool that compares resume text with a job description and shows exactly why the match score changed.
 
-## Why this belongs in my portfolio
+## What I built
 
-This project connects directly to the skills and practical experience listed in my CV.
+- A tokenizer that normalizes useful terms and removes common stop words
+- Frequency-weighted scoring so repeated job requirements matter more
+- Separate matched and missing keyword lists
+- Three readable verdict bands: needs tailoring, good foundation and strong match
+- JSON output that can be saved for another workflow
 
-## Features
+The project uses no API key or paid service. Its output is deterministic for the same two text files.
 
-- Weighted job-keyword coverage score
-- Matched and missing keyword explanations
-- JSON output for automation workflows
-- No API key or paid service required
+## Example result
 
-## Skills demonstrated
+The included sample files currently return a **42.9%** match, nine matched terms and twelve missing terms. The recommendation explicitly tells the user to add only skills they genuinely have and can support with project evidence.
 
-Python, NLP, data analysis, prompt engineering concepts
+## Run and verify
 
-## Run
+```bash
+python app.py sample_resume.txt sample_job.txt
+python test.py
+```
 
-    python app.py sample_resume.txt sample_job.txt
-    python test.py
+The tests cover tokenization, matched/missing terms, a realistic score range and rejection of a job description with no useful keywords.
 
-## Project structure
+## Files
 
-- app.py
-- sample_resume.txt
-- sample_job.txt
-- test.py
+- `app.py` — matching and CLI logic
+- `sample_resume.txt` — synthetic resume text
+- `sample_job.txt` — synthetic job description
+- `test.py` — automated behaviour checks
 
-All included sample data is synthetic and safe to publish.
+## Scope
+
+This is an explainable keyword-coverage baseline, not a claim to reproduce a commercial ATS or predict hiring decisions.
+
+[Back to flagship case studies](../PORTFOLIO_SHOWCASE.md)

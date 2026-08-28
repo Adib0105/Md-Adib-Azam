@@ -1,31 +1,35 @@
 # Sales Forecast Studio
 
-A transparent time-series forecasting tool that compares a moving average with a linear trend and reports holdout error.
+A transparent command-line forecasting baseline for monthly sales data.
 
-## Why this belongs in my portfolio
+## What I built
 
-This project connects directly to the skills and practical experience listed in my CV.
+- CSV input with month and sales fields
+- Three-period moving average for recent-level context
+- Least-squares linear trend for future estimates
+- Two-period holdout mean absolute error for a simple reality check
+- Correct future month labels across year boundaries
+- Structured JSON output for reporting or automation
 
-## Features
+## Current sample result
 
-- Moving-average baseline
-- Least-squares linear trend forecast
-- Holdout mean absolute error
-- Future monthly labels with JSON output
+The included eight-month dataset produces:
 
-## Skills demonstrated
+- Three-period moving average: **161,000**
+- Holdout MAE: **519.04**
+- Forecasts for the next three calendar months
 
-Python, data analytics, forecasting, CSV reporting
+## Run and verify
 
-## Run
+```bash
+python app.py sample_sales.csv --periods 3
+python test.py
+```
 
-    python app.py sample_sales.csv --periods 3
-    python test.py
+Tests cover the trend calculation, moving average, December-to-January rollover and a perfectly linear sample.
 
-## Project structure
+## Scope
 
-- app.py
-- sample_sales.csv
-- test.py
+This is an understandable baseline for short series. A production forecast would compare seasonality, promotions, confidence intervals and multiple validation windows.
 
-All included sample data is synthetic and safe to publish.
+[Back to flagship case studies](../PORTFOLIO_SHOWCASE.md)

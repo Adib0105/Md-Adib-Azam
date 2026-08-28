@@ -1,32 +1,30 @@
 # Responsive Developer Portfolio
 
-A recruiter-focused personal portfolio for Md Adib Azam with filterable project cards, skills, experience highlights, and contact links.
+A recruiter-focused personal website for Md Adib Azam with filterable project cards, skills, experience highlights and professional contact links.
 
-## Why this belongs in my portfolio
+## What I built
 
-This project connects directly to the skills and practical experience listed in my CV.
+- Semantic sections for work, skills and contact
+- Six or more project cards grouped by skill category
+- JavaScript category filters driven by `data-category` attributes
+- Responsive CSS breakpoints for smaller screens
+- Accessible navigation and public links without exposing private contact data
 
-## Features
+## Run and verify
 
-- Responsive editorial layout
-- Filterable project portfolio
-- Accessible navigation and semantic sections
-- Public professional links without exposing private contact data
+Open `index.html` in a browser, then run:
 
-## Skills demonstrated
+```bash
+python test.py
+```
 
-HTML, CSS, JavaScript, responsive web design
+The checker confirms the three key sections, project-card coverage, responsive CSS, filtering logic and the public `Adib0105` profile link.
 
-## Run
+## Files
 
-    Open index.html in a browser
-    python test.py
+- `index.html` — portfolio content and semantic structure
+- `styles.css` — layout, typography and responsive rules
+- `app.js` — project filtering
+- `test.py` — structural checks
 
-## Project structure
-
-- index.html
-- styles.css
-- app.js
-- test.py
-
-All included sample data is synthetic and safe to publish.
+[Back to flagship case studies](../PORTFOLIO_SHOWCASE.md)

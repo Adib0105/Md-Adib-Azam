@@ -1,33 +1,35 @@
 # Digital Seva Request Workflow
 
-A browser-based service request tracker for documentation, application, and customer follow-up workflows at a digital service centre.
+A browser-based request tracker for documentation, application and customer follow-up work at a digital service centre.
 
-## Why this belongs in my portfolio
+## What I built
 
-This project connects directly to the skills and practical experience listed in my CV.
+- Request creation with customer and service validation
+- A controlled four-step lifecycle: `Received → In progress → Ready → Delivered`
+- Search and status summaries for day-to-day queue review
+- Local browser persistence so requests survive a page refresh
+- Separate workflow rules that can be tested without the interface
 
-## Features
+The state function never advances a delivered request and never invents a status outside the defined sequence.
 
-- Create and track customer service requests
-- Validated status progression
-- Local browser storage
-- Search and operational summary
+## Run and verify
 
-## Skills demonstrated
+```bash
+node test.js
+```
 
-HTML, CSS, JavaScript, service operations
+Then open `index.html` in a browser. Tests cover state progression, final-state protection, validation and summary counts.
 
-## Run
+## Files
 
-    Open index.html in a browser
-    node test.js
+- `index.html` — form and request list
+- `style.css` — responsive layout
+- `logic.js` — validation, state and summary rules
+- `app.js` — storage and UI behaviour
+- `test.js` — Node assertions
 
-## Project structure
+## Scope
 
-- logic.js
-- app.js
-- style.css
-- index.html
-- test.js
+This version is designed for a single browser profile. A production multi-user system would add authentication, a server-side database and audit history.
 
-All included sample data is synthetic and safe to publish.
+[Back to flagship case studies](../PORTFOLIO_SHOWCASE.md)
