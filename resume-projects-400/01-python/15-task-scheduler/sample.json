@@ -1,0 +1,20 @@
+{
+  "today": "2026-08-28",
+  "tasks": [
+    {
+      "title": "Submit report",
+      "due": "2026-08-27",
+      "done": false
+    },
+    {
+      "title": "Pay fee",
+      "due": "2026-08-30",
+      "done": false
+    },
+    {
+      "title": "Practice Python",
+      "due": "2026-09-03",
+      "done": true
+    }
+  ]
+}

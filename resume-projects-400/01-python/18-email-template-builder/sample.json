@@ -1,0 +1,8 @@
+{
+  "template": "Hello {{name}}, your ticket {{ticket_id}} is {{status}}.",
+  "values": {
+    "name": "Adib",
+    "ticket_id": "T-101",
+    "status": "resolved"
+  }
+}

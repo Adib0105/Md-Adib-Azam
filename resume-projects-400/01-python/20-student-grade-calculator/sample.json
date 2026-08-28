@@ -1,0 +1,22 @@
+{
+  "weights": {
+    "theory": 0.6,
+    "lab": 0.4
+  },
+  "students": [
+    {
+      "name": "Asha",
+      "scores": {
+        "theory": 84,
+        "lab": 92
+      }
+    },
+    {
+      "name": "Kabir",
+      "scores": {
+        "theory": 72,
+        "lab": 78
+      }
+    }
+  ]
+}

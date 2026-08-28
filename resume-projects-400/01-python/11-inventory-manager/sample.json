@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "sku": "A-1",
+      "quantity": 4,
+      "unit_cost": 80,
+      "reorder_level": 5,
+      "target_stock": 20
+    },
+    {
+      "sku": "B-2",
+      "quantity": 15,
+      "unit_cost": 120,
+      "reorder_level": 8,
+      "target_stock": 25
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "income": 30000,
+  "budgets": {
+    "food": 5000,
+    "travel": 2500,
+    "learning": 2000
+  },
+  "expenses": [
+    {
+      "category": "food",
+      "amount": 5200
+    },
+    {
+      "category": "travel",
+      "amount": 1800
+    },
+    {
+      "category": "learning",
+      "amount": 1200
+    }
+  ]
+}

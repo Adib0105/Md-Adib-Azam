@@ -1,0 +1,19 @@
+{
+  "files": [
+    {
+      "path": "a.txt",
+      "sha256": "abc",
+      "size": 100
+    },
+    {
+      "path": "copy/a.txt",
+      "sha256": "abc",
+      "size": 100
+    },
+    {
+      "path": "b.txt",
+      "sha256": "def",
+      "size": 50
+    }
+  ]
+}

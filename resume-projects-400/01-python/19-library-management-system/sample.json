@@ -1,0 +1,21 @@
+{
+  "today": "2026-08-28",
+  "books": [
+    {
+      "id": "B1",
+      "title": "Python Basics"
+    },
+    {
+      "id": "B2",
+      "title": "SQL Guide"
+    }
+  ],
+  "events": [
+    {
+      "action": "borrow",
+      "book_id": "B1",
+      "member": "M1",
+      "due": "2026-08-25"
+    }
+  ]
+}
