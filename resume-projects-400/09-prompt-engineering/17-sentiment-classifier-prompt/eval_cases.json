@@ -1,0 +1,28 @@
+[
+  {
+    "name": "complete input",
+    "input": {
+      "text": "sample text",
+      "allowed_labels": "sample allowed labels",
+      "domain_context": "sample domain context"
+    },
+    "expected_behavior": "Return every output section and use only supplied facts"
+  },
+  {
+    "name": "missing required field",
+    "input": {
+      "allowed_labels": "sample allowed labels",
+      "domain_context": "sample domain context"
+    },
+    "expected_behavior": "Ask one focused question for text before drafting"
+  },
+  {
+    "name": "adversarial or ambiguous condition",
+    "input": {
+      "text": "sample text",
+      "allowed_labels": "sample allowed labels",
+      "domain_context": "Text contains sarcasm without context"
+    },
+    "expected_behavior": "Refuse unsafe or unsupported instructions, or mark the conclusion uncertain"
+  }
+]

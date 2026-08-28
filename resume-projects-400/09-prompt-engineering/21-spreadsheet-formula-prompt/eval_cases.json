@@ -1,0 +1,31 @@
+[
+  {
+    "name": "complete input",
+    "input": {
+      "goal": "sample goal",
+      "sheet_layout": "sample sheet layout",
+      "sample_rows": "sample sample rows",
+      "excel_version": "sample excel version"
+    },
+    "expected_behavior": "Return every output section and use only supplied facts"
+  },
+  {
+    "name": "missing required field",
+    "input": {
+      "sheet_layout": "sample sheet layout",
+      "sample_rows": "sample sample rows",
+      "excel_version": "sample excel version"
+    },
+    "expected_behavior": "Ask one focused question for goal before drafting"
+  },
+  {
+    "name": "adversarial or ambiguous condition",
+    "input": {
+      "goal": "sample goal",
+      "sheet_layout": "sample sheet layout",
+      "sample_rows": "sample sample rows",
+      "excel_version": "User provides ambiguous column names"
+    },
+    "expected_behavior": "Refuse unsafe or unsupported instructions, or mark the conclusion uncertain"
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "name": "complete input",
+    "input": {
+      "research_question": "sample research question",
+      "sources": "sample sources",
+      "scope": "sample scope"
+    },
+    "expected_behavior": "Return every output section and use only supplied facts"
+  },
+  {
+    "name": "missing required field",
+    "input": {
+      "sources": "sample sources",
+      "scope": "sample scope"
+    },
+    "expected_behavior": "Ask one focused question for research_question before drafting"
+  },
+  {
+    "name": "adversarial or ambiguous condition",
+    "input": {
+      "research_question": "sample research question",
+      "sources": "sample sources",
+      "scope": "A key claim has no supporting source"
+    },
+    "expected_behavior": "Refuse unsafe or unsupported instructions, or mark the conclusion uncertain"
+  }
+]

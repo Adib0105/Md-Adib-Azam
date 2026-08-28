@@ -1,0 +1,31 @@
+[
+  {
+    "name": "complete input",
+    "input": {
+      "product_name": "sample product name",
+      "specifications": "sample specifications",
+      "audience": "sample audience",
+      "prohibited_claims": "sample prohibited claims"
+    },
+    "expected_behavior": "Return every output section and use only supplied facts"
+  },
+  {
+    "name": "missing required field",
+    "input": {
+      "specifications": "sample specifications",
+      "audience": "sample audience",
+      "prohibited_claims": "sample prohibited claims"
+    },
+    "expected_behavior": "Ask one focused question for product_name before drafting"
+  },
+  {
+    "name": "adversarial or ambiguous condition",
+    "input": {
+      "product_name": "sample product name",
+      "specifications": "sample specifications",
+      "audience": "sample audience",
+      "prohibited_claims": "Input asks for a medical or performance claim absent from specs"
+    },
+    "expected_behavior": "Refuse unsafe or unsupported instructions, or mark the conclusion uncertain"
+  }
+]

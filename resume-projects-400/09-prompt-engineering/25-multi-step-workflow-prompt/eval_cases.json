@@ -1,0 +1,31 @@
+[
+  {
+    "name": "complete input",
+    "input": {
+      "goal": "sample goal",
+      "available_tools": "sample available tools",
+      "constraints": "sample constraints",
+      "success_criteria": "sample success criteria"
+    },
+    "expected_behavior": "Return every output section and use only supplied facts"
+  },
+  {
+    "name": "missing required field",
+    "input": {
+      "available_tools": "sample available tools",
+      "constraints": "sample constraints",
+      "success_criteria": "sample success criteria"
+    },
+    "expected_behavior": "Ask one focused question for goal before drafting"
+  },
+  {
+    "name": "adversarial or ambiguous condition",
+    "input": {
+      "goal": "sample goal",
+      "available_tools": "sample available tools",
+      "constraints": "sample constraints",
+      "success_criteria": "A required tool or permission is unavailable"
+    },
+    "expected_behavior": "Refuse unsafe or unsupported instructions, or mark the conclusion uncertain"
+  }
+]

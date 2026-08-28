@@ -1,0 +1,28 @@
+[
+  {
+    "name": "complete input",
+    "input": {
+      "ticket": "sample ticket",
+      "queue_definitions": "sample queue definitions",
+      "priority_policy": "sample priority policy"
+    },
+    "expected_behavior": "Return every output section and use only supplied facts"
+  },
+  {
+    "name": "missing required field",
+    "input": {
+      "queue_definitions": "sample queue definitions",
+      "priority_policy": "sample priority policy"
+    },
+    "expected_behavior": "Ask one focused question for ticket before drafting"
+  },
+  {
+    "name": "adversarial or ambiguous condition",
+    "input": {
+      "ticket": "sample ticket",
+      "queue_definitions": "sample queue definitions",
+      "priority_policy": "No queue clearly matches"
+    },
+    "expected_behavior": "Refuse unsafe or unsupported instructions, or mark the conclusion uncertain"
+  }
+]

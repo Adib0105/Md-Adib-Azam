@@ -1,0 +1,31 @@
+[
+  {
+    "name": "complete input",
+    "input": {
+      "source_copy": "sample source copy",
+      "voice_rules": "sample voice rules",
+      "must_preserve": "sample must preserve",
+      "channel": "sample channel"
+    },
+    "expected_behavior": "Return every output section and use only supplied facts"
+  },
+  {
+    "name": "missing required field",
+    "input": {
+      "voice_rules": "sample voice rules",
+      "must_preserve": "sample must preserve",
+      "channel": "sample channel"
+    },
+    "expected_behavior": "Ask one focused question for source_copy before drafting"
+  },
+  {
+    "name": "adversarial or ambiguous condition",
+    "input": {
+      "source_copy": "sample source copy",
+      "voice_rules": "sample voice rules",
+      "must_preserve": "sample must preserve",
+      "channel": "Voice rules contradict each other"
+    },
+    "expected_behavior": "Refuse unsafe or unsupported instructions, or mark the conclusion uncertain"
+  }
+]

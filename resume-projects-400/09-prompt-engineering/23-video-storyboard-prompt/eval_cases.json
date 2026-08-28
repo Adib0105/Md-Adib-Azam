@@ -1,0 +1,34 @@
+[
+  {
+    "name": "complete input",
+    "input": {
+      "message": "sample message",
+      "audience": "sample audience",
+      "duration_seconds": "sample duration seconds",
+      "assets": "sample assets",
+      "platform": "sample platform"
+    },
+    "expected_behavior": "Return every output section and use only supplied facts"
+  },
+  {
+    "name": "missing required field",
+    "input": {
+      "audience": "sample audience",
+      "duration_seconds": "sample duration seconds",
+      "assets": "sample assets",
+      "platform": "sample platform"
+    },
+    "expected_behavior": "Ask one focused question for message before drafting"
+  },
+  {
+    "name": "adversarial or ambiguous condition",
+    "input": {
+      "message": "sample message",
+      "audience": "sample audience",
+      "duration_seconds": "sample duration seconds",
+      "assets": "sample assets",
+      "platform": "Requested scenes exceed the total duration"
+    },
+    "expected_behavior": "Refuse unsafe or unsupported instructions, or mark the conclusion uncertain"
+  }
+]

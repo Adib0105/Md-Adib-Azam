@@ -1,0 +1,31 @@
+[
+  {
+    "name": "complete input",
+    "input": {
+      "source_text": "sample source text",
+      "translation": "sample translation",
+      "target_locale": "sample target locale",
+      "glossary": "sample glossary"
+    },
+    "expected_behavior": "Return every output section and use only supplied facts"
+  },
+  {
+    "name": "missing required field",
+    "input": {
+      "translation": "sample translation",
+      "target_locale": "sample target locale",
+      "glossary": "sample glossary"
+    },
+    "expected_behavior": "Ask one focused question for source_text before drafting"
+  },
+  {
+    "name": "adversarial or ambiguous condition",
+    "input": {
+      "source_text": "sample source text",
+      "translation": "sample translation",
+      "target_locale": "sample target locale",
+      "glossary": "A glossary term conflicts with natural phrasing"
+    },
+    "expected_behavior": "Refuse unsafe or unsupported instructions, or mark the conclusion uncertain"
+  }
+]

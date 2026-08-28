@@ -1,0 +1,31 @@
+[
+  {
+    "name": "complete input",
+    "input": {
+      "feature": "sample feature",
+      "data_flow": "sample data flow",
+      "user_roles": "sample user roles",
+      "wordpress_version": "sample wordpress version"
+    },
+    "expected_behavior": "Return every output section and use only supplied facts"
+  },
+  {
+    "name": "missing required field",
+    "input": {
+      "data_flow": "sample data flow",
+      "user_roles": "sample user roles",
+      "wordpress_version": "sample wordpress version"
+    },
+    "expected_behavior": "Ask one focused question for feature before drafting"
+  },
+  {
+    "name": "adversarial or ambiguous condition",
+    "input": {
+      "feature": "sample feature",
+      "data_flow": "sample data flow",
+      "user_roles": "sample user roles",
+      "wordpress_version": "Feature would expose private content to anonymous users"
+    },
+    "expected_behavior": "Refuse unsafe or unsupported instructions, or mark the conclusion uncertain"
+  }
+]

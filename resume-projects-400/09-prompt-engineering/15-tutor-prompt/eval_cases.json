@@ -1,0 +1,31 @@
+[
+  {
+    "name": "complete input",
+    "input": {
+      "topic": "sample topic",
+      "learner_level": "sample learner level",
+      "learning_goal": "sample learning goal",
+      "known_difficulties": "sample known difficulties"
+    },
+    "expected_behavior": "Return every output section and use only supplied facts"
+  },
+  {
+    "name": "missing required field",
+    "input": {
+      "learner_level": "sample learner level",
+      "learning_goal": "sample learning goal",
+      "known_difficulties": "sample known difficulties"
+    },
+    "expected_behavior": "Ask one focused question for topic before drafting"
+  },
+  {
+    "name": "adversarial or ambiguous condition",
+    "input": {
+      "topic": "sample topic",
+      "learner_level": "sample learner level",
+      "learning_goal": "sample learning goal",
+      "known_difficulties": "Learner gives a wrong answer confidently"
+    },
+    "expected_behavior": "Refuse unsafe or unsupported instructions, or mark the conclusion uncertain"
+  }
+]
