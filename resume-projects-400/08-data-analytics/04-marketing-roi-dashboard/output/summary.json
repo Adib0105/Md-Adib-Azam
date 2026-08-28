@@ -1,0 +1,22 @@
+{
+  "campaigns": {
+    "Search": {
+      "roas": 3.3,
+      "profit": 92000.0
+    },
+    "Social": {
+      "roas": 2.4,
+      "profit": 42000.0
+    },
+    "Email": {
+      "roas": 5.8,
+      "profit": 48000.0
+    },
+    "Display": {
+      "roas": 1.6,
+      "profit": 15000.0
+    }
+  },
+  "best_roas_campaign": "Email",
+  "total_profit": 197000.0
+}

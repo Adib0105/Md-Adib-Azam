@@ -1,0 +1,7 @@
+employee,department,attrition,tenure_years
+E1,Support,0,2.1
+E2,Support,1,0.7
+E3,IT,0,3.2
+E4,IT,0,1.5
+E5,Sales,1,0.9
+E6,Sales,0,2.4

@@ -1,0 +1,9 @@
+{
+  "budget": 24700.0,
+  "actual": 24500.0,
+  "variance": 200.0,
+  "overspent_categories": [
+    "Food",
+    "Utilities"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "customers": 6,
+  "overall_churn_pct": 50.0,
+  "churn_by_plan_pct": {
+    "Basic": 66.67,
+    "Pro": 33.33
+  },
+  "highest_risk_plan": "Basic"
+}

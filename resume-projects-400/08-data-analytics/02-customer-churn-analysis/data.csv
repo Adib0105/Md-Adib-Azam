@@ -1,0 +1,7 @@
+customer,plan,churned,tenure_months
+C1,Basic,1,2
+C2,Basic,0,8
+C3,Basic,1,1
+C4,Pro,0,18
+C5,Pro,0,12
+C6,Pro,1,4

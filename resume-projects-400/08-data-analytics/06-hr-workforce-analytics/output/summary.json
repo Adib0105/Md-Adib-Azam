@@ -1,0 +1,13 @@
+{
+  "headcount": {
+    "Support": 2,
+    "IT": 2,
+    "Sales": 2
+  },
+  "attrition_rate_pct": {
+    "Support": 50.0,
+    "IT": 0.0,
+    "Sales": 50.0
+  },
+  "overall_attrition_pct": 33.33
+}

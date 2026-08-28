@@ -1,0 +1,29 @@
+{
+  "overall_conversion_pct": 8.6,
+  "steps": [
+    {
+      "from": "Visit",
+      "to": "Product View",
+      "conversion_pct": 62.0,
+      "drop_off": 3800
+    },
+    {
+      "from": "Product View",
+      "to": "Add to Cart",
+      "conversion_pct": 33.87,
+      "drop_off": 4100
+    },
+    {
+      "from": "Add to Cart",
+      "to": "Checkout",
+      "conversion_pct": 57.14,
+      "drop_off": 900
+    },
+    {
+      "from": "Checkout",
+      "to": "Purchase",
+      "conversion_pct": 71.67,
+      "drop_off": 340
+    }
+  ]
+}

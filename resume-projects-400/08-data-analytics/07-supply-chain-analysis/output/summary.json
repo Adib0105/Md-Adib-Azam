@@ -1,0 +1,9 @@
+{
+  "otif_by_supplier_pct": {
+    "Alpha": 50.0,
+    "Beta": 50.0,
+    "Gamma": 100.0
+  },
+  "overall_otif_pct": 66.67,
+  "best_supplier": "Gamma"
+}

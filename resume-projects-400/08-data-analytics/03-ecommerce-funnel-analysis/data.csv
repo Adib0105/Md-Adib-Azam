@@ -1,0 +1,6 @@
+stage,users,stage_order
+Visit,10000,1
+Product View,6200,2
+Add to Cart,2100,3
+Checkout,1200,4
+Purchase,860,5

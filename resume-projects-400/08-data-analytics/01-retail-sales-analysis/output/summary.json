@@ -1,0 +1,8 @@
+{
+  "total_revenue": 695000.0,
+  "category_revenue": {
+    "Electronics": 425000.0,
+    "Home": 270000.0
+  },
+  "first_to_last_month_growth_pct": 23.19
+}
