@@ -1,0 +1,5 @@
+kpi,actual,target,direction
+Revenue,1080000,1000000,higher
+SLA Compliance,93,95,higher
+Open Defects,8,10,lower
+CSAT,4.5,4.3,higher
