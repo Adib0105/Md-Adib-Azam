@@ -1,6 +1,6 @@
 <div align="center">
 
-![Md Adib Azam — Personal Portfolio](assets/md-adib-azam-banner.svg)
+![Md Adib Azam — Personal Portfolio](assets/md-adib-azam-banner.gif)
 
 [![Portfolio quality gate](https://github.com/Adib0105/Md-Adib-Azam/actions/workflows/resume-portfolio.yml/badge.svg)](https://github.com/Adib0105/Md-Adib-Azam/actions/workflows/resume-portfolio.yml)
 [![GitHub](https://img.shields.io/badge/GitHub-Adib0105-0F172A?style=for-the-badge&logo=github)](https://github.com/Adib0105)
@@ -14,7 +14,7 @@
 <div align="center">
 
 <a href="https://github.com/Adib0105/JARVIS-AI-OMEGA">
-  <img src="assets/jarvis-omega-feature.svg" alt="Open Md Adib Azam's JARVIS AI OMEGA V7.5 desktop agent project" width="100%">
+  <img src="assets/jarvis-omega-feature.gif" alt="Open Md Adib Azam's animated JARVIS AI OMEGA V7.5 desktop agent project" width="100%">
 </a>
 
 **Click the card to explore JARVIS AI OMEGA V7.5 →**
