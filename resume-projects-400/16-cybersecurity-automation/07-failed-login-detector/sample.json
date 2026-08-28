@@ -1,0 +1,25 @@
+{
+  "threshold": 3,
+  "events": [
+    {
+      "user": "admin",
+      "source": "10.0.0.9",
+      "result": "failed"
+    },
+    {
+      "user": "admin",
+      "source": "10.0.0.9",
+      "result": "failed"
+    },
+    {
+      "user": "admin",
+      "source": "10.0.0.9",
+      "result": "failed"
+    },
+    {
+      "user": "adib",
+      "source": "10.0.0.2",
+      "result": "success"
+    }
+  ]
+}

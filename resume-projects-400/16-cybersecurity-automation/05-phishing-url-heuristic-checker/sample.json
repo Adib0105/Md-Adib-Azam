@@ -1,0 +1,8 @@
+{
+  "max_labels": 4,
+  "urls": [
+    "https://example.com/account",
+    "http://198.51.100.8/urgent-login",
+    "https://login.example.co.in/verify-account"
+  ]
+}

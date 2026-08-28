@@ -1,0 +1,8 @@
+{
+  "error_threshold": 2,
+  "lines": [
+    "10.0.0.5 \"GET /.env\" 404 \"curl\"",
+    "10.0.0.5 \"GET /wp-admin\" 404 \"curl\"",
+    "10.0.0.8 \"GET /\" 200 \"Browser\""
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "trusted": [
+    {
+      "path": "app.py",
+      "sha256": "aaa"
+    },
+    {
+      "path": "config.json",
+      "sha256": "bbb"
+    }
+  ],
+  "current": [
+    {
+      "path": "app.py",
+      "sha256": "ccc"
+    },
+    {
+      "path": "new.txt",
+      "sha256": "ddd"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "password": "Adib#SecurePortfolio2026",
+  "minimum_length": 14,
+  "blocked": [
+    "password",
+    "12345678"
+  ]
+}

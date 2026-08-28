@@ -1,0 +1,6 @@
+{
+  "headers": {
+    "Content-Security-Policy": "default-src 'self'",
+    "X-Content-Type-Options": "nosniff"
+  }
+}

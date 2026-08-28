@@ -1,0 +1,3 @@
+{
+  "nmap_xml": "<nmaprun><host><address addr='192.0.2.10'/><ports><port protocol='tcp' portid='22'><state state='open'/><service name='ssh'/></port><port protocol='tcp' portid='80'><state state='closed'/></port></ports></host></nmaprun>"
+}
