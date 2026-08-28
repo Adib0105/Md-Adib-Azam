@@ -1,0 +1,22 @@
+{
+  "channel_metrics": {
+    "Organic": {
+      "conversion_rate_pct": 5.2,
+      "bounce_rate_pct": 38.0
+    },
+    "Paid Search": {
+      "conversion_rate_pct": 5.94,
+      "bounce_rate_pct": 42.19
+    },
+    "Social": {
+      "conversion_rate_pct": 3.04,
+      "bounce_rate_pct": 53.57
+    },
+    "Email": {
+      "conversion_rate_pct": 12.5,
+      "bounce_rate_pct": 20.0
+    }
+  },
+  "best_conversion_channel": "Email",
+  "total_sessions": 12200.0
+}

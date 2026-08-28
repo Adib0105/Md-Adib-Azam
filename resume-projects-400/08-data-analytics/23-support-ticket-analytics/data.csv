@@ -1,0 +1,7 @@
+ticket,category,sla_met,resolution_hours
+T1,Technical,1,3
+T2,Technical,0,14
+T3,Billing,1,2
+T4,Billing,1,4
+T5,Delivery,0,20
+T6,Delivery,1,6

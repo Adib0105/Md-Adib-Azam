@@ -1,0 +1,8 @@
+{
+  "attrition_by_overtime_pct": {
+    "Yes": 66.67,
+    "No": 0.0
+  },
+  "overall_attrition_pct": 33.33,
+  "note": "Descriptive pattern; not proof of cause."
+}

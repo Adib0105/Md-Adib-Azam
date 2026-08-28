@@ -1,0 +1,7 @@
+{
+  "control_rate_pct": 4.2,
+  "treatment_rate_pct": 5.1,
+  "relative_lift_pct": 21.38,
+  "z_score": 2.14,
+  "note": "Approximate test; check experiment design before causal claims."
+}

@@ -1,0 +1,7 @@
+employee,department,overtime,attrition,satisfaction
+E1,Support,Yes,1,2
+E2,Support,No,0,4
+E3,IT,No,0,5
+E4,IT,Yes,0,4
+E5,Sales,Yes,1,2
+E6,Sales,No,0,3

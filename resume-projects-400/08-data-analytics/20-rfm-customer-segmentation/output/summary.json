@@ -1,0 +1,34 @@
+{
+  "customers": [
+    {
+      "customer": "C1",
+      "rfm_score": 222,
+      "segment": "at risk"
+    },
+    {
+      "customer": "C2",
+      "rfm_score": 444,
+      "segment": "champion"
+    },
+    {
+      "customer": "C3",
+      "rfm_score": 333,
+      "segment": "regular"
+    },
+    {
+      "customer": "C4",
+      "rfm_score": 555,
+      "segment": "champion"
+    },
+    {
+      "customer": "C5",
+      "rfm_score": 111,
+      "segment": "at risk"
+    }
+  ],
+  "segments": {
+    "at risk": 2,
+    "champion": 2,
+    "regular": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "mean": 2661.67,
+  "standard_deviation": 3497.3,
+  "flagged": [
+    {
+      "transaction": "T6",
+      "amount": 9800.0,
+      "z_score": 2.04,
+      "flag": true
+    }
+  ],
+  "method": "z-score >= 2; review only, not proof of fraud"
+}

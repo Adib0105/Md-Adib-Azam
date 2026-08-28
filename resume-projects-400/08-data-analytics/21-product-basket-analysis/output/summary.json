@@ -1,0 +1,9 @@
+{
+  "orders": 4,
+  "pair_counts": {
+    "Keyboard + Mouse": 2,
+    "Headset + Mouse": 2,
+    "Headset + Keyboard": 2
+  },
+  "top_pair": "Keyboard + Mouse"
+}

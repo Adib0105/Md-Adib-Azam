@@ -1,0 +1,17 @@
+{
+  "ticket_volume": {
+    "Technical": 2,
+    "Billing": 2,
+    "Delivery": 2
+  },
+  "sla_by_category_pct": {
+    "Technical": 50.0,
+    "Billing": 100.0,
+    "Delivery": 50.0
+  },
+  "average_resolution_hours": {
+    "Technical": 8.5,
+    "Billing": 3.0,
+    "Delivery": 13.0
+  }
+}
