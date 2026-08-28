@@ -1,0 +1,14 @@
+{
+  "schema": {
+    "user.id": "number",
+    "user.name": "string",
+    "items": "array"
+  },
+  "response": {
+    "user": {
+      "id": 7,
+      "name": "Adib"
+    },
+    "items": []
+  }
+}

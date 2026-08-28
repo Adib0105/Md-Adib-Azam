@@ -1,0 +1,12 @@
+{
+  "resume": "Python developer with SQL, Excel, customer support and Git experience.",
+  "required": [
+    "python",
+    "sql",
+    "excel"
+  ],
+  "preferred": [
+    "powerbi",
+    "git"
+  ]
+}

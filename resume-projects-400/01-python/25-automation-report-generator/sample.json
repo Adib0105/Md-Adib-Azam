@@ -1,0 +1,19 @@
+{
+  "runs": [
+    {
+      "task": "daily-backup",
+      "status": "success",
+      "duration_s": 12
+    },
+    {
+      "task": "data-import",
+      "status": "failed",
+      "duration_s": 8
+    },
+    {
+      "task": "email-report",
+      "status": "success",
+      "duration_s": 3
+    }
+  ]
+}
