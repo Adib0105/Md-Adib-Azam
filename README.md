@@ -9,6 +9,20 @@
 
 </div>
 
+## Featured Project — JARVIS AI OMEGA
+
+<div align="center">
+
+<a href="https://github.com/Adib0105/JARVIS-AI-OMEGA">
+  <img src="assets/jarvis-omega-feature.svg" alt="Open Md Adib Azam's JARVIS AI OMEGA V7.5 desktop agent project" width="100%">
+</a>
+
+**Click the card to explore JARVIS AI OMEGA V7.5 →**
+
+Windows-first multimodal desktop agent with voice, vision, memory, computer use, permission gates, evidence-based verification and controlled recovery.
+
+</div>
+
 ## Hello, I am Md Adib Azam 👋
 
 I am a Computer Science & Technology diploma student from Durgapur. I build practical tools across programming, data analytics, web development, databases, automation and digital operations.
@@ -28,6 +42,7 @@ My project workflow is simple: **understand the problem → build a usable solut
 
 | Project | Problem solved | Evidence |
 |---|---|---|
+| [JARVIS AI OMEGA V7.5](https://github.com/Adib0105/JARVIS-AI-OMEGA) | Coordinates voice, vision, memory and computer-use capabilities through a permission-aware desktop agent | Separate public repository with architecture, security, testing and Windows build documentation |
 | [Advanced Analytics Portfolio](advanced-data-analytics/) | Turns business questions into reproducible analytical decisions | 20 pipelines; metrics and decision briefs for every run |
 | [Customer Support SLA Dashboard](28-customer-support-sla-dashboard/) | Tracks open work, breaches, response time and agent load | Separate UI/logic modules with passing Node tests |
 | [Digital Seva Workflow](30-digital-seva-workflow/) | Controls a service request from receipt to delivery | Validation, ordered states, local persistence and tests |

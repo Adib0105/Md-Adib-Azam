@@ -6,10 +6,11 @@ This is the short, evidence-first route through my portfolio. It highlights the 
 
 ## Five-minute review path
 
-1. Start with the [Advanced Data Analytics collection](#1-advanced-data-analytics-portfolio) for end-to-end analytical depth.
-2. Review the [Customer Support SLA Dashboard](#2-customer-support-sla-dashboard) and [Digital Seva Workflow](#3-digital-seva-request-workflow) for practical operations work.
-3. Open the [MySQL Helpdesk Database](#4-mysql-helpdesk-database) for relational design.
-4. Finish with the [Security Header Auditor](#6-defensive-security-header-auditor) and [Excel Dashboard](#8-excel-sales-dashboard-workbook) for breadth.
+1. Open [JARVIS AI OMEGA V7.5](#featured-build--jarvis-ai-omega-v75) for the largest standalone agent project.
+2. Continue with the [Advanced Data Analytics collection](#1-advanced-data-analytics-portfolio) for end-to-end analytical depth.
+3. Review the [Customer Support SLA Dashboard](#2-customer-support-sla-dashboard) and [Digital Seva Workflow](#3-digital-seva-request-workflow) for practical operations work.
+4. Open the [MySQL Helpdesk Database](#4-mysql-helpdesk-database) for relational design.
+5. Finish with the [Security Header Auditor](#6-defensive-security-header-auditor) and [Excel Dashboard](#8-excel-sales-dashboard-workbook) for breadth.
 
 ## Evidence summary
 
@@ -19,6 +20,20 @@ This is the short, evidence-first route through my portfolio. It highlights the 
 | CV-aligned multi-file applications | 20/20 passed | `python run_cv_project_tests.py` |
 | Advanced analytics pipelines | 20/20 completed | `python advanced-data-analytics/run_all.py` |
 | Creative/media spaces | 125 clean folders | Preserved for Md Adib Azam's finished files |
+
+## Featured build — JARVIS AI OMEGA V7.5
+
+**JARVIS AI OMEGA** is a separate Windows-first multimodal desktop-agent project organized around a strict runtime loop:
+
+```text
+UNDERSTAND → PLAN → PERMISSION → EXECUTE → VERIFY → RECOVER / REPLAN
+```
+
+Its documented scope includes Hindi/Hinglish/English voice interaction, screen and image vision, layered memory and RAG, capability-aware computer use, browser research, coding tools, observability, security gates and controlled self-development workflows.
+
+The repository also documents capability status, testing across multiple Python versions, Windows packaging, audit boundaries and features that still require real-workstation validation.
+
+**Review the complete standalone project:** [Adib0105/JARVIS-AI-OMEGA](https://github.com/Adib0105/JARVIS-AI-OMEGA)
 
 ## 1. Advanced Data Analytics Portfolio
 

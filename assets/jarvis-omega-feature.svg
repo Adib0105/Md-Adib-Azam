@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title description">
+  <title id="title">JARVIS AI OMEGA V7.5 featured project</title>
+  <desc id="description">A red, gold and cyan armored AI assistant emblem beside details for Md Adib Azam's JARVIS desktop agent.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12080d"/>
+      <stop offset="0.5" stop-color="#250b12"/>
+      <stop offset="1" stop-color="#081827"/>
+    </linearGradient>
+    <linearGradient id="redMetal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff4b3e"/>
+      <stop offset="0.45" stop-color="#a10f24"/>
+      <stop offset="1" stop-color="#4d0714"/>
+    </linearGradient>
+    <linearGradient id="goldMetal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff0a8"/>
+      <stop offset="0.42" stop-color="#f6be3d"/>
+      <stop offset="1" stop-color="#9b5711"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#e6ffff"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#67e8f9" stroke-opacity="0.055"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="480" rx="32" fill="url(#background)"/>
+  <rect width="1200" height="480" rx="32" fill="url(#grid)"/>
+  <path d="M0 384C162 318 290 406 432 354S706 294 866 346s241 23 334-8v142H0z" fill="#ef233c" opacity="0.07"/>
+  <circle cx="214" cy="236" r="172" fill="#0b2232" stroke="#22d3ee" stroke-opacity="0.24" stroke-width="2"/>
+  <circle cx="214" cy="236" r="146" fill="none" stroke="#f6be3d" stroke-opacity="0.22" stroke-width="2" stroke-dasharray="10 13"/>
+
+  <g stroke-linejoin="round">
+    <path d="M94 392Q119 329 163 306H265Q309 329 334 392Z" fill="#5b0a18" stroke="#da2940" stroke-width="3"/>
+    <path d="M126 176Q132 116 214 92Q296 116 302 176L285 310Q214 356 143 310Z" fill="url(#redMetal)" stroke="#f2b335" stroke-width="4"/>
+    <path d="M161 137Q214 111 267 137L282 191L259 289Q214 321 169 289L146 191Z" fill="url(#goldMetal)" stroke="#ffc857" stroke-width="3"/>
+    <path d="M126 177L155 188L169 289L143 310Z" fill="#7d0c20" stroke="#d5223c" stroke-width="2"/>
+    <path d="M302 177L273 188L259 289L285 310Z" fill="#7d0c20" stroke="#d5223c" stroke-width="2"/>
+    <path d="M162 136L188 165L214 154L240 165L266 136" fill="none" stroke="#fff0a8" stroke-opacity="0.6" stroke-width="3"/>
+    <path d="M162 204L204 211L190 230L158 219Z" fill="url(#cyan)" stroke="#d9ffff" stroke-width="2"/>
+    <path d="M266 204L224 211L238 230L270 219Z" fill="url(#cyan)" stroke="#d9ffff" stroke-width="2"/>
+    <path d="M181 259L214 270L247 259L239 291L214 306L189 291Z" fill="#6f4010" opacity="0.72"/>
+    <path d="M188 166L204 183H224L240 166" fill="none" stroke="#9b5711" stroke-width="3"/>
+    <circle cx="214" cy="357" r="35" fill="#0b2533" stroke="#22d3ee" stroke-width="5"/>
+    <circle cx="214" cy="357" r="24" fill="#dfffff" stroke="#67e8f9" stroke-width="3"/>
+    <path d="M214 337L232 368H196Z" fill="#0ea5c6" stroke="#ffffff" stroke-width="2"/>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="432" y="82" fill="#67e8f9" font-size="18" font-weight="700" letter-spacing="5">MD ADIB AZAM · FEATURED BUILD</text>
+    <text x="428" y="158" fill="#ffffff" font-size="58" font-weight="900">JARVIS AI OMEGA</text>
+    <text x="432" y="202" fill="#fbbf24" font-size="24" font-weight="800" letter-spacing="2">V7.5 · RELIABLE ARC DESKTOP AGENT</text>
+    <rect x="432" y="226" width="672" height="4" rx="2" fill="url(#cyan)" opacity="0.9"/>
+
+    <text x="432" y="274" fill="#dbeafe" font-size="22" font-weight="700">Voice  ·  Vision  ·  Memory  ·  Computer Use</text>
+    <text x="432" y="311" fill="#9fb6ce" font-size="18">Windows-first multimodal assistant with evidence-driven actions</text>
+    <text x="432" y="341" fill="#9fb6ce" font-size="18">Permission gates · Capability awareness · Verification · Recovery</text>
+
+    <g transform="translate(432 376)">
+      <rect width="238" height="56" rx="28" fill="#a10f24" stroke="#fbbf24" stroke-width="2"/>
+      <text x="119" y="36" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="800" letter-spacing="1">OPEN PROJECT  ↗</text>
+    </g>
+    <text x="692" y="411" fill="#67e8f9" font-size="16">github.com/Adib0105/JARVIS-AI-OMEGA</text>
+  </g>
+
+  <path d="M1136 74h-28v-8h36v36h-8zM1139 69l-66 66" fill="none" stroke="#fbbf24" stroke-width="5" stroke-linecap="round"/>
+</svg>
