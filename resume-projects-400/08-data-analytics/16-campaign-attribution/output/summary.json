@@ -1,0 +1,14 @@
+{
+  "first_touch_revenue": {
+    "Organic": 7200.0,
+    "Social": 7100.0,
+    "Search": 7600.0
+  },
+  "last_touch_revenue": {
+    "Email": 12600.0,
+    "Direct": 3000.0,
+    "Organic": 2200.0,
+    "Search": 4100.0
+  },
+  "note": "Attribution models allocate the same observed revenue differently."
+}

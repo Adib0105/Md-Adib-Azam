@@ -1,0 +1,35 @@
+{
+  "total_consumption_value": 1780000.0,
+  "items": [
+    {
+      "sku": "A1",
+      "value": 960000.0,
+      "class": "A"
+    },
+    {
+      "sku": "B2",
+      "value": 320000.0,
+      "class": "A"
+    },
+    {
+      "sku": "C3",
+      "value": 270000.0,
+      "class": "B"
+    },
+    {
+      "sku": "D4",
+      "value": 140000.0,
+      "class": "B"
+    },
+    {
+      "sku": "E5",
+      "value": 90000.0,
+      "class": "C"
+    }
+  ],
+  "class_counts": {
+    "A": 2,
+    "B": 2,
+    "C": 1
+  }
+}

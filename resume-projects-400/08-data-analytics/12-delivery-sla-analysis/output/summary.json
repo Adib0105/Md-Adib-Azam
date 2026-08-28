@@ -1,0 +1,8 @@
+{
+  "on_time_by_courier_pct": {
+    "Alpha": 50.0,
+    "Beta": 100.0,
+    "Gamma": 50.0
+  },
+  "average_delay_days": 0.5
+}

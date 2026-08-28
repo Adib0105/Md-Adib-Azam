@@ -1,0 +1,6 @@
+ticket,aht_seconds,sla_met,first_contact_resolved,csat
+T1,320,1,1,5
+T2,440,0,0,3
+T3,280,1,1,4
+T4,360,1,0,4
+T5,300,1,1,5

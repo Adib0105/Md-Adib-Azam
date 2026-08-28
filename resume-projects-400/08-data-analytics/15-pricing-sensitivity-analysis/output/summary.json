@@ -1,0 +1,10 @@
+{
+  "midpoint_elasticity": {
+    "Basic": -1.11,
+    "Pro": -2.72
+  },
+  "interpretation": {
+    "Basic": "elastic",
+    "Pro": "elastic"
+  }
+}
