@@ -1,4 +1,0 @@
-Project,Owner,Status,Target,Actual,Variance,Achievement,Updated
-Training Compliance Matrix,Md Adib Azam,On Track,1190,1128,=E2-D2,=IFERROR(E2/D2,0),2026-08-28
-Sample Team,Operations,Review,895,874,=E3-D3,=IFERROR(E3/D3,0),2026-08-28
-TOTAL,,,=SUM(D2:D3),=SUM(E2:E3),=E4-D4,=IFERROR(E4/D4,0),

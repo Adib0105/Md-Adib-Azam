@@ -1,0 +1,19 @@
+{
+  "query": "ad",
+  "contacts": [
+    {
+      "name": "Adib",
+      "phone": "+91 94332 80105",
+      "email": "A@EXAMPLE.COM"
+    },
+    {
+      "name": "Adib",
+      "phone": "919433280105",
+      "email": "a@example.com"
+    },
+    {
+      "name": "Riya",
+      "phone": "9999999999"
+    }
+  ]
+}

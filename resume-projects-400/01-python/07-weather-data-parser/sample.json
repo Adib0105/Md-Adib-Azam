@@ -1,0 +1,19 @@
+{
+  "readings": [
+    {
+      "date": "2026-08-01",
+      "temperature_c": 31.2,
+      "rain_mm": 4.5
+    },
+    {
+      "date": "2026-08-02",
+      "temperature_c": 29.4,
+      "rain_mm": 18.0
+    },
+    {
+      "date": "2026-08-03",
+      "temperature_c": 32.1,
+      "rain_mm": 0
+    }
+  ]
+}

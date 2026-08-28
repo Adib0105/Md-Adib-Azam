@@ -1,0 +1,16 @@
+{
+  "invoice_no": "INV-1001",
+  "tax_rate": 0.18,
+  "items": [
+    {
+      "description": "Design",
+      "quantity": 2,
+      "unit_price": 1500
+    },
+    {
+      "description": "Hosting",
+      "quantity": 1,
+      "unit_price": 900
+    }
+  ]
+}

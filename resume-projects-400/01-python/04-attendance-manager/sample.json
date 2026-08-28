@@ -1,0 +1,15 @@
+{
+  "threshold": 75,
+  "students": [
+    {
+      "name": "Asha",
+      "present": 42,
+      "classes": 50
+    },
+    {
+      "name": "Kabir",
+      "present": 31,
+      "classes": 50
+    }
+  ]
+}
