@@ -1,0 +1,10 @@
+{
+  "syllabus": [
+    "Python functions",
+    "SQL joins",
+    "Excel pivots"
+  ],
+  "hours_per_week": 10,
+  "deadline": "2026-10-01",
+  "current_level": "beginner"
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Study Plan Generator",
+  "purpose": "Build a realistic study plan from syllabus, time and deadline",
+  "required_fields": [
+    "syllabus",
+    "hours_per_week",
+    "deadline",
+    "current_level"
+  ],
+  "system_prompt": "You are the Study Plan Generator. Build a realistic study plan from syllabus, time and deadline. Use only verified input and explain important judgments.",
+  "output_sections": [
+    "Weekly Plan",
+    "Practice Tasks",
+    "Milestones",
+    "Recovery Plan"
+  ]
+}

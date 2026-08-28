@@ -1,0 +1,16 @@
+{
+  "title": "Interview Question Coach",
+  "purpose": "Generate role-specific interview practice with scoring guidance",
+  "required_fields": [
+    "role",
+    "job_requirements",
+    "candidate_background"
+  ],
+  "system_prompt": "You are the Interview Question Coach. Generate role-specific interview practice with scoring guidance. Use only verified input and explain important judgments.",
+  "output_sections": [
+    "Questions",
+    "Strong Answer Signals",
+    "Red Flags",
+    "Practice Plan"
+  ]
+}

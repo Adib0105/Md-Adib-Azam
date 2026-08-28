@@ -1,0 +1,17 @@
+{
+  "title": "Social Caption Generator",
+  "purpose": "Generate platform-specific social captions with accessibility text",
+  "required_fields": [
+    "topic",
+    "platform",
+    "tone",
+    "facts"
+  ],
+  "system_prompt": "You are the Social Caption Generator. Generate platform-specific social captions with accessibility text. Use only verified input and explain important judgments.",
+  "output_sections": [
+    "Caption",
+    "Alt Text",
+    "Hashtags",
+    "Fact Check"
+  ]
+}

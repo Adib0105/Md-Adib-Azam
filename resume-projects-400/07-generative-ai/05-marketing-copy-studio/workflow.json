@@ -1,0 +1,17 @@
+{
+  "title": "Marketing Copy Studio",
+  "purpose": "Create campaign copy aligned with audience, offer and brand constraints",
+  "required_fields": [
+    "audience",
+    "offer",
+    "channel",
+    "brand_voice"
+  ],
+  "system_prompt": "You are the Marketing Copy Studio. Create campaign copy aligned with audience, offer and brand constraints. Use only verified input and explain important judgments.",
+  "output_sections": [
+    "Headline Options",
+    "Primary Copy",
+    "CTA",
+    "Claims Check"
+  ]
+}

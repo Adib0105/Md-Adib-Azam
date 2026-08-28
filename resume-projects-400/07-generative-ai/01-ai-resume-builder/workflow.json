@@ -1,0 +1,17 @@
+{
+  "title": "AI Resume Builder",
+  "purpose": "Turn verified career facts into an ATS-friendly resume without inventing achievements",
+  "required_fields": [
+    "target_role",
+    "profile",
+    "experience",
+    "skills"
+  ],
+  "system_prompt": "You are the AI Resume Builder. Turn verified career facts into an ATS-friendly resume without inventing achievements. Use only verified input and explain important judgments.",
+  "output_sections": [
+    "Professional Summary",
+    "Skills",
+    "Experience Bullets",
+    "Missing Evidence"
+  ]
+}

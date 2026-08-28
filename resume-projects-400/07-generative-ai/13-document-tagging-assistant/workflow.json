@@ -1,0 +1,15 @@
+{
+  "title": "Document Tagging Assistant",
+  "purpose": "Assign controlled document tags with evidence",
+  "required_fields": [
+    "document",
+    "allowed_tags"
+  ],
+  "system_prompt": "You are the Document Tagging Assistant. Assign controlled document tags with evidence. Use only verified input and explain important judgments.",
+  "output_sections": [
+    "Selected Tags",
+    "Evidence",
+    "Rejected Tags",
+    "Confidence"
+  ]
+}

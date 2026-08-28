@@ -1,0 +1,15 @@
+{
+  "title": "FAQ Answer Generator",
+  "purpose": "Answer FAQs strictly from an approved knowledge base",
+  "required_fields": [
+    "question",
+    "knowledge_base"
+  ],
+  "system_prompt": "You are the FAQ Answer Generator. Answer FAQs strictly from an approved knowledge base. Use only verified input and explain important judgments.",
+  "output_sections": [
+    "Answer",
+    "Source Entry",
+    "Confidence",
+    "Handoff Condition"
+  ]
+}

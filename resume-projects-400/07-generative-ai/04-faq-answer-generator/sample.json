@@ -1,0 +1,9 @@
+{
+  "question": "How can I reset my password?",
+  "knowledge_base": [
+    {
+      "id": "KB-1",
+      "text": "Use Forgot Password on the login page."
+    }
+  ]
+}

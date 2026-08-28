@@ -1,0 +1,15 @@
+{
+  "title": "Prompt Safety Checker",
+  "purpose": "Inspect a prompt for injection, private-data and unsupported-claim risks",
+  "required_fields": [
+    "prompt",
+    "context_policy"
+  ],
+  "system_prompt": "You are the Prompt Safety Checker. Inspect a prompt for injection, private-data and unsupported-claim risks. Use only verified input and explain important judgments.",
+  "output_sections": [
+    "Risk Level",
+    "Detected Risks",
+    "Safe Rewrite",
+    "Residual Limitations"
+  ]
+}

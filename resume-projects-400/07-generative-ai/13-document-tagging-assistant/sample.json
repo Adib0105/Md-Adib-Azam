@@ -1,0 +1,10 @@
+{
+  "document": "Invoice INV-12 is pending approval for website hosting.",
+  "allowed_tags": [
+    "invoice",
+    "approved",
+    "pending",
+    "technical",
+    "marketing"
+  ]
+}
