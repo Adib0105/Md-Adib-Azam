@@ -1,0 +1,6 @@
+{
+  "headers": {
+    "Authentication-Results": "mx.example; spf=pass; dkim=pass; dmarc=fail",
+    "Received": "from mail.example by mx.example"
+  }
+}

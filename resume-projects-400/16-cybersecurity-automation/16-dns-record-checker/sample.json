@@ -1,0 +1,26 @@
+{
+  "expected": [
+    {
+      "type": "A",
+      "name": "app.example.com",
+      "value": "192.0.2.10"
+    },
+    {
+      "type": "TXT",
+      "name": "example.com",
+      "value": "v=spf1 -all"
+    }
+  ],
+  "observed": [
+    {
+      "type": "A",
+      "name": "app.example.com",
+      "value": "192.0.2.11"
+    },
+    {
+      "type": "TXT",
+      "name": "example.com",
+      "value": "v=spf1 -all"
+    }
+  ]
+}

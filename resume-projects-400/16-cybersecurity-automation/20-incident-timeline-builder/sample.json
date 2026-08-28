@@ -1,0 +1,15 @@
+{
+  "incident_id": "INC-2026-01",
+  "events": [
+    {
+      "timestamp": "2026-08-28T12:05:00+05:30",
+      "source": "auth",
+      "event": "failed login"
+    },
+    {
+      "timestamp": "2026-08-28T06:40:00Z",
+      "source": "edr",
+      "event": "alert created"
+    }
+  ]
+}

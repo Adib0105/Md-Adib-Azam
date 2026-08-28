@@ -1,0 +1,23 @@
+{
+  "approved": [
+    {
+      "name": "python",
+      "path": "/usr/bin/python"
+    }
+  ],
+  "processes": [
+    {
+      "pid": 101,
+      "name": "python",
+      "path": "/usr/bin/python",
+      "user": "adib"
+    },
+    {
+      "pid": 202,
+      "name": "mystery",
+      "path": "/tmp/mystery",
+      "user": "root",
+      "requires_root": false
+    }
+  ]
+}

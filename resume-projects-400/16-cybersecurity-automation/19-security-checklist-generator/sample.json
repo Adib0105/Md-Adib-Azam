@@ -1,0 +1,7 @@
+{
+  "mfa": true,
+  "backup_tested": false,
+  "auto_updates": true,
+  "least_privilege_reviewed": false,
+  "logging": true
+}

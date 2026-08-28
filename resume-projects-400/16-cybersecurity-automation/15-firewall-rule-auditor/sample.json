@@ -1,0 +1,18 @@
+{
+  "rules": [
+    {
+      "id": "R1",
+      "action": "allow",
+      "source": "0.0.0.0/0",
+      "port": "22",
+      "justification": ""
+    },
+    {
+      "id": "R2",
+      "action": "allow",
+      "source": "10.0.0.0/24",
+      "port": "443",
+      "justification": "Internal HTTPS"
+    }
+  ]
+}

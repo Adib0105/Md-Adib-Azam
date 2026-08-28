@@ -1,0 +1,19 @@
+{
+  "configuration": {
+    "http_to_https_redirect": true,
+    "cookies": [
+      {
+        "name": "session",
+        "secure": true,
+        "http_only": true,
+        "same_site": "Lax"
+      },
+      {
+        "name": "prefs",
+        "secure": false,
+        "http_only": false,
+        "same_site": ""
+      }
+    ]
+  }
+}

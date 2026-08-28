@@ -1,0 +1,13 @@
+{
+  "today": "2026-08-28",
+  "certificates": [
+    {
+      "host": "app.example.com",
+      "not_after": "2026-09-05"
+    },
+    {
+      "host": "api.example.com",
+      "not_after": "2026-12-01"
+    }
+  ]
+}

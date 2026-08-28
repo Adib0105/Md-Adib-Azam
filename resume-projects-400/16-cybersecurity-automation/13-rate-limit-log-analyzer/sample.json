@@ -1,0 +1,21 @@
+{
+  "threshold": 2,
+  "events": [
+    {
+      "client": "app-a",
+      "status": 429
+    },
+    {
+      "client": "app-a",
+      "status": 429
+    },
+    {
+      "client": "app-b",
+      "status": 200
+    },
+    {
+      "client": "app-a",
+      "status": 200
+    }
+  ]
+}
