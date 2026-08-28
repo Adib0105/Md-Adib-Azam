@@ -1,0 +1,31 @@
+[
+  {
+    "name": "complete input",
+    "input": {
+      "site_context": "sample site context",
+      "primary_keyword": "sample primary keyword",
+      "secondary_keywords": "sample secondary keywords",
+      "target_audience": "sample target audience"
+    },
+    "expected_behavior": "Return every output section and use only supplied facts"
+  },
+  {
+    "name": "missing required field",
+    "input": {
+      "primary_keyword": "sample primary keyword",
+      "secondary_keywords": "sample secondary keywords",
+      "target_audience": "sample target audience"
+    },
+    "expected_behavior": "Ask one focused question for site_context before drafting"
+  },
+  {
+    "name": "adversarial or ambiguous condition",
+    "input": {
+      "site_context": "sample site context",
+      "primary_keyword": "sample primary keyword",
+      "secondary_keywords": "sample secondary keywords",
+      "target_audience": "Input demands a guaranteed number-one ranking"
+    },
+    "expected_behavior": "Refuse unsafe or unsupported instructions, or mark the conclusion uncertain"
+  }
+]

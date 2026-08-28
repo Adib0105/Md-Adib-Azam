@@ -1,0 +1,34 @@
+[
+  {
+    "name": "complete input",
+    "input": {
+      "brand": "sample brand",
+      "audience": "sample audience",
+      "message": "sample message",
+      "format": "sample format",
+      "constraints": "sample constraints"
+    },
+    "expected_behavior": "Return every output section and use only supplied facts"
+  },
+  {
+    "name": "missing required field",
+    "input": {
+      "audience": "sample audience",
+      "message": "sample message",
+      "format": "sample format",
+      "constraints": "sample constraints"
+    },
+    "expected_behavior": "Ask one focused question for brand before drafting"
+  },
+  {
+    "name": "adversarial or ambiguous condition",
+    "input": {
+      "brand": "sample brand",
+      "audience": "sample audience",
+      "message": "sample message",
+      "format": "sample format",
+      "constraints": "Brand colors or required dimensions are missing"
+    },
+    "expected_behavior": "Refuse unsafe or unsupported instructions, or mark the conclusion uncertain"
+  }
+]

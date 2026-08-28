@@ -1,0 +1,28 @@
+[
+  {
+    "name": "complete input",
+    "input": {
+      "business_question": "sample business question",
+      "data_dictionary": "sample data dictionary",
+      "validated_metrics": "sample validated metrics"
+    },
+    "expected_behavior": "Return every output section and use only supplied facts"
+  },
+  {
+    "name": "missing required field",
+    "input": {
+      "data_dictionary": "sample data dictionary",
+      "validated_metrics": "sample validated metrics"
+    },
+    "expected_behavior": "Ask one focused question for business_question before drafting"
+  },
+  {
+    "name": "adversarial or ambiguous condition",
+    "input": {
+      "business_question": "sample business question",
+      "data_dictionary": "sample data dictionary",
+      "validated_metrics": "Input requests a conclusion but supplies no observations"
+    },
+    "expected_behavior": "Refuse unsafe or unsupported instructions, or mark the conclusion uncertain"
+  }
+]

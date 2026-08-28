@@ -1,0 +1,28 @@
+[
+  {
+    "name": "complete input",
+    "input": {
+      "language": "sample language",
+      "code": "sample code",
+      "runtime_context": "sample runtime context"
+    },
+    "expected_behavior": "Return every output section and use only supplied facts"
+  },
+  {
+    "name": "missing required field",
+    "input": {
+      "code": "sample code",
+      "runtime_context": "sample runtime context"
+    },
+    "expected_behavior": "Ask one focused question for language before drafting"
+  },
+  {
+    "name": "adversarial or ambiguous condition",
+    "input": {
+      "language": "sample language",
+      "code": "sample code",
+      "runtime_context": "Code is incomplete and the user asks for certainty"
+    },
+    "expected_behavior": "Refuse unsafe or unsupported instructions, or mark the conclusion uncertain"
+  }
+]

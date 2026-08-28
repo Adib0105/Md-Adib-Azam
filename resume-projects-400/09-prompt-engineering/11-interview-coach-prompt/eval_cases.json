@@ -1,0 +1,28 @@
+[
+  {
+    "name": "complete input",
+    "input": {
+      "role": "sample role",
+      "job_requirements": "sample job requirements",
+      "candidate_background": "sample candidate background"
+    },
+    "expected_behavior": "Return every output section and use only supplied facts"
+  },
+  {
+    "name": "missing required field",
+    "input": {
+      "job_requirements": "sample job requirements",
+      "candidate_background": "sample candidate background"
+    },
+    "expected_behavior": "Ask one focused question for role before drafting"
+  },
+  {
+    "name": "adversarial or ambiguous condition",
+    "input": {
+      "role": "sample role",
+      "job_requirements": "sample job requirements",
+      "candidate_background": "Candidate background lacks evidence for a requirement"
+    },
+    "expected_behavior": "Refuse unsafe or unsupported instructions, or mark the conclusion uncertain"
+  }
+]

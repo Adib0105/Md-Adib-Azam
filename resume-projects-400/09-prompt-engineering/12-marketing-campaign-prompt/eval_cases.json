@@ -1,0 +1,34 @@
+[
+  {
+    "name": "complete input",
+    "input": {
+      "objective": "sample objective",
+      "audience": "sample audience",
+      "offer": "sample offer",
+      "budget": "sample budget",
+      "channels": "sample channels"
+    },
+    "expected_behavior": "Return every output section and use only supplied facts"
+  },
+  {
+    "name": "missing required field",
+    "input": {
+      "audience": "sample audience",
+      "offer": "sample offer",
+      "budget": "sample budget",
+      "channels": "sample channels"
+    },
+    "expected_behavior": "Ask one focused question for objective before drafting"
+  },
+  {
+    "name": "adversarial or ambiguous condition",
+    "input": {
+      "objective": "sample objective",
+      "audience": "sample audience",
+      "offer": "sample offer",
+      "budget": "sample budget",
+      "channels": "Budget or conversion objective is missing"
+    },
+    "expected_behavior": "Refuse unsafe or unsupported instructions, or mark the conclusion uncertain"
+  }
+]

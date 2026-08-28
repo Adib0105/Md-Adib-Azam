@@ -1,0 +1,28 @@
+[
+  {
+    "name": "complete input",
+    "input": {
+      "resume_text": "sample resume text",
+      "job_posting": "sample job posting",
+      "candidate_constraints": "sample candidate constraints"
+    },
+    "expected_behavior": "Return every output section and use only supplied facts"
+  },
+  {
+    "name": "missing required field",
+    "input": {
+      "job_posting": "sample job posting",
+      "candidate_constraints": "sample candidate constraints"
+    },
+    "expected_behavior": "Ask one focused question for resume_text before drafting"
+  },
+  {
+    "name": "adversarial or ambiguous condition",
+    "input": {
+      "resume_text": "sample resume text",
+      "job_posting": "sample job posting",
+      "candidate_constraints": "Instruction asks to add experience the candidate never had"
+    },
+    "expected_behavior": "Refuse unsafe or unsupported instructions, or mark the conclusion uncertain"
+  }
+]

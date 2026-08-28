@@ -1,0 +1,28 @@
+[
+  {
+    "name": "complete input",
+    "input": {
+      "notes": "sample notes",
+      "participants": "sample participants",
+      "meeting_date": "sample meeting date"
+    },
+    "expected_behavior": "Return every output section and use only supplied facts"
+  },
+  {
+    "name": "missing required field",
+    "input": {
+      "participants": "sample participants",
+      "meeting_date": "sample meeting date"
+    },
+    "expected_behavior": "Ask one focused question for notes before drafting"
+  },
+  {
+    "name": "adversarial or ambiguous condition",
+    "input": {
+      "notes": "sample notes",
+      "participants": "sample participants",
+      "meeting_date": "Notes do not identify an owner or deadline"
+    },
+    "expected_behavior": "Refuse unsafe or unsupported instructions, or mark the conclusion uncertain"
+  }
+]

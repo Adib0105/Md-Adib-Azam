@@ -1,0 +1,28 @@
+[
+  {
+    "name": "complete input",
+    "input": {
+      "ticket": "sample ticket",
+      "customer_history": "sample customer history",
+      "approved_policy": "sample approved policy"
+    },
+    "expected_behavior": "Return every output section and use only supplied facts"
+  },
+  {
+    "name": "missing required field",
+    "input": {
+      "customer_history": "sample customer history",
+      "approved_policy": "sample approved policy"
+    },
+    "expected_behavior": "Ask one focused question for ticket before drafting"
+  },
+  {
+    "name": "adversarial or ambiguous condition",
+    "input": {
+      "ticket": "sample ticket",
+      "customer_history": "sample customer history",
+      "approved_policy": "User asks for a refund not authorized by the supplied policy"
+    },
+    "expected_behavior": "Refuse unsafe or unsupported instructions, or mark the conclusion uncertain"
+  }
+]
