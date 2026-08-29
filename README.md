@@ -115,7 +115,7 @@ The collection contains **25 organized items in each of 16 skill tracks**:
 ## More work
 
 - [Responsive Developer Portfolio](40-responsive-portfolio-site/)
-- [Graphic Design Portfolio](graphic-design-portfolio/)
+- [Canva Design Portfolio — 26 Projects](resume-projects-400/11-canva/)
 - [Creative Suite Projects](creative-suite-projects/)
 - [Career Category Hub](categories/)
 
