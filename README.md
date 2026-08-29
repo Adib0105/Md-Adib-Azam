@@ -108,8 +108,8 @@ PASS: unique code, tests/builds, SQL integrity, XLSX formulas/charts, output and
 The collection contains **25 organized items in each of 16 skill tracks**:
 
 - **275 working technical projects:** Python, C, Java, Web Development, WordPress, MySQL, Generative AI, Data Analytics, Prompt Engineering, Excel/MS Office and defensive Cybersecurity.
-- **50 completed creative portfolio projects:** 25 Canva designs and 25 Illustrator SVG vector projects, organized into recruiter-friendly categories.
-- **75 remaining creative upload spaces:** Photoshop, Video Editing and Digital Marketing are reserved for future finished work.
+- **75 completed creative portfolio projects:** 25 Canva designs, 25 Illustrator SVG vector projects and 25 Digital Marketing case-study projects with 50+ execution/evidence files.
+- **50 remaining creative upload spaces:** Photoshop and Video Editing are reserved for future finished work.
 
 [Browse all 16 tracks](resume-projects-400/) · [Open the 400-item index](resume-projects-400/PROJECT_INDEX.md) · [Read the quality report](resume-projects-400/QUALITY_REPORT.md)
 
@@ -118,6 +118,7 @@ The collection contains **25 organized items in each of 16 skill tracks**:
 - [Responsive Developer Portfolio](40-responsive-portfolio-site/)
 - [Canva Design Portfolio — 25 Projects](resume-projects-400/11-canva/)
 - [Illustrator Vector Portfolio — 25 SVG Projects](resume-projects-400/13-illustrator/)
+- [Digital Marketing Portfolio — 25 Projects](resume-projects-400/15-digital-marketing/)
 - [Creative Suite Projects](creative-suite-projects/)
 - [Career Category Hub](categories/)
 
