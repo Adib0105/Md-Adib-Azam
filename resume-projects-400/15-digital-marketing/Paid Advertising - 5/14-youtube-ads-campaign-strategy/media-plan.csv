@@ -1,0 +1,6 @@
+audience,format,budget_share,creative_length,goal,kpi
+Custom intent,Skippable in-stream,35,30s,Qualified traffic,Engaged visits
+Topic/contextual,Skippable in-stream,20,30s,Awareness,View rate
+Remarketing,Skippable in-stream,25,15s,Return visits,Conversions
+Channel/video placements,In-feed,10,Thumbnail-led,Consideration,Clicks
+Creative testing,Multiple,10,15s/30s,Learning,Relative lift

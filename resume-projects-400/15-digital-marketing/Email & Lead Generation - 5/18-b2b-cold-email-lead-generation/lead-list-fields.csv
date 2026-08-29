@@ -1,0 +1,11 @@
+field,purpose,example,quality_rule
+company,Account identification,Example Co,Required
+first_name,Personalization,Aarav,Use verified name only
+role,Relevance check,Marketing Manager,Target relevant decision-maker
+industry,Segmentation,SaaS,Use for message context
+company_size,Qualification,11-50,Optional
+observation,Personalized reason,No clear lead CTA,Must be specific and truthful
+source_url,Verification,https://example.com,Record source
+contact_status,Workflow,Not contacted,Track suppression/opt-out
+last_contacted,Frequency control,2026-08-29,Avoid repeated outreach
+opt_out,Compliance,false,Never contact if true

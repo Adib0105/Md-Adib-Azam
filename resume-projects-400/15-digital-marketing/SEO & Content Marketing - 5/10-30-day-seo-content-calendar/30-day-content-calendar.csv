@@ -1,0 +1,31 @@
+day,asset,target_intent,primary_topic,internal_link_goal
+1,Audit existing page,Commercial,Digital marketing services,Service hub
+2,Brief,Informational,SEO checklist,SEO service
+3,Article,Informational,Local SEO basics,Local SEO service
+4,Refresh,Commercial,SEO services,Contact
+5,Brief,Informational,Instagram growth strategy,Social service
+6,Article,Informational,Google Ads basics,PPC service
+7,Refresh,Commercial,Social media services,Contact
+8,Brief,Informational,Email automation,Email service
+9,Article,Informational,Marketing funnel,Strategy page
+10,Refresh,Commercial,Google Ads services,Contact
+11,Brief,Informational,Keyword research,SEO service
+12,Article,Informational,Buyer persona,Strategy page
+13,Refresh,Commercial,Email marketing services,Contact
+14,Brief,Informational,Retargeting ads,PPC service
+15,Article,Informational,GA4 reporting,Analytics page
+16,Refresh,Commercial,Digital marketing packages,Contact
+17,Brief,Informational,Content calendar,Content service
+18,Article,Informational,Real estate lead generation,Industry page
+19,Refresh,Commercial,Local SEO services,Contact
+20,Brief,Informational,Restaurant Instagram marketing,Industry page
+21,Article,Informational,Abandoned cart emails,Email service
+22,Refresh,Commercial,PPC management,Contact
+23,Brief,Informational,Competitor SEO analysis,SEO service
+24,Article,Informational,Social media reporting,Analytics page
+25,Refresh,Commercial,Marketing strategy services,Contact
+26,Brief,Informational,YouTube ad strategy,PPC service
+27,Article,Informational,90-day marketing plan,Strategy page
+28,Refresh,Commercial,Lead generation services,Contact
+29,Content update,Informational,Top performing guide,Relevant service
+30,Monthly review,Measurement,Search performance,Next month roadmap

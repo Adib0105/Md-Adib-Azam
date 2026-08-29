@@ -1,0 +1,7 @@
+segment,criteria,message,frequency,kpi
+New customers,First purchase <=30d,Onboarding and support,Weekly max,Activation
+Active customers,Purchase in last 90d,Education and relevant offers,2-4 per month,Repeat purchase
+High-value customers,Top value tier,Early access and service,2-3 per month,Retention
+Lapsed customers,No purchase 90-180d,Win-back and updates,1-2 per month,Reactivation
+Unengaged subscribers,No opens/clicks 90d,Preference/re-engagement,Short sequence,Re-engagement
+Opted out,Unsubscribed,No marketing,None,Compliance

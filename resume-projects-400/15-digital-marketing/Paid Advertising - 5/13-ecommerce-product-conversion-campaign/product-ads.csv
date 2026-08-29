@@ -1,0 +1,7 @@
+funnel_stage,format,creative_angle,offer,cta,measurement
+Prospecting,Video,Problem to product benefit,None,Shop Now,Landing page views
+Prospecting,Carousel,Best sellers,None,Shop Now,Product views
+Consideration,Static,Feature proof,Free shipping threshold,Learn More,Add to carts
+Retargeting,Dynamic,Recently viewed products,None,Shop Now,Checkout starts
+Cart Recovery,Static,Complete your order,Time-bound if genuine,Checkout,Purchases
+Customer,Carousel,Complementary products,Loyalty offer if valid,Shop Again,Repeat purchases

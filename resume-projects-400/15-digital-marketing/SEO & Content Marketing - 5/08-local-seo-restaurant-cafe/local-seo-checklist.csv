@@ -1,0 +1,12 @@
+task,channel,frequency,owner,kpi
+Complete business profile,Google Business Profile,One-time plus updates,Marketing,Profile completeness
+Verify NAP consistency,Directories,Quarterly,Marketing,Consistency
+Add service/menu categories,Google Business Profile,Monthly,Marketing,Discovery searches
+Publish local photos,Google Business Profile,Weekly,Content,Photo views
+Publish GBP posts,Google Business Profile,Weekly,Content,Actions
+Ask satisfied customers for reviews,In-store/CRM,Ongoing,Operations,Review velocity
+Respond to reviews,Google Business Profile,Within 48h,Operations,Response rate
+Create location landing page,Website,One-time,SEO,Organic clicks
+Add LocalBusiness schema,Website,One-time,SEO,Validation
+Build local citations,Directories,Monthly,SEO,Valid citations
+Track calls and direction requests,Analytics,Monthly,Marketing,Leads

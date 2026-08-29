@@ -1,0 +1,9 @@
+objective,kpi,definition,target_type,review_frequency,action_if_weak
+Awareness,Qualified reach,Relevant audience reached,Benchmark then improve,Weekly,Review targeting/content fit
+Engagement,Save/share rate,Saves plus shares divided by reach,Trend target,Weekly,Improve usefulness and hooks
+Traffic,Qualified landing visits,Engaged campaign sessions,Volume plus quality,Weekly,Align ad/content with page
+Lead generation,Qualified lead rate,Qualified leads divided by total leads,Quality target,Weekly,Tighten offer/form/audience
+Paid efficiency,Cost per qualified lead,Spend divided by qualified leads,Guardrail,Weekly,Fix tracking then ads/landing page
+SEO,Non-brand organic clicks,Clicks from non-brand queries,Growth trend,Monthly,Refresh content and intent mapping
+Email,Click-to-open rate,Unique clicks divided by unique opens,Benchmark,Per campaign,Improve offer/content alignment
+Retention,Repeat action rate,Customers completing repeat action,Trend target,Monthly,Improve onboarding/nurture

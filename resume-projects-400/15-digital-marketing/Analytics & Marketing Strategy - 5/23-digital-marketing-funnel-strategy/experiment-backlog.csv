@@ -1,0 +1,7 @@
+experiment,hypothesis,stage,effort,impact,success_metric
+Shorter lead form,Fewer fields will increase completed forms,Lead,Low,High,Qualified form conversion
+New hero CTA,Intent-matched CTA will increase service clicks,Consideration,Low,Medium,CTA click rate
+FAQ block,Answering objections will improve lead quality,Consideration,Medium,Medium,Lead quality
+Retargeting proof creative,Proof-led creative will recover warm users,Consideration,Medium,High,Cost per qualified lead
+Welcome sequence,Structured onboarding will improve activation,Customer,Medium,Medium,Activation event
+Content upgrade,Downloadable checklist will capture more email leads,Engagement,Medium,Medium,Subscriber conversion

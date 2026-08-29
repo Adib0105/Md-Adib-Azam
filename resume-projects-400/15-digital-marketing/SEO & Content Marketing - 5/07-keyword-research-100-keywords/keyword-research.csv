@@ -1,0 +1,101 @@
+id,keyword,intent,cluster,priority
+1,digital marketing services,Commercial,Services,High
+2,digital marketing agency,Commercial,Services,High
+3,digital marketing company,Commercial,Services,High
+4,online marketing services,Commercial,Services,Medium
+5,internet marketing agency,Commercial,Services,Medium
+6,small business digital marketing,Commercial,Services,High
+7,digital marketing consultant,Commercial,Services,Medium
+8,digital marketing packages,Commercial,Services,Medium
+9,affordable digital marketing services,Commercial,Services,Medium
+10,digital marketing strategy services,Commercial,Services,High
+11,seo services,Commercial,SEO,High
+12,seo agency,Commercial,SEO,High
+13,seo company,Commercial,SEO,High
+14,website seo audit,Commercial,SEO,High
+15,technical seo services,Commercial,SEO,Medium
+16,on page seo services,Commercial,SEO,Medium
+17,local seo services,Commercial,SEO,High
+18,seo for small business,Commercial,SEO,High
+19,ecommerce seo services,Commercial,SEO,Medium
+20,seo content strategy,Informational,SEO,Medium
+21,keyword research services,Commercial,SEO,Medium
+22,seo competitor analysis,Informational,SEO,Medium
+23,how to improve google ranking,Informational,SEO,Medium
+24,seo checklist for website,Informational,SEO,Medium
+25,seo content calendar,Informational,SEO,Low
+26,social media marketing services,Commercial,Social Media,High
+27,social media agency,Commercial,Social Media,High
+28,instagram marketing services,Commercial,Social Media,High
+29,facebook marketing services,Commercial,Social Media,Medium
+30,linkedin marketing services,Commercial,Social Media,Medium
+31,social media strategy,Informational,Social Media,Medium
+32,social media content plan,Informational,Social Media,Medium
+33,instagram growth strategy,Informational,Social Media,High
+34,social media management for small business,Commercial,Social Media,High
+35,social media content calendar,Informational,Social Media,Medium
+36,reels marketing strategy,Informational,Social Media,Medium
+37,social media lead generation,Commercial,Social Media,High
+38,social media campaign ideas,Informational,Social Media,Low
+39,how to increase instagram engagement,Informational,Social Media,Medium
+40,social media marketing plan,Informational,Social Media,Medium
+41,google ads services,Commercial,Paid Ads,High
+42,google ads agency,Commercial,Paid Ads,High
+43,ppc management services,Commercial,Paid Ads,High
+44,search ads campaign,Informational,Paid Ads,Medium
+45,google ads for small business,Commercial,Paid Ads,High
+46,meta ads services,Commercial,Paid Ads,High
+47,facebook ads agency,Commercial,Paid Ads,High
+48,instagram ads services,Commercial,Paid Ads,Medium
+49,lead generation ads,Commercial,Paid Ads,High
+50,ecommerce ads strategy,Informational,Paid Ads,Medium
+51,retargeting ads,Commercial,Paid Ads,Medium
+52,remarketing campaign,Informational,Paid Ads,Medium
+53,youtube ads strategy,Informational,Paid Ads,Medium
+54,ppc campaign audit,Commercial,Paid Ads,Medium
+55,google ads keyword research,Informational,Paid Ads,Medium
+56,email marketing services,Commercial,Email,High
+57,email marketing agency,Commercial,Email,Medium
+58,email automation services,Commercial,Email,High
+59,welcome email sequence,Informational,Email,Medium
+60,abandoned cart email sequence,Informational,Email,High
+61,cold email lead generation,Commercial,Email,High
+62,b2b cold email strategy,Informational,Email,Medium
+63,email newsletter strategy,Informational,Email,Medium
+64,customer retention emails,Informational,Email,Medium
+65,email subject line ideas,Informational,Email,Low
+66,email segmentation strategy,Informational,Email,Medium
+67,email campaign calendar,Informational,Email,Low
+68,marketing funnel strategy,Informational,Strategy,High
+69,digital marketing funnel,Informational,Strategy,High
+70,buyer journey marketing,Informational,Strategy,Medium
+71,customer persona template,Informational,Strategy,Medium
+72,90 day marketing plan,Informational,Strategy,High
+73,marketing campaign plan,Informational,Strategy,Medium
+74,marketing kpi dashboard,Informational,Analytics,Medium
+75,digital marketing metrics,Informational,Analytics,Medium
+76,google analytics report,Informational,Analytics,High
+77,ga4 website report,Informational,Analytics,Medium
+78,social media performance report,Informational,Analytics,Medium
+79,marketing attribution basics,Informational,Analytics,Low
+80,conversion tracking plan,Informational,Analytics,High
+81,restaurant social media marketing,Commercial,Industry,High
+82,restaurant instagram marketing,Commercial,Industry,High
+83,gym social media marketing,Commercial,Industry,High
+84,fitness instagram marketing,Commercial,Industry,Medium
+85,real estate lead generation,Commercial,Industry,High
+86,real estate social media marketing,Commercial,Industry,High
+87,clothing brand marketing strategy,Informational,Industry,Medium
+88,fashion brand social media strategy,Informational,Industry,Medium
+89,ecommerce digital marketing,Commercial,Industry,High
+90,local business marketing strategy,Commercial,Industry,High
+91,content marketing services,Commercial,Content,High
+92,content marketing strategy,Informational,Content,High
+93,blog content calendar,Informational,Content,Medium
+94,content gap analysis,Informational,Content,Medium
+95,competitor content analysis,Informational,Content,Medium
+96,marketing campaign reporting,Informational,Analytics,Medium
+97,lead generation strategy,Informational,Strategy,High
+98,online marketing plan for small business,Informational,Strategy,High
+99,digital marketing portfolio project,Informational,Portfolio,Low
+100,digital marketing case study template,Informational,Portfolio,Low

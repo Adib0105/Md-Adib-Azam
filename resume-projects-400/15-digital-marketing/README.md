@@ -6,7 +6,7 @@
 
 **Social Media · SEO · Paid Ads · Email · Analytics · Funnel Strategy**
 
-A recruiter-friendly collection of 25 digital marketing projects built around real campaign planning, audience strategy, conversion thinking and measurable KPIs.
+A recruiter-friendly collection of 25 digital marketing projects built around campaign planning, audience strategy, conversion thinking, execution assets and measurable KPIs.
 
 </div>
 
@@ -25,6 +25,16 @@ This portfolio is organized into **5 categories with 5 projects each**. Every pr
 | [📊 Analytics & Marketing Strategy](Analytics%20%26%20Marketing%20Strategy%20-%205/) | 5 | Reporting, funnels, personas and 90-day planning |
 
 **Total: 25 Digital Marketing Projects**
+
+---
+
+## Evidence & Working Files
+
+The portfolio now includes **50+ supporting execution files** in addition to the 25 project READMEs: content calendars, caption banks, SEO audit sheets, a 100-keyword research dataset, ad-copy matrices, budget plans, audience plans, email sequences, automation rules, sample analytics data, funnel models, personas and KPI dashboards.
+
+➡️ [Open the evidence index](EVIDENCE_INDEX.md)
+
+> Sample analytics/performance numbers are clearly labelled as simulated portfolio data. They are included to demonstrate reporting and decision-making, not to claim real client performance.
 
 ---
 
@@ -67,7 +77,7 @@ This portfolio is organized into **5 categories with 5 projects each**. Every pr
 
 ## Skills Demonstrated
 
-`Social Media Marketing` · `Content Strategy` · `SEO` · `Keyword Research` · `Local SEO` · `Google Ads` · `Meta Ads` · `Retargeting` · `Email Marketing` · `Lead Generation` · `Analytics` · `Marketing Funnels` · `Customer Personas` · `Campaign Planning`
+`Social Media Marketing` · `Content Strategy` · `SEO` · `Keyword Research` · `Local SEO` · `Google Ads` · `Meta Ads` · `Retargeting` · `Email Marketing` · `Lead Generation` · `Analytics` · `Marketing Funnels` · `Customer Personas` · `Campaign Planning` · `Reporting`
 
 ## Portfolio Method
 

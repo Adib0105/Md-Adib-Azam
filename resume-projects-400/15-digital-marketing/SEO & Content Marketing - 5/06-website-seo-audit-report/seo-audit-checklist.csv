@@ -1,0 +1,16 @@
+area,check,status,priority,recommendation
+Indexing,Robots.txt accessible,Review,High,Confirm important pages are crawlable
+Indexing,XML sitemap present,Review,High,Submit clean sitemap
+On-page,Unique title tags,Review,High,Map one primary topic per page
+On-page,Meta descriptions,Review,Medium,Write benefit-led descriptions
+On-page,Single descriptive H1,Review,Medium,Align H1 with search intent
+Content,Thin pages,Review,High,Expand or consolidate weak pages
+Content,Duplicate content,Review,High,Canonicalize or merge duplicates
+Technical,HTTPS consistency,Review,High,Redirect all HTTP variants
+Technical,Mobile usability,Review,High,Fix overflow and tap targets
+Technical,Core Web Vitals,Review,High,Optimize LCP INP and CLS
+Technical,Broken internal links,Review,Medium,Repair or redirect dead paths
+Images,Alt text coverage,Review,Medium,Describe meaningful images
+Internal links,Orphan pages,Review,Medium,Add contextual links
+Schema,Structured data relevance,Review,Low,Use only valid relevant schema
+Local,Contact details consistency,Review,Medium,Standardize NAP information

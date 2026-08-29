@@ -1,0 +1,13 @@
+date,source_medium,users,sessions,engaged_sessions,key_events,lead_events,revenue_example
+2026-08-01,google / organic,420,510,356,61,18,0
+2026-08-01,google / cpc,180,215,137,31,14,0
+2026-08-01,instagram / social,155,190,104,20,7,0
+2026-08-01,direct / none,130,155,98,17,5,0
+2026-08-08,google / organic,465,560,401,69,22,0
+2026-08-08,google / cpc,210,246,165,38,17,0
+2026-08-08,instagram / social,172,208,119,24,8,0
+2026-08-08,direct / none,143,170,110,19,6,0
+2026-08-15,google / organic,498,601,439,75,24,0
+2026-08-15,google / cpc,228,265,181,42,19,0
+2026-08-15,instagram / social,188,226,132,27,9,0
+2026-08-15,direct / none,151,179,118,20,6,0

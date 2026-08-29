@@ -1,0 +1,6 @@
+trigger,delay,condition,action,exit_condition
+Cart created,1 hour,Purchase not completed,Send reminder,Purchase
+Reminder sent,19 hours,Purchase not completed,Send FAQ/trust email,Purchase
+Trust email sent,28 hours,Purchase not completed,Send final reminder,Purchase
+Any email,Bounce,Hard bounce,Suppress address,Suppressed
+Any email,Unsubscribe,Opt-out,Stop sequence,Unsubscribed

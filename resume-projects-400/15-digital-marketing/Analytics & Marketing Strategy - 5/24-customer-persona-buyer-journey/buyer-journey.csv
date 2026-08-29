@@ -1,0 +1,7 @@
+stage,persona_question,content_needed,channel,conversion_action,measurement
+Awareness,"What is causing the problem?",Educational short-form/content,Search/social,Engaged visit,Engagement quality
+Problem aware,"What options exist?",Comparison/checklist,Search/LinkedIn,Content download,Qualified click
+Consideration,"Can this approach work for me?",Case framework/process,Website/email,Service-page visit,Depth and return visits
+Decision,"Why choose this provider?",Proof scope pricing process,Website/sales,Enquiry,Qualified lead
+Onboarding,"What happens next?",Welcome sequence/checklist,Email/CRM,Activation,Time to value
+Retention,"How do I keep improving?",Reports tips relevant offers,Email/customer channels,Repeat action,Retention

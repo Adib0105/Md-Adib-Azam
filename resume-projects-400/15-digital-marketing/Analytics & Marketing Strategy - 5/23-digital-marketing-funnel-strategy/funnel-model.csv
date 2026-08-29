@@ -1,0 +1,7 @@
+stage,audience_size_example,conversion_rate_example,next_stage,primary_channel,primary_metric
+Awareness,100000,8.0%,Engaged audience,Social/video,Qualified engagement
+Engagement,8000,25.0%,Site visitors,Social/content,Clicks
+Consideration,2000,20.0%,Leads,Website/email,Lead rate
+Lead,400,35.0%,Qualified leads,CRM/email,Qualification rate
+Qualified,140,25.0%,Customers,Sales/nurture,Close rate
+Customer,35,30.0%,Repeat/referral,Email/customer marketing,Retention
