@@ -1,31 +1,116 @@
-# Canva - 25 Manual Upload Slots
+# 🎨 Canva Design Portfolio — 26 Visual Projects
 
-Each numbered folder is a clean space reserved for Md Adib Azam's finished Canva project file. Until that file is added, the folder contains only its .gitkeep marker.
+A curated Canva portfolio showcasing practical design work across social media advertising, branding, business collateral, YouTube content, education, events, food, travel and promotional campaigns.
 
-| # | Folder | Status |
-|---:|---|---|
-| 01 | [Canva upload slot 01](01-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 02 | [Canva upload slot 02](02-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 03 | [Canva upload slot 03](03-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 04 | [Canva upload slot 04](04-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 05 | [Canva upload slot 05](05-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 06 | [Canva upload slot 06](06-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 07 | [Canva upload slot 07](07-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 08 | [Canva upload slot 08](08-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 09 | [Canva upload slot 09](09-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 10 | [Canva upload slot 10](10-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 11 | [Canva upload slot 11](11-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 12 | [Canva upload slot 12](12-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 13 | [Canva upload slot 13](13-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 14 | [Canva upload slot 14](14-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 15 | [Canva upload slot 15](15-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 16 | [Canva upload slot 16](16-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 17 | [Canva upload slot 17](17-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 18 | [Canva upload slot 18](18-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 19 | [Canva upload slot 19](19-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 20 | [Canva upload slot 20](20-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 21 | [Canva upload slot 21](21-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 22 | [Canva upload slot 22](22-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 23 | [Canva upload slot 23](23-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 24 | [Canva upload slot 24](24-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 25 | [Canva upload slot 25](25-upload-slot/) | Waiting for Md Adib Azam's original file |
+## Portfolio Overview
+
+- **25 primary Canva projects**
+- **1 alternate wedding invitation design**
+- Built for real-world marketing, branding and content use cases
+- Focused on visual hierarchy, typography, layout, CTA clarity and platform-ready composition
+
+## Featured Categories
+
+### 📱 Social Media & Advertising
+- Instagram Restaurant Promo Post
+- Gym/Fitness Membership Ad
+- Real Estate Property Sale Post
+- Digital Marketing Agency Service Post
+- Brand Sale Banner
+- Beauty Salon Offer Creative
+- Education/Course Admission Post
+- Mobile/Electronics Product Ad
+- Food Delivery Social Media Creative
+- Travel Package Advertisement
+- Facebook Event Promotion Banner
+
+### ▶️ YouTube & Content
+- YouTube Thumbnail – Tech Video
+- YouTube Thumbnail – Vlog
+- YouTube Thumbnail – Gaming
+
+### 🏢 Business & Corporate
+- LinkedIn Professional Hiring Post
+- Restaurant Menu Design
+- Business Flyer
+- Corporate Brochure Cover
+- Business Card Design
+- Resume/CV Template
+- Product Launch Poster
+
+### 📚 Carousel & Educational Content
+- Instagram Carousel – Digital Marketing Tips
+- Instagram Carousel – Business Growth Tips
+
+### ✨ Branding & Events
+- Personal Brand Premium Campaign
+- Event Invitation / Wedding Card
+- Event Invitation / Wedding Card — Alternate Version
+
+## 🖼️ Design Gallery
+
+<p align="center">
+  <img src="Instagram Restaurant Promo Post.png" width="31%" alt="Instagram Restaurant Promo Post" />
+  <img src="GymFitness Membership Ad.png" width="31%" alt="Gym Fitness Membership Ad" />
+  <img src="Real Estate Property Sale Post.png" width="31%" alt="Real Estate Property Sale Post" />
+</p>
+
+<p align="center">
+  <img src="Digital Marketing Agency Service Post.png" width="31%" alt="Digital Marketing Agency Service Post" />
+  <img src="Brand Sale Banner.png" width="31%" alt="Brand Sale Banner" />
+  <img src="Beauty Salon Offer Creative.png" width="31%" alt="Beauty Salon Offer Creative" />
+</p>
+
+<p align="center">
+  <img src="EducationCourse Admission Post.png" width="31%" alt="Education Course Admission Post" />
+  <img src="MobileElectronics Product Ad.png" width="31%" alt="Mobile Electronics Product Ad" />
+  <img src="Food Delivery Social Media Creative.png" width="31%" alt="Food Delivery Social Media Creative" />
+</p>
+
+<p align="center">
+  <img src="Travel Package Advertisement.png" width="31%" alt="Travel Package Advertisement" />
+  <img src="Facebook Event Promotion Banner.png" width="31%" alt="Facebook Event Promotion Banner" />
+  <img src="LinkedIn Professional Hiring Post.png" width="31%" alt="LinkedIn Professional Hiring Post" />
+</p>
+
+<p align="center">
+  <img src="YouTube Thumbnail – Tech Video.png" width="31%" alt="YouTube Tech Thumbnail" />
+  <img src="YouTube Thumbnail – Vlog.png" width="31%" alt="YouTube Vlog Thumbnail" />
+  <img src="YouTube Thumbnail – Gaming.png" width="31%" alt="YouTube Gaming Thumbnail" />
+</p>
+
+<p align="center">
+  <img src="Restaurant Menu Design.png" width="31%" alt="Restaurant Menu Design" />
+  <img src="Business Flyer.png" width="31%" alt="Business Flyer" />
+  <img src="Corporate Brochure Cover.png" width="31%" alt="Corporate Brochure Cover" />
+</p>
+
+<p align="center">
+  <img src="Business Card Design.png" width="31%" alt="Business Card Design" />
+  <img src="ResumeCV Template.png" width="31%" alt="Resume CV Template" />
+  <img src="Product Launch Poster.png" width="31%" alt="Product Launch Poster" />
+</p>
+
+<p align="center">
+  <img src="Instagram Carousel – Digital Marketing Tips.png" width="31%" alt="Digital Marketing Tips Carousel" />
+  <img src="Instagram Carousel – Business Growth Tips.png" width="31%" alt="Business Growth Tips Carousel" />
+  <img src="Personal Brand Premium Campaign.png" width="31%" alt="Personal Brand Premium Campaign" />
+</p>
+
+<p align="center">
+  <img src="Event Invitation  Wedding Card.png" width="45%" alt="Wedding Card" />
+  <img src="Event Invitation  Wedding Card 2.png" width="45%" alt="Wedding Card Alternate" />
+</p>
+
+## Skills Demonstrated
+
+`Canva` · `Graphic Design` · `Social Media Creatives` · `Branding` · `Advertising Design` · `Typography` · `Layout Design` · `YouTube Thumbnails` · `Business Collateral` · `Marketing Communication`
+
+## Design Approach
+
+Each project is created around a clear communication objective: attract attention quickly, establish visual hierarchy, keep the message readable, and guide the viewer toward the intended action. The collection demonstrates flexibility across multiple industries and content formats rather than relying on a single visual style.
+
+---
+
+**Portfolio by Md Adib Azam**  
+Canva • Graphic Design • Digital Marketing • Visual Communication
