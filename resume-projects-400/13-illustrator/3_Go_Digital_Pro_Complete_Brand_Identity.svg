@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100">
+  <title>Go Digital Pro — Complete Logo &amp; Brand Identity</title>
+  <desc>Professional vector brand identity system for Go Digital Pro, including primary logo, icon, wordmark, color swatches and typography.</desc>
+
+  <defs>
+    <linearGradient id="gdg" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="55%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="gdpDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ================= PRIMARY BRAND BOARD ================= -->
+  <rect width="1600" height="1100" fill="#F8FAFC"/>
+
+  <!-- Header -->
+  <text x="90" y="85" font-family="Arial, Helvetica, sans-serif"
+        font-size="20" font-weight="700" letter-spacing="5" fill="#64748B">BRAND IDENTITY SYSTEM</text>
+  <text x="90" y="130" font-family="Arial, Helvetica, sans-serif"
+        font-size="42" font-weight="800" fill="#0F172A">GO DIGITAL PRO</text>
+  <path d="M90 155 H1510" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- ================= PRIMARY LOGO ================= -->
+  <g transform="translate(90 225)">
+    <!-- Icon -->
+    <rect x="0" y="0" width="300" height="300" rx="52" fill="url(#gdpDark)"/>
+    <path d="M82 160 A70 70 0 1 1 148 226"
+          fill="none" stroke="url(#gdg)" stroke-width="27"
+          stroke-linecap="round"/>
+    <path d="M150 226 H218 V158"
+          fill="none" stroke="#FFFFFF" stroke-width="27"
+          stroke-linecap="square" stroke-linejoin="round"/>
+    <path d="M184 158 L225 117"
+          fill="none" stroke="#06B6D4" stroke-width="15" stroke-linecap="round"/>
+    <circle cx="225" cy="117" r="10" fill="#7C3AED"/>
+
+    <!-- Wordmark -->
+    <text x="350" y="128" font-family="Arial, Helvetica, sans-serif"
+          font-size="84" font-weight="800" letter-spacing="-2" fill="#0F172A">Go Digital</text>
+    <text x="352" y="210" font-family="Arial, Helvetica, sans-serif"
+          font-size="84" font-weight="800" letter-spacing="3" fill="url(#gdg)">Pro</text>
+
+    <path d="M352 245 H810" stroke="#CBD5E1" stroke-width="3"/>
+    <text x="352" y="290" font-family="Arial, Helvetica, sans-serif"
+          font-size="22" font-weight="700" letter-spacing="6" fill="#475569">GROW • AUTOMATE • SCALE</text>
+  </g>
+
+  <!-- ================= DARK LOCKUP ================= -->
+  <g transform="translate(90 600)">
+    <rect width="930" height="330" rx="28" fill="#0F172A"/>
+    <rect x="45" y="45" width="240" height="240" rx="42" fill="#172554"/>
+
+    <path d="M110 165 A57 57 0 1 1 164 219"
+          fill="none" stroke="url(#gdg)" stroke-width="22" stroke-linecap="round"/>
+    <path d="M165 219 H220 V165"
+          fill="none" stroke="#FFFFFF" stroke-width="22"
+          stroke-linecap="square"/>
+    <path d="M193 165 L225 133"
+          fill="none" stroke="#06B6D4" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="225" cy="133" r="8" fill="#7C3AED"/>
+
+    <text x="330" y="140" font-family="Arial, Helvetica, sans-serif"
+          font-size="70" font-weight="800" fill="#FFFFFF">GO DIGITAL</text>
+    <text x="330" y="210" font-family="Arial, Helvetica, sans-serif"
+          font-size="70" font-weight="800" fill="url(#gdg)">PRO</text>
+    <text x="333" y="258" font-family="Arial, Helvetica, sans-serif"
+          font-size="18" font-weight="700" letter-spacing="5" fill="#CBD5E1">DIGITAL SOLUTIONS &amp; GROWTH</text>
+  </g>
+
+  <!-- ================= BRAND COLORS ================= -->
+  <g transform="translate(1080 225)">
+    <text x="0" y="0" font-family="Arial, Helvetica, sans-serif"
+          font-size="25" font-weight="800" fill="#0F172A">COLOR PALETTE</text>
+
+    <rect x="0" y="35" width="430" height="82" rx="14" fill="#0F172A"/>
+    <text x="25" y="86" font-family="Arial, Helvetica, sans-serif"
+          font-size="20" font-weight="700" fill="#FFFFFF">MIDNIGHT</text>
+    <text x="405" y="86" text-anchor="end" font-family="Arial, Helvetica, sans-serif"
+          font-size="17" fill="#CBD5E1">#0F172A</text>
+
+    <rect x="0" y="132" width="430" height="82" rx="14" fill="#2563EB"/>
+    <text x="25" y="183" font-family="Arial, Helvetica, sans-serif"
+          font-size="20" font-weight="700" fill="#FFFFFF">DIGITAL BLUE</text>
+    <text x="405" y="183" text-anchor="end" font-family="Arial, Helvetica, sans-serif"
+          font-size="17" fill="#FFFFFF">#2563EB</text>
+
+    <rect x="0" y="229" width="430" height="82" rx="14" fill="#06B6D4"/>
+    <text x="25" y="280" font-family="Arial, Helvetica, sans-serif"
+          font-size="20" font-weight="700" fill="#FFFFFF">CYAN</text>
+    <text x="405" y="280" text-anchor="end" font-family="Arial, Helvetica, sans-serif"
+          font-size="17" fill="#FFFFFF">#06B6D4</text>
+
+    <rect x="0" y="326" width="430" height="82" rx="14" fill="#7C3AED"/>
+    <text x="25" y="377" font-family="Arial, Helvetica, sans-serif"
+          font-size="20" font-weight="700" fill="#FFFFFF">PRO PURPLE</text>
+    <text x="405" y="377" text-anchor="end" font-family="Arial, Helvetica, sans-serif"
+          font-size="17" fill="#FFFFFF">#7C3AED</text>
+
+    <rect x="0" y="423" width="430" height="82" rx="14" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <text x="25" y="474" font-family="Arial, Helvetica, sans-serif"
+          font-size="20" font-weight="700" fill="#0F172A">CLOUD</text>
+    <text x="405" y="474" text-anchor="end" font-family="Arial, Helvetica, sans-serif"
+          font-size="17" fill="#475569">#F8FAFC</text>
+  </g>
+
+  <!-- ================= TYPOGRAPHY ================= -->
+  <g transform="translate(1080 790)">
+    <text x="0" y="0" font-family="Arial, Helvetica, sans-serif"
+          font-size="25" font-weight="800" fill="#0F172A">TYPOGRAPHY</text>
+    <text x="0" y="62" font-family="Arial, Helvetica, sans-serif"
+          font-size="42" font-weight="800" fill="#0F172A">GO DIGITAL PRO</text>
+    <text x="0" y="104" font-family="Arial, Helvetica, sans-serif"
+          font-size="20" font-weight="500" letter-spacing="3" fill="#64748B">MODERN • CLEAR • DIGITAL</text>
+  </g>
+
+  <!-- Footer -->
+  <path d="M90 1010 H1510" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="90" y="1055" font-family="Arial, Helvetica, sans-serif"
+        font-size="17" font-weight="600" letter-spacing="4" fill="#64748B">PRIMARY MARK • ICON • WORDMARK • DARK LOCKUP • PALETTE</text>
+  <text x="1510" y="1055" text-anchor="end" font-family="Arial, Helvetica, sans-serif"
+        font-size="17" font-weight="600" fill="#94A3B8">VECTOR / SVG</text>
+</svg>

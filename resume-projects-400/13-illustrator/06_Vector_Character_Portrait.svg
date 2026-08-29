@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+<title>Vector Character Portrait</title>
+<rect width="1000" height="1000" fill="#F1F5F9"/>
+<circle cx="500" cy="410" r="310" fill="#DBEAFE"/>
+<path d="M205 900 Q245 665 500 650 Q755 665 795 900Z" fill="#172554"/>
+<path d="M345 610 Q500 710 655 610 L655 760 Q500 850 345 760Z" fill="#2563EB"/>
+<path d="M345 365 Q365 205 500 190 Q635 205 655 365 L625 535 Q585 625 500 640 Q415 625 375 535Z" fill="#C68662"/>
+<path d="M345 390 Q330 235 470 170 Q640 165 680 345 L630 365 L600 285 Q515 325 385 295 L380 390Z" fill="#0F172A"/>
+<path d="M415 420 Q450 400 475 420" fill="none" stroke="#0F172A" stroke-width="14" stroke-linecap="round"/>
+<path d="M525 420 Q550 400 585 420" fill="none" stroke="#0F172A" stroke-width="14" stroke-linecap="round"/>
+<circle cx="455" cy="445" r="10" fill="#0F172A"/><circle cx="545" cy="445" r="10" fill="#0F172A"/>
+<path d="M450 530 Q500 555 550 530" fill="none" stroke="#7C2D12" stroke-width="12" stroke-linecap="round"/>
+<path d="M420 610 Q500 655 580 610" fill="none" stroke="#F59E0B" stroke-width="10"/>
+<text x="500" y="950" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" letter-spacing="6" fill="#334155">VECTOR CHARACTER</text>
+</svg>

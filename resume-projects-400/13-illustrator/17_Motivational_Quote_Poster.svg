@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<title>17 Motivational Quote Poster</title>
+
+<rect width="1200" height="900" fill="#F8FAFC"/>
+<circle cx="920" cy="180" r="110" fill="#DBEAFE"/>
+<path d="M100 160h180" stroke="#2563EB" stroke-width="8"/>
+<text x="100" y="330" font-family="Georgia" font-size="92" font-weight="700" fill="#0F172A">DISCIPLINE</text>
+<text x="100" y="430" font-family="Georgia" font-size="92" font-weight="700" fill="#2563EB">BEATS</text>
+<text x="100" y="530" font-family="Georgia" font-size="92" font-weight="700" fill="#0F172A">MOTIVATION.</text>
+<text x="100" y="625" font-family="Arial" font-size="24" letter-spacing="5" fill="#64748B">SHOW UP. DO THE WORK. REPEAT.</text>
+<path d="M100 690h1000" stroke="#CBD5E1" stroke-width="3"/>
+<text x="100" y="750" font-family="Arial" font-size="18" font-weight="700" letter-spacing="5" fill="#94A3B8">MINDSET / 02</text>
+
+</svg>

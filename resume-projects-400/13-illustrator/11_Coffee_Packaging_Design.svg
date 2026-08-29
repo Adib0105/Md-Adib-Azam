@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<title>11 Coffee Packaging Design</title>
+
+<rect width="1200" height="900" fill="#F5EFE7"/>
+<rect x="145" y="105" width="330" height="650" rx="18" fill="#2A1B16"/>
+<path d="M190 190h240v390H190z" fill="#B77945"/>
+<circle cx="310" cy="350" r="110" fill="#F5EFE7"/>
+<path d="M250 390q60-130 120 0M275 430h70" fill="none" stroke="#2A1B16" stroke-width="18" stroke-linecap="round"/>
+<text x="310" y="210" text-anchor="middle" font-family="Georgia" font-size="30" fill="#F5EFE7" letter-spacing="5">ADIB</text>
+<text x="310" y="620" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#F5EFE7" letter-spacing="4">ROAST HOUSE</text>
+<text x="310" y="655" text-anchor="middle" font-family="Arial" font-size="16" fill="#F5EFE7" letter-spacing="3">DARK ROAST • 250g</text>
+<path d="M650 150h330v600H650z" fill="#D9C1A5" stroke="#2A1B16" stroke-width="5"/>
+<path d="M700 210h230v390H700z" fill="#F5EFE7"/>
+<circle cx="815" cy="390" r="90" fill="#2A1B16"/>
+<path d="M775 425q40-100 80 0M790 455h50" fill="none" stroke="#B77945" stroke-width="14" stroke-linecap="round"/>
+<text x="815" y="275" text-anchor="middle" font-family="Georgia" font-size="27" fill="#2A1B16">ORIGIN</text>
+<text x="815" y="540" text-anchor="middle" font-family="Arial" font-size="19" font-weight="700" letter-spacing="4" fill="#2A1B16">ETHICALLY ROASTED</text>
+<text x="600" y="830" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" letter-spacing="6" fill="#5C4034">COFFEE PACKAGING CONCEPT</text>
+
+</svg>

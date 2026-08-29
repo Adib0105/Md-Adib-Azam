@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<title>19 Movie Style Vector Poster</title>
+
+<rect width="1200" height="900" fill="#090D14"/>
+<circle cx="820" cy="360" r="270" fill="#172554"/>
+<path d="M560 700L820 180l260 520" fill="#111827" stroke="#F59E0B" stroke-width="7"/>
+<path d="M820 180L770 340l65-40 55 45z" fill="#F8FAFC"/>
+<text x="90" y="180" font-family="Arial" font-size="25" font-weight="700" letter-spacing="10" fill="#F59E0B">AN ORIGINAL VECTOR FILM</text>
+<text x="90" y="335" font-family="Georgia" font-size="110" font-weight="700" fill="#FFFFFF">THE</text>
+<text x="90" y="450" font-family="Georgia" font-size="110" font-weight="700" fill="#F59E0B">LAST</text>
+<text x="90" y="565" font-family="Georgia" font-size="110" font-weight="700" fill="#FFFFFF">SIGNAL</text>
+<text x="90" y="665" font-family="Arial" font-size="19" letter-spacing="6" fill="#94A3B8">EVERY CITY HAS A SECRET.</text>
+<text x="90" y="760" font-family="Arial" font-size="17" letter-spacing="4" fill="#64748B">A CINEMATIC POSTER STUDY</text>
+
+</svg>

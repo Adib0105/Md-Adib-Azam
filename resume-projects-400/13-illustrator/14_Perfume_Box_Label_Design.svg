@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<title>14 Perfume Box Label Design</title>
+
+<rect width="1200" height="900" fill="#0B0B0D"/>
+<path d="M180 160h380l-40 570H220z" fill="#D4AF37"/>
+<rect x="230" y="220" width="280" height="440" fill="#111318"/>
+<text x="370" y="330" text-anchor="middle" font-family="Georgia" font-size="48" fill="#D4AF37">AZAM</text>
+<path d="M300 365h140" stroke="#D4AF37" stroke-width="3"/>
+<text x="370" y="425" text-anchor="middle" font-family="Arial" font-size="18" letter-spacing="6" fill="#F8FAFC">NOIR</text>
+<text x="370" y="470" text-anchor="middle" font-family="Arial" font-size="13" letter-spacing="4" fill="#CBD5E1">EAU DE PARFUM</text>
+<rect x="650" y="250" width="300" height="370" rx="18" fill="#111318" stroke="#D4AF37" stroke-width="5"/>
+<rect x="720" y="195" width="160" height="70" rx="8" fill="#D4AF37"/>
+<path d="M700 360h200v220H700z" fill="#15171B"/>
+<text x="800" y="430" text-anchor="middle" font-family="Georgia" font-size="39" fill="#D4AF37">NOIR</text>
+<text x="800" y="470" text-anchor="middle" font-family="Arial" font-size="13" letter-spacing="5" fill="#E2E8F0">AZAM</text>
+<text x="600" y="800" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" letter-spacing="6" fill="#D4AF37">PERFUME BOX &amp; LABEL</text>
+
+</svg>

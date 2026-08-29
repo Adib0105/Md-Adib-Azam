@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200">
+  <title>Md Adib Azam — Luxury Portfolio Monogram</title>
+  <desc>Minimal premium MA monogram for a GitHub portfolio and personal brand.</desc>
+
+  <rect width="1200" height="1200" fill="#0B0B0D"/>
+
+  <!-- Fine luxury frame -->
+  <rect x="72" y="72" width="1056" height="1056" rx="8"
+        fill="none" stroke="#C9A86A" stroke-width="3"/>
+  <rect x="91" y="91" width="1018" height="1018" rx="6"
+        fill="none" stroke="#C9A86A" stroke-opacity="0.35" stroke-width="1"/>
+
+  <!-- Monogram -->
+  <g fill="none" stroke="#F4F0E8" stroke-width="18"
+     stroke-linecap="square" stroke-linejoin="miter">
+    <!-- M -->
+    <path d="M315 720 V390 L455 570 L595 390 V720"/>
+    <!-- A -->
+    <path d="M545 720 L690 390 L835 720"/>
+    <path d="M602 590 H778"/>
+  </g>
+
+  <!-- Gold accent -->
+  <path d="M350 805 H850" stroke="#C9A86A" stroke-width="5"/>
+  <circle cx="600" cy="805" r="7" fill="#C9A86A"/>
+
+  <!-- Wordmark -->
+  <text x="600" y="875" text-anchor="middle"
+        fill="#F4F0E8"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="54" letter-spacing="14">MD ADIB AZAM</text>
+
+  <text x="600" y="935" text-anchor="middle"
+        fill="#C9A86A"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="22" letter-spacing="8">AI • DATA • TECHNOLOGY</text>
+</svg>

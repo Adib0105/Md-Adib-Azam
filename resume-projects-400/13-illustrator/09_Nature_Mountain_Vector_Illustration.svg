@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+<title>Nature Mountain Vector Illustration</title>
+<rect width="1200" height="800" fill="#DCFCE7"/>
+<circle cx="950" cy="145" r="82" fill="#F59E0B"/>
+<path d="M0 540 L240 235 L380 420 L575 145 L810 455 L955 300 L1200 560 V800 H0Z" fill="#475569"/>
+<path d="M575 145 L510 245 L560 225 L590 270 L635 225 L675 250Z" fill="#F8FAFC"/>
+<path d="M0 600 L250 420 L405 560 L585 350 L760 580 L960 420 L1200 600 V800 H0Z" fill="#166534"/>
+<path d="M0 690 Q250 610 500 690 T1000 680 T1200 650 V800 H0Z" fill="#14532D"/>
+<g fill="#0F5132">
+<path d="M100 675l35-115 35 115zm70 0l30-95 30 95zm810 0l38-130 38 130zm80 0l30-100 30 100z"/>
+</g>
+<path d="M80 735 Q300 700 520 735 T1160 730" fill="none" stroke="#86EFAC" stroke-width="7"/>
+<text x="600" y="760" text-anchor="middle" font-family="Arial" font-size="26" font-weight="700" letter-spacing="7" fill="#ECFDF5">MOUNTAIN ESCAPE</text>
+</svg>

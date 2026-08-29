@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<title>12 Cosmetic Product Packaging</title>
+
+<rect width="1200" height="900" fill="#FAF7F5"/>
+<rect x="175" y="185" width="250" height="470" rx="30" fill="#E8D8D2"/>
+<rect x="245" y="130" width="110" height="70" rx="12" fill="#C7B7B0"/>
+<rect x="210" y="350" width="180" height="190" fill="#FFFDFC"/>
+<text x="300" y="410" text-anchor="middle" font-family="Georgia" font-size="28" fill="#6B4F48">AZAM</text>
+<text x="300" y="445" text-anchor="middle" font-family="Arial" font-size="17" letter-spacing="4" fill="#8A716A">SKIN LAB</text>
+<text x="300" y="485" text-anchor="middle" font-family="Arial" font-size="14" letter-spacing="2" fill="#A58D85">HYDRATING SERUM</text>
+<rect x="570" y="150" width="380" height="540" rx="10" fill="#F1E6E1" stroke="#B9A39A" stroke-width="4"/>
+<rect x="615" y="205" width="290" height="430" fill="#FFFDFC"/>
+<circle cx="760" cy="330" r="62" fill="none" stroke="#C7A38D" stroke-width="6"/>
+<path d="M730 350q30-55 60 0" fill="none" stroke="#6B4F48" stroke-width="7"/>
+<text x="760" y="455" text-anchor="middle" font-family="Georgia" font-size="36" fill="#6B4F48">AZAM</text>
+<text x="760" y="490" text-anchor="middle" font-family="Arial" font-size="15" letter-spacing="5" fill="#8A716A">SKIN LAB</text>
+<text x="760" y="535" text-anchor="middle" font-family="Arial" font-size="13" letter-spacing="3" fill="#A58D85">PURE • MODERN • CARE</text>
+<text x="600" y="800" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" letter-spacing="6" fill="#6B4F48">COSMETIC PACKAGING SYSTEM</text>
+
+</svg>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<title>16 Creative Typography Poster</title>
+
+<rect width="1200" height="900" fill="#111827"/>
+<text x="90" y="190" font-family="Arial" font-size="150" font-weight="900" fill="#F8FAFC">MAKE</text>
+<text x="90" y="340" font-family="Arial" font-size="150" font-weight="900" fill="#22D3EE">NOISE.</text>
+<path d="M95 395H1050" stroke="#7C3AED" stroke-width="12"/>
+<text x="95" y="470" font-family="Arial" font-size="42" font-weight="700" letter-spacing="12" fill="#CBD5E1">TYPE / FORM / ENERGY</text>
+<text x="95" y="700" font-family="Arial" font-size="180" font-weight="900" fill="none" stroke="#475569" stroke-width="3">TYPE</text>
+<text x="95" y="790" font-family="Arial" font-size="22" letter-spacing="8" fill="#94A3B8">CREATIVE TYPOGRAPHY SERIES • 01</text>
+
+</svg>

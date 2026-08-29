@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<title>23 Technology Cybersecurity Icon Set</title>
+
+<rect width="1200" height="900" fill="#07111F"/>
+<text x="600" y="70" text-anchor="middle" font-family="Arial" font-size="30" font-weight="800" letter-spacing="6" fill="#67E8F9">TECH / CYBERSECURITY ICON SET</text>
+<g fill="none" stroke="#22D3EE" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+<path d="M180 310q-80-100 0-160 80 60 0 160z"/><path d="M145 235h70"/>
+<rect x="330" y="170" width="150" height="120" rx="15"/><path d="M355 320h100M405 290v30"/>
+<path d="M590 300l75-45 75 45-75 45z"/><path d="M665 255v-70M625 280v-70M705 280v-70"/>
+<path d="M885 305l-35-100h100l-35 100z"/><circle cx="900" cy="250" r="8"/>
+<circle cx="180" cy="510" r="75"/><path d="M145 510l25 25 50-60"/>
+<path d="M350 580v-90q55-60 110 0v90M405 470v-35"/>
+<path d="M575 580l55-90 55 90M600 545h60"/>
+<path d="M830 485h140v100H830z"/><path d="M855 520h90m-90 35h55"/>
+</g>
+<text x="600" y="720" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700" letter-spacing="5" fill="#A5F3FC">SECURE • DETECT • DEFEND • AUTOMATE</text>
+
+</svg>

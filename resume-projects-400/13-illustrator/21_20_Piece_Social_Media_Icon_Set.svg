@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<title>21 20 Piece Social Media Icon Set</title>
+
+<rect width="1200" height="900" fill="#F8FAFC"/>
+<text x="600" y="70" text-anchor="middle" font-family="Arial" font-size="30" font-weight="800" letter-spacing="6" fill="#0F172A">SOCIAL MEDIA ICON SET</text>
+<g fill="none" stroke="#2563EB" stroke-width="8">
+<circle cx="180" cy="190" r="45"/><rect x="315" y="145" width="90" height="90" rx="20"/><path d="M500 235l45-90 45 90z"/>
+<circle cx="820" cy="190" r="45"/><path d="M955 235v-90m0 0l45 45m-45-45l-45 45"/>
+<rect x="135" y="315" width="90" height="70" rx="18"/><circle cx="360" cy="350" r="45"/><path d="M500 390v-80m0 0l70 80m0-80v80"/>
+<circle cx="820" cy="350" r="45"/><path d="M955 390q45-80 90 0M955 350h90"/>
+<rect x="135" y="485" width="90" height="90" rx="12"/><path d="M315 575l45-90 45 90m-70-30h50"/><circle cx="545" cy="530" r="45"/>
+<path d="M775 575l45-90 45 90m-70-30h50M955 575v-90h70"/>
+<circle cx="180" cy="700" r="45"/><path d="M315 700h90m-45-45v90M500 745l90-90M500 655l90 90"/>
+<rect x="685" y="655" width="90" height="90" rx="45"/><path d="M910 655v90m0-90l90 90m-90 0l90-90"/>
+</g>
+<text x="600" y="825" text-anchor="middle" font-family="Arial" font-size="18" letter-spacing="4" fill="#64748B">20 ICONS • SOCIAL • CONTENT • DIGITAL</text>
+
+</svg>

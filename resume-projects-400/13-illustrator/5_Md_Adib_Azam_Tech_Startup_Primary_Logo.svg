@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200">
+  <title>Md Adib Azam — Tech Startup Primary Logo</title>
+  <desc>Professional vector logo for a technology portfolio: MA monogram with AI circuit motif.</desc>
+
+  <defs>
+    <linearGradient id="accent" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="52%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="48%" stop-color="#CBD5E1"/>
+      <stop offset="100%" stop-color="#64748B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Transparent canvas: Illustrator/GitHub friendly -->
+  <g transform="translate(0,20)">
+    <!-- Outer technology ring -->
+    <circle cx="600" cy="410" r="300" fill="none" stroke="url(#accent)" stroke-width="12"/>
+    <circle cx="600" cy="410" r="276" fill="none" stroke="#94A3B8" stroke-opacity="0.25" stroke-width="2"/>
+
+    <!-- Circuit nodes -->
+    <g fill="url(#accent)">
+      <circle cx="300" cy="410" r="10"/>
+      <circle cx="900" cy="410" r="10"/>
+      <circle cx="385" cy="195" r="9"/>
+      <circle cx="815" cy="195" r="9"/>
+      <circle cx="385" cy="625" r="9"/>
+      <circle cx="815" cy="625" r="9"/>
+    </g>
+    <g fill="none" stroke="url(#accent)" stroke-width="5" stroke-linecap="round">
+      <path d="M300 410h70l34-34h48"/>
+      <path d="M900 410h-70l-34-34h-48"/>
+      <path d="M385 195l48 48v45"/>
+      <path d="M815 195l-48 48v45"/>
+      <path d="M385 625l48-48v-45"/>
+      <path d="M815 625l-48-48v-45"/>
+    </g>
+
+    <!-- MA monogram -->
+    <g fill="none" stroke="url(#metal)" stroke-width="28"
+       stroke-linecap="square" stroke-linejoin="miter">
+      <!-- M -->
+      <path d="M390 575V255l105 140 105-140v320"/>
+      <!-- A -->
+      <path d="M565 575l125-320 125 320"/>
+      <path d="M615 465h150"/>
+    </g>
+
+    <!-- AI/core node -->
+    <circle cx="600" cy="410" r="42" fill="#0B1020" stroke="url(#accent)" stroke-width="10"/>
+    <circle cx="600" cy="410" r="13" fill="url(#accent)"/>
+    <g stroke="url(#accent)" stroke-width="5" stroke-linecap="round">
+      <path d="M600 355v-28"/>
+      <path d="M600 465v28"/>
+      <path d="M545 410h-28"/>
+      <path d="M655 410h28"/>
+    </g>
+
+    <!-- Divider -->
+    <path d="M385 735H815" stroke="url(#accent)" stroke-width="6"/>
+    <circle cx="600" cy="735" r="7" fill="url(#accent)"/>
+
+    <!-- Wordmark -->
+    <text x="600" y="820" text-anchor="middle"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="68" font-weight="700" letter-spacing="12"
+          fill="#0F172A">MD ADIB AZAM</text>
+
+    <text x="600" y="875" text-anchor="middle"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="23" font-weight="600" letter-spacing="7"
+          fill="#475569">AI  •  DATA  •  SOFTWARE  •  AUTOMATION</text>
+
+    <text x="600" y="930" text-anchor="middle"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="18" font-weight="500" letter-spacing="5"
+          fill="#64748B">BUILD  •  AUTOMATE  •  INNOVATE</text>
+  </g>
+</svg>

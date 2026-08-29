@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<title>25 Professional Business Landing Page Hero</title>
+
+<rect width="1200" height="900" fill="#F8FAFC"/>
+<path d="M0 0h1200v900H0z" fill="#F8FAFC"/>
+<text x="90" y="105" font-family="Arial" font-size="22" font-weight="800" letter-spacing="5" fill="#2563EB">GO DIGITAL PRO</text>
+<text x="90" y="245" font-family="Arial" font-size="72" font-weight="900" fill="#0F172A">BUILD SMART.</text>
+<text x="90" y="325" font-family="Arial" font-size="72" font-weight="900" fill="#2563EB">GROW FASTER.</text>
+<text x="90" y="385" font-family="Arial" font-size="22" fill="#64748B">Digital products, automation and AI systems<br/>designed for modern businesses.</text>
+<rect x="90" y="455" width="210" height="62" rx="31" fill="#0F172A"/>
+<text x="195" y="495" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#FFFFFF">START A PROJECT</text>
+<circle cx="850" cy="405" r="250" fill="#DBEAFE"/>
+<circle cx="850" cy="405" r="175" fill="#FFFFFF" stroke="#2563EB" stroke-width="8"/>
+<path d="M735 470l115-190 115 190M780 405h140" fill="none" stroke="#0F172A" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="850" cy="405" r="30" fill="#06B6D4"/>
+<path d="M700 650h300" stroke="#CBD5E1" stroke-width="4"/>
+<text x="850" y="705" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" letter-spacing="5" fill="#475569">AI • DATA • SOFTWARE • AUTOMATION</text>
+
+</svg>

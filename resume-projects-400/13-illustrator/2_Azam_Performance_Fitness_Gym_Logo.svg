@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <title>AZAM PERFORMANCE — Fitness &amp; Gym Logo</title>
+  <desc>Bold professional vector gym logo with MA monogram and barbell motif.</desc>
+
+  <defs>
+    <linearGradient id="energy" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Shield emblem -->
+  <path d="M600 95 L815 165 V370 C815 515 730 620 600 690
+           C470 620 385 515 385 370 V165 Z"
+        fill="#111318" stroke="#252A33" stroke-width="8"/>
+
+  <path d="M600 125 L785 185 V365 C785 492 716 585 600 650
+           C484 585 415 492 415 365 V185 Z"
+        fill="none" stroke="url(#energy)" stroke-width="5"/>
+
+  <!-- Barbell -->
+  <g fill="none" stroke="#F5F5F5" stroke-linecap="square">
+    <path d="M330 395 H870" stroke-width="18"/>
+    <path d="M410 350 V440 M455 335 V455 M745 335 V455 M790 350 V440"
+          stroke-width="22"/>
+  </g>
+
+  <!-- Weight plates -->
+  <g fill="url(#energy)" stroke="#111318" stroke-width="6">
+    <rect x="345" y="325" width="45" height="140" rx="4"/>
+    <rect x="395" y="305" width="55" height="180" rx="4"/>
+    <rect x="810" y="325" width="45" height="140" rx="4"/>
+    <rect x="750" y="305" width="55" height="180" rx="4"/>
+  </g>
+
+  <!-- MA monogram -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="17"
+     stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M500 535 V445 L550 500 L600 445 V535"/>
+    <path d="M610 535 L655 445 L700 535 M625 505 H685"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="600" y="765" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="67" font-weight="900" letter-spacing="8"
+        fill="#15171B">AZAM PERFORMANCE</text>
+
+  <path d="M420 795 H780" stroke="url(#energy)" stroke-width="5"/>
+  <circle cx="600" cy="795" r="6" fill="#EF4444"/>
+
+  <text x="600" y="840" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="19" font-weight="700" letter-spacing="6"
+        fill="#525862">STRENGTH • DISCIPLINE • PERFORMANCE</text>
+</svg>

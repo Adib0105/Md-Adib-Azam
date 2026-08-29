@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+<title>City Landscape Vector Art</title>
+<rect width="1200" height="800" fill="#E0F2FE"/>
+<circle cx="930" cy="150" r="72" fill="#FBBF24"/>
+<path d="M0 560 L150 420 L255 525 L390 330 L535 520 L690 370 L830 530 L990 350 L1200 550 V800 H0Z" fill="#64748B"/>
+<path d="M0 630 L180 470 L300 600 L430 430 L560 610 L710 455 L850 605 L1020 440 L1200 590 V800 H0Z" fill="#334155"/>
+<g fill="#0F172A">
+<rect x="70" y="350" width="105" height="310"/><rect x="205" y="275" width="125" height="385"/>
+<rect x="360" y="400" width="95" height="260"/><rect x="485" y="235" width="145" height="425"/>
+<rect x="665" y="330" width="120" height="330"/><rect x="820" y="210" width="110" height="450"/>
+<rect x="970" y="365" width="135" height="295"/>
+</g>
+<g fill="#FDE68A">
+<path d="M95 380h55v35H95zm0 65h55v35H95zm140-110h70v35h-70zm0 65h70v35h-70zm280-95h55v35h-55zm0 65h55v35h-55zm180 80h65v35h-65zm0 65h65v35h-65zm150-195h55v35h-55zm0 65h55v35h-55zm155 105h75v35h-75z"/>
+</g>
+<path d="M0 680 Q300 625 600 690 T1200 665 V800 H0Z" fill="#111827"/>
+<path d="M0 730 H1200" stroke="#FBBF24" stroke-width="8" stroke-dasharray="50 35"/>
+<text x="600" y="755" text-anchor="middle" font-family="Arial" font-size="26" font-weight="700" letter-spacing="7" fill="#E2E8F0">CITY VECTOR</text>
+</svg>

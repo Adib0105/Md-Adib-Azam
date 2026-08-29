@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <title>Adib Café — Premium Restaurant &amp; Cafe Logo</title>
+  <desc>Minimal vector cafe logo featuring an A monogram, coffee cup and subtle steam.</desc>
+
+  <defs>
+    <linearGradient id="coffee" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7A4B2A"/>
+      <stop offset="100%" stop-color="#B77945"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Emblem -->
+  <g transform="translate(600 355)">
+    <!-- outer badge -->
+    <circle r="245" fill="none" stroke="#241A15" stroke-width="8"/>
+    <circle r="225" fill="none" stroke="#B77945" stroke-width="3"/>
+
+    <!-- steam -->
+    <g fill="none" stroke="#7A4B2A" stroke-width="9" stroke-linecap="round">
+      <path d="M-72 -116 C-112 -155 -38 -183 -74 -221"/>
+      <path d="M0 -116 C-40 -155 34 -183 -2 -221"/>
+      <path d="M72 -116 C32 -155 106 -183 70 -221"/>
+    </g>
+
+    <!-- cup -->
+    <path d="M-145 -78 H145 V25 C145 105 82 143 0 143 C-82 143 -145 105 -145 25 Z"
+          fill="none" stroke="#241A15" stroke-width="14"/>
+    <path d="M145 -45 H180 C226 -45 239 26 188 48 L145 65"
+          fill="none" stroke="#241A15" stroke-width="14"/>
+
+    <!-- coffee -->
+    <path d="M-128 -70 H128 V-34 C128 -8 94 7 0 7 C-94 7 -128 -8 -128 -34 Z"
+          fill="url(#coffee)"/>
+
+    <!-- A monogram -->
+    <path d="M-65 100 L0 -43 L65 100 M-43 54 H43"
+          fill="none" stroke="#B77945" stroke-width="12"
+          stroke-linecap="square" stroke-linejoin="miter"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="600" y="735" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="76" font-weight="700" letter-spacing="8"
+        fill="#241A15">ADIB CAFÉ</text>
+
+  <path d="M410 765 H790" stroke="#B77945" stroke-width="4"/>
+  <circle cx="600" cy="765" r="6" fill="#B77945"/>
+
+  <text x="600" y="815" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="20" font-weight="600" letter-spacing="7"
+        fill="#6B5548">COFFEE • FOOD • COMMUNITY</text>
+</svg>

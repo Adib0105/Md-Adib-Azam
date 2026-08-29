@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<title>13 Snack Food Packet Design</title>
+
+<rect width="1200" height="900" fill="#FFF7ED"/>
+<path d="M270 110h660l-35 660H305z" fill="#EA580C"/>
+<path d="M305 175h590v515H305z" fill="#FDE68A"/>
+<circle cx="600" cy="420" r="135" fill="#FFFFFF"/>
+<path d="M510 465q90-190 180 0" fill="none" stroke="#EA580C" stroke-width="26" stroke-linecap="round"/>
+<path d="M530 500h140" stroke="#EA580C" stroke-width="20" stroke-linecap="round"/>
+<text x="600" y="260" text-anchor="middle" font-family="Arial" font-size="42" font-weight="900" letter-spacing="7" fill="#7C2D12">CRUNCH</text>
+<text x="600" y="305" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" letter-spacing="4" fill="#9A3412">SPICY MASALA BITES</text>
+<text x="600" y="615" text-anchor="middle" font-family="Arial" font-size="19" font-weight="700" fill="#7C2D12">BOLD FLAVOR • REAL CRUNCH</text>
+<circle cx="350" cy="720" r="48" fill="#FFFFFF"/><text x="350" y="727" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700" fill="#EA580C">50g</text>
+<text x="600" y="835" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" letter-spacing="6" fill="#9A3412">FOOD PACKAGING CONCEPT</text>
+
+</svg>

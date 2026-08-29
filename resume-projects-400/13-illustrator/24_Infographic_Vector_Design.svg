@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<title>24 Infographic Vector Design</title>
+
+<rect width="1200" height="900" fill="#FFFFFF"/>
+<text x="80" y="85" font-family="Arial" font-size="36" font-weight="800" fill="#0F172A">DIGITAL GROWTH FUNNEL</text>
+<text x="80" y="125" font-family="Arial" font-size="18" letter-spacing="3" fill="#64748B">FROM DISCOVERY TO RETENTION</text>
+<path d="M120 190h960l-120 125H240z" fill="#2563EB"/>
+<path d="M240 340h720l-100 120H340z" fill="#06B6D4"/>
+<path d="M340 480h520l-75 110H415z" fill="#7C3AED"/>
+<path d="M415 610h370l-55 105H470z" fill="#0F172A"/>
+<text x="600" y="265" text-anchor="middle" font-family="Arial" font-size="34" font-weight="800" fill="#FFFFFF">AWARENESS</text>
+<text x="600" y="410" text-anchor="middle" font-family="Arial" font-size="32" font-weight="800" fill="#FFFFFF">CONSIDERATION</text>
+<text x="600" y="545" text-anchor="middle" font-family="Arial" font-size="30" font-weight="800" fill="#FFFFFF">CONVERSION</text>
+<text x="600" y="675" text-anchor="middle" font-family="Arial" font-size="28" font-weight="800" fill="#FFFFFF">RETENTION</text>
+<text x="80" y="805" font-family="Arial" font-size="20" font-weight="700" letter-spacing="4" fill="#475569">INFOGRAPHIC / DATA STORYTELLING</text>
+
+</svg>

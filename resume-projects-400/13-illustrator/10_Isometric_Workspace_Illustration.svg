@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+<title>Isometric Workspace Illustration</title>
+<rect width="1200" height="900" fill="#F8FAFC"/>
+<path d="M140 665 L600 430 L1060 665 L600 850Z" fill="#CBD5E1"/>
+<path d="M140 665 L600 430 L600 505 L215 700Z" fill="#94A3B8"/>
+<path d="M600 430 L1060 665 L985 705 L600 505Z" fill="#64748B"/>
+<!-- desk -->
+<path d="M265 515 L610 335 L935 500 L590 680Z" fill="#7C3AED"/>
+<path d="M265 515 L590 680 L590 730 L265 565Z" fill="#4C1D95"/>
+<path d="M590 680 L935 500 L935 550 L590 730Z" fill="#5B21B6"/>
+<!-- monitor -->
+<path d="M435 330 L680 205 L835 285 L590 410Z" fill="#0F172A"/>
+<path d="M470 330 L680 223 L798 284 L588 390Z" fill="#0EA5E9"/>
+<path d="M580 405 L650 370 L650 445 L580 480Z" fill="#334155"/>
+<!-- laptop -->
+<path d="M350 505 L510 425 L650 495 L490 575Z" fill="#1E293B"/>
+<path d="M490 575 L650 495 L680 510 L520 590Z" fill="#94A3B8"/>
+<!-- chair -->
+<path d="M785 455 L895 510 L895 650 L785 595Z" fill="#2563EB"/>
+<path d="M805 600 L875 635 L875 735 L805 700Z" fill="#1D4ED8"/>
+<path d="M805 735 L770 770 M875 735 L910 770" stroke="#0F172A" stroke-width="15" stroke-linecap="round"/>
+<!-- coffee -->
+<ellipse cx="740" cy="455" rx="42" ry="20" fill="#78350F"/>
+<path d="M700 455v48q40 28 80 0v-48" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="5"/>
+<!-- plant -->
+<path d="M245 455v90 M245 485 Q205 430 180 465 M245 500 Q290 435 315 465" fill="none" stroke="#15803D" stroke-width="14" stroke-linecap="round"/>
+<path d="M215 545h60l-10 70h-40z" fill="#B45309"/>
+<text x="600" y="825" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" letter-spacing="7" fill="#334155">ISOMETRIC WORKSPACE</text>
+</svg>
