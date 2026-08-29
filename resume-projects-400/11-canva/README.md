@@ -1,116 +1,117 @@
-# 🎨 Canva Design Portfolio — 26 Visual Projects
+# 🎨 Canva Design Portfolio
 
-A curated Canva portfolio showcasing practical design work across social media advertising, branding, business collateral, YouTube content, education, events, food, travel and promotional campaigns.
+<div align="center">
 
-## Portfolio Overview
+## 25 Curated Visual Design Projects
 
-- **25 primary Canva projects**
-- **1 alternate wedding invitation design**
-- Built for real-world marketing, branding and content use cases
-- Focused on visual hierarchy, typography, layout, CTA clarity and platform-ready composition
+**Social Media · YouTube · Corporate Design · Carousels · Personal Branding**
 
-## Featured Categories
+A structured collection of Canva design work created for practical marketing, content, business and personal-brand use cases.
 
-### 📱 Social Media & Advertising
-- Instagram Restaurant Promo Post
-- Gym/Fitness Membership Ad
-- Real Estate Property Sale Post
-- Digital Marketing Agency Service Post
-- Brand Sale Banner
-- Beauty Salon Offer Creative
-- Education/Course Admission Post
-- Mobile/Electronics Product Ad
-- Food Delivery Social Media Creative
-- Travel Package Advertisement
-- Facebook Event Promotion Banner
-
-### ▶️ YouTube & Content
-- YouTube Thumbnail – Tech Video
-- YouTube Thumbnail – Vlog
-- YouTube Thumbnail – Gaming
-
-### 🏢 Business & Corporate
-- LinkedIn Professional Hiring Post
-- Restaurant Menu Design
-- Business Flyer
-- Corporate Brochure Cover
-- Business Card Design
-- Resume/CV Template
-- Product Launch Poster
-
-### 📚 Carousel & Educational Content
-- Instagram Carousel – Digital Marketing Tips
-- Instagram Carousel – Business Growth Tips
-
-### ✨ Branding & Events
-- Personal Brand Premium Campaign
-- Event Invitation / Wedding Card
-- Event Invitation / Wedding Card — Alternate Version
-
-## 🖼️ Design Gallery
-
-<p align="center">
-  <img src="Instagram Restaurant Promo Post.png" width="31%" alt="Instagram Restaurant Promo Post" />
-  <img src="GymFitness Membership Ad.png" width="31%" alt="Gym Fitness Membership Ad" />
-  <img src="Real Estate Property Sale Post.png" width="31%" alt="Real Estate Property Sale Post" />
-</p>
-
-<p align="center">
-  <img src="Digital Marketing Agency Service Post.png" width="31%" alt="Digital Marketing Agency Service Post" />
-  <img src="Brand Sale Banner.png" width="31%" alt="Brand Sale Banner" />
-  <img src="Beauty Salon Offer Creative.png" width="31%" alt="Beauty Salon Offer Creative" />
-</p>
-
-<p align="center">
-  <img src="EducationCourse Admission Post.png" width="31%" alt="Education Course Admission Post" />
-  <img src="MobileElectronics Product Ad.png" width="31%" alt="Mobile Electronics Product Ad" />
-  <img src="Food Delivery Social Media Creative.png" width="31%" alt="Food Delivery Social Media Creative" />
-</p>
-
-<p align="center">
-  <img src="Travel Package Advertisement.png" width="31%" alt="Travel Package Advertisement" />
-  <img src="Facebook Event Promotion Banner.png" width="31%" alt="Facebook Event Promotion Banner" />
-  <img src="LinkedIn Professional Hiring Post.png" width="31%" alt="LinkedIn Professional Hiring Post" />
-</p>
-
-<p align="center">
-  <img src="YouTube Thumbnail – Tech Video.png" width="31%" alt="YouTube Tech Thumbnail" />
-  <img src="YouTube Thumbnail – Vlog.png" width="31%" alt="YouTube Vlog Thumbnail" />
-  <img src="YouTube Thumbnail – Gaming.png" width="31%" alt="YouTube Gaming Thumbnail" />
-</p>
-
-<p align="center">
-  <img src="Restaurant Menu Design.png" width="31%" alt="Restaurant Menu Design" />
-  <img src="Business Flyer.png" width="31%" alt="Business Flyer" />
-  <img src="Corporate Brochure Cover.png" width="31%" alt="Corporate Brochure Cover" />
-</p>
-
-<p align="center">
-  <img src="Business Card Design.png" width="31%" alt="Business Card Design" />
-  <img src="ResumeCV Template.png" width="31%" alt="Resume CV Template" />
-  <img src="Product Launch Poster.png" width="31%" alt="Product Launch Poster" />
-</p>
-
-<p align="center">
-  <img src="Instagram Carousel – Digital Marketing Tips.png" width="31%" alt="Digital Marketing Tips Carousel" />
-  <img src="Instagram Carousel – Business Growth Tips.png" width="31%" alt="Business Growth Tips Carousel" />
-  <img src="Personal Brand Premium Campaign.png" width="31%" alt="Personal Brand Premium Campaign" />
-</p>
-
-<p align="center">
-  <img src="Event Invitation  Wedding Card.png" width="45%" alt="Wedding Card" />
-  <img src="Event Invitation  Wedding Card 2.png" width="45%" alt="Wedding Card Alternate" />
-</p>
-
-## Skills Demonstrated
-
-`Canva` · `Graphic Design` · `Social Media Creatives` · `Branding` · `Advertising Design` · `Typography` · `Layout Design` · `YouTube Thumbnails` · `Business Collateral` · `Marketing Communication`
-
-## Design Approach
-
-Each project is created around a clear communication objective: attract attention quickly, establish visual hierarchy, keep the message readable, and guide the viewer toward the intended action. The collection demonstrates flexibility across multiple industries and content formats rather than relying on a single visual style.
+</div>
 
 ---
 
-**Portfolio by Md Adib Azam**  
-Canva • Graphic Design • Digital Marketing • Visual Communication
+## 📌 Portfolio Overview
+
+This portfolio contains **25 completed Canva designs**, organized into **5 focused categories**. The collection demonstrates visual hierarchy, typography, layout, brand consistency, advertising communication, content design and platform-aware composition.
+
+| Category | Projects | Focus |
+|---|---:|---|
+| [📱 Social Media Ads](Social%20Media%20Ads%20-%2010/) | **10** | Promotional creatives, offers, campaigns and product/service advertising |
+| [▶️ YouTube & Content](YouTube%20%26%20Content%20-%203/) | **3** | High-impact thumbnails for tech, vlog and gaming content |
+| [🏢 Business & Corporate](Business%20%26%20Corporate%20-%206/) | **6** | Professional business collateral, hiring, brochure and launch material |
+| [📚 Carousel & Education](Carousel%20%26%20Education%20-%202/) | **2** | Educational and value-driven carousel content |
+| [✨ Branding & Personal Portfolio](Branding%20%26%20Personal%20Portfolio%20-%204/) | **4** | Personal branding, CV presentation, invitation and brand identity work |
+
+**Total: 25 Designs**
+
+---
+
+## 📱 Social Media Ads — 10
+
+Designed to communicate an offer quickly, attract attention and maintain clear CTA-focused composition across social platforms.
+
+1. Instagram Restaurant Promo Post
+2. Gym / Fitness Membership Ad
+3. Real Estate Property Sale Post
+4. Digital Marketing Agency Service Post
+5. Beauty Salon Offer Creative
+6. Education / Course Admission Post
+7. Mobile / Electronics Product Ad
+8. Food Delivery Social Media Creative
+9. Travel Package Advertisement
+10. Facebook Event Promotion Banner
+
+➡️ [Open Social Media Ads](Social%20Media%20Ads%20-%2010/)
+
+---
+
+## ▶️ YouTube & Content — 3
+
+Thumbnail concepts built around fast readability, strong subject emphasis and click-oriented visual hierarchy.
+
+1. YouTube Thumbnail — Tech Video
+2. YouTube Thumbnail — Vlog
+3. YouTube Thumbnail — Gaming
+
+➡️ [Open YouTube & Content](YouTube%20%26%20Content%20-%203/)
+
+---
+
+## 🏢 Business & Corporate — 6
+
+Professional designs focused on business communication, recruitment, presentation and branded corporate material.
+
+1. LinkedIn Professional Hiring Post
+2. Restaurant Menu Design
+3. Business Flyer
+4. Corporate Brochure Cover
+5. Business Card Design
+6. Product Launch Poster
+
+➡️ [Open Business & Corporate](Business%20%26%20Corporate%20-%206/)
+
+---
+
+## 📚 Carousel & Education — 2
+
+Structured educational content designed to make information easy to scan, understand and retain.
+
+1. Instagram Carousel — Digital Marketing Tips
+2. Instagram Carousel — Business Growth Tips
+
+➡️ [Open Carousel & Education](Carousel%20%26%20Education%20-%202/)
+
+---
+
+## ✨ Branding & Personal Portfolio — 4
+
+Identity-focused designs that present an individual or brand in a polished, memorable and professional way.
+
+1. Personal Brand Premium Campaign
+2. Resume / CV Template
+3. Event Invitation / Wedding Card
+4. Brand Sale Banner
+
+➡️ [Open Branding & Personal Portfolio](Branding%20%26%20Personal%20Portfolio%20-%204/)
+
+---
+
+## 🛠️ Skills Demonstrated
+
+`Canva` · `Graphic Design` · `Social Media Creatives` · `Advertising Design` · `YouTube Thumbnails` · `Branding` · `Typography` · `Layout Design` · `Business Collateral` · `Marketing Communication`
+
+## 🎯 Design Approach
+
+Every design is built around a communication goal: **capture attention → establish hierarchy → deliver the message clearly → guide the viewer toward the intended action**. The five-category structure makes the portfolio easier for recruiters, clients and collaborators to browse by real-world design use case.
+
+---
+
+<div align="center">
+
+### Created by Md Adib Azam
+
+**Canva · Graphic Design · Digital Marketing · Visual Communication**
+
+</div>
