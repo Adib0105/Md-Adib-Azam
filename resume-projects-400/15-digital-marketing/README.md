@@ -1,31 +1,88 @@
-# Digital Marketing - 25 Manual Upload Slots
+# 📈 Digital Marketing Portfolio
 
-Each numbered folder is a clean space reserved for Md Adib Azam's finished digital-marketing project file. Until that file is added, the folder contains only its .gitkeep marker.
+<div align="center">
 
-| # | Folder | Status |
-|---:|---|---|
-| 01 | [Digital Marketing upload slot 01](01-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 02 | [Digital Marketing upload slot 02](02-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 03 | [Digital Marketing upload slot 03](03-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 04 | [Digital Marketing upload slot 04](04-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 05 | [Digital Marketing upload slot 05](05-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 06 | [Digital Marketing upload slot 06](06-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 07 | [Digital Marketing upload slot 07](07-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 08 | [Digital Marketing upload slot 08](08-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 09 | [Digital Marketing upload slot 09](09-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 10 | [Digital Marketing upload slot 10](10-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 11 | [Digital Marketing upload slot 11](11-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 12 | [Digital Marketing upload slot 12](12-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 13 | [Digital Marketing upload slot 13](13-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 14 | [Digital Marketing upload slot 14](14-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 15 | [Digital Marketing upload slot 15](15-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 16 | [Digital Marketing upload slot 16](16-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 17 | [Digital Marketing upload slot 17](17-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 18 | [Digital Marketing upload slot 18](18-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 19 | [Digital Marketing upload slot 19](19-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 20 | [Digital Marketing upload slot 20](20-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 21 | [Digital Marketing upload slot 21](21-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 22 | [Digital Marketing upload slot 22](22-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 23 | [Digital Marketing upload slot 23](23-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 24 | [Digital Marketing upload slot 24](24-upload-slot/) | Waiting for Md Adib Azam's original file |
-| 25 | [Digital Marketing upload slot 25](25-upload-slot/) | Waiting for Md Adib Azam's original file |
+## 25 Practical Marketing Strategy Projects
+
+**Social Media · SEO · Paid Ads · Email · Analytics · Funnel Strategy**
+
+A recruiter-friendly collection of 25 digital marketing projects built around real campaign planning, audience strategy, conversion thinking and measurable KPIs.
+
+</div>
+
+---
+
+## Portfolio Overview
+
+This portfolio is organized into **5 categories with 5 projects each**. Every project documents a clear objective, target audience, strategy, deliverables and measurement framework. The projects are presented as portfolio case-study plans and do not claim fabricated campaign results.
+
+| Category | Projects | Focus |
+|---|---:|---|
+| [📱 Social Media Marketing](Social%20Media%20Marketing%20-%205/) | 5 | Organic growth, content planning and lead generation |
+| [🔎 SEO & Content Marketing](SEO%20%26%20Content%20Marketing%20-%205/) | 5 | Audits, keywords, local SEO, competitors and content |
+| [🎯 Paid Advertising](Paid%20Advertising%20-%205/) | 5 | Search, Meta, e-commerce, YouTube and remarketing |
+| [✉️ Email & Lead Generation](Email%20%26%20Lead%20Generation%20-%205/) | 5 | Automation, retention, newsletters and B2B outreach |
+| [📊 Analytics & Marketing Strategy](Analytics%20%26%20Marketing%20Strategy%20-%205/) | 5 | Reporting, funnels, personas and 90-day planning |
+
+**Total: 25 Digital Marketing Projects**
+
+---
+
+## 📱 Social Media Marketing — 5
+1. Restaurant Instagram Growth Campaign
+2. Gym/Fitness Social Media Campaign
+3. Clothing Brand 30-Day Content Plan
+4. Real Estate Lead Generation Social Campaign
+5. Go Digital Pro – Complete Social Media Strategy
+
+## 🔎 SEO & Content Marketing — 5
+6. Website SEO Audit Report
+7. Keyword Research – 100 Keywords Project
+8. Local SEO Strategy for Restaurant/Cafe
+9. Competitor SEO Analysis
+10. 30-Day SEO Content Calendar
+
+## 🎯 Paid Advertising — 5
+11. Google Search Ads Campaign
+12. Meta Facebook/Instagram Lead Campaign
+13. E-commerce Product Conversion Campaign
+14. YouTube Ads Campaign Strategy
+15. Retargeting / Remarketing Campaign
+
+## ✉️ Email & Lead Generation — 5
+16. Welcome Email Automation Sequence
+17. E-commerce Abandoned Cart Email Campaign
+18. B2B Cold Email Lead Generation Campaign
+19. Promotional Newsletter Campaign
+20. Customer Retention Email Campaign
+
+## 📊 Analytics & Marketing Strategy — 5
+21. Google Analytics Website Performance Report
+22. Social Media Monthly Performance Report
+23. Digital Marketing Funnel Strategy
+24. Customer Persona & Buyer Journey Project
+25. Go Digital Pro – Complete 90-Day Digital Marketing Plan
+
+---
+
+## Skills Demonstrated
+
+`Social Media Marketing` · `Content Strategy` · `SEO` · `Keyword Research` · `Local SEO` · `Google Ads` · `Meta Ads` · `Retargeting` · `Email Marketing` · `Lead Generation` · `Analytics` · `Marketing Funnels` · `Customer Personas` · `Campaign Planning`
+
+## Portfolio Method
+
+Each project follows the same practical workflow:
+
+**Business Goal → Audience → Channel Strategy → Content/Message → Conversion Path → KPI Plan → Optimization**
+
+This keeps the work focused on business outcomes rather than vanity metrics.
+
+---
+
+<div align="center">
+
+### Created by Md Adib Azam
+
+**Digital Marketing · SEO · Social Media · Paid Advertising · Analytics**
+
+</div>
