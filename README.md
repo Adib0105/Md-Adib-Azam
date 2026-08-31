@@ -23,6 +23,28 @@ Windows-first multimodal desktop agent with voice, vision, memory, computer use,
 
 </div>
 
+## Featured Project — AirMic
+
+<div align="center">
+
+<a href="https://github.com/Adib0105/AirMic">
+  <img src="assets/airmic-feature.svg" alt="Open Md Adib Azam's AirMic encrypted iPhone-to-Windows wireless microphone project" width="100%">
+</a>
+
+**Click the card to explore AirMic →**
+
+Turn an iPhone into a secure, low-latency wireless microphone for Windows 11 over local Wi-Fi—free, account-free and cloud-free.
+
+![Swift](https://img.shields.io/badge/SwiftUI-5.10-F05138?style=flat-square&logo=swift&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?style=flat-square&logo=dotnet&logoColor=white)
+![Security](https://img.shields.io/badge/Audio-AES--256--GCM-16A085?style=flat-square)
+![Network](https://img.shields.io/badge/Network-LAN_Only-0078D4?style=flat-square)
+
+</div>
+
+> [!NOTE]
+> **Current milestone:** the encrypted iPhone-to-PC audio pipeline, pairing, reconnect, diagnostics and polished apps are implemented in source. The Microsoft-signed Windows virtual-audio driver remains the production release gate.
+
 ## Hello, I am Md Adib Azam 👋
 
 I am a Computer Science & Technology diploma student from Durgapur. I build practical tools across programming, data analytics, web development, databases, automation and digital operations.
@@ -43,6 +65,7 @@ My project workflow is simple: **understand the problem → build a usable solut
 | Project | Problem solved | Evidence |
 |---|---|---|
 | [JARVIS AI OMEGA V7.5](https://github.com/Adib0105/JARVIS-AI-OMEGA) | Coordinates voice, vision, memory and computer-use capabilities through a permission-aware desktop agent | Separate public repository with architecture, security, testing and Windows build documentation |
+| [AirMic — Encrypted Wireless Microphone](https://github.com/Adib0105/AirMic) | Turns an iPhone into a LAN-only, encrypted Windows microphone with low-latency PCM streaming | SwiftUI, AVFoundation, .NET 8, TLS/PIN pairing, AES-GCM, jitter buffering, diagnostics, tests and a signed-driver release gate |
 | [Advanced Analytics Portfolio](advanced-data-analytics/) | Turns business questions into reproducible analytical decisions | 20 pipelines; metrics and decision briefs for every run |
 | [Customer Support SLA Dashboard](28-customer-support-sla-dashboard/) | Tracks open work, breaches, response time and agent load | Separate UI/logic modules with passing Node tests |
 | [Digital Seva Workflow](30-digital-seva-workflow/) | Controls a service request from receipt to delivery | Validation, ordered states, local persistence and tests |
