@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title description">
+  <title id="title">AirMic</title>
+  <desc id="description">Turn an iPhone into an encrypted wireless microphone for Windows over local Wi-Fi.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07101d"/>
+      <stop offset="0.5" stop-color="#111d36"/>
+      <stop offset="1" stop-color="#092b2d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#57e6c0"/>
+      <stop offset="0.5" stop-color="#5ca8ff"/>
+      <stop offset="1" stop-color="#aa7cff"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="360" rx="28" fill="url(#bg)"/>
+  <circle cx="1050" cy="40" r="180" fill="#5ca8ff" opacity="0.08"/>
+  <circle cx="120" cy="330" r="170" fill="#57e6c0" opacity="0.08"/>
+  <path d="M40 302 C260 245 330 350 548 292 S900 230 1160 292" fill="none" stroke="url(#accent)" stroke-width="3" opacity="0.4"/>
+
+  <g transform="translate(82 76)">
+    <rect x="0" y="0" width="94" height="184" rx="22" fill="#101a2a" stroke="#57e6c0" stroke-width="4"/>
+    <rect x="11" y="21" width="72" height="133" rx="10" fill="#0a111e"/>
+    <rect x="34" y="9" width="27" height="5" rx="3" fill="#899ab4"/>
+    <circle cx="47" cy="167" r="7" fill="#57e6c0"/>
+    <g transform="translate(34 62)" fill="none" stroke="#f5f8ff" stroke-width="5" stroke-linecap="round">
+      <rect x="0" y="0" width="26" height="43" rx="13"/>
+      <path d="M-9 26a22 22 0 0 0 44 0M13 48v14M2 62h22"/>
+    </g>
+  </g>
+
+  <g transform="translate(220 134)" fill="none" stroke="#5ca8ff" stroke-width="6" stroke-linecap="round" filter="url(#glow)">
+    <path d="M0 24a66 66 0 0 1 94 0"/>
+    <path d="M18 43a41 41 0 0 1 58 0"/>
+    <path d="M38 62a14 14 0 0 1 18 0"/>
+    <circle cx="47" cy="75" r="4" fill="#5ca8ff" stroke="none"/>
+  </g>
+
+  <g transform="translate(351 91)">
+    <rect x="0" y="0" width="248" height="144" rx="15" fill="#111b2b" stroke="#aa7cff" stroke-width="4"/>
+    <rect x="14" y="14" width="220" height="116" rx="8" fill="#08101c"/>
+    <path d="M93 146h62l12 26H81z" fill="#263552"/>
+    <rect x="63" y="171" width="122" height="12" rx="6" fill="#344664"/>
+    <g transform="translate(99 38)" fill="none" stroke="#57e6c0" stroke-width="6" stroke-linecap="round">
+      <rect x="0" y="0" width="35" height="55" rx="18"/>
+      <path d="M-12 34a30 30 0 0 0 59 0M17 64v18M2 82h31"/>
+    </g>
+    <circle cx="208" cy="28" r="6" fill="#57e6c0"/>
+    <text x="26" y="116" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#91a5c3">ENCRYPTED LAN AUDIO</text>
+  </g>
+
+  <g transform="translate(663 72)" font-family="Segoe UI, Arial, sans-serif">
+    <text x="0" y="72" font-size="74" font-weight="800" letter-spacing="5" fill="#f7f9ff">AIRMIC</text>
+    <rect x="2" y="91" width="405" height="5" rx="3" fill="url(#accent)"/>
+    <text x="2" y="136" font-size="25" font-weight="600" fill="#c7d5e8">iPhone → Wi-Fi → Windows 11</text>
+    <text x="2" y="174" font-size="18" fill="#91a5c3">Free • Private • Local-network only</text>
+    <g transform="translate(2 204)">
+      <rect width="160" height="38" rx="19" fill="#57e6c0" opacity="0.16"/>
+      <circle cx="22" cy="19" r="6" fill="#57e6c0"/>
+      <text x="39" y="25" font-size="15" font-weight="700" fill="#74f1cf">AES-256-GCM</text>
+    </g>
+    <g transform="translate(176 204)">
+      <rect width="132" height="38" rx="19" fill="#5ca8ff" opacity="0.16"/>
+      <text x="21" y="25" font-size="15" font-weight="700" fill="#78b8ff">48 kHz PCM</text>
+    </g>
+  </g>
+</svg>
