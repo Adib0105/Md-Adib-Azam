@@ -1,0 +1,9 @@
+campaign_id,channel,impressions,clicks,conversions,spend,revenue,audience
+M001,Google Ads,120000,4200,310,85000,242000,Young Professionals
+M002,Instagram,98000,5100,280,62000,188000,Students
+M003,Email,45000,6200,540,18000,295000,Existing Customers
+M004,Facebook,87000,3600,190,54000,136000,Families
+M005,LinkedIn,38000,1300,95,47000,121000,B2B
+M006,YouTube,150000,4900,230,91000,174000,Tech Enthusiasts
+M007,Organic Search,76000,5800,410,26000,267000,High Intent
+M008,Referral,29000,2400,205,12000,143000,Partners

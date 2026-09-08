@@ -1,0 +1,6 @@
+// Create these measures after loading the linked CSV.
+
+ROAS = DIVIDE(SUM('marketing_campaigns'[revenue]), SUM('marketing_campaigns'[spend]))
+CPA = DIVIDE(SUM('marketing_campaigns'[spend]), SUM('marketing_campaigns'[conversions]))
+CTR = DIVIDE(SUM('marketing_campaigns'[clicks]), SUM('marketing_campaigns'[impressions]))
+CVR = DIVIDE(SUM('marketing_campaigns'[conversions]), SUM('marketing_campaigns'[clicks]))

@@ -1,0 +1,5 @@
+SLA Status
+IF [first_response_min] > 30 THEN 'Breached' ELSE 'Met' END
+
+Closure Rate
+AVG(IF [status]='Closed' THEN 1 ELSE 0 END)

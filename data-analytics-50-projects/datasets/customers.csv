@@ -1,0 +1,11 @@
+customer_id,signup_date,city,segment,age,monthly_spend,churned,satisfaction
+C101,2025-01-12,Kolkata,Consumer,24,2400,0,5
+C102,2025-02-18,Delhi,Corporate,35,6200,0,4
+C103,2025-03-25,Patna,Consumer,29,1800,1,2
+C104,2025-04-07,Mumbai,Small Business,42,7400,0,4
+C105,2025-05-19,Kolkata,Corporate,31,5100,0,5
+C106,2025-06-22,Pune,Consumer,22,1300,1,2
+C107,2025-07-14,Jaipur,Small Business,39,4600,0,3
+C108,2025-08-30,Delhi,Corporate,47,8900,0,4
+C109,2025-09-09,Patna,Consumer,26,1600,1,1
+C110,2025-10-16,Mumbai,Small Business,36,5700,0,4

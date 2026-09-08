@@ -1,0 +1,8 @@
+ROAS
+SUM([revenue])/SUM([spend])
+
+Conversion Rate
+SUM([conversions])/SUM([clicks])
+
+CPA
+SUM([spend])/SUM([conversions])

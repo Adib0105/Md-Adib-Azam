@@ -1,0 +1,6 @@
+// Create these measures after loading the linked CSV.
+
+Net Sales = SUMX('retail_sales', 'retail_sales'[units] * 'retail_sales'[unit_price] * (1-'retail_sales'[discount]))
+Orders = DISTINCTCOUNT('retail_sales'[order_id])
+AOV = DIVIDE([Net Sales], [Orders])
+Sales Rank = RANKX(ALL('retail_sales'[region]), [Net Sales],, DESC, Dense)

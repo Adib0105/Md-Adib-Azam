@@ -1,0 +1,6 @@
+// Create these measures after loading the linked CSV.
+
+Revenue = SUMX('retail_sales', 'retail_sales'[units]*'retail_sales'[unit_price]*(1-'retail_sales'[discount]))
+Orders = DISTINCTCOUNT('retail_sales'[order_id])
+Top Region = MAXX(TOPN(1, VALUES('retail_sales'[region]), [Revenue], DESC), 'retail_sales'[region])
+Executive Status = IF([Revenue] >= 40000, "On Track", "Needs Attention")

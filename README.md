@@ -56,6 +56,7 @@ My project workflow is simple: **understand the problem → build a usable solut
 | Time | Start here | What it shows |
 |---:|---|---|
 | 5 min | [Flagship Project Showcase](PORTFOLIO_SHOWCASE.md) | Eight concise case studies with problems, implementation details, metrics and test commands |
+| 10 min | [50 Data Analytics Projects](data-analytics-50-projects/) | Excel, SQL, Python, Statistics, Power BI and Tableau case studies with reproducible evidence |
 | 10 min | [Advanced Data Analytics](advanced-data-analytics/) | 20 end-to-end analytical pipelines with decision briefs |
 | 10 min | [CV-Aligned Applications](CV_PROJECTS.md) | 20 multi-file projects across Python, web, SQL, C and Java |
 | Deep dive | [Complete 400-Item Collection](resume-projects-400/) | 16 resume-aligned tracks with a reproducible quality gate |
@@ -66,6 +67,7 @@ My project workflow is simple: **understand the problem → build a usable solut
 |---|---|---|
 | [JARVIS AI OMEGA V7.5](https://github.com/Adib0105/JARVIS-AI-OMEGA) | Coordinates voice, vision, memory and computer-use capabilities through a permission-aware desktop agent | Separate public repository with architecture, security, testing and Windows build documentation |
 | [AirMic — Encrypted Wireless Microphone](https://github.com/Adib0105/AirMic) | Turns an iPhone into a LAN-only, encrypted Windows microphone with low-latency PCM streaming | SwiftUI, AVFoundation, .NET 8, TLS/PIN pairing, AES-GCM, jitter buffering, diagnostics, tests and a signed-driver release gate |
+| [50 Data Analytics Projects](data-analytics-50-projects/) | Answers practical business questions across sales, customers, service, workforce and marketing | 50 case studies: 10 Excel, 10 SQL, 10 Python, 8 Statistics, 6 Power BI and 6 Tableau |
 | [Advanced Analytics Portfolio](advanced-data-analytics/) | Turns business questions into reproducible analytical decisions | 20 pipelines; metrics and decision briefs for every run |
 | [Customer Support SLA Dashboard](28-customer-support-sla-dashboard/) | Tracks open work, breaches, response time and agent load | Separate UI/logic modules with passing Node tests |
 | [Digital Seva Workflow](30-digital-seva-workflow/) | Controls a service request from receipt to delivery | Validation, ordered states, local persistence and tests |
