@@ -1,0 +1,13 @@
+region,category,sales,profit,orders
+West,Office Supplies,220853.249,52609.849,1169
+East,Technology,264973.981,47462.0351,443
+West,Technology,251991.832,44303.6496,490
+East,Office Supplies,205516.055,41014.5791,1074
+Central,Technology,170416.312,33697.432,356
+South,Technology,148771.908,19991.8314,255
+South,Office Supplies,125651.313,19986.3928,619
+West,Furniture,252612.7435,11504.9503,595
+Central,Office Supplies,167026.415,8879.979899999998,880
+South,Furniture,117298.684,6771.2061,278
+East,Furniture,208291.204,3046.1658,488
+Central,Furniture,163797.1638,-2871.0494,403

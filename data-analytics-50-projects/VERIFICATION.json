@@ -1,0 +1,335 @@
+{
+  "status": "PASS",
+  "source_sha256": "58fb59c63089e564d835e4aabe19d371757de1137a5bf1888243ae386c4b7a97",
+  "cases": [
+    {
+      "id": 1,
+      "output_rows": 4,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 2,
+      "output_rows": 3,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 3,
+      "output_rows": 17,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 4,
+      "output_rows": 48,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 5,
+      "output_rows": 3,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 6,
+      "output_rows": 49,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 7,
+      "output_rows": 4,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 8,
+      "output_rows": 4,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 9,
+      "output_rows": 4,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 10,
+      "output_rows": 16,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 11,
+      "output_rows": 5009,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 12,
+      "output_rows": 793,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 13,
+      "output_rows": 4,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 14,
+      "output_rows": 49,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 15,
+      "output_rows": 48,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 16,
+      "output_rows": 1862,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 17,
+      "output_rows": 4,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 18,
+      "output_rows": 4,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 19,
+      "output_rows": 1022,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 20,
+      "output_rows": 4199,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 21,
+      "output_rows": 6,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 22,
+      "output_rows": 793,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 23,
+      "output_rows": 10,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 24,
+      "output_rows": 1862,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 25,
+      "output_rows": 12,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 26,
+      "output_rows": 5009,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 27,
+      "output_rows": 96,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 28,
+      "output_rows": 4,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 29,
+      "output_rows": 781,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 30,
+      "output_rows": 126,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 31,
+      "output_rows": 1,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 32,
+      "output_rows": 1,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 33,
+      "output_rows": 1,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 34,
+      "output_rows": 1,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 35,
+      "output_rows": 1,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 36,
+      "output_rows": 1,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 37,
+      "output_rows": 1,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 38,
+      "output_rows": 1,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 39,
+      "output_rows": 12,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 40,
+      "output_rows": 4,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 41,
+      "output_rows": 17,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 42,
+      "output_rows": 15,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 43,
+      "output_rows": 12,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 44,
+      "output_rows": 16,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 45,
+      "output_rows": 604,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 46,
+      "output_rows": 48,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 47,
+      "output_rows": 793,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 48,
+      "output_rows": 12,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 49,
+      "output_rows": 46,
+      "rerun_matches_saved": true
+    },
+    {
+      "id": 50,
+      "output_rows": 4,
+      "rerun_matches_saved": true
+    }
+  ],
+  "independent_checks": [
+    "10 grouped SQL vs pandas totals and margins",
+    "SQL vs pandas order totals",
+    "SQL vs Python shipping grain",
+    "loss-order population",
+    "YoY first-period null",
+    "RFM score bounds",
+    "cohort retention bounds",
+    "holdout absolute errors",
+    "statistics finite values and intervals",
+    "internal Markdown links",
+    "cached XLSX KPI values vs source"
+  ],
+  "excel_workbooks": [
+    {
+      "id": 1,
+      "formulas": 20,
+      "native_chart": true,
+      "cell_errors": 0
+    },
+    {
+      "id": 2,
+      "formulas": 16,
+      "native_chart": true,
+      "cell_errors": 0
+    },
+    {
+      "id": 3,
+      "formulas": 92,
+      "native_chart": true,
+      "cell_errors": 0
+    },
+    {
+      "id": 4,
+      "formulas": 196,
+      "native_chart": true,
+      "cell_errors": 0
+    },
+    {
+      "id": 5,
+      "formulas": 16,
+      "native_chart": true,
+      "cell_errors": 0
+    },
+    {
+      "id": 6,
+      "formulas": 220,
+      "native_chart": true,
+      "cell_errors": 0
+    },
+    {
+      "id": 7,
+      "formulas": 20,
+      "native_chart": true,
+      "cell_errors": 0
+    },
+    {
+      "id": 8,
+      "formulas": 20,
+      "native_chart": true,
+      "cell_errors": 0
+    },
+    {
+      "id": 9,
+      "formulas": 20,
+      "native_chart": true,
+      "cell_errors": 0
+    },
+    {
+      "id": 10,
+      "formulas": 68,
+      "native_chart": true,
+      "cell_errors": 0
+    }
+  ],
+  "native_desktop_validation": {
+    "Power BI": "NOT RUN",
+    "Tableau": "NOT RUN"
+  }
+}

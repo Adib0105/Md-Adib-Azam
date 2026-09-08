@@ -1,0 +1,8 @@
+{
+  "id": 5,
+  "formula_results_match_sql": true,
+  "groups": 3,
+  "input_rows": 9994,
+  "inspect": "{\"kind\":\"table\",\"sheet\":\"Analysis\",\"address\":\"A7:E15\",\"rows\":9,\"cols\":5,\"values\":[[\"Total sales\",\"Total profit\",\"Total units\",\"Overall margin\",null],[2297200.860299955,286397.0217000013,37873,0.12467217240315906,null],[null,null,null,null,null],[null,null,null,null,null],[\"Group\",\"Sales\",\"Profit\",\"Quantity\",\"Margin\"],[\"Consumer\",1161401.3449999888,134119.20919999972,19521,0.11548050101491919],[\"Corporate\",706146.3668000001,91979.13400000021,11608,0.13025505521867425],[\"Home Office\",429653.1485000003,60298.678500000075,6744,0.14034268970334343],[null,null,null,null,null]]}",
+  "error_scan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}"
+}

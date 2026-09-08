@@ -1,0 +1,112 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Power BI Shipping Mix</title>
+<style>body{font:16px system-ui;background:#eef3f8;color:#17243a;margin:0}main{max-width:1200px;margin:40px auto;padding:36px;background:white;border-top:8px solid #087e8b;border-radius:12px}h1{font-size:32px}.tag{color:#087e8b;font-weight:700}.table{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th{background:#142c49;color:white}th,td{padding:12px;text-align:left;border-bottom:1px solid #dde5ed}tbody tr:nth-child(even){background:#f3f7fa}.note{padding:16px;background:#eaf5f3}a{color:#086a85}</style><main>
+<div class="tag">SUPERSTORE / Power BI / CASE 44</div><h1>Power BI Shipping Mix</h1><p>How do order volume and dispatch intervals differ by region and mode?</p><p class="note">Executed reference analysis + desktop implementation pack (not a native dashboard). 16 output records; preview shows up to 25. Source: 9,994 supplied sales lines. No invented data.</p>
+<div class="table"><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>region</th>
+      <th>ship_mode</th>
+      <th>orders</th>
+      <th>mean_ship_days</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Central</td>
+      <td>Same Day</td>
+      <td>62</td>
+      <td>0.0484</td>
+    </tr>
+    <tr>
+      <td>Central</td>
+      <td>First Class</td>
+      <td>174</td>
+      <td>2.2299</td>
+    </tr>
+    <tr>
+      <td>Central</td>
+      <td>Second Class</td>
+      <td>224</td>
+      <td>3.3661</td>
+    </tr>
+    <tr>
+      <td>Central</td>
+      <td>Standard Class</td>
+      <td>715</td>
+      <td>4.9860</td>
+    </tr>
+    <tr>
+      <td>East</td>
+      <td>Same Day</td>
+      <td>74</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <td>East</td>
+      <td>First Class</td>
+      <td>233</td>
+      <td>2.2275</td>
+    </tr>
+    <tr>
+      <td>East</td>
+      <td>Second Class</td>
+      <td>266</td>
+      <td>3.2669</td>
+    </tr>
+    <tr>
+      <td>East</td>
+      <td>Standard Class</td>
+      <td>828</td>
+      <td>4.9843</td>
+    </tr>
+    <tr>
+      <td>South</td>
+      <td>Same Day</td>
+      <td>39</td>
+      <td>0.0256</td>
+    </tr>
+    <tr>
+      <td>South</td>
+      <td>First Class</td>
+      <td>124</td>
+      <td>2.1935</td>
+    </tr>
+    <tr>
+      <td>South</td>
+      <td>Second Class</td>
+      <td>164</td>
+      <td>3.1646</td>
+    </tr>
+    <tr>
+      <td>South</td>
+      <td>Standard Class</td>
+      <td>495</td>
+      <td>4.9980</td>
+    </tr>
+    <tr>
+      <td>West</td>
+      <td>Same Day</td>
+      <td>89</td>
+      <td>0.0899</td>
+    </tr>
+    <tr>
+      <td>West</td>
+      <td>First Class</td>
+      <td>256</td>
+      <td>2.1211</td>
+    </tr>
+    <tr>
+      <td>West</td>
+      <td>Second Class</td>
+      <td>310</td>
+      <td>3.1419</td>
+    </tr>
+    <tr>
+      <td>West</td>
+      <td>Standard Class</td>
+      <td>956</td>
+      <td>5.0282</td>
+    </tr>
+  </tbody>
+</table></div>
+<p><a href="results.csv">Full results CSV</a> · <a href="README.md">Method and limitations</a> · <a href="../METRIC_DEFINITIONS.md">Metric contract</a></p></main></html>

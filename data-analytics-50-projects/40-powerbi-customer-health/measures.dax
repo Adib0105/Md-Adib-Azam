@@ -1,6 +1,0 @@
-// Create these measures after loading the linked CSV.
-
-Customers = DISTINCTCOUNT('customers'[customer_id])
-Churn Rate = AVERAGE('customers'[churned])
-Average Spend = AVERAGE('customers'[monthly_spend])
-Average Satisfaction = AVERAGE('customers'[satisfaction])

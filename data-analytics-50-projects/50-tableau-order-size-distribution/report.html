@@ -1,0 +1,40 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Tableau Order Size Distribution</title>
+<style>body{font:16px system-ui;background:#eef3f8;color:#17243a;margin:0}main{max-width:1200px;margin:40px auto;padding:36px;background:white;border-top:8px solid #087e8b;border-radius:12px}h1{font-size:32px}.tag{color:#087e8b;font-weight:700}.table{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th{background:#142c49;color:white}th,td{padding:12px;text-align:left;border-bottom:1px solid #dde5ed}tbody tr:nth-child(even){background:#f3f7fa}.note{padding:16px;background:#eaf5f3}a{color:#086a85}</style><main>
+<div class="tag">SUPERSTORE / Tableau / CASE 50</div><h1>Tableau Order Size Distribution</h1><p>How does order size relate to order-level profit by quantity band?</p><p class="note">Executed reference analysis + desktop implementation pack (not a native dashboard). 4 output records; preview shows up to 25. Source: 9,994 supplied sales lines. No invented data.</p>
+<div class="table"><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>size_band</th>
+      <th>orders</th>
+      <th>average_order_sales</th>
+      <th>profit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>01: 1-5 units</td>
+      <td>2413</td>
+      <td>183.5150</td>
+      <td>55348.4284</td>
+    </tr>
+    <tr>
+      <td>02: 6-10 units</td>
+      <td>1457</td>
+      <td>449.8685</td>
+      <td>70432.1972</td>
+    </tr>
+    <tr>
+      <td>03: 11-20 units</td>
+      <td>904</td>
+      <td>908.6935</td>
+      <td>135914.3393</td>
+    </tr>
+    <tr>
+      <td>04: 21+ units</td>
+      <td>235</td>
+      <td>1606.2211</td>
+      <td>24702.0568</td>
+    </tr>
+  </tbody>
+</table></div>
+<p><a href="results.csv">Full results CSV</a> · <a href="README.md">Method and limitations</a> · <a href="../METRIC_DEFINITIONS.md">Metric contract</a></p></main></html>

@@ -1,6 +1,0 @@
-// Create these measures after loading the linked CSV.
-
-Open Backlog = CALCULATE(COUNTROWS('support_tickets'), 'support_tickets'[status] = "Open")
-SLA Breach Rate = AVERAGEX('support_tickets', IF('support_tickets'[first_response_min] > 30, 1, 0))
-Average CSAT = AVERAGE('support_tickets'[csat])
-Average Response = AVERAGE('support_tickets'[first_response_min])

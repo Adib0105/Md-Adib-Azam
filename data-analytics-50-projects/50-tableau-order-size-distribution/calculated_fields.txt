@@ -1,0 +1,26 @@
+Sales
+SUM([sales])
+
+Profit
+SUM([profit])
+
+Margin
+IF SUM([sales]) <> 0 THEN SUM([profit])/SUM([sales]) END
+
+Orders
+COUNTD([order_id])
+
+AOV
+SUM([sales])/COUNTD([order_id])
+
+Loss Line Rate
+AVG(IF [profit] < 0 THEN 1 ELSE 0 END)
+
+Order Sales
+{ FIXED [order_id] : SUM([sales]) }
+
+Order Units
+{ FIXED [order_id] : SUM([quantity]) }
+
+Category Share
+SUM([sales])/WINDOW_SUM(SUM([sales]))

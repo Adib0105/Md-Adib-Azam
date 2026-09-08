@@ -1,0 +1,2 @@
+-- Dialect: SQLite 3.25+; run via analysis.py to load source data.
+WITH o AS (SELECT order_id,SUM(quantity) AS units,SUM(sales) AS sales,SUM(profit) AS profit FROM superstore GROUP BY order_id), b AS (SELECT *,CASE WHEN units<=5 THEN '01: 1-5 units' WHEN units<=10 THEN '02: 6-10 units' WHEN units<=20 THEN '03: 11-20 units' ELSE '04: 21+ units' END AS size_band FROM o) SELECT size_band,COUNT(*) AS orders,AVG(sales) AS average_order_sales,SUM(profit) AS profit FROM b GROUP BY size_band ORDER BY size_band;

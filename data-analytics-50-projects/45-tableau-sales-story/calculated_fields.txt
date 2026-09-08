@@ -1,5 +1,0 @@
-Net Sales
-SUM([units] * [unit_price] * (1-[discount]))
-
-Region Share
-SUM([units]*[unit_price]*(1-[discount])) / TOTAL(SUM([units]*[unit_price]*(1-[discount])))

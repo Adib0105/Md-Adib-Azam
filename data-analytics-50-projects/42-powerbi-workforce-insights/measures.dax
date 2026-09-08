@@ -1,6 +1,0 @@
-// Create these measures after loading the linked CSV.
-
-Headcount = DISTINCTCOUNT('hr_employees'[employee_id])
-Attrition Rate = AVERAGE('hr_employees'[attrition])
-Average Salary = AVERAGE('hr_employees'[monthly_salary])
-Average Performance = AVERAGE('hr_employees'[performance])

@@ -1,5 +1,0 @@
-Attrition Rate
-AVG([attrition])
-
-Tenure Band
-IF [tenure_years] < 3 THEN 'Early' ELSEIF [tenure_years] < 7 THEN 'Established' ELSE 'Senior' END

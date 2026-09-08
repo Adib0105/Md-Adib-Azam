@@ -1,0 +1,138 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Power BI Discount Exposure</title>
+<style>body{font:16px system-ui;background:#eef3f8;color:#17243a;margin:0}main{max-width:1200px;margin:40px auto;padding:36px;background:white;border-top:8px solid #087e8b;border-radius:12px}h1{font-size:32px}.tag{color:#087e8b;font-weight:700}.table{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th{background:#142c49;color:white}th,td{padding:12px;text-align:left;border-bottom:1px solid #dde5ed}tbody tr:nth-child(even){background:#f3f7fa}.note{padding:16px;background:#eaf5f3}a{color:#086a85}</style><main>
+<div class="tag">SUPERSTORE / Power BI / CASE 42</div><h1>Power BI Discount Exposure</h1><p>Which region-discount combinations show loss exposure?</p><p class="note">Executed reference analysis + desktop implementation pack (not a native dashboard). 15 output records; preview shows up to 25. Source: 9,994 supplied sales lines. No invented data.</p>
+<div class="table"><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>region</th>
+      <th>discount_band</th>
+      <th>lines</th>
+      <th>sales</th>
+      <th>profit</th>
+      <th>loss_line_rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Central</td>
+      <td>0–20%</td>
+      <td>852</td>
+      <td>128955.1520</td>
+      <td>15973.1962</td>
+      <td>0.1350</td>
+    </tr>
+    <tr>
+      <td>Central</td>
+      <td>20–40%</td>
+      <td>187</td>
+      <td>98974.9728</td>
+      <td>-11598.8353</td>
+      <td>0.9091</td>
+    </tr>
+    <tr>
+      <td>Central</td>
+      <td>Above 40%</td>
+      <td>456</td>
+      <td>30159.1260</td>
+      <td>-40793.4391</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>Central</td>
+      <td>No discount</td>
+      <td>828</td>
+      <td>243150.6400</td>
+      <td>76125.4407</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <td>East</td>
+      <td>0–20%</td>
+      <td>938</td>
+      <td>191168.3030</td>
+      <td>28233.8412</td>
+      <td>0.1279</td>
+    </tr>
+    <tr>
+      <td>East</td>
+      <td>20–40%</td>
+      <td>257</td>
+      <td>119266.8370</td>
+      <td>-17870.9625</td>
+      <td>0.8911</td>
+    </tr>
+    <tr>
+      <td>East</td>
+      <td>Above 40%</td>
+      <td>204</td>
+      <td>26603.5600</td>
+      <td>-24217.6451</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>East</td>
+      <td>No discount</td>
+      <td>1449</td>
+      <td>341742.5400</td>
+      <td>105377.5464</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <td>South</td>
+      <td>0–20%</td>
+      <td>644</td>
+      <td>105021.7520</td>
+      <td>8648.5743</td>
+      <td>0.1366</td>
+    </tr>
+    <tr>
+      <td>South</td>
+      <td>20–40%</td>
+      <td>16</td>
+      <td>15896.0880</td>
+      <td>-6347.6677</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>South</td>
+      <td>Above 40%</td>
+      <td>155</td>
+      <td>54820.9050</td>
+      <td>-18532.8141</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>South</td>
+      <td>No discount</td>
+      <td>805</td>
+      <td>215983.1600</td>
+      <td>62981.3378</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <td>West</td>
+      <td>0–20%</td>
+      <td>1369</td>
+      <td>421377.0335</td>
+      <td>47929.8628</td>
+      <td>0.1461</td>
+    </tr>
+    <tr>
+      <td>West</td>
+      <td>Above 40%</td>
+      <td>118</td>
+      <td>17048.6610</td>
+      <td>-16014.6922</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>West</td>
+      <td>No discount</td>
+      <td>1716</td>
+      <td>287032.1300</td>
+      <td>76503.2783</td>
+      <td>0.0000</td>
+    </tr>
+  </tbody>
+</table></div>
+<p><a href="results.csv">Full results CSV</a> · <a href="README.md">Method and limitations</a> · <a href="../METRIC_DEFINITIONS.md">Metric contract</a></p></main></html>

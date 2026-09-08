@@ -1,0 +1,8 @@
+{
+  "id": 3,
+  "formula_results_match_sql": true,
+  "groups": 17,
+  "input_rows": 9994,
+  "inspect": "{\"kind\":\"table\",\"sheet\":\"Analysis\",\"address\":\"A7:E15\",\"rows\":9,\"cols\":5,\"values\":[[\"Total sales\",\"Total profit\",\"Total units\",\"Overall margin\",null],[2297200.860299955,286397.0217000013,37873,0.12467217240315906,null],[null,null,null,null,null],[null,null,null,null,null],[\"Group\",\"Sales\",\"Profit\",\"Quantity\",\"Margin\"],[\"Accessories\",167380.3180000001,41936.63569999993,2976,0.2505469950176574],[\"Appliances\",107532.161,18138.005399999995,1729,0.16867516872463853],[\"Art\",27118.791999999954,6527.786999999998,3000,0.2407108325474088],[\"Binders\",203412.7330000001,30221.763299999995,5974,0.1485736062550223]]}",
+  "error_scan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}"
+}

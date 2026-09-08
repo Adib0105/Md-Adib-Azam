@@ -1,9 +1,0 @@
-ticket_id,opened_at,closed_at,channel,priority,agent,status,csat,first_response_min
-T001,2026-05-01 09:00,2026-05-01 11:20,Email,High,Asha,Closed,5,12
-T002,2026-05-01 10:15,2026-05-02 13:00,Chat,Medium,Rahul,Closed,4,4
-T003,2026-05-02 08:30,,Phone,Critical,Asha,Open,,2
-T004,2026-05-02 12:00,2026-05-02 16:40,Email,Low,Imran,Closed,3,35
-T005,2026-05-03 09:45,2026-05-03 10:50,Chat,High,Rahul,Closed,5,3
-T006,2026-05-03 14:20,,Email,Medium,Imran,Open,,28
-T007,2026-05-04 11:10,2026-05-04 14:05,Phone,High,Asha,Closed,4,6
-T008,2026-05-05 15:00,2026-05-06 12:10,Email,Low,Rahul,Closed,2,48

@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Shipping Interval Quantiles</title>
+<style>body{font:16px system-ui;background:#eef3f8;color:#17243a;margin:0}main{max-width:1200px;margin:40px auto;padding:36px;background:white;border-top:8px solid #087e8b;border-radius:12px}h1{font-size:32px}.tag{color:#087e8b;font-weight:700}.table{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th{background:#142c49;color:white}th,td{padding:12px;text-align:left;border-bottom:1px solid #dde5ed}tbody tr:nth-child(even){background:#f3f7fa}.note{padding:16px;background:#eaf5f3}a{color:#086a85}</style><main>
+<div class="tag">SUPERSTORE / Python / CASE 28</div><h1>Shipping Interval Quantiles</h1><p>What are median and 90th percentile order-to-ship intervals?</p><p class="note">Implemented analysis. 4 output records; preview shows up to 25. Source: 9,994 supplied sales lines. No invented data.</p>
+<div class="table"><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ship_mode</th>
+      <th>orders</th>
+      <th>median_days</th>
+      <th>p90_days</th>
+      <th>mean_days</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>First Class</td>
+      <td>787</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>2.1881</td>
+    </tr>
+    <tr>
+      <td>Same Day</td>
+      <td>264</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0455</td>
+    </tr>
+    <tr>
+      <td>Second Class</td>
+      <td>964</td>
+      <td>3.0</td>
+      <td>5.0</td>
+      <td>3.2324</td>
+    </tr>
+    <tr>
+      <td>Standard Class</td>
+      <td>2994</td>
+      <td>5.0</td>
+      <td>7.0</td>
+      <td>5.0010</td>
+    </tr>
+  </tbody>
+</table></div>
+<p><a href="results.csv">Full results CSV</a> · <a href="README.md">Method and limitations</a> · <a href="../METRIC_DEFINITIONS.md">Metric contract</a></p></main></html>

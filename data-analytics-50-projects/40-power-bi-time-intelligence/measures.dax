@@ -1,0 +1,19 @@
+Sales = SUM(superstore[sales])
+
+Profit = SUM(superstore[profit])
+
+Margin = DIVIDE([Profit], [Sales])
+
+Orders = DISTINCTCOUNT(superstore[order_id])
+
+Customers = DISTINCTCOUNT(superstore[customer_id])
+
+AOV = DIVIDE([Sales], [Orders])
+
+Loss Line Rate = DIVIDE(CALCULATE(COUNTROWS(superstore), superstore[profit] < 0), COUNTROWS(superstore))
+
+Mean Ship Days = AVERAGEX(VALUES(superstore[order_id]), CALCULATE(MAX(superstore[ship_days])))
+
+Sales Prior Year = CALCULATE([Sales], SAMEPERIODLASTYEAR('Calendar'[Date]))
+
+Sales YoY = IF(NOT ISBLANK([Sales Prior Year]), DIVIDE([Sales]-[Sales Prior Year], [Sales Prior Year]))

@@ -1,5 +1,0 @@
-Churn Rate
-AVG([churned])
-
-Value Segment
-IF [monthly_spend] >= 6000 THEN 'High Value' ELSEIF [churned]=1 THEN 'At Risk' ELSE 'Core' END

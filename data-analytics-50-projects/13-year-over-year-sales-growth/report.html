@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Year over Year Sales Growth</title>
+<style>body{font:16px system-ui;background:#eef3f8;color:#17243a;margin:0}main{max-width:1200px;margin:40px auto;padding:36px;background:white;border-top:8px solid #087e8b;border-radius:12px}h1{font-size:32px}.tag{color:#087e8b;font-weight:700}.table{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th{background:#142c49;color:white}th,td{padding:12px;text-align:left;border-bottom:1px solid #dde5ed}tbody tr:nth-child(even){background:#f3f7fa}.note{padding:16px;background:#eaf5f3}a{color:#086a85}</style><main>
+<div class="tag">SUPERSTORE / SQL / CASE 13</div><h1>Year over Year Sales Growth</h1><p>What is annual sales growth with a missing first-year comparison?</p><p class="note">Implemented analysis. 4 output records; preview shows up to 25. Source: 9,994 supplied sales lines. No invented data.</p>
+<div class="table"><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>order_year</th>
+      <th>sales</th>
+      <th>profit</th>
+      <th>prior_sales</th>
+      <th>yoy_growth</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2014</td>
+      <td>484247.4981</td>
+      <td>49543.9741</td>
+      <td>Not available</td>
+      <td>Not available</td>
+    </tr>
+    <tr>
+      <td>2015</td>
+      <td>470532.5090</td>
+      <td>61618.6037</td>
+      <td>484247.4981</td>
+      <td>-0.0283</td>
+    </tr>
+    <tr>
+      <td>2016</td>
+      <td>609205.5980</td>
+      <td>81795.1743</td>
+      <td>470532.5090</td>
+      <td>0.2947</td>
+    </tr>
+    <tr>
+      <td>2017</td>
+      <td>733215.2552</td>
+      <td>93439.2696</td>
+      <td>609205.5980</td>
+      <td>0.2036</td>
+    </tr>
+  </tbody>
+</table></div>
+<p><a href="results.csv">Full results CSV</a> · <a href="README.md">Method and limitations</a> · <a href="../METRIC_DEFINITIONS.md">Metric contract</a></p></main></html>

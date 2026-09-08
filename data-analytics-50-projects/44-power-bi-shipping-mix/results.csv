@@ -1,0 +1,17 @@
+region,ship_mode,orders,mean_ship_days
+Central,Same Day,62,0.04838709677419355
+Central,First Class,174,2.2298850574712645
+Central,Second Class,224,3.3660714285714284
+Central,Standard Class,715,4.986013986013986
+East,Same Day,74,0.0
+East,First Class,233,2.227467811158798
+East,Second Class,266,3.2669172932330826
+East,Standard Class,828,4.984299516908212
+South,Same Day,39,0.02564102564102564
+South,First Class,124,2.193548387096774
+South,Second Class,164,3.1646341463414633
+South,Standard Class,495,4.997979797979798
+West,Same Day,89,0.0898876404494382
+West,First Class,256,2.12109375
+West,Second Class,310,3.141935483870968
+West,Standard Class,956,5.0282426778242675

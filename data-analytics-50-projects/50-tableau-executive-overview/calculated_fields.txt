@@ -1,8 +1,0 @@
-Net Revenue
-SUM([units]*[unit_price]*(1-[discount]))
-
-Order Value
-SUM([units]*[unit_price]*(1-[discount]))/COUNTD([order_id])
-
-Performance Band
-IF [Net Revenue] >= 15000 THEN 'High' ELSEIF [Net Revenue] >= 10000 THEN 'Medium' ELSE 'Low' END

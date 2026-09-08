@@ -1,0 +1,7 @@
+check,value
+row_count,9994
+unique_orders,5009
+unique_customers,793
+missing_cells,0
+duplicate_row_ids,0
+negative_ship_intervals,0

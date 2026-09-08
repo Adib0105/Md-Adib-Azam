@@ -1,0 +1,442 @@
+[
+  {
+    "id": 1,
+    "tool": "Excel",
+    "title": "Regional Sales and Margin",
+    "question": "Which regions turn sales into profit most efficiently?",
+    "folder": "01-regional-sales-and-margin",
+    "sql": "SELECT region AS dimension, SUM(sales) AS sales, SUM(profit) AS profit, SUM(quantity) AS quantity, SUM(profit)/SUM(sales) AS margin FROM superstore GROUP BY region ORDER BY region",
+    "dimension": "region"
+  },
+  {
+    "id": 2,
+    "tool": "Excel",
+    "title": "Category Profit Contribution",
+    "question": "How much profit does each category contribute?",
+    "folder": "02-category-profit-contribution",
+    "sql": "SELECT category AS dimension, SUM(sales) AS sales, SUM(profit) AS profit, SUM(quantity) AS quantity, SUM(profit)/SUM(sales) AS margin FROM superstore GROUP BY category ORDER BY category",
+    "dimension": "category"
+  },
+  {
+    "id": 3,
+    "tool": "Excel",
+    "title": "Subcategory Loss Exposure",
+    "question": "Which subcategories have negative profit and concentrated losses?",
+    "folder": "03-subcategory-loss-exposure",
+    "sql": "SELECT sub_category AS dimension, SUM(sales) AS sales, SUM(profit) AS profit, SUM(quantity) AS quantity, SUM(profit)/SUM(sales) AS margin FROM superstore GROUP BY sub_category ORDER BY sub_category",
+    "dimension": "sub_category"
+  },
+  {
+    "id": 4,
+    "tool": "Excel",
+    "title": "Monthly Sales and Profit",
+    "question": "How do sales and profit evolve across all 48 observed months?",
+    "folder": "04-monthly-sales-and-profit",
+    "sql": "SELECT order_month AS dimension, SUM(sales) AS sales, SUM(profit) AS profit, SUM(quantity) AS quantity, SUM(profit)/SUM(sales) AS margin FROM superstore GROUP BY order_month ORDER BY order_month",
+    "dimension": "order_month"
+  },
+  {
+    "id": 5,
+    "tool": "Excel",
+    "title": "Customer Segment Economics",
+    "question": "Which customer segments offer stronger sales and margins?",
+    "folder": "05-customer-segment-economics",
+    "sql": "SELECT segment AS dimension, SUM(sales) AS sales, SUM(profit) AS profit, SUM(quantity) AS quantity, SUM(profit)/SUM(sales) AS margin FROM superstore GROUP BY segment ORDER BY segment",
+    "dimension": "segment"
+  },
+  {
+    "id": 6,
+    "tool": "Excel",
+    "title": "State Profitability Review",
+    "question": "Which states merit a detailed loss review?",
+    "folder": "06-state-profitability-review",
+    "sql": "SELECT state AS dimension, SUM(sales) AS sales, SUM(profit) AS profit, SUM(quantity) AS quantity, SUM(profit)/SUM(sales) AS margin FROM superstore GROUP BY state ORDER BY state",
+    "dimension": "state"
+  },
+  {
+    "id": 7,
+    "tool": "Excel",
+    "title": "Shipping Mode Sales Mix",
+    "question": "How do sales and profit differ by shipping mode, without implying delivery performance?",
+    "folder": "07-shipping-mode-sales-mix",
+    "sql": "SELECT ship_mode AS dimension, SUM(sales) AS sales, SUM(profit) AS profit, SUM(quantity) AS quantity, SUM(profit)/SUM(sales) AS margin FROM superstore GROUP BY ship_mode ORDER BY ship_mode",
+    "dimension": "ship_mode"
+  },
+  {
+    "id": 8,
+    "tool": "Excel",
+    "title": "Discount Band Economics",
+    "question": "How are discount bands associated with line-level profitability?",
+    "folder": "08-discount-band-economics",
+    "sql": "SELECT discount_band AS dimension, SUM(sales) AS sales, SUM(profit) AS profit, SUM(quantity) AS quantity, SUM(profit)/SUM(sales) AS margin FROM superstore GROUP BY discount_band ORDER BY discount_band",
+    "dimension": "discount_band"
+  },
+  {
+    "id": 9,
+    "tool": "Excel",
+    "title": "Annual Commercial Performance",
+    "question": "How did annual sales and profit change during the observed period?",
+    "folder": "09-annual-commercial-performance",
+    "sql": "SELECT order_year AS dimension, SUM(sales) AS sales, SUM(profit) AS profit, SUM(quantity) AS quantity, SUM(profit)/SUM(sales) AS margin FROM superstore GROUP BY order_year ORDER BY order_year",
+    "dimension": "order_year"
+  },
+  {
+    "id": 10,
+    "tool": "Excel",
+    "title": "Quarterly Trading Review",
+    "question": "What quarterly pattern is visible in sales and margins?",
+    "folder": "10-quarterly-trading-review",
+    "sql": "SELECT order_quarter AS dimension, SUM(sales) AS sales, SUM(profit) AS profit, SUM(quantity) AS quantity, SUM(profit)/SUM(sales) AS margin FROM superstore GROUP BY order_quarter ORDER BY order_quarter",
+    "dimension": "order_quarter"
+  },
+  {
+    "id": 11,
+    "tool": "SQL",
+    "title": "Order Value and Basket Size",
+    "question": "What is the true average order value after consolidating order lines?",
+    "folder": "11-order-value-and-basket-size",
+    "sql": "SELECT order_id,COUNT(*) AS lines,SUM(quantity) AS units,SUM(sales) AS order_sales,SUM(profit) AS order_profit FROM superstore GROUP BY order_id ORDER BY order_sales DESC"
+  },
+  {
+    "id": 12,
+    "tool": "SQL",
+    "title": "Customer Observed Value",
+    "question": "Which customers generated the most observed revenue, not projected lifetime value?",
+    "folder": "12-customer-observed-value",
+    "sql": "SELECT customer_id,COUNT(DISTINCT order_id) AS orders,SUM(sales) AS observed_sales,SUM(profit) AS observed_profit,MIN(order_date) AS first_order,MAX(order_date) AS last_order FROM superstore GROUP BY customer_id ORDER BY observed_sales DESC"
+  },
+  {
+    "id": 13,
+    "tool": "SQL",
+    "title": "Year over Year Sales Growth",
+    "question": "What is annual sales growth with a missing first-year comparison?",
+    "folder": "13-year-over-year-sales-growth",
+    "sql": "WITH a AS (SELECT order_year,SUM(sales) AS sales,SUM(profit) AS profit FROM superstore GROUP BY order_year), b AS (SELECT *,LAG(sales) OVER(ORDER BY order_year) AS prior_sales FROM a) SELECT *,sales/NULLIF(prior_sales,0)-1 AS yoy_growth FROM b ORDER BY order_year"
+  },
+  {
+    "id": 14,
+    "tool": "SQL",
+    "title": "State Rank within Region",
+    "question": "Which states lead sales within each region?",
+    "folder": "14-state-rank-within-region",
+    "sql": "WITH a AS (SELECT region,state,SUM(sales) AS sales,SUM(profit) AS profit FROM superstore GROUP BY region,state) SELECT *,DENSE_RANK() OVER(PARTITION BY region ORDER BY sales DESC) AS regional_rank FROM a ORDER BY region,regional_rank"
+  },
+  {
+    "id": 15,
+    "tool": "SQL",
+    "title": "Rolling Three Month Sales",
+    "question": "What is the trailing three-month sales baseline without partial initial windows?",
+    "folder": "15-rolling-three-month-sales",
+    "sql": "WITH a AS (SELECT order_month,SUM(sales) AS sales FROM superstore GROUP BY order_month) SELECT *,CASE WHEN ROW_NUMBER() OVER(ORDER BY order_month)>=3 THEN AVG(sales) OVER(ORDER BY order_month ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) END AS trailing_3_month_sales FROM a ORDER BY order_month"
+  },
+  {
+    "id": 16,
+    "tool": "SQL",
+    "title": "Product Sales Concentration",
+    "question": "How concentrated is revenue across products?",
+    "folder": "16-product-sales-concentration",
+    "sql": "WITH a AS (SELECT product_id,SUM(sales) AS sales FROM superstore GROUP BY product_id) SELECT *,SUM(sales) OVER(ORDER BY sales DESC,product_id ROWS UNBOUNDED PRECEDING)/SUM(sales) OVER() AS cumulative_share FROM a ORDER BY sales DESC,product_id"
+  },
+  {
+    "id": 17,
+    "tool": "SQL",
+    "title": "First Observed Purchase Cohorts",
+    "question": "How many customers and sales belong to each first-observed annual cohort?",
+    "folder": "17-first-observed-purchase-cohorts",
+    "sql": "WITH firsts AS (SELECT customer_id,MIN(order_year) AS cohort FROM superstore GROUP BY customer_id) SELECT f.cohort,COUNT(DISTINCT s.customer_id) AS customers,COUNT(DISTINCT s.order_id) AS orders,SUM(s.sales) AS sales FROM superstore s JOIN firsts f USING(customer_id) GROUP BY f.cohort ORDER BY f.cohort"
+  },
+  {
+    "id": 18,
+    "tool": "SQL",
+    "title": "Order Level Shipping Intervals",
+    "question": "What are dispatch intervals by shipping mode when orders are counted once?",
+    "folder": "18-order-level-shipping-intervals",
+    "sql": "WITH o AS (SELECT order_id,ship_mode,MAX(ship_days) AS days FROM superstore GROUP BY order_id,ship_mode) SELECT ship_mode,COUNT(*) AS orders,AVG(days) AS mean_days,MIN(days) AS min_days,MAX(days) AS max_days FROM o GROUP BY ship_mode ORDER BY mean_days"
+  },
+  {
+    "id": 19,
+    "tool": "SQL",
+    "title": "Loss Making Order Audit",
+    "question": "Which orders lose money overall rather than only on individual lines?",
+    "folder": "19-loss-making-order-audit",
+    "sql": "SELECT order_id,customer_id,SUM(sales) AS sales,SUM(profit) AS profit,SUM(profit)/SUM(sales) AS margin FROM superstore GROUP BY order_id,customer_id HAVING SUM(profit)<0 ORDER BY profit"
+  },
+  {
+    "id": 20,
+    "tool": "SQL",
+    "title": "Repeat Purchase Gaps",
+    "question": "How long is the interval between consecutive distinct purchase dates?",
+    "folder": "20-repeat-purchase-gaps",
+    "sql": "WITH dates AS (SELECT DISTINCT customer_id,order_date FROM superstore), a AS (SELECT *,LAG(order_date) OVER(PARTITION BY customer_id ORDER BY order_date) AS prior_date FROM dates) SELECT *,julianday(order_date)-julianday(prior_date) AS gap_days FROM a WHERE prior_date IS NOT NULL ORDER BY customer_id,order_date"
+  },
+  {
+    "id": 21,
+    "tool": "Python",
+    "title": "Source Data Quality Audit",
+    "question": "Do keys, null counts and shipping intervals pass validity checks?",
+    "folder": "21-source-data-quality-audit",
+    "sql": null,
+    "python": "quality"
+  },
+  {
+    "id": 22,
+    "tool": "Python",
+    "title": "Customer RFM Ranking",
+    "question": "Which customers score highly on recency, frequency and observed monetary value?",
+    "folder": "22-customer-rfm-ranking",
+    "sql": null,
+    "python": "rfm"
+  },
+  {
+    "id": 23,
+    "tool": "Python",
+    "title": "Annual Cohort Retention",
+    "question": "What fraction of each first-observed cohort purchases in subsequent observed years?",
+    "folder": "23-annual-cohort-retention",
+    "sql": null,
+    "python": "retention"
+  },
+  {
+    "id": 24,
+    "tool": "Python",
+    "title": "Product Pareto Analysis",
+    "question": "How many products are needed to account for most sales?",
+    "folder": "24-product-pareto-analysis",
+    "sql": null,
+    "python": "pareto"
+  },
+  {
+    "id": 25,
+    "tool": "Python",
+    "title": "Holdout Sales Forecast Comparison",
+    "question": "Does seasonal naive beat a three-month mean on the last 12 months?",
+    "folder": "25-holdout-sales-forecast-comparison",
+    "sql": null,
+    "python": "forecast"
+  },
+  {
+    "id": 26,
+    "tool": "Python",
+    "title": "Robust Order Value Outliers",
+    "question": "Which log-order values exceed a robust absolute z-score of 3.5?",
+    "folder": "26-robust-order-value-outliers",
+    "sql": null,
+    "python": "anomaly"
+  },
+  {
+    "id": 27,
+    "tool": "Python",
+    "title": "Subcategory Basket Association",
+    "question": "Which subcategory pairs co-occur in at least 20 orders, and with what lift?",
+    "folder": "27-subcategory-basket-association",
+    "sql": null,
+    "python": "basket"
+  },
+  {
+    "id": 28,
+    "tool": "Python",
+    "title": "Shipping Interval Quantiles",
+    "question": "What are median and 90th percentile order-to-ship intervals?",
+    "folder": "28-shipping-interval-quantiles",
+    "sql": null,
+    "python": "shipping"
+  },
+  {
+    "id": 29,
+    "tool": "Python",
+    "title": "Customer Purchase Cadence",
+    "question": "What is each repeat customer’s median gap between distinct purchase dates?",
+    "folder": "29-customer-purchase-cadence",
+    "sql": null,
+    "python": "repeat"
+  },
+  {
+    "id": 30,
+    "tool": "Python",
+    "title": "State Subcategory Loss Hotspots",
+    "question": "Which state and subcategory combinations concentrate loss dollars?",
+    "folder": "30-state-subcategory-loss-hotspots",
+    "sql": null,
+    "python": "loss"
+  },
+  {
+    "id": 31,
+    "tool": "Statistics",
+    "title": "Order Sales Mean Confidence Interval",
+    "question": "What is the order-level mean sales and its illustrative Student-t interval?",
+    "folder": "31-order-sales-mean-confidence-interval",
+    "sql": null,
+    "statistics": "mean_ci"
+  },
+  {
+    "id": 32,
+    "tool": "Statistics",
+    "title": "Regional Profit Welch Comparison",
+    "question": "How does mean order profit differ between West and Central?",
+    "folder": "32-regional-profit-welch-comparison",
+    "sql": null,
+    "statistics": "welch"
+  },
+  {
+    "id": 33,
+    "tool": "Statistics",
+    "title": "Segment Loss Association Test",
+    "question": "Is segment associated with the occurrence of order-level losses?",
+    "folder": "33-segment-loss-association-test",
+    "sql": null,
+    "statistics": "association"
+  },
+  {
+    "id": 34,
+    "tool": "Statistics",
+    "title": "Discount Profit Rank Correlation",
+    "question": "What is the order-level rank association of average line discount and profit?",
+    "folder": "34-discount-profit-rank-correlation",
+    "sql": null,
+    "statistics": "spearman"
+  },
+  {
+    "id": 35,
+    "tool": "Statistics",
+    "title": "Shipping Interval Kruskal Test",
+    "question": "Do shipping-mode interval distributions differ?",
+    "folder": "35-shipping-interval-kruskal-test",
+    "sql": null,
+    "statistics": "kruskal"
+  },
+  {
+    "id": 36,
+    "tool": "Statistics",
+    "title": "Profit Margin Bootstrap Interval",
+    "question": "What is uncertainty in the ratio of total profit to total sales under order resampling?",
+    "folder": "36-profit-margin-bootstrap-interval",
+    "sql": null,
+    "statistics": "bootstrap"
+  },
+  {
+    "id": 37,
+    "tool": "Statistics",
+    "title": "Temporal Holdout Profit Regression",
+    "question": "How does a sales-only regression predict order profit on a later temporal holdout?",
+    "folder": "37-temporal-holdout-profit-regression",
+    "sql": null,
+    "statistics": "regression"
+  },
+  {
+    "id": 38,
+    "tool": "Statistics",
+    "title": "Loss Order Wilson Interval",
+    "question": "What is the loss-order proportion and Wilson confidence interval?",
+    "folder": "38-loss-order-wilson-interval",
+    "sql": null,
+    "statistics": "wilson"
+  },
+  {
+    "id": 39,
+    "tool": "Power BI",
+    "title": "Power BI Executive Profit Scorecard",
+    "question": "Which region-category combinations drive profit?",
+    "folder": "39-power-bi-executive-profit-scorecard",
+    "sql": "SELECT region,category,SUM(sales) AS sales,SUM(profit) AS profit,COUNT(DISTINCT order_id) AS orders FROM superstore GROUP BY region,category ORDER BY profit DESC",
+    "dimension": "region"
+  },
+  {
+    "id": 40,
+    "tool": "Power BI",
+    "title": "Power BI Time Intelligence",
+    "question": "How do annual metrics and comparable prior-year growth behave?",
+    "folder": "40-power-bi-time-intelligence",
+    "sql": "SELECT order_year,SUM(sales) AS sales,SUM(profit) AS profit,COUNT(DISTINCT order_id) AS orders FROM superstore GROUP BY order_year ORDER BY order_year",
+    "dimension": "order_year"
+  },
+  {
+    "id": 41,
+    "tool": "Power BI",
+    "title": "Power BI Product Profit Matrix",
+    "question": "Where does product revenue coexist with negative profitability?",
+    "folder": "41-power-bi-product-profit-matrix",
+    "sql": "SELECT category,sub_category,SUM(sales) AS sales,SUM(profit) AS profit,SUM(profit)/SUM(sales) AS margin FROM superstore GROUP BY category,sub_category ORDER BY profit",
+    "dimension": "sub_category"
+  },
+  {
+    "id": 42,
+    "tool": "Power BI",
+    "title": "Power BI Discount Exposure",
+    "question": "Which region-discount combinations show loss exposure?",
+    "folder": "42-power-bi-discount-exposure",
+    "sql": "SELECT region,discount_band,COUNT(*) AS lines,SUM(sales) AS sales,SUM(profit) AS profit,1.0*SUM(loss_flag)/COUNT(*) AS loss_line_rate FROM superstore GROUP BY region,discount_band ORDER BY region,discount_band",
+    "dimension": "discount_band"
+  },
+  {
+    "id": 43,
+    "tool": "Power BI",
+    "title": "Power BI Customer Portfolio",
+    "question": "Which region-segment combinations create customer value?",
+    "folder": "43-power-bi-customer-portfolio",
+    "sql": "SELECT region,segment,COUNT(DISTINCT customer_id) AS customers,SUM(sales) AS sales,SUM(profit) AS profit FROM superstore GROUP BY region,segment ORDER BY sales DESC",
+    "dimension": "segment"
+  },
+  {
+    "id": 44,
+    "tool": "Power BI",
+    "title": "Power BI Shipping Mix",
+    "question": "How do order volume and dispatch intervals differ by region and mode?",
+    "folder": "44-power-bi-shipping-mix",
+    "sql": "WITH o AS (SELECT order_id,region,ship_mode,MAX(ship_days) AS days FROM superstore GROUP BY order_id,region,ship_mode) SELECT region,ship_mode,COUNT(*) AS orders,AVG(days) AS mean_ship_days FROM o GROUP BY region,ship_mode ORDER BY region,mean_ship_days",
+    "dimension": "ship_mode"
+  },
+  {
+    "id": 45,
+    "tool": "Tableau",
+    "title": "Tableau City Profit Explorer",
+    "question": "Which city-state combinations generate the strongest and weakest profits?",
+    "folder": "45-tableau-city-profit-explorer",
+    "sql": "SELECT city,state,SUM(sales) AS sales,SUM(profit) AS profit FROM superstore GROUP BY city,state ORDER BY profit",
+    "dimension": "city"
+  },
+  {
+    "id": 46,
+    "tool": "Tableau",
+    "title": "Tableau Seasonal Sales Heatmap",
+    "question": "How do calendar months compare across years?",
+    "folder": "46-tableau-seasonal-sales-heatmap",
+    "sql": "SELECT order_year,substr(order_month,6,2) AS month_number,SUM(sales) AS sales,SUM(profit) AS profit FROM superstore GROUP BY order_year,month_number ORDER BY order_year,month_number",
+    "dimension": "order_month"
+  },
+  {
+    "id": 47,
+    "tool": "Tableau",
+    "title": "Tableau Customer Profit Scatter",
+    "question": "Which customers have high sales but weak profitability?",
+    "folder": "47-tableau-customer-profit-scatter",
+    "sql": "SELECT customer_id,COUNT(DISTINCT order_id) AS orders,SUM(sales) AS sales,SUM(profit) AS profit FROM superstore GROUP BY customer_id ORDER BY sales DESC",
+    "dimension": "customer_id"
+  },
+  {
+    "id": 48,
+    "tool": "Tableau",
+    "title": "Tableau Category Share Story",
+    "question": "How does category sales mix change across years?",
+    "folder": "48-tableau-category-share-story",
+    "sql": "WITH a AS (SELECT order_year,category,SUM(sales) AS sales FROM superstore GROUP BY order_year,category) SELECT *,sales/SUM(sales) OVER(PARTITION BY order_year) AS annual_share FROM a ORDER BY order_year,category",
+    "dimension": "category"
+  },
+  {
+    "id": 49,
+    "tool": "Tableau",
+    "title": "Tableau Discount Loss Heatmap",
+    "question": "Which subcategory-discount cells merit margin investigation?",
+    "folder": "49-tableau-discount-loss-heatmap",
+    "sql": "SELECT sub_category,discount_band,SUM(sales) AS sales,SUM(profit) AS profit,1.0*SUM(loss_flag)/COUNT(*) AS loss_line_rate FROM superstore GROUP BY sub_category,discount_band ORDER BY sub_category,discount_band",
+    "dimension": "sub_category"
+  },
+  {
+    "id": 50,
+    "tool": "Tableau",
+    "title": "Tableau Order Size Distribution",
+    "question": "How does order size relate to order-level profit by quantity band?",
+    "folder": "50-tableau-order-size-distribution",
+    "sql": "WITH o AS (SELECT order_id,SUM(quantity) AS units,SUM(sales) AS sales,SUM(profit) AS profit FROM superstore GROUP BY order_id), b AS (SELECT *,CASE WHEN units<=5 THEN '01: 1-5 units' WHEN units<=10 THEN '02: 6-10 units' WHEN units<=20 THEN '03: 11-20 units' ELSE '04: 21+ units' END AS size_band FROM o) SELECT size_band,COUNT(*) AS orders,AVG(sales) AS average_order_sales,SUM(profit) AS profit FROM b GROUP BY size_band ORDER BY size_band",
+    "dimension": "quantity"
+  }
+]

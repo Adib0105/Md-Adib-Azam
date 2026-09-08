@@ -1,0 +1,15 @@
+{
+  "original_filename": "Sample - Superstore (1)(2).csv",
+  "sha256": "58fb59c63089e564d835e4aabe19d371757de1137a5bf1888243ae386c4b7a97",
+  "rows": 9994,
+  "orders": 5009,
+  "customers": 793,
+  "sales": 2297200.8603,
+  "profit": 286397.0217,
+  "quantity": 37873,
+  "margin": 0.12467217240315605,
+  "start": "2014-01-03",
+  "end": "2017-12-30",
+  "missing_cells": 0,
+  "currency": "source monetary units; no conversion"
+}

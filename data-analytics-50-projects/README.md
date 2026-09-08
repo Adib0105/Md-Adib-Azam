@@ -1,95 +1,83 @@
-# 50 Data Analytics Projects
+# Superstore — 50 Audited Analytics Cases
 
-[![Projects](https://img.shields.io/badge/Projects-50-7C3AED?style=for-the-badge)](#project-index)
-[![Excel](https://img.shields.io/badge/Excel-10-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)](#project-index)
-[![SQL](https://img.shields.io/badge/SQL-10-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](#project-index)
-[![Python](https://img.shields.io/badge/Python-10-3776AB?style=for-the-badge&logo=python&logoColor=white)](#project-index)
-[![Statistics](https://img.shields.io/badge/Statistics-8-F59E0B?style=for-the-badge)](#project-index)
-[![Power BI](https://img.shields.io/badge/Power_BI-6-F2C811?style=for-the-badge&logo=powerbi&logoColor=111827)](#project-index)
-[![Tableau](https://img.shields.io/badge/Tableau-6-E97627?style=for-the-badge&logo=tableau&logoColor=white)](#project-index)
+**Md Adib Azam** · Excel · SQL · Python · Statistics · Power BI · Tableau
 
-A recruiter-friendly collection of 50 compact, reproducible analytics case studies by **Md Adib Azam**. Each project starts with a business question, identifies decision-ready KPIs, links to source data and includes a tool-specific deliverable.
+Rebuilt entirely from the user-supplied Superstore CSV. Source totals: **9,994 sales lines**, **5,009 orders**, **793 customers**, **2,297,200.86 Sales**, **286,397.02 Profit**. Period: 2014-01-03 to 2017-12-30.
 
-## Coverage
+## Honest deliverables
 
-| Track | Projects | Evidence |
-|---|---:|---|
-| Excel | 10 | formulas, PivotTable plan, validation and dashboard blueprints |
-| SQL | 10 | executable analytical queries, CTEs and window functions |
-| Python | 10 | pandas/NumPy scripts for EDA, quality, segmentation and forecasting |
-| Statistics | 8 | hypothesis tests, confidence intervals, effect sizes and regression |
-| Power BI | 6 | DAX measure packs and dashboard interaction blueprints |
-| Tableau | 6 | calculated fields and multi-dashboard story blueprints |
+- 10 actual Excel workbooks: editable input rows, recalculating SUMIF summaries, margins, native charts and formula checks.
+- 10 SQL cases: explicit analytical queries run against an automatically loaded SQLite database.
+- 10 Python cases: quality, RFM, cohort retention, Pareto, holdout forecast, robust outliers, basket association, shipping quantiles, purchase cadence and loss hotspots.
+- 8 statistics cases: full computed outputs with assumptions and limitations.
+- 6 Power BI + 6 Tableau cases: executed reference results, measures/calculated fields and specific desktop build instructions. **These 12 are implementation packs, not completed native PBIX/TWBX dashboards.**
+- Every case includes a results CSV, a readable HTML report, a business question and a reproducible command.
 
-## Run locally
+## Reproduce
 
 ```bash
 python -m pip install -r requirements.txt
-python 21-retail-eda-python/analysis.py
-python verify_portfolio.py
+python run.py --all
+python verify.py
 ```
 
-The five CSV files in [`datasets/`](datasets/) are deliberately compact and auditable. They make the calculations reproducible without hiding logic inside large downloads.
+Run any case via its analysis.py. View report.html locally after downloading the repository. Excel binaries are checked in; regeneration requires the documented artifact-tool environment in build_workbooks.mjs, not Python alone.
 
-## Project index
+Original data: [source CSV](datasets/source_superstore.csv) · [provenance](DATA_PROFILE.json) · [definitions](METRIC_DEFINITIONS.md) · [audit](AUDIT_AND_CORRECTIONS.md) · [test evidence](VERIFICATION.json)
 
-| # | Project | Tool | Business question |
+## Case index
+
+| # | Case | Track | Status |
 |---:|---|---|---|
-| 01 | [Retail Sales KPI Dashboard](01-sales-kpi-dashboard/) | Excel | Which regions and categories drive net sales? |
-| 02 | [Monthly Budget Variance Tracker](02-monthly-budget-variance/) | Excel | Which channels are over budget relative to return? |
-| 03 | [Inventory Reorder Analysis](03-inventory-reorder-analysis/) | Excel | Which products need priority replenishment? |
-| 04 | [Customer Segmentation Pivot Report](04-customer-segmentation-pivot/) | Excel | How does spend vary by city and segment? |
-| 05 | [Support SLA Scorecard](05-support-sla-scorecard/) | Excel | Where are response-time and closure bottlenecks? |
-| 06 | [HR Attrition Workbook](06-hr-attrition-workbook/) | Excel | Which workforce groups have the highest attrition? |
-| 07 | [Marketing Campaign ROI Model](07-campaign-roi-model/) | Excel | Which campaigns produce the strongest return? |
-| 08 | [Excel Sales Forecast Sheet](08-sales-forecast-sheet/) | Excel | What is the baseline next-period sales forecast? |
-| 09 | [Excel Data Cleaning Audit](09-data-cleaning-audit/) | Excel | Which records fail completeness and validity checks? |
-| 10 | [Executive Performance Pack](10-executive-performance-pack/) | Excel | What are the headline commercial trends? |
-| 11 | [Retail Sales Analysis with SQL](11-retail-sales-sql/) | SQL | How do revenue and order value rank across regions? |
-| 12 | [Customer Lifetime Value SQL](12-customer-lifetime-value-sql/) | SQL | Which customers contribute the most sales value? |
-| 13 | [Support Ticket SLA SQL](13-support-ticket-sla-sql/) | SQL | Which agents and channels miss response targets? |
-| 14 | [Employee Attrition SQL](14-employee-attrition-sql/) | SQL | Which departments show elevated employee exits? |
-| 15 | [Marketing Funnel SQL](15-marketing-funnel-sql/) | SQL | Where does the funnel lose efficiency? |
-| 16 | [Customer Cohort SQL](16-cohort-retention-sql/) | SQL | How do signup cohorts differ in churn and spend? |
-| 17 | [Product Affinity SQL](17-product-affinity-sql/) | SQL | Which category combinations are valuable? |
-| 18 | [Regional Performance Ranking SQL](18-regional-ranking-sql/) | SQL | How do regions rank after discount-adjusted sales? |
-| 19 | [Support Agent Workload SQL](19-agent-workload-sql/) | SQL | Is support workload distributed fairly? |
-| 20 | [Salary Benchmark SQL](20-salary-benchmark-sql/) | SQL | Who falls above or below department benchmarks? |
-| 21 | [Retail Exploratory Data Analysis](21-retail-eda-python/) | Python | What patterns and outliers exist in retail sales? |
-| 22 | [Customer Churn Risk Analysis](22-churn-risk-python/) | Python | Which customer characteristics signal churn risk? |
-| 23 | [Support Ticket Trend Analysis](23-ticket-volume-python/) | Python | How do ticket load and response vary by channel? |
-| 24 | [Employee Workforce Analytics](24-employee-analytics-python/) | Python | How are performance, pay and attrition related? |
-| 25 | [Campaign Performance Optimizer](25-campaign-optimizer-python/) | Python | How should budget be prioritized by campaign efficiency? |
-| 26 | [Python Sales Forecast Baseline](26-sales-forecast-python/) | Python | What does a transparent trend forecast predict? |
-| 27 | [Rule-Based Customer Clustering](27-customer-clustering-python/) | Python | How can customers be grouped into actionable tiers? |
-| 28 | [Sales Anomaly Detection](28-anomaly-detection-python/) | Python | Which orders are unusual using robust statistics? |
-| 29 | [Automated Data Quality Report](29-automated-data-quality-python/) | Python | Can quality failures be detected reproducibly? |
-| 30 | [Multi-Source Business Report](30-multi-source-business-report/) | Python | Can marketing efficiency be summarized automatically? |
-| 31 | [A/B Test Conversion Analysis](31-ab-test-conversion/) | Statistics | Is the conversion-rate difference statistically meaningful? |
-| 32 | [Salary Confidence Interval](32-salary-confidence-interval/) | Statistics | What range likely contains the workforce mean salary? |
-| 33 | [Customer Spend Correlation Study](33-spend-correlation-study/) | Statistics | How strongly are age, satisfaction and spend related? |
-| 34 | [Attrition Chi-Square Test](34-attrition-chi-square/) | Statistics | Is overtime associated with attrition? |
-| 35 | [Sales Distribution Analysis](35-sales-distribution-analysis/) | Statistics | How variable and skewed are order values? |
-| 36 | [CSAT Hypothesis Test](36-csat-hypothesis-test/) | Statistics | Does mean CSAT meet the service target? |
-| 37 | [Bootstrap ROAS Confidence Interval](37-bootstrap-roas/) | Statistics | How uncertain is the average campaign ROAS? |
-| 38 | [Customer Spend Regression](38-regression-spend-model/) | Statistics | How much spend variation is explained by satisfaction? |
-| 39 | [Power BI Sales Command Center](39-powerbi-sales-command-center/) | Power BI | How is net sales tracking across regions and categories? |
-| 40 | [Power BI Customer Health Dashboard](40-powerbi-customer-health/) | Power BI | Where are churn and satisfaction risks concentrated? |
-| 41 | [Power BI Service Operations Dashboard](41-powerbi-service-operations/) | Power BI | Which operational queues need intervention? |
-| 42 | [Power BI Workforce Insights](42-powerbi-workforce-insights/) | Power BI | What factors accompany attrition and performance? |
-| 43 | [Power BI Marketing ROI Dashboard](43-powerbi-marketing-roi/) | Power BI | Which channels convert spend into revenue efficiently? |
-| 44 | [Power BI Executive Scorecard](44-powerbi-executive-scorecard/) | Power BI | What should leadership see in a one-page scorecard? |
-| 45 | [Tableau Retail Sales Story](45-tableau-sales-story/) | Tableau | What geographic and product story explains sales? |
-| 46 | [Tableau Customer Segment Explorer](46-tableau-customer-segments/) | Tableau | How do customer segments differ by value and churn? |
-| 47 | [Tableau Support Operations Monitor](47-tableau-support-monitor/) | Tableau | Where do response delays affect satisfaction? |
-| 48 | [Tableau HR Attrition Story](48-tableau-hr-story/) | Tableau | Which employee groups require retention action? |
-| 49 | [Tableau Campaign Performance](49-tableau-campaign-analysis/) | Tableau | Which channels win on reach and return? |
-| 50 | [Tableau Executive Business Overview](50-tableau-executive-overview/) | Tableau | How can leaders explore performance in three clicks? |
+| 01 | [Regional Sales and Margin](01-regional-sales-and-margin/) | Excel | Executed analysis |
+| 02 | [Category Profit Contribution](02-category-profit-contribution/) | Excel | Executed analysis |
+| 03 | [Subcategory Loss Exposure](03-subcategory-loss-exposure/) | Excel | Executed analysis |
+| 04 | [Monthly Sales and Profit](04-monthly-sales-and-profit/) | Excel | Executed analysis |
+| 05 | [Customer Segment Economics](05-customer-segment-economics/) | Excel | Executed analysis |
+| 06 | [State Profitability Review](06-state-profitability-review/) | Excel | Executed analysis |
+| 07 | [Shipping Mode Sales Mix](07-shipping-mode-sales-mix/) | Excel | Executed analysis |
+| 08 | [Discount Band Economics](08-discount-band-economics/) | Excel | Executed analysis |
+| 09 | [Annual Commercial Performance](09-annual-commercial-performance/) | Excel | Executed analysis |
+| 10 | [Quarterly Trading Review](10-quarterly-trading-review/) | Excel | Executed analysis |
+| 11 | [Order Value and Basket Size](11-order-value-and-basket-size/) | SQL | Executed analysis |
+| 12 | [Customer Observed Value](12-customer-observed-value/) | SQL | Executed analysis |
+| 13 | [Year over Year Sales Growth](13-year-over-year-sales-growth/) | SQL | Executed analysis |
+| 14 | [State Rank within Region](14-state-rank-within-region/) | SQL | Executed analysis |
+| 15 | [Rolling Three Month Sales](15-rolling-three-month-sales/) | SQL | Executed analysis |
+| 16 | [Product Sales Concentration](16-product-sales-concentration/) | SQL | Executed analysis |
+| 17 | [First Observed Purchase Cohorts](17-first-observed-purchase-cohorts/) | SQL | Executed analysis |
+| 18 | [Order Level Shipping Intervals](18-order-level-shipping-intervals/) | SQL | Executed analysis |
+| 19 | [Loss Making Order Audit](19-loss-making-order-audit/) | SQL | Executed analysis |
+| 20 | [Repeat Purchase Gaps](20-repeat-purchase-gaps/) | SQL | Executed analysis |
+| 21 | [Source Data Quality Audit](21-source-data-quality-audit/) | Python | Executed analysis |
+| 22 | [Customer RFM Ranking](22-customer-rfm-ranking/) | Python | Executed analysis |
+| 23 | [Annual Cohort Retention](23-annual-cohort-retention/) | Python | Executed analysis |
+| 24 | [Product Pareto Analysis](24-product-pareto-analysis/) | Python | Executed analysis |
+| 25 | [Holdout Sales Forecast Comparison](25-holdout-sales-forecast-comparison/) | Python | Executed analysis |
+| 26 | [Robust Order Value Outliers](26-robust-order-value-outliers/) | Python | Executed analysis |
+| 27 | [Subcategory Basket Association](27-subcategory-basket-association/) | Python | Executed analysis |
+| 28 | [Shipping Interval Quantiles](28-shipping-interval-quantiles/) | Python | Executed analysis |
+| 29 | [Customer Purchase Cadence](29-customer-purchase-cadence/) | Python | Executed analysis |
+| 30 | [State Subcategory Loss Hotspots](30-state-subcategory-loss-hotspots/) | Python | Executed analysis |
+| 31 | [Order Sales Mean Confidence Interval](31-order-sales-mean-confidence-interval/) | Statistics | Executed analysis |
+| 32 | [Regional Profit Welch Comparison](32-regional-profit-welch-comparison/) | Statistics | Executed analysis |
+| 33 | [Segment Loss Association Test](33-segment-loss-association-test/) | Statistics | Executed analysis |
+| 34 | [Discount Profit Rank Correlation](34-discount-profit-rank-correlation/) | Statistics | Executed analysis |
+| 35 | [Shipping Interval Kruskal Test](35-shipping-interval-kruskal-test/) | Statistics | Executed analysis |
+| 36 | [Profit Margin Bootstrap Interval](36-profit-margin-bootstrap-interval/) | Statistics | Executed analysis |
+| 37 | [Temporal Holdout Profit Regression](37-temporal-holdout-profit-regression/) | Statistics | Executed analysis |
+| 38 | [Loss Order Wilson Interval](38-loss-order-wilson-interval/) | Statistics | Executed analysis |
+| 39 | [Power BI Executive Profit Scorecard](39-power-bi-executive-profit-scorecard/) | Power BI | Desktop implementation pack |
+| 40 | [Power BI Time Intelligence](40-power-bi-time-intelligence/) | Power BI | Desktop implementation pack |
+| 41 | [Power BI Product Profit Matrix](41-power-bi-product-profit-matrix/) | Power BI | Desktop implementation pack |
+| 42 | [Power BI Discount Exposure](42-power-bi-discount-exposure/) | Power BI | Desktop implementation pack |
+| 43 | [Power BI Customer Portfolio](43-power-bi-customer-portfolio/) | Power BI | Desktop implementation pack |
+| 44 | [Power BI Shipping Mix](44-power-bi-shipping-mix/) | Power BI | Desktop implementation pack |
+| 45 | [Tableau City Profit Explorer](45-tableau-city-profit-explorer/) | Tableau | Desktop implementation pack |
+| 46 | [Tableau Seasonal Sales Heatmap](46-tableau-seasonal-sales-heatmap/) | Tableau | Desktop implementation pack |
+| 47 | [Tableau Customer Profit Scatter](47-tableau-customer-profit-scatter/) | Tableau | Desktop implementation pack |
+| 48 | [Tableau Category Share Story](48-tableau-category-share-story/) | Tableau | Desktop implementation pack |
+| 49 | [Tableau Discount Loss Heatmap](49-tableau-discount-loss-heatmap/) | Tableau | Desktop implementation pack |
+| 50 | [Tableau Order Size Distribution](50-tableau-order-size-distribution/) | Tableau | Desktop implementation pack |
 
-## Honest scope
-
-Power BI `.pbix` files are proprietary binaries and Tableau packaged workbooks require desktop authoring. These projects provide the complete source data, DAX/calculated fields, visual layout, interactions and QA checklist needed to reproduce the dashboards in the respective desktop tools; they do not pretend a binary dashboard was generated or published when it was not.
-
-## Author
-
-**Md Adib Azam** — Computer Science & Technology student focused on practical data analytics and decision-ready reporting.
+This is a sample-data learning portfolio, not a claim of client work or independently collected real-world data. Statistical findings are exploratory. The original attachment is preserved byte-for-byte; all normalization is in the separate clean file.
