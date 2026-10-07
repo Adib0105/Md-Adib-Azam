@@ -10,9 +10,10 @@ from flask import (
     flash,
     abort,
     jsonify,
+    current_app,
 )
 from sqlalchemy.exc import IntegrityError
-from models.database import db, Job, SavedJob, Application, SearchEvent
+from models.database import db, Job, SavedJob, Application, SearchEvent, JobView, utcnow
 from routes.auth import login_required
 from services.recommendation_service import (
     active_jobs,
@@ -20,9 +21,13 @@ from services.recommendation_service import (
     engine,
     profile_data,
 )
-from models.skill_extractor import normalize_skills, SKILLS
+from models.skill_extractor import SKILLS
+from services.job_catalog import parse_filters, job_query, eligible_conditions
+from services.external_jobs_service import live_search
+from services.job_providers.provider_registry import provider_summaries
+from services.security_service import rate_limit
 from utils.constants import EMPLOYMENT_TYPES
-from utils.validators import number_field, ValidationError
+from utils.validators import ValidationError
 
 jobs = Blueprint("jobs", __name__)
 
@@ -44,72 +49,79 @@ def flags():
     }
 
 
-def ranked_jobs():
-    return (
-        recommendations(g.user)
-        if g.user
-        else engine().rank({"skills": []}, active_jobs())
-    )
-
-
-def filtered_rows(rows):
-    query = request.args.get("q", "").strip()[:160]
-    # Search ranks semantically before applying structured constraints.
-    if query:
-        rows = engine().search(query, rows)
+def request_filters():
     try:
-        low = number_field(request.args, "min_salary", 100000000, True)
-        high = number_field(request.args, "max_salary", 100000000, True)
-        experience = number_field(request.args, "experience", 60)
-        minimum_match = number_field(request.args, "min_match", 100) or 0
-        if low is not None and high is not None and low > high:
-            raise ValidationError("Minimum salary cannot exceed maximum salary.")
+        return parse_filters(request.args)
     except ValidationError as exc:
         abort(400, description=str(exc))
-    result = []
-    for row in rows:
-        job = row["job"]
-        if any(
-            request.args.get(key)
-            and request.args[key].casefold() not in getattr(job, column).casefold()
-            for key, column in [
-                ("title", "job_title"),
-                ("company", "company_name"),
-                ("location", "location"),
-                ("industry", "industry"),
-            ]
-        ):
-            continue
-        if request.args.get("type") and request.args["type"] != job.employment_type:
-            continue
-        required = {s.casefold() for s in job.required_skills + job.preferred_skills}
-        if any(
-            s.casefold() not in required
-            for s in normalize_skills(request.args.get("skills", ""))
-        ):
-            continue
-        # Salary filters keep listings whose ranges overlap the selected interval.
-        if low is not None and (job.max_salary is None or job.max_salary < low):
-            continue
-        if high is not None and (job.min_salary is None or job.min_salary > high):
-            continue
-        if experience is not None and job.experience_min > experience:
-            continue
-        if g.user and row["score"] < minimum_match:
-            continue
-        result.append(row)
-    sort = request.args.get("sort", "relevance" if query else "match")
+
+
+def query_rows(filters, ids=None):
+    statement = job_query(filters)
+    if ids is not None:
+        statement = statement.where(Job.id.in_(ids))
+    sort = filters.get("sort")
     if sort == "salary":
-        result.sort(key=lambda row: (-(row["job"].max_salary or 0), row["job"].id))
-    elif sort == "newest":
-        result.sort(
-            key=lambda row: (-row["job"].posted_date.toordinal(), row["job"].id)
+        # Compare annual salaries only within the explicitly selected currency.
+        from services.job_catalog import country_currency
+
+        currency = filters.get("currency") or (
+            "USD"
+            if filters.get("source") == "usajobs"
+            else country_currency(filters.get("country", "in"))
         )
+        statement = statement.where(
+            Job.salary_currency == currency, Job.salary_period == "year"
+        ).order_by(Job.max_salary.desc(), Job.id)
+    else:
+        statement = statement.order_by(
+            Job.featured.desc(), Job.posted_date.desc(), Job.id
+        )
+    pool = db.session.scalars(
+        statement.limit(current_app.config["MAX_RANKING_JOBS"])
+    ).all()
+    rows = engine().rank(profile_data(g.user) if g.user else {"skills": []}, pool)
+    if filters.get("q") and sort == "relevance":
+        rows = engine().search(filters["q"], rows)
+    if g.user and filters.get("min_match"):
+        rows = [r for r in rows if r["score"] >= filters["min_match"]]
+    if sort == "salary":
+        rows.sort(key=lambda r: (-(r["job"].max_salary or 0), r["job"].id))
+    elif sort == "newest":
+        rows.sort(key=lambda r: (-r["job"].posted_date.toordinal(), r["job"].id))
     elif sort == "rating":
-        result.sort(key=lambda row: (-(row["job"].company_rating or 0), row["job"].id))
-    elif sort == "match":
-        result.sort(key=lambda row: (-row["score"], row["job"].id))
-    return result
+        rows.sort(key=lambda r: (-(r["job"].company_rating or 0), r["job"].id))
+    return rows
+
+
+def record_search(filters, count):
+    if filters.get("q") and filters.get("page", 1) == 1:
+        db.session.add(
+            SearchEvent(
+                query=filters["q"].casefold(),
+                user_id=g.user.id if g.user else None,
+                source=filters["source"],
+                location=filters["location"],
+                result_count=count,
+            )
+        )
+        db.session.commit()
+
+
+def visible_job(job_id):
+    job = db.get_or_404(Job, job_id)
+    if (not job.published or job.deleted) and not (g.user and g.user.is_admin):
+        abort(404)
+    return job
+
+
+def public_item(row):
+    return {
+        **row["job"].as_dict(),
+        "match_score": row["score"] if g.user else None,
+        "skill_match": row["matched"] if g.user else [],
+        "context": row["context"] if g.user else {},
+    }
 
 
 def pagination(rows, per_page=12):
@@ -135,33 +147,108 @@ def pagination(rows, per_page=12):
 
 @jobs.get("/jobs")
 def listing():
-    all_rows = ranked_jobs()
-    query = request.args.get("q", "").strip()[:160]
-    if query and not request.args.get("page"):
-        db.session.add(SearchEvent(query=query.casefold()))
-        db.session.commit()
-    rows, pager = pagination(filtered_rows(all_rows))
+    filters = request_filters()
+    all_rows = query_rows(filters)
+    record_search(filters, len(all_rows))
+    rows, pager = pagination(all_rows)
     return render_template(
         "jobs.html",
         rows=rows,
         pager=pager,
         title="Explore opportunities",
-        subtitle="Find your next move, one thoughtful match at a time.",
+        subtitle="Real sources. Clear labels. A match you can understand.",
         filterable=True,
-        locations=sorted({r["job"].location for r in all_rows}),
-        industries=sorted({r["job"].industry for r in all_rows}),
+        types=EMPLOYMENT_TYPES,
+        live=None,
+        **flags(),
+    )
+
+
+def live_results():
+    filters = request_filters()
+    slug = request.args.get("provider", "adzuna")
+    if slug not in {"adzuna", "usajobs"}:
+        abort(400, description="Choose Adzuna or USAJOBS.")
+    rate_limit("live_search", 60, 60)
+    filters["source"] = slug
+    if slug == "usajobs":
+        filters["country"] = "us"
+    live = live_search(slug, filters)
+    if live["fallback"]:
+        fallback = {**filters, "source": "demo"}
+        rows = query_rows(fallback)[: filters["per_page"]]
+    else:
+        rows = query_rows(filters, live["ids"])
+    record_search(filters, len(rows))
+    return filters, rows, live
+
+
+@jobs.get("/real-jobs")
+def real_jobs():
+    filters, rows, live = live_results()
+    page = filters["page"]
+    from math import ceil
+
+    pages = (
+        max(1, ceil(live["provider_total"] / filters["per_page"]))
+        if not live["fallback"]
+        else page
+    )
+    parameters = request.args.to_dict()
+    pager = {
+        "page": page,
+        "pages": pages,
+        "total": len(rows),
+        "previous": url_for(
+            "jobs.real_jobs", **{**parameters, "page": max(1, page - 1)}
+        ),
+        "next": url_for("jobs.real_jobs", **{**parameters, "page": page + 1}),
+    }
+    return render_template(
+        "jobs.html",
+        rows=rows,
+        pager=pager,
+        title="Discover real opportunities",
+        subtitle="Supported providers, thoughtful matches, your next chapter.",
+        filterable=True,
+        live=live,
         types=EMPLOYMENT_TYPES,
         **flags(),
     )
 
 
+@jobs.get("/api/jobs/live")
+def api_live():
+    filters, rows, live = live_results()
+    return jsonify(items=[public_item(r) for r in rows], page=filters["page"], **live)
+
+
+@jobs.get("/api/providers")
+def api_providers():
+    return jsonify(providers=provider_summaries())
+
+
 @jobs.get("/jobs/<int:job_id>")
 def detail(job_id):
-    job = db.get_or_404(Job, job_id)
+    job = visible_job(job_id)
     db.session.execute(
         db.update(Job).where(Job.id == job_id).values(views=Job.views + 1)
     )
     db.session.commit()
+    if g.user:
+        viewed = db.session.scalar(
+            db.select(JobView).where(
+                JobView.user_id == g.user.id, JobView.job_id == job_id
+            )
+        )
+        if viewed:
+            viewed.viewed_at = utcnow()
+        else:
+            db.session.add(JobView(user_id=g.user.id, job_id=job_id))
+        try:
+            db.session.commit()
+        except IntegrityError:
+            db.session.rollback()
     available = active_jobs()
     pool = available if any(j.id == job_id for j in available) else available + [job]
     row, estimated = None, None
@@ -172,8 +259,8 @@ def detail(job_id):
             simulated = recommendations(g.user, extra_skills=row["missing"], jobs=pool)
             estimated = next(r["score"] for r in simulated if r["job"].id == job_id)
     similar = engine().similar(job, pool)
-    closed = not job.active or (
-        job.application_deadline and job.application_deadline < date.today()
+    closed = not db.session.scalar(
+        db.select(Job.id).where(Job.id == job_id, *eligible_conditions())
     )
     return render_template(
         "job_details.html",
@@ -196,7 +283,7 @@ def back_to_job(job_id):
 @jobs.post("/jobs/<int:job_id>/save")
 @login_required
 def save(job_id):
-    db.get_or_404(Job, job_id)
+    visible_job(job_id)
     record = db.session.scalar(
         db.select(SavedJob).where(
             SavedJob.user_id == g.user.id, SavedJob.job_id == job_id
@@ -219,9 +306,9 @@ def save(job_id):
 @jobs.post("/jobs/<int:job_id>/apply")
 @login_required
 def apply(job_id):
-    job = db.get_or_404(Job, job_id)
-    if not job.active or (
-        job.application_deadline and job.application_deadline < date.today()
+    job = visible_job(job_id)
+    if not db.session.scalar(
+        db.select(Job.id).where(Job.id == job_id, *eligible_conditions())
     ):
         abort(
             400,
@@ -233,7 +320,14 @@ def apply(job_id):
         )
     )
     if not record:
-        db.session.add(Application(user_id=g.user.id, job_id=job_id))
+        db.session.add(
+            Application(
+                user_id=g.user.id,
+                job_id=job_id,
+                application_date=date.today(),
+                application_url=job.source_url if job.is_external else "",
+            )
+        )
         try:
             db.session.commit()
         except IntegrityError:
@@ -273,22 +367,22 @@ def saved():
 
 
 @jobs.get("/api/jobs")
+@jobs.get("/api/jobs/search")
 def api_jobs():
-    rows, pager = pagination(filtered_rows(ranked_jobs()))
+    filters = request_filters()
+    rows, pager = pagination(query_rows(filters))
     return jsonify(
-        items=[
-            {**r["job"].as_dict(), "match_score": r["score"] if g.user else None}
-            for r in rows
-        ],
+        items=[public_item(r) for r in rows],
         page=pager["page"],
         pages=pager["pages"],
         total=pager["total"],
+        ranking_pool_limit=current_app.config["MAX_RANKING_JOBS"],
     )
 
 
 @jobs.get("/api/jobs/<int:job_id>")
 def api_job(job_id):
-    return jsonify(db.get_or_404(Job, job_id).as_dict())
+    return jsonify(visible_job(job_id).as_dict())
 
 
 @jobs.get("/api/skills")

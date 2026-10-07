@@ -4,6 +4,7 @@ APPLICATION_STATUSES = [
     "Applied",
     "Screening",
     "Interview",
+    "Assessment",
     "Offer",
     "Rejected",
     "Withdrawn",

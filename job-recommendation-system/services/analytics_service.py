@@ -33,16 +33,22 @@ def market_analytics(jobs):
             "Senior (6+)": 0,
         }
     )
-    remote = Counter({"Remote": 0, "Onsite": 0})
+    remote = Counter({"Remote": 0, "Onsite": 0, "Hybrid": 0, "Unknown": 0})
     for job in jobs:
         skills.update(set(job.required_skills))
         roles[job.job_title] += 1
         locations[job.location] += 1
         industries[job.industry] += 1
-        remote["Remote" if job.location.casefold() == "remote" else "Onsite"] += 1
+        remote[
+            "Remote"
+            if job.remote_allowed or job.location.casefold() == "remote"
+            else job.remote_type.title()
+        ] += 1
         experience = job.experience_min
         experiences[
-            "Fresher (0)"
+            "Unknown"
+            if not job.experience_known
+            else "Fresher (0)"
             if experience == 0
             else "Early career (1–2)"
             if experience <= 2
@@ -50,7 +56,12 @@ def market_analytics(jobs):
             if experience <= 5
             else "Senior (6+)"
         ] += 1
-        if job.min_salary is not None and job.max_salary is not None:
+        if (
+            job.salary_currency == "INR"
+            and job.salary_period == "year"
+            and job.min_salary is not None
+            and job.max_salary is not None
+        ):
             midpoint = (job.min_salary + job.max_salary) / 2 / 100000
             salaries_by_role[job.job_title].append(midpoint)
             salary_bands[
@@ -176,6 +187,29 @@ def admin_analytics():
     )
     data["runs"] = (
         db.session.scalar(db.select(db.func.count(RecommendationRun.id))) or 0
+    )
+    from models.database import SavedJob, AuditLog, utcnow
+
+    data["real"] = db.session.scalar(
+        db.select(db.func.count(Job.id)).where(Job.is_external.is_(True))
+    )
+    data["fetched_today"] = db.session.scalar(
+        db.select(db.func.count(Job.id)).where(
+            Job.is_external.is_(True),
+            Job.last_synced_at
+            >= utcnow().replace(hour=0, minute=0, second=0, microsecond=0),
+        )
+    )
+    data["active_users"] = db.session.scalar(
+        db.select(db.func.count(User.id)).where(
+            User.is_active.is_(True), User.is_admin.is_(False)
+        )
+    )
+    data["saved"] = db.session.scalar(db.select(db.func.count(SavedJob.id)))
+    data["resets"] = db.session.scalar(
+        db.select(db.func.count(AuditLog.id)).where(
+            AuditLog.action == "password_reset_requested"
+        )
     )
     data["popular"] = sorted(all_jobs, key=lambda job: (-job.views, job.id))[:6]
     return data

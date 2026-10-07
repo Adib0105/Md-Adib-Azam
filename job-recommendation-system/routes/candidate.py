@@ -18,11 +18,15 @@ from models.database import (
     Application,
     ResumeDraft,
     utcnow,
+    Job,
+    JobView,
+    SearchEvent,
 )
 from models.resume_parser import parse_resume, ResumeError
 from models.skill_extractor import SKILLS
 from routes.auth import login_required
 from services.recommendation_service import recommendations, snapshot, active_jobs
+from services.notification_service import account_notices
 from services.analytics_service import career_paths, skill_analytics
 from utils.constants import EMPLOYMENT_TYPES, APPLICATION_STATUSES, PROFICIENCIES
 from utils.validators import (
@@ -52,8 +56,23 @@ def replace_skills(user, skills, form=None):
 def index():
     jobs = active_jobs()
     categories = Counter(job.job_title for job in jobs)
+    from routes.jobs import flags
+    from services.recommendation_service import engine, profile_data
+
+    selected = ([j for j in jobs if j.featured] or jobs)[:3]
+    featured_rows = engine().rank(
+        profile_data(g.user) if g.user else {"skills": []}, selected
+    )
     return render_template(
-        "index.html", total_jobs=len(jobs), categories=categories.most_common(8)
+        "index.html",
+        total_jobs=len(jobs),
+        featured_rows=featured_rows,
+        role_count=len(categories),
+        **flags(),
+        categories=categories.most_common(8),
+        marquee=sorted(
+            jobs, key=lambda j: (not j.is_external, -j.posted_date.toordinal())
+        )[:8],
     )
 
 
@@ -69,9 +88,36 @@ def dashboard():
     ).all()
     skills = skill_analytics(g.user, rows)
     counts = Counter(a.status for a in applications)
+    account_notices(g.user, skills["gaps"])
     return render_template(
         "dashboard.html",
         rows=rows[:4],
+        real_count=db.session.scalar(
+            db.select(db.func.count(Job.id)).where(
+                Job.is_external.is_(True),
+                Job.active.is_(True),
+                Job.published.is_(True),
+                Job.deleted.is_(False),
+                Job.archived.is_(False),
+            )
+        ),
+        recent_searches=db.session.scalars(
+            db.select(SearchEvent)
+            .where(SearchEvent.user_id == g.user.id)
+            .order_by(SearchEvent.id.desc())
+            .limit(5)
+        ).all(),
+        viewed_jobs=db.session.scalars(
+            db.select(JobView)
+            .join(Job)
+            .where(
+                JobView.user_id == g.user.id,
+                Job.published.is_(True),
+                Job.deleted.is_(False),
+            )
+            .order_by(JobView.viewed_at.desc())
+            .limit(5)
+        ).all(),
         total=len(rows),
         best=rows[0]["score"] if rows else 0,
         saved_ids={s.job_id for s in saved},

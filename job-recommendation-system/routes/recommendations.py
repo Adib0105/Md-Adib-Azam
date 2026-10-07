@@ -4,7 +4,6 @@ from flask import (
     request,
     render_template,
     jsonify,
-    current_app,
     flash,
     redirect,
     url_for,
@@ -16,6 +15,7 @@ from routes.jobs import flags, pagination
 from services.recommendation_service import recommendations, snapshot, active_jobs
 from services.analytics_service import market_analytics, skill_analytics, career_paths
 from utils.validators import validate_skills, ValidationError
+from services.settings_service import weights as configured_weights
 
 recs = Blueprint("recs", __name__)
 
@@ -157,9 +157,7 @@ def save_snapshot():
 
 @recs.get("/methodology")
 def methodology():
-    return render_template(
-        "methodology.html", weights=current_app.config["RECOMMENDATION_WEIGHTS"]
-    )
+    return render_template("methodology.html", weights=configured_weights())
 
 
 def serialized_recommendations(rows):

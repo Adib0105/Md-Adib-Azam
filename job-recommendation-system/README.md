@@ -2,291 +2,182 @@
 
 ![JobMatch — your next chapter, made clearer](docs/jobmatch-banner.gif)
 
-# JobMatch — Job Recommendation System
+# JobMatch
 
-**Your skills. Your direction. Your next chapter.**
+**AI Job Discovery & Career Intelligence Platform**
 
-[Quick start](#start-on-windows-in-vs-code) · [Hinglish guide](START_HERE_HINGLISH.md) · [Features](#what-is-implemented) · [Interface](#interface-and-motion) · [Validation](docs/VALIDATION.md)
+[Quick start](#run-locally) · [Hinglish guide](START_HERE_HINGLISH.md) · [Upgrade report A–P](docs/UPGRADE_REPORT.md) · [Architecture](docs/ARCHITECTURE.md) · [Validation](docs/VALIDATION.md)
 
-`Python + Flask` · `SQLite` · `scikit-learn` · `640 demo jobs` · `Offline assets`
+`Flask` · `SQLite` · `Explainable TF-IDF` · `Adzuna + USAJOBS` · `640 offline demo jobs`
 
 </div>
 
-A complete local web application for explainable job recommendations, resume review, skill-gap analysis and career planning. Run it from VS Code and open **http://127.0.0.1:5000** in Google Chrome.
+Find the right job. Build the right skills. JobMatch combines source-labeled job discovery, reviewed resume extraction, seven-factor recommendations, skill-gap insights and application planning. It retains the original local application and adds optional official-provider integrations.
 
-Built with Python, Flask, SQLite/SQLAlchemy, scikit-learn, Jinja2, Bootstrap 5 and vanilla JavaScript. All frontend assets are bundled locally. No API key, cloud service, Docker or paid subscription is needed.
+Developed by **Md Adib Azam**, **Computer Science and Technology**, **Bengal College of Polytechnic, Durgapur**. This is a college/portfolio project and an early-stage application prototype.
 
-> **This is a portfolio and learning platform.** The included 640 listings, companies, salaries and ratings are fictional. “Apply · Track locally” adds a personal tracker record; it does not contact an employer. Scores are model compatibility estimates, not hiring probabilities. “AI” here means dictionary NLP and unsupervised TF-IDF ranking, not an LLM.
+**Demo listings are fictional.** Real listings carry their provider name and original apply link. JobMatch does not submit applications. Matching scores are explainable model estimates, not hiring probabilities, ATS scores or employment guarantees. “AI-assisted” means dictionary NLP and TF-IDF cosine similarity, not a deep-learning model.
 
 ![Candidate dashboard](docs/screenshots/dashboard-desktop.png)
 
-## Start on Windows in VS Code
+## Run locally
 
-Install **64-bit Python 3.11 or 3.12**. Extract the archive, then open the inner `job-recommendation-system` folder in VS Code. The terminal must be in the folder containing `app.py`.
+Install 64-bit **Python 3.11 or 3.12**, clone/download [the repository](https://github.com/Adib0105/Md-Adib-Azam), and open **`job-recommendation-system/`** in VS Code. Other projects in the repository have independent setup instructions.
 
-**From this GitHub repository:** clone/download `Adib0105/Md-Adib-Azam`, then open its `job-recommendation-system` subfolder. If the terminal is at the repository root, run `cd job-recommendation-system` first. Other portfolio projects have their own setup instructions.
-
-Paste these commands into the VS Code PowerShell terminal:
+Windows PowerShell, from this folder:
 
 ```powershell
 python -m venv venv
 .\venv\Scripts\python.exe -m pip install -r requirements.txt
-.\venv\Scripts\python.exe scripts\seed_database.py --demo
+.\venv\Scripts\python.exe scripts\seed_database.py
+.\venv\Scripts\python.exe scripts\create_admin.py
 .\venv\Scripts\python.exe app.py
 ```
 
-Then open **http://127.0.0.1:5000** in Chrome. Keep the terminal open while using the site. Press **Ctrl+C** to stop it. This is a local address on your own computer, not a public hosted link.
+Open **http://127.0.0.1:5000** in Chrome. Leave the terminal running; Ctrl+C stops the server. This is your computer's local address, not a published website. Later, run `venv\Scripts\python.exe app.py` or use `start_windows.cmd`. If needed, create the venv with `py -3.12 -m venv venv`. Activation is optional; these commands avoid PowerShell execution-policy problems.
 
-These commands call the virtual environment's Python directly, so PowerShell activation restrictions do not get in your way. If `python` is not found, create the environment with `py -3.12 -m venv venv` instead.
-
-For later runs:
-
-```powershell
-.\venv\Scripts\python.exe app.py
-```
-
-Or activate the environment first, then use the requested short command:
-
-```powershell
-.\venv\Scripts\Activate.ps1
-python app.py
-```
-
-In Command Prompt, activation is `venv\Scripts\activate.bat`. Do not change system execution policy just to activate the environment; the direct Python commands above are sufficient.
-
-### Linux / macOS
+Linux/macOS:
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 python -m pip install -r requirements.txt
-python scripts/seed_database.py --demo
+python scripts/seed_database.py
+python scripts/create_admin.py
 python app.py
 ```
 
-## Demo accounts
+Register a candidate at `/register`. Optionally run `python scripts/seed_database.py --demo` to create a local candidate at `demo@jobmatch.com`; a **random password is displayed once in your private terminal**. There is no fixed demo administrator. Re-running the seed preserves existing accounts/jobs. Demo account creation is refused in production. Dependencies need installation access; demo search and bundled frontend assets work offline afterward.
 
-Created **only** when you explicitly run `seed_database.py --demo`. Normal first startup creates the job database and model, but no default accounts.
+## Create or recover the administrator
 
-| Account | Sign-in page | Email | Password |
-| --- | --- | --- | --- |
-| Candidate | `/login` | `demo@jobmatch.com` | `Demo@123` |
-| Admin | `/admin/login` | `admin@jobmatch.com` | `Admin@123` |
+`python scripts/create_admin.py` privately prompts for name, email, password and confirmation. Nothing is passed as a password command-line argument. Sign in at `/admin/login`; candidates use `/login`. Public registration always creates candidates.
 
-These are public demonstration credentials for local development only. Do not put a database containing them on a public server. `--demo` refuses to run with `APP_ENV=production`. To create your own administrator, run:
+To recover an existing administrator locally:
 
-```powershell
-.\venv\Scripts\python.exe scripts\create_admin.py
+```bash
+python scripts/create_admin.py --reset-existing
 ```
 
-The administrator's password is entered privately in the terminal. Register your own candidate from the home page. No email delivery or email verification service is configured.
+This resets an existing **administrator only**, revokes sessions and outstanding security tokens, and reactivates that account. It does not promote a candidate. The upgrade disables the legacy publicly seeded administrator while retaining its data. Re-establish a private password with this command if you used that identity. Ordinary administrator password recovery also uses the same secure email flow as candidates.
 
-## What is implemented
+## Configure real jobs
 
-- Candidate registration, separate admin sign-in, hashed passwords, expiring signed sessions, login throttling and CSRF protection.
-- Editable profile with education, experience, technical/soft skill tags, self-reported proficiency, certifications, projects, career interests and preferences.
-- PDF/DOCX resume extraction with file size/type/content validation and an owner-only, editable review step. No field is applied until confirmed.
-- A deterministic seven-factor hybrid recommender with TF-IDF + cosine similarity, normalized skill coverage and gradual feature scores.
-- Job-specific explanations, score contributions, matching and missing skills, completeness-based information confidence, and similar jobs.
-- Search ranked by lexical similarity, query coverage, skill overlap and candidate fit. Structured title/skill/company/location/salary/experience/type/industry/match filters; pagination and sorting.
-- Saved jobs, deduplicated local applications, and editable Saved/Applied/Screening/Interview/Offer/Rejected/Withdrawn statuses.
-- Candidate dashboard, eight dataset insight charts with accessible data tables, personal skill comparison, top-20 skill gaps and career-path suggestions.
-- What-if simulator that recalculates the complete model without modifying the real profile or recommendation history.
-- Immutable top-50 recommendation snapshots after profile/resume changes, and same-job comparisons between the last two snapshots.
-- Admin add/edit/remove jobs, candidate overview, query frequency, view counts, application statistics and historical recommendation statistics.
-- JSON endpoints, friendly error pages, locally bundled charts/icons/styles, responsive desktop/tablet/mobile layouts and reduced-motion behavior.
-- Automated backend tests, optional browser workflow tests, synthetic evaluation, Windows/Linux CI configuration, documented setup and screenshots.
+All keys stay on the backend. `.env.example` lists settings but is **not automatically loaded**. Set environment variables in the same shell that starts the app, or use your server's secret manager. Do not paste keys into HTML, JavaScript, GitHub files or chat messages.
 
-## Interface and motion
+1. Register an application with the [official Adzuna developer service](https://developer.adzuna.com/). Supply `ADZUNA_APP_ID` and `ADZUNA_APP_KEY` in your environment. Country defaults to India.
+2. Optionally request a [USAJOBS API key](https://developer.usajobs.gov/). Set `USAJOBS_API_KEY`, `USAJOBS_USER_AGENT` to the registered email, and `ENABLE_USAJOBS=true` before first initialization, or enable it in Admin → Providers afterward. It searches **US government jobs**, with their own eligibility requirements.
+3. Restart the app, sign in as administrator, open `/admin/providers`, enable the provider if needed, and use **Test connection** or **Sync now**. Configuration status alone does not prove credentials or delivery work.
+4. Open `/real-jobs` and search. Missing keys produce a clear connection message and **labeled demo fallback**. Failure uses cached results if available.
 
-A cream, sage and deep-green workspace pairs **Manrope** variable typography with **Fraunces** italic editorial accents. Both fonts, their licenses, icons and charts ship with the project and work without external requests after setup.
+Provider enable flags initialize database settings once. Later admin choices are authoritative. Credentials are never stored in site settings. Provider docs: [Adzuna search](https://developer.adzuna.com/docs/search), [Adzuna API reference](https://developer.adzuna.com/activedocs), [USAJOBS search](https://developer.usajobs.gov/api-reference/get-api-search).
 
-- A layered hero illustration with a card entrance, floating-note entrances and a short bar reveal.
-- Staggered, once-only scroll reveals for features, recommendations and dashboard cards.
-- Gentle card lifts, button-arrow feedback, animated match rings and chart entrances.
-- Native reduced-motion support, keyboard focus indicators, immediately available content with JavaScript disabled, and responsive layouts.
-- Decorative entrances finish automatically; the interface has no endless animation loops.
+Backend behavior:
 
-| Career workspace | Explore your next move |
-| --- | --- |
-| ![Candidate dashboard](docs/screenshots/dashboard-desktop.png) | ![Career simulator](docs/screenshots/simulator-desktop.png) |
-| ![Explainable job match](docs/screenshots/job-match-desktop.png) | ![Career insights](docs/screenshots/insights-desktop.png) |
+- 30-minute configurable TTL; cache keys include provider and upstream-supported parameters. Database leases coalesce identical searches across processes. Provider failures use a two-minute retry delay.
+- Fixed official HTTPS endpoints, 8-second timeout, 2 MiB response cap, refused redirects and a default 60-request/hour/provider budget. Admin test/sync uses the same controls.
+- Normalize text, currency, pay period, dates, safe apply URL, remote evidence and source metadata. Full raw credential-bearing payloads are not retained.
+- Deduplicate `(provider, external_id)` and normalized title/company/location; retain aliases when providers describe the same job. Conservative fingerprinting can merge similar openings.
+- Fresh: posted within two days. Recently posted: within 14 days. Older: beyond that. By default, exclude jobs unrefreshed for 14 days, posted more than 60 days ago, explicitly possibly expired or past their deadline. Dates not supplied remain labeled unknown.
+- Adzuna descriptions can be snippets. Remote is inferred only from explicit title/location wording; USAJOBS supports its remote search flag. Unknown experience/requirements are not invented. Compare currency and pay period before interpreting a salary; there is no currency conversion.
+- Filters not supported upstream apply to the current provider page. Search totals describe that page; upstream pagination remains available even when local filters remove its results.
+- The Google button opens a regular Google job-related search in a new tab. **No Google jobs feed or scraping is used.**
 
-See [`static/css/polish.css`](static/css/polish.css) for typography/visual styling, [`static/js/motion.js`](static/js/motion.js) for progressive motion, and [font sources and licenses](static/fonts/README.md).
+## Forgot password and email
 
-The repository-level workflow [`.github/workflows/jobmatch.yml`](../.github/workflows/jobmatch.yml) checks this subfolder on Windows/Linux with Python 3.11/3.12. The project's own `.github/workflows/tests.yml` is retained for use if this folder is extracted into a standalone repository.
+Development defaults to `MAIL_BACKEND=file`. Emails go to private `instance/mail/*.eml` files (or your configured instance directory). Open the newest message locally and follow its link. They contain security tokens: keep the directory outside the web root. Reset links use `APP_BASE_URL`, never an untrusted request Host header.
 
-## Architecture
+Production mail settings:
 
-| Location | Responsibility |
-| --- | --- |
-| `app.py` | Flask application factory, first-run initialization, security headers, errors, loopback-only Waitress server |
-| `config.py` | Environment settings, validated recommendation weights |
-| `models/database.py` | Users, skills, jobs, saved jobs, applications, recommendation runs/results, resume drafts, search events |
-| `models/skill_extractor.py` | Boundary-aware dictionary matching, aliases and skill normalization |
-| `models/resume_parser.py` | Bounded PDF/DOCX parsing and editable field extraction |
-| `models/recommendation_model.py` | Individually testable score and explanation functions |
-| `services/recommendation_service.py` | Cached job features, ranking, similar jobs and snapshots |
-| `services/data_service.py` | Dataset generator, preprocessing, idempotent CSV import |
-| `services/analytics_service.py` | Demand, salary, career path, skill-gap and admin summaries |
-| `routes/` | Authentication, candidate, jobs/API, recommendations and admin blueprints |
-| `templates/` | Jinja screens and reusable UI components |
-| `static/` | CSS, JavaScript, SVG mark and locally vendored assets |
-| `data/jobs.csv` | 640 synthetic job records, across 24 roles and 12 locations |
-| `data/processed_jobs.csv` | Cleaned output with normalized skills and model text |
-| `scripts/` | Seed, generate data, build model, evaluate and create administrator |
-| `tests/` | Unit, integration and optional browser workflow tests |
-| `docs/` | Architecture notes, validation evidence, evaluation results and screenshots |
-| `instance/` | Generated private database, random session key and joblib cache; never commit this directory |
-
-```mermaid
-flowchart TD
-  A[Candidate profile] --> C[Reviewed candidate features]
-  B[PDF or DOCX resume] --> R[Extract and review]
-  R --> C
-  D[Job CSV or admin input] --> E[Clean and normalize]
-  E --> F[Cached job TF-IDF matrices]
-  C --> G[Seven compatibility factors]
-  F --> G
-  G --> H[Weighted ranking]
-  H --> I[Explanations and skill gaps]
-  H --> J[Recommendation snapshots]
-  C --> K[Temporary skill simulation]
-  K --> G
+```text
+MAIL_BACKEND=smtp
+MAIL_SERVER=<your SMTP host>
+MAIL_PORT=587
+MAIL_USERNAME=<your SMTP username>
+MAIL_PASSWORD=<your SMTP secret>
+MAIL_DEFAULT_SENDER=<verified sender address>
+MAIL_USE_TLS=true
+APP_BASE_URL=https://your-trusted-domain.example
 ```
 
-SQLite foreign keys are enabled, email and owner/job pairs have uniqueness constraints, salaries/experience have range constraints, and relevant lookup columns are indexed. Job removal is a soft delete so saved applications and old snapshots retain their context.
+Port 587 uses STARTTLS; port 465 uses TLS from connection start. `MAIL_BACKEND=disabled` intentionally disables delivery. Environment values never appear in the admin email-status page. Real SMTP delivery must be checked against your own server.
 
-## Recommendation algorithm
+Flow: `/forgot-password` → generic response for every address → cryptographically random token → SHA-256 token hash stored with a 30-minute expiry → private email → CSRF-protected reset form → atomic single-use consumption → new scrypt password → all earlier sessions and pending security tokens revoked. The user signs in again. Tokens, passwords and email bodies are excluded from structured app logs. Verification links require a POST confirmation, so a link scanner cannot consume them merely by fetching the page.
 
-```python
-overall = (
-    skills * 0.35
-    + semantic * 0.25
-    + experience * 0.15
-    + education * 0.10
-    + location * 0.05
-    + salary * 0.05
-    + role * 0.05
-)
+Account settings include current-password-checked password changes, verified email changes, remember me, active-session revocation and recent security activity. Ordinary sessions last at most eight hours with a default 60-minute idle limit; remembered sessions last at most 30 days.
+
+## Career workspace
+
+- Profile: education, experience, skills/proficiency, projects, interests, location, annual salary currency, employment/remote/relocation preferences and completeness.
+- Resume: bounded PDF/DOCX parsing, owner-only review, explicit confirmation and removal. File bytes are discarded after extraction; confirmed text stays in the operator's database.
+- Recommendations: seven original weighted components, explained contributions, matching/missing skills, similar jobs and immutable history. Default weights: skills .35, semantic .25, experience .15, education .10, location .05, salary .05, role .05.
+- Equal-score tie-breakers use employment fit, remote preference, freshness and information availability. The displayed seven-factor score is unchanged. Unknown external experience/education and noncomparable salaries receive neutral 50s.
+- Resume versus job: reviewed-resume skill coverage plus text similarity, missing keywords and truthful improvement suggestions. No ATS claim.
+- Dashboard: strongest current opportunity, profile completion, gaps, saved/tracked jobs, recent searches/views and career paths.
+- Tracker: Saved, Applied, legacy Screening, Assessment, Interview, Offer, Rejected and Withdrawn; notes, dates, contact, source URL and visible follow-up reminders.
+- Notifications: saved-job changes, due follow-ups, profile/skill prompts and new alert matches. Personal data is always owner-scoped.
+- Career charts: dataset coverage, skills, roles, locations, experience and salaries. Salary charts include only complete annual INR ranges.
+
+## Job alerts and scheduled sync
+
+Users create up to ten daily/weekly alerts at `/alerts`; optional email delivery requires a verified email. Alerts check **newly added catalog entries**, not all old matches. An in-app notification and unique delivery row prevent repeat alerts for the same job.
+
+Run the worker periodically with cron or Windows Task Scheduler, from the project folder using the same environment/instance:
+
+```bash
+python scripts/sync_jobs.py --provider adzuna --query "data analyst" --country in
+python scripts/process_alerts.py
 ```
 
-Weights live in `config.py` and must be nonnegative, finite, contain the documented seven keys and sum to 1. The total is clamped to 0–100 and rounded to one decimal place.
+A five-minute worker interval is suitable for checking which daily/weekly alerts are due; actual frequency is per alert. Sync only approved queries on a schedule within your provider's terms/quota. No scheduler is installed automatically. `process_alerts.py` reads the cached/local catalog and makes no hidden provider requests. It processes up to 100 due alerts and 50 matched jobs per alert per run. Email failures retry after 30 minutes. Database leases reduce concurrent delivery; a crash after SMTP acceptance but before commit can still duplicate an email. Production at scale should use a durable mail/worker queue.
 
-| Factor | Scoring behavior |
+## Admin control center
+
+`/admin/` links to job lifecycle/bulk CSV, candidates, providers, applications, search/recommendation analytics, CMS, weights/cache settings, health/email, audit logs and backups. Jobs support publishing, archive/restore, soft-delete, featured/verified flags, local/demo provenance and conservative freshness overrides. External provider identity stays immutable. Export escapes spreadsheet formula prefixes. Suspensions revoke candidate sessions; account role promotion is unavailable in the UI.
+
+CMS stores allowlisted plain text for hero, CTA, marquee, categories, About, contact, footer, privacy, terms and FAQ. It cannot inject HTML. Settings validate all seven weights, their sum and bounded cache/freshness values. Mutations require admin authorization and CSRF and are audited.
+
+SQLite backups use the database backup API plus integrity check and private file permissions. Creating/downloading one requires the current admin password. Backups include private profiles/resumes and must be kept secure. Restore is an offline operator action, not a public upload feature.
+
+## Upgrade an existing installation
+
+1. Stop all app and worker processes; make an independent backup of the private instance directory.
+2. Update code and dependencies. Keep your database and secret key private and unchanged.
+3. Run `python scripts/upgrade_database.py` with the same `DATABASE_URL` and `JOBMATCH_INSTANCE` as the app.
+4. Run `python scripts/create_admin.py --reset-existing` if recovering the retired demo administrator.
+5. Start the app and review `/admin/health`.
+
+Schema v2 adds columns/tables/indexes without dropping old records. A file-based SQLite database receives a private integrity-checked pre-upgrade backup. Repeated upgrades are idempotent. New local development instances can upgrade automatically; production defaults `AUTO_UPGRADE_SCHEMA=false` and requires the explicit maintenance command. Do not migrate concurrently with web workers. Rollback means restoring both the previous code and its backed-up database; no destructive automatic downgrade is supplied. SQLite is the tested database; other SQLAlchemy backends need dialect-specific validation before use.
+
+## JSON routes
+
+| Access | Endpoints |
 | --- | --- |
-| Skills | 85% required-skill coverage + 15% preferred-skill coverage when both lists exist. One list present: 100% weight to that list. Neither present: neutral 50. Aliases are normalized and repeated skills do not inflate coverage. |
-| Text similarity | Fit word/bigram TF-IDF on the job corpus only; transform profile text and compute cosine similarity × 100. This measures lexical overlap, not deep semantic understanding. |
-| Experience | Meets/exceeds minimum: 100. Below minimum: candidate years / minimum years × 100. Unknown candidate years: 50. Overqualified candidates are not automatically penalized. |
-| Education | A six-level qualification hierarchy. Meeting/exceeding the level: 100; each level below subtracts 25. Unknown/unrecognized level: 50. No requirement: 100. Subject/accreditation equivalence is not verified. |
-| Location | Preferred city or a remote job: 100. Same state: 80. Other city with relocation allowed: 85; otherwise 30. Missing location context: 50. Explicit location preference takes precedence over current state. |
-| Salary | Expectation at/below the listed annual maximum: 100. Otherwise maximum / expectation × 100. Unknown values: 50. Salaries are INR per year. |
-| Role | TF-IDF cosine similarity of preferred role and titles, expanded with a small documented vocabulary of related roles. |
+| Public read | `GET /api/jobs`, `/api/jobs/search`, `/api/jobs/live`, `/api/jobs/<id>`, `/api/providers`, `/api/skills`, `/api/csrf` |
+| Candidate | `GET /api/profile`, `/api/recommendations`, `/api/notifications`; existing `POST /api/recommend` |
+| Recovery | `POST /api/password/forgot`, `/api/password/reset` |
+| Administrator | `GET /api/admin/analytics`, `/api/admin/providers/health` |
 
-Required skills come from the explicit field; if it is blank, the dictionary extracts skills from the job description. Candidate skill coverage uses the **reviewed skills list**; resume text influences text similarity. Self-reported proficiency is shown in skill analysis but is not treated as a verified ranking signal. Employment type is a filter and explanation note, rather than an eighth hidden score factor.
+State-changing JSON requests need a same-session CSRF token from `/api/csrf` in `X-CSRFToken`. Live API filters include `q`, `location`, `country`, `provider`, `source`, `remote=true`, `type`, `category`, `posted`, salary range/currency, `skills`, `experience`, `education`, `company`, `sort`, `page`, and `per_page` (max 50 for live provider pages). Catalog API pages are 12 records. Hidden/deleted jobs are not exposed publicly. Responses exclude raw provider payloads, password hashes, private resume text and provider credentials.
 
-Information confidence is based on the presence of nine profile fields: High ≥8, Medium ≥4, otherwise Low. Profile completion separately covers ten equally weighted sections. Neither is a statistical estimate.
+## Interface, fonts and motion
 
-### Performance and reproducibility
+Cream, sage and deep green; bundled **Manrope** and **Fraunces** fonts with licenses; locally served Bootstrap, icons and charts. Responsive cards, source badges, account forms, mobile navigation, accessible chart tables, subtle once-only reveals and a horizontally drifting opportunity marquee. The marquee pauses on hover/focus, has a manual pause control and becomes manually scrollable with reduced motion. Core content works without JavaScript. There are no runtime CDN dependencies.
 
-Job-only matrices are cached in memory and in the private `instance/model.joblib` artifact. A hash of model version, scikit-learn version, job IDs and model text invalidates the cache when relevant data changes. Repeated requests do not retrain the corpus; up to eight recent feature sets are retained in memory. Profile vectors are transformed against the fixed corpus.
+![Real job discovery](docs/screenshots/discovery-desktop.png)
+![About the project](docs/screenshots/about-desktop.png)
 
-Search sorts by `0.45 × text similarity + 25 × token coverage + 15 × skill overlap + 0.15 × candidate match`. Explicit structured filters then constrain the results. Same inputs and dataset produce the same scores; there are no random match percentages.
+## Validation and operational limits
 
-The simulator adds only selected skills to a temporary profile. Its full recomputation can occasionally reduce text similarity because TF-IDF normalizes vector lengths. The UI shows the actual score difference rather than forcing an improvement.
-
-## Dataset and preprocessing
-
-The CSV is generated with a fixed random seed and a reference date. It includes 640 distinct descriptions, 24 role categories, all 12 requested locations, salary/experience variation and multiple sectors. Every record is explicitly marked synthetic.
-
-```powershell
-.\venv\Scripts\python.exe scripts\generate_dataset.py --count 640 --date 2026-10-07
-.\venv\Scripts\python.exe scripts\seed_database.py
-.\venv\Scripts\python.exe scripts\train_model.py
+```bash
+python -m pip install -r requirements-dev.txt
+python -m pytest -v -o faulthandler_timeout=60
+python scripts/train_model.py
+python scripts/evaluate_model.py
 ```
 
-The importer trims whitespace/control characters, normalizes aliases, removes duplicate skill names/records, repairs reversed salary ranges, preserves genuinely unknown numeric values, and reports invalid rows. Admin forms instead reject reversed salary ranges so data-entry mistakes are visible.
+See [validation evidence](docs/VALIDATION.md) and the [A–P upgrade report](docs/UPGRADE_REPORT.md). The real-provider adapters are fixture-tested; this delivery does not include API credentials or claim verified live provider/SMTP calls. The synthetic evaluation is a sanity check, not proof of real-world recommendation quality.
 
-`seed_database.py` is idempotent by source ID and **does not overwrite existing jobs or reset users**. Changing a CSV row with an existing ID does not update that database row; use the admin editor. To try a completely new dataset without losing existing data, point `JOBMATCH_INSTANCE` at a new empty directory before starting. The supplied example deadlines eventually expire; regenerate with a current reference date and use a new instance for a fresh demo. Do not delete a database that contains data you need.
+Catalog ranking uses SQL filters and a bounded pool (default 2,000 recent eligible jobs). Cross-provider fingerprints can collapse similar jobs; snippets may miss requirements. SQLite, background recovery-email threads and lexical ranking suit a college prototype; they are not a claim of large-scale production capacity. Process untrusted documents in a separately limited worker/container for a hostile public deployment. No public hosting/deployment is performed by updating this repository.
 
-## Resume behavior and privacy
-
-- PDF/DOCX only, 5 MB request limit; PDFs with more than 30 pages and excessively expanded DOCX archives are rejected.
-- Content signatures are checked in addition to extensions. Filenames are sanitized. The original upload is not served or kept on disk.
-- Text is limited to 50,000 characters. Scanned images and encrypted PDFs receive actionable errors.
-- Dictionary matching detects skills/technologies; headings and regexes suggest education, job titles, certifications, projects and explicit total experience. Date ranges are not automatically added up.
-- A candidate reviews every extracted field before saving. Drafts are owner-scoped and inaccessible after one hour; stale drafts are deleted on the next resume upload.
-- Confirmed resume text is private to the candidate profile in local SQLite. Removing it does not erase separately reviewed profile fields.
-- Admin candidate listings omit passwords/hashes and resume content. JSON profile responses exclude resume text, account privileges and password fields.
-
-## Internal API
-
-| Endpoint | Authentication | Result |
-| --- | --- | --- |
-| `GET /api/jobs` | Optional | Paginated, filtered jobs; candidate scores when signed in |
-| `GET /api/jobs/<id>` | Optional | One public job record |
-| `GET /api/skills?q=sql` | Optional | Dictionary suggestions |
-| `GET /api/profile` | Candidate session | Own safe profile fields |
-| `GET /api/recommendations?page=1` | Candidate session | 20 explained results per page |
-| `POST /api/recommend` | Session + CSRF | Save/reuse current snapshot and return top results |
-| `GET /health` | Optional | Database-backed health check |
-
-All state-changing form routes require CSRF tokens. API clients must retain the session cookie and supply `X-CSRFToken` with the token rendered in the page's `meta[name="csrf-token"]`. There is no cross-origin API access.
-
-## Tests and evaluation
-
-```powershell
-.\venv\Scripts\python.exe -m pip install -r requirements-dev.txt
-.\venv\Scripts\python.exe -m pytest
-.\venv\Scripts\python.exe scripts\evaluate_model.py --output docs\evaluation.json
-```
-
-The test suite covers authentication/CSRF, isolation, ranking and cache behavior, score edge cases, valid/invalid uploads, confirmation before saving, simulator immutability, job filtering, CRUD, expired listings, idempotent seeding and restart persistence. See `docs/VALIDATION.md` for the actual tested environment and browser results. `.github/workflows/tests.yml` configures Windows/Linux CI; configured checks should not be confused with a completed GitHub Actions run.
-
-`evaluate_model.py` reports Precision@K, Recall@K and NDCG@K for four hand-authored role-family scenarios against a deterministic synthetic corpus. This is a smoke test. Generated templates and relevance proxies make the task easier than real recruitment; these numbers **do not prove real-world recommendation quality**. No genuine relevance labels or hiring outcomes are supplied.
-
-## Screenshots
-
-| Screen | File |
-| --- | --- |
-| Landing page | `docs/screenshots/landing-desktop.png` |
-| Candidate overview | `docs/screenshots/dashboard-desktop.png` |
-| Job explanation | `docs/screenshots/job-match-desktop.png` |
-| Dataset insights | `docs/screenshots/insights-desktop.png` |
-| Career simulator | `docs/screenshots/simulator-desktop.png` |
-| Mobile overview | `docs/screenshots/dashboard-mobile.png` |
-
-## Configuration and limitations
-
-- Local startup generates a random private session key under `instance/` unless `SECRET_KEY` is provided in the environment. No real secret is checked into source.
-- `APP_ENV=production` requires an explicit secret and sets secure cookies. This project is designed for loopback use, not an internet deployment. Public hosting would also need HTTPS, isolated document processing, robust distributed rate limiting, email/account recovery, migrations, monitoring and a security review.
-- Login throttling is in memory for a single process and resets on restart. SQLite and automatic schema creation are appropriate for this local project; there is no production migration system.
-- PDF resource limits reduce risk but are not a replacement for sandboxed hostile-document processing. Upload trusted resumes on your own machine.
-- No live vacancy scraping, employer submission, email delivery, password-reset service, embeddings, collaborative filtering or trained hiring-outcome model is implemented.
-- Resume and education interpretation is approximate and favors English-language text. Add/correct fields manually where needed. Degree field, accreditation and work authorization must be verified independently.
-- Career analytics describe the current dataset only. External validity, fairness, subgroup calibration and outcome quality require genuine consented evaluation data.
-- Learning priorities and career paths are suggestions generated from listed skill requirements, not validated professional advice.
-- Future improvements: labeled relevance evaluation, structured work-history parsing, real authorized vacancy imports, fairness evaluation, production migration support and stronger deployment isolation.
-
-### Troubleshooting
-
-| Issue | Action |
-| --- | --- |
-| `ModuleNotFoundError` | Use the virtual environment's Python and install `requirements.txt` into that same environment. |
-| Python version too old | Use 64-bit Python 3.11 or 3.12; scikit-learn 1.8 requires Python 3.11+. |
-| Port 5000 already in use | In PowerShell: `$env:PORT="5001"`, then start the app and open `http://127.0.0.1:5001`. |
-| Resume has no readable text | Export a text-based PDF/DOCX or perform OCR before uploading. |
-| CSRF/session expired | Refresh the form or sign in again. Keep cookies enabled for localhost. |
-| No active jobs | Check deadlines and active flags in Admin; see the fresh-dataset instructions above. |
-| PowerShell blocks activation | Use `.\venv\Scripts\python.exe` directly as shown in the quick start. |
-
-## Third-party assets and technical references
-
-Bootstrap 5.3.3, Chart.js 4.4.8 and Font Awesome Free 6.7.2 are included in `static/vendor`; their license notices are retained there. Font Awesome CSS paths are adjusted for the local directory layout. System fonts are used, with no external font request.
-
-- [Flask file upload patterns](https://flask.palletsprojects.com/en/stable/patterns/fileuploads/)
-- [Flask security considerations](https://flask.palletsprojects.com/en/stable/web-security/)
-- [scikit-learn TF-IDF vectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html)
-- [scikit-learn pairwise metrics](https://scikit-learn.org/stable/modules/metrics.html)
-
-Back up the private `instance/` directory yourself when you need to preserve local account/profile/application data. Do not commit it to GitHub or include it in a shared project archive.
+For HTTPS deployment, set `APP_ENV=production`, a random `SECRET_KEY` of at least 32 characters, a trusted HTTPS `APP_BASE_URL`, production mail settings and `AUTO_UPGRADE_SCHEMA=false`. The app enforces Secure/HttpOnly/SameSite cookies, HSTS, trusted Host, CSP, CSRF and DB-backed rate limits. Keep Waitress behind your trusted HTTPS proxy; configure proxy address trust explicitly rather than trusting arbitrary forwarded headers. Rate limits use the observed remote address. Redact reset/verification query strings in any proxy access logs. Restrict instance/backups/mail permissions, define retention/privacy policy, monitor failures and remove any old demo accounts before public deployment. Review and test your own deployment; the repository is not a penetration-test certification.

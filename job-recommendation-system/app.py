@@ -4,12 +4,13 @@ import logging
 import os
 import secrets
 from pathlib import Path
-from flask import Flask, g, session, render_template, request, jsonify
+from flask import Flask, g, render_template, request, jsonify
+from urllib.parse import urlsplit
 from flask_wtf.csrf import CSRFProtect
 from werkzeug.exceptions import HTTPException
 from werkzeug.security import generate_password_hash
 from config import Config, ROOT, validate_weights
-from models.database import db, User, Job
+from models.database import db, Job, Notification
 from services.recommendation_service import RecommendationEngine, active_jobs
 
 
@@ -25,9 +26,43 @@ def create_app(test_config=None):
     app.config.from_object(Config)
     if test_config:
         app.config.update(test_config)
+    if app.config["APP_ENV"] == "production":
+        if app.testing or app.debug or len(app.config.get("SECRET_KEY") or "") < 32:
+            raise RuntimeError(
+                "Production requires a random SECRET_KEY of at least 32 characters and TESTING/DEBUG disabled."
+            )
+        base = urlsplit(app.config["APP_BASE_URL"])
+        if (
+            base.scheme != "https"
+            or not base.hostname
+            or base.username
+            or base.password
+            or base.query
+            or base.fragment
+            or base.path not in {"", "/"}
+        ):
+            raise RuntimeError("Set APP_BASE_URL to your trusted HTTPS site origin.")
+        if app.config["MAIL_BACKEND"] in {"file", "memory"} or (
+            app.config["MAIL_BACKEND"] == "smtp" and not app.config["MAIL_USE_TLS"]
+        ):
+            raise RuntimeError(
+                "Production mail requires encrypted SMTP or the disabled backend."
+            )
+        app.config["SESSION_COOKIE_SECURE"] = True
+        app.config["TRUSTED_HOSTS"] = [base.hostname]
+    if (
+        not 1 <= app.config["REAL_JOB_CACHE_TTL_MINUTES"] <= 1440
+        or not 100 <= app.config["MAX_RANKING_JOBS"] <= 10000
+    ):
+        raise RuntimeError(
+            "Cache TTL must be 1-1440 minutes and MAX_RANKING_JOBS 100-10000."
+        )
+    from services.logging_service import configure_logging
+
+    configure_logging(app)
     Path(app.instance_path).mkdir(parents=True, exist_ok=True)
     if not app.config["SECRET_KEY"]:
-        if os.getenv("APP_ENV") == "production":
+        if app.config["APP_ENV"] == "production":
             raise RuntimeError(
                 "Set a long random SECRET_KEY in the environment for production."
             )
@@ -45,9 +80,11 @@ def create_app(test_config=None):
     CSRFProtect(app)
     app.extensions["recommendation_engine"] = RecommendationEngine()
     app.extensions["dummy_password_hash"] = generate_password_hash(
-        secrets.token_urlsafe(32)
+        secrets.token_urlsafe(32),
+        method=(app.config.get("TEST_PASSWORD_HASH_METHOD") or "scrypt")
+        if app.testing
+        else "scrypt",
     )
-    app.extensions["auth_attempts"] = {}
 
     from routes.auth import auth
     from routes.candidate import candidate
@@ -55,20 +92,44 @@ def create_app(test_config=None):
     from routes.recommendations import recs
     from routes.admin import admin
 
-    for blueprint in [auth, candidate, jobs, recs, admin]:
+    from routes.workspace import workspace
+    from routes.control import control, admin_api
+    from routes.public import public
+
+    for blueprint in [
+        auth,
+        candidate,
+        jobs,
+        recs,
+        admin,
+        workspace,
+        control,
+        admin_api,
+        public,
+    ]:
         app.register_blueprint(blueprint)
 
     @app.before_request
     def load_user():
-        g.user = (
-            db.session.get(User, session["user_id"]) if session.get("user_id") else None
-        )
+        from services.security_service import load_session_user
+
+        load_session_user()
 
     @app.after_request
     def security_headers(response):
         response.headers["X-Content-Type-Options"] = "nosniff"
         response.headers["X-Frame-Options"] = "DENY"
         response.headers["Referrer-Policy"] = "same-origin"
+        response.headers["Permissions-Policy"] = (
+            "camera=(), microphone=(), geolocation=()"
+        )
+        if request.path in {"/reset-password", "/verify-email"}:
+            response.headers["Referrer-Policy"] = "no-referrer"
+            response.headers["X-Robots-Tag"] = "noindex, nofollow"
+        if app.config["APP_ENV"] == "production":
+            response.headers["Strict-Transport-Security"] = (
+                "max-age=31536000; includeSubDomains"
+            )
         response.headers["Content-Security-Policy"] = (
             "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; "
             "img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; "
@@ -81,9 +142,20 @@ def create_app(test_config=None):
     @app.context_processor
     def shared_context():
         from services.recommendation_service import profile_completion
+        from services.settings_service import content
+        from services.job_catalog import google_jobs_url
 
         return {
             "current_user": g.get("user"),
+            "site_content": content(),
+            "google_jobs_url": google_jobs_url,
+            "notification_count": db.session.scalar(
+                db.select(db.func.count(Notification.id)).where(
+                    Notification.user_id == g.user.id, Notification.read_at.is_(None)
+                )
+            )
+            if g.get("user")
+            else 0,
             "completion": profile_completion(g.user) if g.get("user") else None,
         }
 
@@ -103,11 +175,14 @@ def create_app(test_config=None):
                 404: "This page could not be found.",
                 403: "You do not have access to this page.",
                 413: "Your upload is too large. Choose a PDF or DOCX under 5 MB.",
-                429: "Too many login attempts. Please wait 15 minutes.",
+                429: "Too many requests. Please wait before trying again.",
             }.get(status, error.description)
         else:
             status, message = 500, "Something went wrong. Please try again."
-            app.logger.exception("Unhandled request error")
+            app.logger.error(
+                "request_failed",
+                extra={"event": "request_failed", "error_type": type(error).__name__},
+            )
         db.session.rollback()
         if request.path.startswith("/api/"):
             return jsonify(error=message), status
@@ -115,11 +190,20 @@ def create_app(test_config=None):
 
     @app.get("/health")
     def health():
-        db.session.execute(db.text("SELECT 1"))
-        return jsonify(status="ok")
+        try:
+            db.session.execute(db.text("SELECT 1"))
+            return jsonify(status="ok")
+        except Exception:
+            db.session.rollback()
+            return jsonify(status="unavailable"), 503
 
     with app.app_context():
-        db.create_all()
+        from services.schema_service import upgrade_schema
+
+        upgrade_schema()
+        from services.job_providers.provider_registry import initialize_providers
+
+        initialize_providers()
         if (
             app.config["SEED_ON_START"]
             and db.session.scalar(db.select(db.func.count(Job.id))) == 0
@@ -133,7 +217,9 @@ def create_app(test_config=None):
                 )
         jobs_data = active_jobs()
         if jobs_data:
-            app.extensions["recommendation_engine"].features_for(jobs_data)
+            app.extensions["recommendation_engine"].features_for(
+                sorted(jobs_data, key=lambda job: job.id)
+            )
     return app
 
 

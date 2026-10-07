@@ -43,7 +43,11 @@ def test_admin_separation_and_logout(logged_in):
     assert logged_in.get("/api/profile").status_code == 401
     assert (
         logged_in.post(
-            "/login", data={"email": "admin@example.com", "password": "Adminpass123"}
+            "/login",
+            data={
+                "email": "admin@example.com",
+                "password": logged_in.application.config["TEST_ADMIN_PASSWORD"],
+            },
         ).status_code
         == 401
     )

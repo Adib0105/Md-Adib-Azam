@@ -420,6 +420,11 @@ def clean_job_rows(rows):
             cleaned.append(
                 {
                     "source_id": clean_text(row.get("job_id"), 80) or None,
+                    "remote_type": "remote"
+                    if clean_text(row.get("location"), 100).casefold() == "remote"
+                    else "onsite",
+                    "remote_allowed": clean_text(row.get("location"), 100).casefold()
+                    == "remote",
                     "job_title": title,
                     "company_name": company,
                     "location": location,
@@ -467,7 +472,9 @@ def seed_jobs(data_dir):
             "w", encoding="utf-8", newline=""
         ) as handle:
             writer = csv.DictWriter(
-                handle, fieldnames=list(rows[0]) + ["processed_text"]
+                handle,
+                fieldnames=list(rows[0]) + ["processed_text"],
+                lineterminator="\n",
             )
             writer.writeheader()
             for row in rows:

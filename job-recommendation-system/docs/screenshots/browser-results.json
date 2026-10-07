@@ -43,6 +43,16 @@
       "width": 390
     },
     {
+      "page": "/real-jobs-390",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "page": "/about-390",
+      "viewport": 390,
+      "width": 390
+    },
+    {
       "page": "/profile-390",
       "viewport": 390,
       "width": 390
@@ -71,6 +81,66 @@
       "page": "/history-390",
       "viewport": 390,
       "width": 390
+    },
+    {
+      "page": "/account-390",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "page": "/alerts-390",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "page": "/notifications-390",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "page": "/admin/providers-390",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "page": "/admin/users-390",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "page": "/admin/applications-390",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "page": "/admin/analytics-390",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "page": "/admin/settings-390",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "page": "/admin/content-390",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "page": "/admin/security-390",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "page": "/admin/health-390",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "page": "/admin/backups-390",
+      "viewport": 390,
+      "width": 390
     }
   ],
   "jsErrors": [],
@@ -97,6 +167,13 @@
     "history",
     "logout",
     "admin login",
-    "admin create/edit/delete"
+    "admin create/edit/delete",
+    "real discovery labeled fallback",
+    "account sessions",
+    "alert creation",
+    "resume-job comparison",
+    "application notes",
+    "About and credits",
+    "admin control pages at mobile width"
   ]
 }

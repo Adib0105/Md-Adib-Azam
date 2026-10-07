@@ -1,6 +1,6 @@
 import pytest
 from config import validate_weights, RECOMMENDATION_WEIGHTS
-from models.database import db, User, RecommendationRun
+from models.database import db, User, Job, RecommendationRun
 from models.skill_extractor import normalize_skills, extract_skills
 from models.recommendation_model import (
     calculate_skill_score,
@@ -163,3 +163,29 @@ def test_job_edit_invalidates_features(app):
         db.session.commit()
         engine().features_for(jobs)
         assert engine().fit_count == initial + 1
+
+
+def test_unflushed_local_jobs_keep_legacy_score_defaults(app):
+    """Offline evaluation uses transient Job objects before ORM defaults are applied."""
+    from services.data_service import clean_job_rows, generate_dataset
+    from tempfile import TemporaryDirectory
+    from pathlib import Path
+
+    with app.app_context(), TemporaryDirectory() as directory:
+        raw = generate_dataset(Path(directory) / "jobs.csv", count=1)
+        fields = clean_job_rows(raw)[0][0]
+        fields["source_id"] = "TRANSIENT-CHECK"
+        job = Job(id=1001, **fields)
+        profile = {
+            "skills": job.required_skills,
+            "experience_years": 20,
+            "expected_salary": 1,
+            "education": "BTech",
+            "preferred_role": job.job_title,
+        }
+        before = engine().rank(profile, [job])[0]["scores"]
+        db.session.add(job)
+        db.session.commit()
+        after = engine().rank(profile, [job])[0]["scores"]
+        assert before == after
+        assert after["experience"] == 100 and after["salary"] == 100

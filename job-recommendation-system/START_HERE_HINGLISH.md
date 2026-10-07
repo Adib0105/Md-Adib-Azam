@@ -1,60 +1,31 @@
-# Job Recommendation System — Kaise chalana hai
+# JobMatch — shuru kaise karein
 
-1. GitHub repo ko **Code → Download ZIP** se download karke **Extract All** karo, ya repo clone karo.
-2. VS Code mein `job-recommendation-system` wala folder kholo. Isi folder mein `app.py` dikhna chahiye.
-3. **Terminal → New Terminal** kholo.
+Repo download/clone karke **job-recommendation-system** folder VS Code mein kholo. Python 3.11 ya 3.12 (64-bit) chahiye.
 
-   Agar terminal `Md-Adib-Azam` repo ke root mein hai, pehle `cd job-recommendation-system` chalao.
-4. Python **3.11 ya 3.12, 64-bit** installed hona chahiye.
-5. Ye commands ek-ek karke paste karo:
+PowerShell terminal mein:
 
 ```powershell
 python -m venv venv
 .\venv\Scripts\python.exe -m pip install -r requirements.txt
-.\venv\Scripts\python.exe scripts\seed_database.py --demo
+.\venv\Scripts\python.exe scripts\seed_database.py
+.\venv\Scripts\python.exe scripts\create_admin.py
 .\venv\Scripts\python.exe app.py
 ```
 
-6. Chrome kholo aur address bar mein ye likho:
+Chrome mein **http://127.0.0.1:5000** kholo. Terminal chalta rehna chahiye. Band karne ke liye Ctrl+C.
 
-**http://127.0.0.1:5000**
+- User account: **Create account** se banao; login `/login` par.
+- Admin: setup command mein apna email aur private password do; login `/admin/login` par. Koi fixed/public admin password nahi hai.
+- Purana demo admin ho to `python scripts/create_admin.py --reset-existing` se naya private password set karo.
+- Optional demo user: `python scripts/seed_database.py --demo`; naya random candidate password terminal mein ek baar milega.
+- APIs ke bina 640 demo jobs, profile, resume review, recommendations, charts aur tracker chalenge.
+- Real jobs ke liye Adzuna keys environment mein set karo; optional USAJOBS credentials bhi support hote hain. Admin → Providers → Enable/Test/Sync. `.env.example` sirf reference hai, auto-load nahi hoti.
+- Forgot password development mein private `instance/mail/` folder ki newest `.eml` file mein link deta hai. Production mein SMTP configure karna hoga. Link 30 minute valid aur single-use hai.
+- Alerts ke liye scheduler/Task Scheduler se `python scripts/process_alerts.py` run karna hoga. Email alerts se pehle Account settings mein email verify karo.
+- Purane app ka data ho to processes stop karke backup lo, phir `python scripts/upgrade_database.py` chalao. Existing records preserve honge.
 
-Terminal khula rehne do. Band karne ke liye **Ctrl+C**.
+Baad mein start karne ke liye sirf `venv\Scripts\python.exe app.py` ya `start_windows.cmd`.
 
-## Demo login
+Demo jobs fictional hain. Real jobs par **Apply on source** original website kholta hai; **Add to tracker** sirf apni progress save karta hai. Score hiring ya ATS guarantee nahi hai.
 
-Candidate:
-
-- Email: `demo@jobmatch.com`
-- Password: `Demo@123`
-
-Admin ke liye `/admin/login` kholo:
-
-- Email: `admin@jobmatch.com`
-- Password: `Admin@123`
-
-Ye sirf local demo passwords hain. Apna account banana ho to **Get started** dabao.
-
-## Project ka demo kaise dena hai
-
-1. Profile mein education, experience aur skills bharo. Fresher ho to experience **0** likho.
-2. Salary saal ki bharo: **5 LPA = 500000**.
-3. Resume PDF/DOCX upload karo. Extracted details check karke confirm karo.
-4. Recommendations kholo. Job details mein score ka reason aur missing skills dikhenge.
-5. Job save karo aur **Apply · Track locally** dabao. Application tracker mein status update karo.
-6. Career Insights se charts dikhao.
-7. Skill Analysis mein learning gaps dekho.
-8. Career Simulator mein Tableau/DAX jaisi skill add karke before/after estimated score compare karo.
-9. Match History mein profile updates ka difference dekho.
-10. Logout karke Admin login se job add/edit/remove dikhao.
-
-## Dhyan rahe
-
-- Ye **local web project** hai, phone app ya desktop executable nahi.
-- Internet dependencies install karne ke liye chahiye; uske baad core project offline chalta hai.
-- Manrope aur Fraunces fonts project ke andar hain. Cards, hero illustration aur charts mein smooth animations hain; device par reduced motion on ho to decorative animation band ho jayega.
-- `localhost` link tumhare computer par server chalne ke baad khulega. GitHub ka repository link website ka live link nahi hota.
-- 640 jobs aur company details demo data hain. Apply dabane par employer ko kuch send nahi hota.
-- Score actual algorithm se calculate hota hai. Lekin job milne ka guarantee/percentage chance nahi hai.
-- Agli baar sirf `.\venv\Scripts\python.exe app.py` chalana hai.
-- Pura technical explanation aur troubleshooting `README.md` mein hai.
+Details: [README](README.md) · [Upgrade report](docs/UPGRADE_REPORT.md).

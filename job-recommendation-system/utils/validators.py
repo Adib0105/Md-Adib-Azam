@@ -1,5 +1,8 @@
 import math
 import re
+import ipaddress
+from datetime import date
+from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 from models.skill_extractor import normalize_skills
 from utils.constants import EMPLOYMENT_TYPES
 
@@ -88,4 +91,95 @@ def validate_profile(form):
     result["experience_years"] = number_field(form, "experience_years", 60)
     result["expected_salary"] = number_field(form, "expected_salary", 100000000, True)
     result["willing_to_relocate"] = form.get("willing_to_relocate") == "on"
+    result["remote_preference"] = choice_field(
+        form, "remote_preference", {"any", "remote", "hybrid", "onsite"}, "any"
+    )
+    result["salary_currency"] = choice_field(form, "salary_currency", CURRENCIES, "INR")
     return result, validate_skills(form.get("skills", ""))
+
+
+CURRENCIES = {
+    "INR",
+    "USD",
+    "GBP",
+    "EUR",
+    "AUD",
+    "CAD",
+    "NZD",
+    "SGD",
+    "ZAR",
+    "BRL",
+    "MXN",
+    "PLN",
+    "CHF",
+}
+
+
+def choice_field(form, key, choices, default=""):
+    value = str(form.get(key, default)).strip()
+    if value not in choices:
+        raise ValidationError(f"Choose a valid {key.replace('_', ' ')}.")
+    return value
+
+
+def date_field(form, key):
+    value = str(form.get(key, "")).strip()
+    if not value:
+        return None
+    try:
+        return date.fromisoformat(value)
+    except ValueError as exc:
+        raise ValidationError(f"Enter a valid {key.replace('_', ' ')}.") from exc
+
+
+def safe_external_url(value, required=False):
+    value = str(value or "").strip()
+    if not value and not required:
+        return ""
+    if len(value) > 2048 or any(ord(c) < 33 for c in value) or "\\" in value:
+        raise ValidationError("Use a valid public HTTP or HTTPS address.")
+    try:
+        parsed = urlsplit(value)
+        host = (parsed.hostname or "").rstrip(".").lower()
+        if (
+            parsed.scheme not in {"http", "https"}
+            or not host
+            or parsed.username
+            or parsed.password
+        ):
+            raise ValueError()
+        if (
+            parsed.port not in {None, 80, 443}
+            or host == "localhost"
+            or host.endswith((".localhost", ".local", ".internal"))
+            or "." not in host
+        ):
+            raise ValueError()
+        try:
+            address = ipaddress.ip_address(host)
+        except ValueError:
+            address = None
+        if address is not None and not address.is_global:
+            raise ValueError()
+        # Provider attribution links never carry credential query parameters.
+        blocked = {
+            "app_key",
+            "app_id",
+            "api_key",
+            "apikey",
+            "authorization",
+            "password",
+            "secret",
+        }
+        query = urlencode(
+            [
+                (k, v)
+                for k, v in parse_qsl(parsed.query, keep_blank_values=True)
+                if k.casefold() not in blocked
+            ]
+        )
+        return urlunsplit(
+            (parsed.scheme, parsed.netloc, parsed.path, query, parsed.fragment)
+        )
+    except (ValueError, UnicodeError) as exc:
+        raise ValidationError("Use a valid public HTTP or HTTPS address.") from exc

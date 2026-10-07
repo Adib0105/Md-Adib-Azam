@@ -51,9 +51,9 @@ Turn an iPhone into a secure, low-latency wireless microphone for Windows 11 ove
 
 **[Open the Job Recommendation System →](job-recommendation-system/)**
 
-A complete local Flask app with resume review, explainable job matches, skill-gap analysis and a career simulator. Includes a responsive interface, bundled Manrope + Fraunces fonts, smooth animations and 60 automated tests. The 640 job listings are fictional demo data.
+AI-assisted job discovery and career intelligence with official Adzuna/USAJOBS adapters, explainable matches, resume review, skill-gap analysis and career simulation. Includes secure account recovery, an admin control center, alerts, a responsive interface, bundled Manrope + Fraunces fonts and accessible animations. The 640 offline listings are clearly labeled demo data; real providers require configured credentials.
 
-[Setup guide](job-recommendation-system/START_HERE_HINGLISH.md) · [Screenshots & documentation](job-recommendation-system/README.md) · [Source code](job-recommendation-system/app.py)
+[Setup guide](job-recommendation-system/START_HERE_HINGLISH.md) · [Screenshots & documentation](job-recommendation-system/README.md) · [A–P upgrade report](job-recommendation-system/docs/UPGRADE_REPORT.md) · [Source code](job-recommendation-system/app.py)
 
 ## Hello, I am Md Adib Azam 👋
 

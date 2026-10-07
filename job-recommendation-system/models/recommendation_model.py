@@ -171,7 +171,7 @@ def generate_recommendation_explanation(profile, job, scores, matched, missing):
     if matched:
         reasons.append("Shared skills: " + ", ".join(matched[:5]) + ".")
     experience = profile.get("experience_years")
-    if experience is None:
+    if experience is None or job.experience_known is False:
         reasons.append("Experience is unknown; a neutral 50/100 is used.")
     elif experience >= job.experience_min:
         reasons.append(
@@ -183,8 +183,15 @@ def generate_recommendation_explanation(profile, job, scores, matched, missing):
         )
     if scores["salary"] == 100:
         reasons.append("The listed salary can meet your annual expectation.")
-    elif profile.get("expected_salary") is None or job.max_salary is None:
-        reasons.append("Salary information is incomplete; a neutral 50/100 is used.")
+    elif (
+        profile.get("expected_salary") is None
+        or job.max_salary is None
+        or (job.salary_currency or "INR") != profile.get("salary_currency", "INR")
+        or (job.salary_period or "year") != "year"
+    ):
+        reasons.append(
+            "Salary information is incomplete or uses a different currency/pay period; a neutral 50/100 is used."
+        )
     else:
         reasons.append("The maximum listed salary is below your expectation.")
     if scores["location"] == 100:

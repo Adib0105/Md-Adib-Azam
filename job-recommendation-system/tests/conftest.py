@@ -1,4 +1,5 @@
 import io
+import secrets
 import pytest
 from docx import Document
 from app import create_app
@@ -17,6 +18,9 @@ def app(tmp_path):
             "SEED_ON_START": False,
             "WTF_CSRF_ENABLED": False,
             "MODEL_CACHE": False,
+            "TEST_PASSWORD_HASH_METHOD": "pbkdf2:sha256:1000",
+            "MAIL_BACKEND": "memory",
+            "MAIL_ASYNC": False,
         }
     )
     with application.app_context():
@@ -42,7 +46,8 @@ def app(tmp_path):
             for s in ["SQL", "Excel", "Python", "Power BI", "Statistics"]
         ]
         admin = User(full_name="Test Admin", email="admin@example.com", is_admin=True)
-        admin.set_password("Adminpass123")
+        application.config["TEST_ADMIN_PASSWORD"] = secrets.token_urlsafe(24) + "9a"
+        admin.set_password(application.config["TEST_ADMIN_PASSWORD"])
         db.session.add_all([candidate, admin])
         db.session.commit()
     yield application
@@ -68,7 +73,11 @@ def logged_in(client):
 @pytest.fixture
 def admin_client(client):
     response = client.post(
-        "/admin/login", data={"email": "admin@example.com", "password": "Adminpass123"}
+        "/admin/login",
+        data={
+            "email": "admin@example.com",
+            "password": client.application.config["TEST_ADMIN_PASSWORD"],
+        },
     )
     assert response.status_code == 302
     return client

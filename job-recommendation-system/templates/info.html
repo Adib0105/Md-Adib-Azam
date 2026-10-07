@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% from 'macros.html' import heading with context %}{% block content %}{{ heading('JOBMATCH',page|replace('_',' ')|title,'Information about this installation.') }}<section class="panel description-text">{{ site_content[page] }}</section>{% endblock %}

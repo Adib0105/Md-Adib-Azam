@@ -1,7 +1,8 @@
-"""Idempotent local setup. Demo credentials are opt-in and never used in production."""
+"""Idempotent job setup. --demo creates a candidate only; never an administrator."""
 
 import argparse
 import os
+import secrets
 import sys
 from pathlib import Path
 
@@ -18,7 +19,7 @@ def main():
     parser.add_argument(
         "--demo",
         action="store_true",
-        help="Explicitly create known local demonstration accounts",
+        help="Create an opt-in local demo candidate (no administrator)",
     )
     args = parser.parse_args()
     if args.demo and os.getenv("APP_ENV") == "production":
@@ -26,65 +27,53 @@ def main():
     app = create_app({"SEED_ON_START": False})
     with app.app_context():
         print(seed_jobs(ROOT / "data"))
-        if args.demo:
-            accounts = [
-                ("demo@jobmatch.com", "Demo@123", False),
-                ("admin@jobmatch.com", "Admin@123", True),
-            ]
-            for email, password, is_admin in accounts:
-                if db.session.scalar(db.select(User).where(User.email == email)):
-                    continue
-                user = User(
-                    full_name="Demo Administrator" if is_admin else "Rahul Kumar",
-                    email=email,
-                    is_admin=is_admin,
-                )
-                user.set_password(password)
-                if not is_admin:
-                    user.city, user.state, user.education = (
-                        "Kolkata",
-                        "West Bengal",
-                        "B.Tech Computer Science",
-                    )
-                    user.experience_years, user.expected_salary = 1, 500000
-                    (
-                        user.preferred_role,
-                        user.preferred_location,
-                        user.employment_type,
-                    ) = "Data Analyst", "Kolkata / Remote", "Full-time"
-                    user.projects = "Retail sales dashboard using SQL, Python, Excel and Power BI. Cleaned transaction data and explained sales trends."
-                    user.certifications = (
-                        "Foundations of Data Analytics (demonstration)"
-                    )
-                    user.experience_summary = (
-                        "One year analyzing sales and customer support reporting."
-                    )
-                    user.career_interests = "Business intelligence, customer analytics and data visualization."
-                    for name in [
-                        "Python",
-                        "SQL",
-                        "Excel",
-                        "Power BI",
-                        "Pandas",
-                        "Statistics",
-                        "Communication",
-                        "Data Cleaning",
-                    ]:
-                        user.skills.append(
-                            CandidateSkill(
-                                skill_name=name,
-                                proficiency_level="Advanced"
-                                if name in {"SQL", "Excel"}
-                                else "Intermediate",
-                            )
-                        )
-                db.session.add(user)
-                db.session.commit()
-                if not is_admin:
-                    snapshot(user, "Demo starting profile")
-            print(
-                "Local demo accounts are ready. See README for sign-in details. Never deploy these accounts publicly."
+        if args.demo and not db.session.scalar(
+            db.select(User).where(User.email == "demo@jobmatch.com")
+        ):
+            user = User(
+                full_name="Rahul Kumar",
+                email="demo@jobmatch.com",
+                city="Kolkata",
+                state="West Bengal",
+                education="B.Tech Computer Science",
+                experience_years=1,
+                expected_salary=500000,
+                preferred_role="Data Analyst",
+                preferred_location="Kolkata / Remote",
+                employment_type="Full-time",
+                projects="Retail sales dashboard using SQL, Python, Excel and Power BI. Cleaned transactions and explained sales trends.",
+                certifications="Foundations of Data Analytics (demonstration)",
+                experience_summary="One year analyzing sales and customer support reporting.",
+                career_interests="Business intelligence, customer analytics and data visualization.",
             )
+            demo_password = secrets.token_urlsafe(18) + "9a"
+            user.set_password(demo_password)
+            for name in [
+                "Python",
+                "SQL",
+                "Excel",
+                "Power BI",
+                "Pandas",
+                "Statistics",
+                "Communication",
+                "Data Cleaning",
+            ]:
+                user.skills.append(
+                    CandidateSkill(
+                        skill_name=name,
+                        proficiency_level="Advanced"
+                        if name in {"SQL", "Excel"}
+                        else "Intermediate",
+                    )
+                )
+            db.session.add(user)
+            db.session.commit()
+            snapshot(user, "Demo starting profile")
+            print("Local demo candidate: demo@jobmatch.com")
+            print("Generated one-time setup password: " + demo_password)
+        print(
+            "Jobs are ready. Create an administrator separately with python scripts/create_admin.py."
+        )
 
 
 if __name__ == "__main__":

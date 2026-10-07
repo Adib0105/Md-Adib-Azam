@@ -9,6 +9,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 (async () => {
+  assert.ok(process.env.TEST_ADMIN_EMAIL && process.env.TEST_ADMIN_PASSWORD, 'Supply an independently created test administrator through environment variables.');
   const base = process.env.TEST_BASE_URL || 'http://127.0.0.1:5000';
   assert.ok(new URL(base).hostname === '127.0.0.1' || new URL(base).hostname === 'localhost', 'Use a local disposable instance.');
   const output = process.env.SCREENSHOT_DIR || path.resolve('docs/screenshots');
@@ -61,7 +62,7 @@ const path = require('node:path');
   await noScript.close();
   await go('/login');
   await page.getByLabel('Email address').fill('demo@jobmatch.com');
-  await page.getByLabel('Password',{exact:true}).fill('Demo@123');
+  await page.getByLabel('Password',{exact:true}).fill(process.env.TEST_DEMO_PASSWORD);
   await page.getByRole('button',{name:'Sign in',exact:true}).click();
   await page.waitForURL('**/dashboard');
   await screenshot('dashboard-desktop.png');
@@ -79,7 +80,7 @@ const path = require('node:path');
     await checkWidth(`dashboard-${width}`);
     if (width === 390) await screenshot('dashboard-mobile.png');
   }
-  for (const url of ['/jobs','/profile','/skills','/simulator','/insights','/applications','/history']) {
+  for (const url of ['/jobs','/real-jobs','/about','/profile','/skills','/simulator','/insights','/applications','/history','/account','/alerts','/notifications']) {
     await go(url); await checkWidth(`${url}-390`);
   }
   await page.setViewportSize({width:1440,height:1050});
@@ -113,18 +114,38 @@ const path = require('node:path');
     await page.waitForURL('**/profile');
     assert.ok(await page.getByText('Reviewed resume details saved.',{exact:false}).isVisible());
   }
+  await go('/account');
+  assert.ok(await page.getByRole('heading',{name:'Active sessions'}).isVisible());
+  await go('/alerts');
+  await page.getByLabel('Alert name',{exact:true}).fill('Browser analyst alert');
+  await page.getByLabel('Keyword',{exact:true}).fill('Python');
+  await page.getByRole('button',{name:'Create alert'}).click();
+  await page.waitForLoadState('networkidle');
+  assert.ok(await page.getByRole('heading',{name:'Browser analyst alert'}).isVisible());
   await go('/recommendations');
   const jobLink = await page.locator('.job-title-row h3 a').first().getAttribute('href');
   await go(jobLink);
+  if (process.env.RESUME_FIXTURE) {
+    await page.getByRole('link',{name:'Compare resume against job'}).click();
+    await page.waitForLoadState('networkidle');
+    assert.ok(await page.getByRole('heading',{name:'Missing keywords'}).isVisible());
+    await go(jobLink);
+  }
   await page.getByRole('button',{name:'Save job',exact:true}).click();
   await page.waitForLoadState('networkidle');
   assert.ok(await page.getByRole('button',{name:'Unsave job',exact:true}).isVisible());
-  await page.getByRole('button',{name:'Apply · Track locally',exact:false}).click();
+  await page.getByRole('button',{name:'Add to tracker',exact:false}).click();
   await page.waitForURL('**/applications');
   await page.locator('.inline-form select').first().selectOption('Interview');
   await page.getByRole('button',{name:'Update',exact:true}).first().click();
   await page.waitForLoadState('networkidle');
   assert.equal(await page.locator('.status-interview').count(),1);
+  await page.locator('.application-notes summary').click();
+  await page.getByLabel('Your notes').fill('Prepare portfolio examples for follow-up.');
+  await page.getByLabel('Follow-up date').fill('2026-10-08');
+  await page.getByRole('button',{name:'Save details'}).click();
+  await page.waitForLoadState('networkidle');
+  assert.equal(await page.getByLabel('Your notes').inputValue(),'Prepare portfolio examples for follow-up.');
   await go('/simulator');
   await page.locator('#simulation-skills-entry').fill('Tableau,DAX');
   await page.locator('#simulation-skills-entry').press('Enter');
@@ -137,8 +158,8 @@ const path = require('node:path');
   await page.getByRole('button',{name:'Sign out',exact:true}).click();
   await page.waitForURL(base + '/');
   await go('/admin/login');
-  await page.getByLabel('Email address').fill('admin@jobmatch.com');
-  await page.getByLabel('Password',{exact:true}).fill('Admin@123');
+  await page.getByLabel('Email address').fill(process.env.TEST_ADMIN_EMAIL);
+  await page.getByLabel('Password',{exact:true}).fill(process.env.TEST_ADMIN_PASSWORD);
   await page.getByRole('button',{name:'Sign in',exact:true}).click();
   await page.waitForURL('**/admin/');
   await go('/admin/jobs/new');
@@ -151,20 +172,33 @@ const path = require('node:path');
   await page.getByRole('button',{name:'Save opportunity'}).click();
   await page.waitForURL('**/admin/jobs');
   let row = page.getByRole('row').filter({hasText:jobTitle});
-  await row.getByRole('link',{name:'Edit',exact:true}).click();
+  await row.getByRole('link',{name:'Edit details',exact:false}).click();
   await page.getByLabel('Job title *',{exact:true}).fill(jobTitle + ' Updated');
   await page.getByRole('button',{name:'Save opportunity'}).click();
   await page.waitForURL('**/admin/jobs');
   row = page.getByRole('row').filter({hasText:jobTitle + ' Updated'});
-  page.once('dialog',dialog=>dialog.accept());
-  await row.getByRole('button',{name:'Remove',exact:true}).click();
+  await row.locator('select[name=action]').selectOption('delete');
+  await row.getByRole('button',{name:'Update',exact:true}).click();
   await page.waitForLoadState('networkidle');
-  assert.ok(await page.getByRole('row').filter({hasText:jobTitle + ' Updated'}).getByText('Removed',{exact:true}).isVisible());
+  assert.ok(await page.getByRole('row').filter({hasText:jobTitle + ' Updated'}).getByText('Deleted',{exact:true}).isVisible());
+  for (const url of ['/admin/providers','/admin/users','/admin/applications','/admin/analytics','/admin/settings','/admin/content','/admin/security','/admin/health','/admin/backups']) {
+    await go(url);
+    await page.setViewportSize({width:390,height:900});
+    await checkWidth(`${url}-390`);
+    await page.setViewportSize({width:1440,height:1050});
+  }
+  await go('/admin/providers');
+  await screenshot('providers-desktop.png');
+  await go('/about');
+  await screenshot('about-desktop.png');
+  await go('/real-jobs');
+  assert.ok(await page.getByText('Live refresh unavailable',{exact:true}).isVisible());
+  await screenshot('discovery-desktop.png');
   assert.deepEqual(errors, [], 'No browser JavaScript errors');
   assert.deepEqual(external, [], 'No requests to external services');
   assert.deepEqual(failures, [], 'No failed HTTP resources');
   const report = {status:'passed',browser:await browser.version(),viewportChecks:reports,jsErrors:errors,externalRequests:external,failedResources:failures,
-    workflow:['landing','offline fonts','normal motion','live reduced-motion cancellation','JavaScript-disabled landing','demo dashboard','job explanation','8 charts','responsive layouts','registration','profile save','resume review','recommendations','save','apply locally','Interview status','what-if simulation','history','logout','admin login','admin create/edit/delete']};
+    workflow:['landing','offline fonts','normal motion','live reduced-motion cancellation','JavaScript-disabled landing','demo dashboard','job explanation','8 charts','responsive layouts','registration','profile save','resume review','recommendations','save','apply locally','Interview status','what-if simulation','history','logout','admin login','admin create/edit/delete','real discovery labeled fallback','account sessions','alert creation','resume-job comparison','application notes','About and credits','admin control pages at mobile width']};
   fs.writeFileSync(path.join(output,'browser-results.json'),JSON.stringify(report,null,2));
   console.log(JSON.stringify(report,null,2));
   await browser.close();

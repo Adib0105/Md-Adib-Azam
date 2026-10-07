@@ -4,11 +4,13 @@ import hashlib
 import json
 import threading
 from collections import OrderedDict
-from datetime import date
+from uuid import uuid4
 from pathlib import Path
 import joblib
 import sklearn
 from flask import current_app
+from services.job_catalog import eligible_conditions
+from services.settings_service import weights as configured_weights
 from sklearn.feature_extraction.text import TfidfVectorizer
 from models.database import db, Job, RecommendationRun, Recommendation
 from models.skill_extractor import normalize_skills, extract_skills
@@ -38,6 +40,8 @@ def profile_data(user):
         "preferred_location",
         "expected_salary",
         "employment_type",
+        "remote_preference",
+        "salary_currency",
         "state",
         "willing_to_relocate",
         "certifications",
@@ -171,7 +175,7 @@ class RecommendationEngine:
                 features = (vectorizer, matrix, role_vectorizer, role_matrix)
                 self.fit_count += 1
                 if current_app.config["MODEL_CACHE"]:
-                    temporary = path.with_suffix(".tmp")
+                    temporary = path.with_name(f"model-{uuid4().hex}.tmp")
                     joblib.dump(
                         {"signature": signature, "features": features}, temporary
                     )
@@ -185,6 +189,7 @@ class RecommendationEngine:
     def rank(self, profile, jobs):
         if not jobs:
             return []
+        jobs = sorted(jobs, key=lambda job: job.id)
         vectorizer, matrix, role_vectorizer, role_matrix = self.features_for(jobs)
         semantics = calculate_semantic_similarity(
             vectorizer.transform([candidate_text(profile)]), matrix
@@ -193,7 +198,7 @@ class RecommendationEngine:
             role_vectorizer.transform([role_text(profile.get("preferred_role"))]),
             role_matrix,
         )
-        weights = current_app.config["RECOMMENDATION_WEIGHTS"]
+        weights = configured_weights()
         result = []
         for index, job in enumerate(jobs):
             matched = get_matching_skills(profile.get("skills"), job.required_skills)
@@ -203,12 +208,16 @@ class RecommendationEngine:
                     profile.get("skills"), job.required_skills, job.preferred_skills
                 ),
                 "semantic": float(semantics[index]),
-                "experience": calculate_experience_score(
+                "experience": 50.0
+                if job.experience_known is False
+                else calculate_experience_score(
                     profile.get("experience_years"),
                     job.experience_min,
                     job.experience_max,
                 ),
-                "education": calculate_education_score(
+                "education": 50.0
+                if job.is_external and not job.education_required
+                else calculate_education_score(
                     profile.get("education"), job.education_required
                 ),
                 "location": calculate_location_score(
@@ -217,7 +226,11 @@ class RecommendationEngine:
                     profile.get("state", ""),
                     profile.get("willing_to_relocate", False),
                 ),
-                "salary": calculate_salary_score(
+                "salary": 50.0
+                if (job.salary_currency or "INR")
+                != profile.get("salary_currency", "INR")
+                or (job.salary_period or "year") != "year"
+                else calculate_salary_score(
                     profile.get("expected_salary"), job.min_salary, job.max_salary
                 ),
                 "role": float(roles[index]),
@@ -234,13 +247,21 @@ class RecommendationEngine:
                     "matched": matched,
                     "missing": missing,
                     "confidence": confidence(profile),
+                    "context": context_signals(profile, job),
                     "label": match_label(total),
                     "reasons": generate_recommendation_explanation(
                         profile, job, scores, matched, missing
                     ),
                 }
             )
-        return sorted(result, key=lambda row: (-row["score"], row["job"].id))
+        return sorted(
+            result,
+            key=lambda row: (
+                -row["score"],
+                -sum(row["context"].values()),
+                row["job"].id,
+            ),
+        )
 
     def search(self, query, rows):
         if not rows or not query.strip():
@@ -288,17 +309,34 @@ class RecommendationEngine:
         return [job for job, _ in ordered if job.id != target.id][:limit]
 
 
+def context_signals(profile, job):
+    """Transparent tie-breakers preserve the seven-factor 0–100 match score."""
+    remote = profile.get("remote_preference", "any")
+    return {
+        "employment": int(
+            bool(profile.get("employment_type"))
+            and profile["employment_type"] == job.employment_type
+        ),
+        "remote": int(remote == job.remote_type and remote != "any"),
+        "freshness": 2
+        if job.freshness == "Fresh"
+        else 1
+        if job.freshness == "Recently posted"
+        else 0,
+        "information": int(
+            confidence(profile) == "High"
+            and job.experience_known is not False
+            and bool(job.required_skills)
+        ),
+    }
+
+
 def active_jobs():
     return db.session.scalars(
         db.select(Job)
-        .where(
-            Job.active.is_(True),
-            db.or_(
-                Job.application_deadline.is_(None),
-                Job.application_deadline >= date.today(),
-            ),
-        )
-        .order_by(Job.id)
+        .where(*eligible_conditions())
+        .order_by(Job.featured.desc(), Job.posted_date.desc(), Job.id)
+        .limit(current_app.config["MAX_RANKING_JOBS"])
     ).all()
 
 
@@ -316,7 +354,7 @@ def recommendations(user, extra_skills=None, jobs=None):
 def snapshot(user, reason="profile", force=False):
     jobs = active_jobs()
     profile = profile_data(user)
-    weights = current_app.config["RECOMMENDATION_WEIGHTS"]
+    weights = configured_weights()
     payload = [profile, weights, [j.as_dict() for j in jobs]]
     fingerprint = hashlib.sha256(
         json.dumps(payload, sort_keys=True).encode()

@@ -12,12 +12,12 @@ if __name__ == "__main__":
     with app.app_context():
         jobs = active_jobs()
         if jobs:
-            features = engine().features_for(jobs)
+            features = engine().features_for(sorted(jobs, key=lambda job: job.id))
             print(
                 f"Indexed {len(jobs)} active jobs, {features[1].shape[1]} TF-IDF features."
             )
             print(
-                "Local artifact: instance/model.joblib (do not share or load untrusted model files)."
+                f"Local artifact: {Path(app.instance_path) / 'model.joblib'} (private; never load untrusted model files)."
             )
         else:
             print("No active jobs to index.")

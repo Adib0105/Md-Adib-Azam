@@ -17,6 +17,8 @@ RECOMMENDATION_WEIGHTS = {
 
 
 class Config:
+    APP_ENV = os.getenv("APP_ENV", "development")
+    APP_BASE_URL = os.getenv("APP_BASE_URL", "http://127.0.0.1:5000").rstrip("/")
     SQLALCHEMY_DATABASE_URI = os.getenv(
         "DATABASE_URL", "sqlite:///job_recommendation.db"
     )
@@ -27,12 +29,47 @@ class Config:
     SESSION_COOKIE_HTTPONLY = True
     SESSION_COOKIE_SAMESITE = "Lax"
     SESSION_COOKIE_SECURE = os.getenv("APP_ENV") == "production"
-    PERMANENT_SESSION_LIFETIME = timedelta(hours=8)
+    PERMANENT_SESSION_LIFETIME = timedelta(days=30)
+    SESSION_HOURS = 8
+    SESSION_IDLE_MINUTES = int(os.getenv("SESSION_IDLE_MINUTES", "60"))
+    REMEMBER_DAYS = int(os.getenv("REMEMBER_DAYS", "30"))
+    RESET_TOKEN_MINUTES = 30
+    AUTO_UPGRADE_SCHEMA = (
+        os.getenv(
+            "AUTO_UPGRADE_SCHEMA", "true" if APP_ENV != "production" else "false"
+        ).lower()
+        == "true"
+    )
     WTF_CSRF_TIME_LIMIT = 8 * 60 * 60
     SEED_ON_START = True
     RECOMMENDATION_WEIGHTS = RECOMMENDATION_WEIGHTS
     MODEL_CACHE = True
     TESTING = False
+    TEST_PASSWORD_HASH_METHOD = None
+    ADZUNA_APP_ID = os.getenv("ADZUNA_APP_ID", "")
+    ADZUNA_APP_KEY = os.getenv("ADZUNA_APP_KEY", "")
+    USAJOBS_API_KEY = os.getenv("USAJOBS_API_KEY", "")
+    USAJOBS_USER_AGENT = os.getenv("USAJOBS_USER_AGENT", "")
+    ENABLE_ADZUNA = os.getenv("ENABLE_ADZUNA", "true").lower() == "true"
+    ENABLE_USAJOBS = os.getenv("ENABLE_USAJOBS", "false").lower() == "true"
+    REAL_JOB_CACHE_TTL_MINUTES = int(os.getenv("REAL_JOB_CACHE_TTL_MINUTES", "30"))
+    EXTERNAL_JOB_STALE_DAYS = int(os.getenv("EXTERNAL_JOB_STALE_DAYS", "14"))
+    EXTERNAL_JOB_MAX_AGE_DAYS = int(os.getenv("EXTERNAL_JOB_MAX_AGE_DAYS", "60"))
+    PROVIDER_TIMEOUT_SECONDS = 8
+    PROVIDER_MAX_RESPONSE_BYTES = 2 * 1024 * 1024
+    PROVIDER_REQUESTS_PER_HOUR = int(os.getenv("PROVIDER_REQUESTS_PER_HOUR", "60"))
+    MAX_RANKING_JOBS = int(os.getenv("MAX_RANKING_JOBS", "2000"))
+    MAIL_BACKEND = os.getenv(
+        "MAIL_BACKEND", "disabled" if APP_ENV == "production" else "file"
+    )
+    MAIL_SERVER = os.getenv("MAIL_SERVER", "")
+    MAIL_PORT = int(os.getenv("MAIL_PORT", "587"))
+    MAIL_USERNAME = os.getenv("MAIL_USERNAME", "")
+    MAIL_PASSWORD = os.getenv("MAIL_PASSWORD", "")
+    MAIL_DEFAULT_SENDER = os.getenv("MAIL_DEFAULT_SENDER", "jobmatch@localhost")
+    MAIL_USE_TLS = os.getenv("MAIL_USE_TLS", "true").lower() == "true"
+    MAIL_ASYNC = True
+    LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
 
 
 def validate_weights(weights):

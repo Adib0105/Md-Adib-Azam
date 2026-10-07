@@ -3,11 +3,19 @@ from uuid import uuid4
 from flask import Blueprint, render_template, request, redirect, url_for, flash
 from models.database import db, User, Job
 from routes.auth import admin_required
-from routes.jobs import pagination
+from routes.control import page_query
+from services.security_service import audit
+from services.notification_service import saved_job_updated
 from services.analytics_service import admin_analytics
 from services.data_service import clean_job_rows
 from utils.constants import EMPLOYMENT_TYPES
-from utils.validators import text_field, number_field, ValidationError
+from utils.validators import (
+    text_field,
+    number_field,
+    ValidationError,
+    choice_field,
+    CURRENCIES,
+)
 
 admin = Blueprint("admin", __name__, url_prefix="/admin")
 
@@ -30,10 +38,16 @@ def listing():
                 Job.company_name.icontains(query, autoescape=True),
             )
         )
-    records, pager = pagination(
-        db.session.scalars(statement.order_by(Job.id.desc())).all(), 20
-    )
-    return render_template("admin/jobs.html", records=records, pager=pager)
+    source = request.args.get("source")
+    if source == "external":
+        statement = statement.where(Job.is_external.is_(True))
+    elif source == "demo":
+        statement = statement.where(Job.is_synthetic.is_(True))
+    state = request.args.get("state")
+    if state in {"archived", "deleted"}:
+        statement = statement.where(getattr(Job, state).is_(True))
+    result = page_query(statement.order_by(Job.id.desc()), 20)
+    return render_template("admin/jobs.html", records=result.items, page=result)
 
 
 def job_form(job=None):
@@ -80,6 +94,39 @@ def job_form(job=None):
                 )
             fields = cleaned[0]
             fields.pop("source_id")
+            fields["salary_currency"] = choice_field(
+                request.form,
+                "salary_currency",
+                CURRENCIES,
+                job.salary_currency if job else "INR",
+            )
+            fields["salary_period"] = choice_field(
+                request.form,
+                "salary_period",
+                {"year", "month", "week", "day", "hour", "unknown"},
+                job.salary_period if job else "year",
+            )
+            fields["remote_type"] = choice_field(
+                request.form,
+                "remote_type",
+                {"unknown", "remote", "onsite", "hybrid"},
+                "remote" if fields["location"].casefold() == "remote" else "unknown",
+            )
+            fields["remote_allowed"] = fields["remote_type"] == "remote"
+            fields["freshness_override"] = choice_field(
+                request.form,
+                "freshness_override",
+                {"auto", "Older listing", "Possibly expired"},
+                "auto",
+            )
+            if not job or not job.is_external:
+                fields["source"] = "demo" if fields["is_synthetic"] else "manual"
+                fields["source_name"] = (
+                    "Demo" if fields["is_synthetic"] else "Local employer entry"
+                )
+            else:
+                fields["is_synthetic"] = False
+
         except (ValidationError, ValueError) as exc:
             flash(str(exc), "error")
             return render_template(
@@ -94,6 +141,9 @@ def job_form(job=None):
         for key, value in fields.items():
             setattr(job, key, value)
         job.active = request.form.get("active") == "on"
+        db.session.flush()
+        audit("job_saved", subject_type="job", subject_id=job.id)
+        saved_job_updated(job)
         db.session.commit()
         flash(
             "Job saved. Model features refresh automatically when listing text changes.",
@@ -123,6 +173,8 @@ def delete_job(job_id):
     # Soft deletion preserves application and historical recommendation integrity.
     job = db.get_or_404(Job, job_id)
     job.active = False
+    job.deleted = True
+    audit("job_deleted", subject_type="job", subject_id=job.id)
     db.session.commit()
     flash(
         "Job removed from active listings. Existing tracker and history records are retained.",
@@ -134,7 +186,7 @@ def delete_job(job_id):
 @admin.get("/users")
 @admin_required
 def users():
-    records = db.session.scalars(
+    page = page_query(
         db.select(User).where(User.is_admin.is_(False)).order_by(User.created_at.desc())
-    ).all()
-    return render_template("admin/users.html", records=records)
+    )
+    return render_template("admin/users.html", records=page.items, page=page)
