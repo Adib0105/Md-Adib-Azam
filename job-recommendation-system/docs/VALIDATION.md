@@ -1,6 +1,6 @@
 # Validation record
 
-Validation performed on **7 October 2026**. The tested runtime was Linux, Python 3.12 and headless Chromium 134.0.6998.35. Windows PowerShell instructions and Windows/Linux GitHub Actions configuration are included; a physical Windows PC and a GitHub Actions run were **not** exercised in this session.
+Local validation performed on **7 October 2026**, using Linux, Python 3.12 and headless Chromium 134.0.6998.35. After publication, the [JobMatch GitHub Actions run](https://github.com/Adib0105/Md-Adib-Azam/actions/runs/37603654358) also executed the project on hosted Linux and Windows runners with Python 3.11/3.12; its linked job results are the source of truth for CI status. A physical Windows PC was **not** exercised in this session.
 
 ## Installation and automated checks
 
