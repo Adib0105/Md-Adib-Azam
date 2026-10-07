@@ -1,0 +1,46 @@
+name: JobMatch checks
+
+on:
+  push:
+    paths:
+      - 'job-recommendation-system/**'
+      - '.github/workflows/jobmatch.yml'
+  pull_request:
+    paths:
+      - 'job-recommendation-system/**'
+      - '.github/workflows/jobmatch.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ['3.11', '3.12']
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: job-recommendation-system
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+          cache-dependency-path: |
+            job-recommendation-system/requirements.txt
+            job-recommendation-system/requirements-dev.txt
+      - name: Install dependencies
+        run: python -m pip install -r requirements-dev.txt
+      - name: Run automated tests
+        run: python -m pytest -q
+      - name: Seed demonstration data
+        run: python scripts/seed_database.py --demo
+      - name: Build the recommendation model
+        run: python scripts/train_model.py
+      - name: Run synthetic evaluation
+        run: python scripts/evaluate_model.py

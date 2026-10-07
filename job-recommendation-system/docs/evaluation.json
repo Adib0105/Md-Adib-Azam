@@ -1,0 +1,65 @@
+{
+  "evaluation": "synthetic role-family smoke test",
+  "dataset_jobs": 640,
+  "k": 10,
+  "limitations": "Hand-authored relevance proxies and generated job templates. No real candidate judgments, hiring outcomes, held-out test population or fairness validation. These metrics do not prove real-world recommendation quality.",
+  "scenarios": [
+    {
+      "scenario": "Early-career analyst",
+      "precision@10": 1.0,
+      "recall@10": 0.0935,
+      "ndcg@10": 1.0,
+      "top_roles": [
+        "Data Analyst",
+        "Data Analyst",
+        "Data Analyst",
+        "Data Analyst",
+        "Data Analyst"
+      ]
+    },
+    {
+      "scenario": "Junior web developer",
+      "precision@10": 1.0,
+      "recall@10": 0.125,
+      "ndcg@10": 1.0,
+      "top_roles": [
+        "Web Developer",
+        "Web Developer",
+        "Web Developer",
+        "Web Developer",
+        "Web Developer"
+      ]
+    },
+    {
+      "scenario": "Experienced support candidate",
+      "precision@10": 1.0,
+      "recall@10": 0.125,
+      "ndcg@10": 0.9217,
+      "top_roles": [
+        "Customer Support Executive",
+        "Customer Support Executive",
+        "Customer Support Executive",
+        "Customer Support Executive",
+        "Customer Support Executive"
+      ]
+    },
+    {
+      "scenario": "Cloud operations candidate",
+      "precision@10": 1.0,
+      "recall@10": 0.1266,
+      "ndcg@10": 1.0,
+      "top_roles": [
+        "Cloud Engineer",
+        "Cloud Engineer",
+        "Cloud Engineer",
+        "Cloud Engineer",
+        "Cloud Engineer"
+      ]
+    }
+  ],
+  "macro_average": {
+    "precision@10": 1.0,
+    "recall@10": 0.1175,
+    "ndcg@10": 0.9804
+  }
+}

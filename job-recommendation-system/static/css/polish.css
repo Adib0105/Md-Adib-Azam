@@ -1,0 +1,128 @@
+/* Offline typography and a quiet layer of depth over the core layout. */
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/Fraunces-Italic-Variable.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+}
+:root {
+  --font-ui: "Manrope", "Segoe UI", Arial, sans-serif;
+  --font-editorial: "Fraunces", Georgia, serif;
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+}
+body { font-family: var(--font-ui); }
+.hero-copy h1 em, .dashboard-banner em, .auth-story h1 em, .simulator-hero h2 em {
+  font-family: var(--font-editorial);
+  font-optical-sizing: auto;
+  font-variation-settings: "SOFT" 30, "WONK" 1;
+  letter-spacing: -.045em;
+}
+.hero-copy h1 { font-weight: 600; }
+.hero-copy h1 em { position: relative; display: inline-block; }
+.hero-copy h1 em::after {
+  content: "";
+  position: absolute;
+  left: 1%; right: -2%; bottom: -.07em;
+  height: .085em;
+  background: #abc99d;
+  border-radius: 50%;
+  transform: rotate(-2deg);
+  opacity: .65;
+}
+.hero-visual {
+  background: radial-gradient(ellipse at 18% 0%, #f4f7ed, transparent 55%),
+    radial-gradient(ellipse at 94% 100%, #cbdcbc, transparent 65%), #e7eedf;
+  box-shadow: inset 0 0 0 1px #c2d3b533, 0 24px 60px -42px #385a34;
+}
+.hero-visual::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: radial-gradient(#78966435 .8px, transparent .8px);
+  background-size: 19px 19px;
+  mask-image: linear-gradient(135deg, #000, transparent 70%);
+  pointer-events: none;
+}
+.illustration-card { box-shadow: 0 28px 48px -18px #45624045; }
+.floating-note { backdrop-filter: blur(10px); }
+.landing-stats {
+  background: linear-gradient(90deg, transparent, #edf2e54d, transparent);
+}
+.landing-stats strong, .stat-card strong, .score-ring strong, .before-after strong {
+  font-variant-numeric: tabular-nums;
+}
+.feature-card, .job-card, .path-card, .category-grid a, a.stat-card {
+  transition: transform 260ms var(--ease-out), border-color 260ms,
+    box-shadow 260ms, background-color 260ms;
+}
+.feature-icon { transition: transform 300ms var(--ease-out), background-color 300ms; }
+.button {
+  transition: transform 220ms var(--ease-out), background-color 220ms, box-shadow 220ms;
+}
+.button.primary { box-shadow: 0 5px 13px -8px #0c4b3e66; }
+.button > span[aria-hidden] { display: inline-block; transition: transform 220ms var(--ease-out); }
+.nav-item { transition: background-color 180ms, color 180ms; }
+.brand-mark { box-shadow: inset 0 1px 0 #ffffff30, 0 5px 12px -7px #116f5d80; }
+.dashboard-banner {
+  background: radial-gradient(ellipse at 95% 10%, #f4f7e7, transparent 50%), #e4eee0;
+}
+.landing-cta {
+  position: relative; overflow: hidden;
+  background: radial-gradient(ellipse at 95% 10%, #3f765e, transparent 55%), #204f3d;
+  box-shadow: 0 16px 35px -24px #113e2c88;
+}
+.landing-cta > * { position: relative; z-index: 1; }
+.landing-cta::after {
+  content: ""; position: absolute; width: 330px; height: 330px;
+  right: -80px; top: -165px; border: 1px solid #ffffff16;
+  border-radius: 50%; box-shadow: 0 0 0 38px #ffffff04, 0 0 0 76px #ffffff03;
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .feature-card:hover, .job-card:hover, .path-card:hover, .category-grid a:hover, a.stat-card:hover {
+    transform: translateY(-4px);
+    border-color: #acc7af;
+    box-shadow: 0 18px 28px -20px #41674d66;
+  }
+  .feature-card:hover .feature-icon { transform: rotate(-6deg); background: #e1eddb; }
+  .button.primary:hover { box-shadow: 0 10px 20px -12px #0c4b3e99; }
+  .button:hover > span[aria-hidden] { transform: translate(2px, -2px); }
+}
+/* CSS-only accents end within five seconds; scrolling reveals are run once in JS. */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  .illustration-card { animation: card-arrive 1000ms var(--ease-out) both; }
+  .note-top { animation: note-top-arrive 1100ms 140ms var(--ease-out) both; }
+  .note-bottom { animation: note-bottom-arrive 1100ms 260ms var(--ease-out) both; }
+  .illustration-bars i { animation: bar-arrive 850ms 400ms var(--ease-out) both; transform-origin: left; }
+  .illustration-bars i:nth-child(2n) { animation-delay: 500ms; }
+  .art-circle { animation: arrow-arrive 850ms 100ms var(--ease-out) both; }
+  .art-star { animation: star-settle 2200ms var(--ease-out) both; }
+}
+@keyframes card-arrive {
+  from { opacity: 0; transform: translateY(22px) rotate(-9deg); }
+  to { opacity: 1; transform: translateY(0) rotate(-5deg); }
+}
+@keyframes note-top-arrive {
+  from { opacity: 0; transform: translate(14px, 12px) rotate(0); }
+  to { opacity: 1; transform: translate(0, 0) rotate(4deg); }
+}
+@keyframes note-bottom-arrive {
+  from { opacity: 0; transform: translate(-14px, 12px) rotate(0); }
+  to { opacity: 1; transform: translate(0, 0) rotate(3deg); }
+}
+@keyframes bar-arrive { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes arrow-arrive {
+  from { opacity: 0; transform: translate(-10px, 10px) scale(.85); }
+  to { opacity: 1; transform: translate(0, 0) scale(1); }
+}
+@keyframes star-settle { from { transform: rotate(-70deg) scale(.6); } to { transform: rotate(0) scale(1); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

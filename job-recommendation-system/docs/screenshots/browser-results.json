@@ -1,0 +1,102 @@
+{
+  "status": "passed",
+  "browser": "134.0.6998.35",
+  "viewportChecks": [
+    {
+      "page": "landing-1024",
+      "viewport": 1024,
+      "width": 1024
+    },
+    {
+      "page": "landing-768",
+      "viewport": 768,
+      "width": 768
+    },
+    {
+      "page": "landing-390",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "page": "dashboard-1366",
+      "viewport": 1366,
+      "width": 1366
+    },
+    {
+      "page": "dashboard-1024",
+      "viewport": 1024,
+      "width": 1024
+    },
+    {
+      "page": "dashboard-768",
+      "viewport": 768,
+      "width": 768
+    },
+    {
+      "page": "dashboard-390",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "page": "/jobs-390",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "page": "/profile-390",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "page": "/skills-390",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "page": "/simulator-390",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "page": "/insights-390",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "page": "/applications-390",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "page": "/history-390",
+      "viewport": 390,
+      "width": 390
+    }
+  ],
+  "jsErrors": [],
+  "externalRequests": [],
+  "failedResources": [],
+  "workflow": [
+    "landing",
+    "offline fonts",
+    "normal motion",
+    "live reduced-motion cancellation",
+    "JavaScript-disabled landing",
+    "demo dashboard",
+    "job explanation",
+    "8 charts",
+    "responsive layouts",
+    "registration",
+    "profile save",
+    "resume review",
+    "recommendations",
+    "save",
+    "apply locally",
+    "Interview status",
+    "what-if simulation",
+    "history",
+    "logout",
+    "admin login",
+    "admin create/edit/delete"
+  ]
+}

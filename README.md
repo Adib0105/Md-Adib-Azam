@@ -45,6 +45,16 @@ Turn an iPhone into a secure, low-latency wireless microphone for Windows 11 ove
 > [!NOTE]
 > **Current milestone:** the encrypted iPhone-to-PC audio pipeline, pairing, reconnect, diagnostics and polished apps are implemented in source. The Microsoft-signed Windows virtual-audio driver remains the production release gate.
 
+## Featured Project — JobMatch
+
+[![JobMatch — an explainable career workspace](job-recommendation-system/docs/jobmatch-banner.gif)](job-recommendation-system/)
+
+**[Open the Job Recommendation System →](job-recommendation-system/)**
+
+A complete local Flask app with resume review, explainable job matches, skill-gap analysis and a career simulator. Includes a responsive interface, bundled Manrope + Fraunces fonts, smooth animations and 60 automated tests. The 640 job listings are fictional demo data.
+
+[Setup guide](job-recommendation-system/START_HERE_HINGLISH.md) · [Screenshots & documentation](job-recommendation-system/README.md) · [Source code](job-recommendation-system/app.py)
+
 ## Hello, I am Md Adib Azam 👋
 
 I am a Computer Science & Technology diploma student from Durgapur. I build practical tools across programming, data analytics, web development, databases, automation and digital operations.
@@ -158,3 +168,4 @@ The collection contains **25 organized items in each of 16 skill tracks**:
 [GitHub](https://github.com/Adib0105) · [LinkedIn](https://linkedin.com/in/mdadibazam)
 
 </div>
+
