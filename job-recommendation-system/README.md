@@ -22,19 +22,22 @@ Developed by **Md Adib Azam**, **Computer Science and Technology**, **Bengal Col
 
 ## Run locally
 
-Install 64-bit **Python 3.11 or 3.12**, clone/download [the repository](https://github.com/Adib0105/Md-Adib-Azam), and open **`job-recommendation-system/`** in VS Code. Other projects in the repository have independent setup instructions.
+Install 64-bit **Python 3.11 or 3.12** (enable **Add python.exe to PATH**). Extract the standalone JobMatch ZIP with **Extract All**: `app.py`, `requirements.txt` and `start_windows.cmd` are directly inside its extracted folder. If you clone/download [the full repository](https://github.com/Adib0105/Md-Adib-Azam), open **`job-recommendation-system/`** instead. Other projects in the repository have independent setup instructions.
 
-Windows PowerShell, from this folder:
+On Windows, **double-click `start_windows.cmd`**. It switches to its own app folder, selects supported Python, creates/reuses a local venv, installs required packages, seeds demo jobs and starts the server. First setup requires internet. Later runs reuse installed packages and preserve existing accounts/jobs. If any setup step fails, the launcher stops and leaves the error visible. Use `setup_windows.cmd` for setup without starting the server.
+
+Manual Windows PowerShell setup, from the folder containing `app.py` and `requirements.txt`:
 
 ```powershell
 python -m venv venv
 .\venv\Scripts\python.exe -m pip install -r requirements.txt
 .\venv\Scripts\python.exe scripts\seed_database.py
-.\venv\Scripts\python.exe scripts\create_admin.py
 .\venv\Scripts\python.exe app.py
 ```
 
-Open **http://127.0.0.1:5000** in Chrome. Leave the terminal running; Ctrl+C stops the server. This is your computer's local address, not a published website. Later, run `venv\Scripts\python.exe app.py` or use `start_windows.cmd`. If needed, create the venv with `py -3.12 -m venv venv`. Activation is optional; these commands avoid PowerShell execution-policy problems.
+Open **http://127.0.0.1:5000** in Chrome after the terminal prints **JobMatch is running**. Leave the terminal running; Ctrl+C stops the server. This is your computer's local address, not a published website. Activation is optional; these commands avoid PowerShell execution-policy problems. To test admin screens, open another terminal in the app folder and run `.\venv\Scripts\python.exe scripts\create_admin.py`.
+
+If `requirements.txt`, `app.py` or `scripts\seed_database.py` is reported missing, your terminal is in the wrong folder. From the outer folder of the older ZIP or full GitHub checkout, run `cd .\job-recommendation-system` first. The new standalone ZIP places the app files directly at the extraction root, and its launcher resolves paths independently of the terminal's folder. See [the download guide](DOWNLOAD_RUN_GUIDE.txt). If an existing venv uses an unsupported Python, close the app, rename `venv` to `venv_old`, and rerun the launcher.
 
 Linux/macOS:
 
@@ -48,6 +51,8 @@ python app.py
 ```
 
 Register a candidate at `/register`. Optionally run `python scripts/seed_database.py --demo` to create a local candidate at `demo@jobmatch.com`; a **random password is displayed once in your private terminal**. There is no fixed demo administrator. Re-running the seed preserves existing accounts/jobs. Demo account creation is refused in production. Dependencies need installation access; demo search and bundled frontend assets work offline afterward.
+
+To produce a standalone download from a Git checkout, run `python scripts/package_download.py --output ../JobMatch-AI-ML-Fixed.zip`. It exports the committed app tree at the ZIP root, with a source-commit note. Local venvs, instance data and other untracked files are excluded. Commit changes before packaging; use `--ref <commit>` to export a specific revision.
 
 ## AI/ML features and evaluation
 

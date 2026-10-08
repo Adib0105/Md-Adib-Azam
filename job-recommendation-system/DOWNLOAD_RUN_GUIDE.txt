@@ -1,0 +1,38 @@
+JobMatch - download karke Windows par kaise chalayein
+===================================================
+
+1. ZIP par right-click -> Extract All. ZIP ke andar se app mat chalao.
+2. Extracted folder kholo. app.py, requirements.txt aur start_windows.cmd
+   ek hi folder mein hone chahiye. Is standalone ZIP mein app files seedhe
+   extracted folder mein hain; extra job-recommendation-system folder nahi hai.
+3. 64-bit Python 3.11 ya 3.12 installed hona chahiye. Installation mein
+   Add python.exe to PATH select karo.
+4. start_windows.cmd par double-click karo. Yeh apne folder mein venv banata
+   hai, packages install karta hai, 640 demo jobs taiyar karta hai, phir app
+   chalata hai. First setup ke liye internet chahiye; thoda wait karo.
+5. Terminal mein JobMatch is running aane par browser mein kholo:
+   http://127.0.0.1:5000
+6. Create account se apna candidate account banao. Terminal khula rakho.
+   Band karne ke liye Ctrl+C. Agli baar bhi start_windows.cmd chalao.
+
+Admin test karna ho to isi app folder mein PowerShell kholo aur chalao:
+  .\venv\Scripts\python.exe scripts\create_admin.py
+Apna email aur private password do; login /admin/login par hai.
+
+Requirements.txt / app.py / seed_database.py not found?
+---------------------------------------------------
+Purane ZIP mein app files job-recommendation-system subfolder mein thi.
+Agar us ZIP ya full GitHub repository ka use kar rahe ho, pehle us subfolder
+mein jao. Naye standalone ZIP mein app.py seedhe extracted folder mein hai.
+Manual commands usi folder se chalao jisme app.py aur requirements.txt hain.
+start_windows.cmd kisi bhi terminal folder se launch kar sakte ho; yeh
+automatically apne app folder mein switch karta hai.
+
+Setup fail ho to terminal ki pehli error dekho. Python version galat ho to
+64-bit Python 3.11/3.12 install karo. Agar purana venv wrong Python se bana
+hai, app band karke venv ko venv_old rename karo aur launcher dobara chalao.
+Packages install na hon to internet check karo aur launcher dobara chalao.
+Launcher failed step ke baad app start nahi karta.
+
+Demo jobs fictional hain. API keys ke bina local demo aur recommendations
+chalenge. Full instructions: START_HERE_HINGLISH.md aur README.md.
