@@ -1,0 +1,32 @@
+<aside class="project-chat" id="project-chat" aria-label="JobMatch project help">
+  <button class="project-chat-launcher" id="project-chat-launcher" type="button" aria-haspopup="dialog" aria-controls="project-chat-panel" aria-expanded="false" hidden>
+    <i class="fa-solid fa-comments" aria-hidden="true"></i><span>Ask JobMatch</span>
+  </button>
+  <section class="project-chat-panel" id="project-chat-panel" role="dialog" aria-modal="false" aria-labelledby="project-chat-title" aria-describedby="project-chat-description" hidden inert>
+    <header class="project-chat-header">
+      <div><h2 id="project-chat-title">JobMatch guide</h2><p id="project-chat-description">Local project FAQs · No external AI</p></div>
+      <div class="project-chat-actions">
+        <button type="button" id="project-chat-clear" aria-label="Clear chat" title="Clear chat"><i class="fa-solid fa-trash-can" aria-hidden="true"></i></button>
+        <button type="button" id="project-chat-minimize" aria-label="Minimize project chat" title="Minimize"><span aria-hidden="true">−</span></button>
+        <button type="button" id="project-chat-close" aria-label="Close project chat" title="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </header>
+    <div class="project-chat-messages" id="project-chat-messages" role="log" aria-label="Chat messages" aria-live="polite" aria-relevant="additions"></div>
+    <div class="project-chat-typing" id="project-chat-typing" role="status" hidden>
+      <span class="project-chat-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Finding a FAQ answer…</span>
+    </div>
+    <div class="project-chat-suggestions" aria-label="Suggested questions">
+      <button type="button" data-project-question="How do I upload my resume?">Upload resume</button>
+      <button type="button" data-project-question="How does the matching score work?">Match score</button>
+      <button type="button" data-project-question="Who are the project team members?">Project team</button>
+    </div>
+    <form class="project-chat-form" id="project-chat-form">
+      <label class="project-chat-sr-only" for="project-chat-question">Your JobMatch question</label>
+      <input id="project-chat-question" type="text" maxlength="300" autocomplete="off" placeholder="Ask about JobMatch…" required>
+      <button id="project-chat-send" type="submit" aria-label="Send question"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+    </form>
+    <p class="project-chat-privacy">Project help only. Chat stays in this page and clears on reload.</p>
+    <span class="project-chat-sr-only" id="project-chat-status" role="status"></span>
+  </section>
+</aside>
+<script type="application/json" id="project-chat-faqs">{{ project_faqs|tojson }}</script>

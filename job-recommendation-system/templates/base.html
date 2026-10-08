@@ -13,10 +13,12 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/polish.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/discovery.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/ml.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/project-help.css') }}">
   <script defer src="{{ url_for('static', filename='js/discovery.js') }}"></script>
   <script defer src="{{ url_for('static', filename='vendor/chart.umd.js') }}"></script>
   <script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
   <script defer src="{{ url_for('static', filename='js/motion.js') }}"></script>
+  <script defer src="{{ url_for('static', filename='js/project-help.js') }}"></script>
 </head>
 <body class="{% if current_user and not public_layout %}workspace{% else %}public-page{% endif %}">
 <a href="#main" class="skip-link">Skip to content</a>
@@ -46,4 +48,5 @@
 </main>
 <footer class="page-footer"><span>{{ site_content.footer_text }}</span><span><a href="{{ url_for('public.about') }}">About</a> · <a href="{{ url_for('public.info',page='privacy') }}">Privacy</a> · <a href="{{ url_for('public.info',page='terms') }}">Terms</a> · <a href="{{ url_for('public.info',page='faq') }}">FAQ</a> · <a href="{{ url_for('public.info',page='contact_details') }}">Contact</a></span></footer>
 {% if current_user and not public_layout %}</div>{% endif %}
+{% include 'components/project_chat.html' %}
 </body></html>

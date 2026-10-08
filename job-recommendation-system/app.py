@@ -163,11 +163,13 @@ def create_app(test_config=None):
         from services.recommendation_service import profile_completion
         from services.settings_service import content
         from services.job_catalog import google_jobs_url
+        from services.project_faq import project_faqs
 
         return {
             "current_user": g.get("user"),
             "site_content": content(),
             "google_jobs_url": google_jobs_url,
+            "project_faqs": project_faqs(),
             "notification_count": (
                 db.session.scalar(
                     db.select(db.func.count(Notification.id)).where(
