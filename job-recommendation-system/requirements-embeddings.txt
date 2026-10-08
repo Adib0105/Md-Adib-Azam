@@ -1,0 +1,3 @@
+# Optional CPU semantic extension. Keep it outside the default lightweight install.
+# Install the CPU torch wheel first; see docs/DEPLOYMENT.md.
+sentence-transformers==5.1.2

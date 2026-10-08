@@ -8,7 +8,7 @@ from sqlalchemy.schema import CreateColumn
 from flask import current_app
 from models.database import db, utcnow
 
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 3
 
 
 def sqlite_backup(label="backup"):
@@ -58,7 +58,7 @@ def upgrade_schema():
         and db.engine.dialect.name == "sqlite"
         and db.engine.url.database not in {None, "", ":memory:"}
     ):
-        sqlite_backup("upgrade-v2")
+        sqlite_backup(f"upgrade-v{SCHEMA_VERSION}")
     with db.engine.begin() as connection:
         quote = db.engine.dialect.identifier_preparer.quote
         for table, column in missing:

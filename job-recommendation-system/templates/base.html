@@ -12,10 +12,13 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/polish.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/discovery.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ml.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/project-help.css') }}">
   <script defer src="{{ url_for('static', filename='js/discovery.js') }}"></script>
   <script defer src="{{ url_for('static', filename='vendor/chart.umd.js') }}"></script>
   <script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
   <script defer src="{{ url_for('static', filename='js/motion.js') }}"></script>
+  <script defer src="{{ url_for('static', filename='js/project-help.js') }}"></script>
 </head>
 <body class="{% if current_user and not public_layout %}workspace{% else %}public-page{% endif %}">
 <a href="#main" class="skip-link">Skip to content</a>
@@ -25,9 +28,9 @@
   <div class="workspace-name"><span class="status-dot"></span> YOUR CAREER WORKSPACE</div>
   <nav>
   {% if current_user.is_admin %}
-    {% set nav = [('admin.dashboard','chart-pie','Overview'),('admin.listing','briefcase','Manage jobs'),('admin.users','users','Candidates'),('control.providers','globe','Providers'),('control.applications','layer-group','Applications'),('control.analytics','chart-simple','Analytics'),('control.cms','pen','Public content'),('control.settings','sliders','System settings'),('control.health','heart','Health & email'),('control.security','shield','Security & audit'),('control.backups','database','Backups'),('auth.account','user','My account')] %}
+    {% set nav = [('admin.dashboard','chart-pie','Overview'),('admin.listing','briefcase','Manage jobs'),('ml_pages.ml_lab','flask','ML Lab'),('admin.users','users','Candidates'),('control.providers','globe','Providers'),('control.applications','layer-group','Applications'),('control.analytics','chart-simple','Analytics'),('control.cms','pen','Public content'),('control.settings','sliders','System settings'),('control.health','heart','Health & email'),('control.security','shield','Security & audit'),('control.backups','database','Backups'),('auth.account','user','My account')] %}
   {% else %}
-    {% set nav = [('candidate.dashboard','grip','Overview'),('recs.listing','wand-magic-sparkles','My recommendations'),('jobs.real_jobs','globe','Real jobs'),('jobs.listing','magnifying-glass','Explore jobs'),('jobs.saved','bookmark','Saved jobs'),('candidate.applications','layer-group','Applications'),('recs.insights','chart-simple','Career insights'),('recs.skills','shapes','Skill analysis'),('recs.simulator','flask','Career simulator'),('recs.history','clock-rotate-left','Match history'),('candidate.profile','user','My profile'),('workspace.alerts','bell','Job alerts'),('workspace.notifications','inbox','Notifications'),('auth.account','shield','Account settings')] %}
+    {% set nav = [('candidate.dashboard','grip','Overview'),('recs.listing','wand-magic-sparkles','My recommendations'),('jobs.real_jobs','globe','Real jobs'),('jobs.listing','magnifying-glass','Explore jobs'),('jobs.saved','bookmark','Saved jobs'),('candidate.applications','layer-group','Applications'),('recs.insights','chart-simple','Career insights'),('recs.skills','shapes','Skill analysis'),('recs.simulator','flask','Career simulator'),('ml_pages.career','route','Career Path'),('ml_pages.resume_intelligence','file-lines','Resume Intelligence'),('recs.history','clock-rotate-left','Match history'),('candidate.profile','user','My profile'),('workspace.alerts','bell','Job alerts'),('workspace.notifications','inbox','Notifications'),('auth.account','shield','Account settings')] %}
   {% endif %}
   {% for endpoint, icon, label in nav %}<a href="{{ url_for(endpoint) }}" class="nav-item {% if request.endpoint == endpoint %}active{% endif %}" {% if request.endpoint == endpoint %}aria-current="page"{% endif %}><i class="fa-solid fa-{{ icon }}" aria-hidden="true"></i>{{ label }}{% if endpoint == 'recs.simulator' %}<span class="new-label">TRY</span>{% endif %}</a>{% endfor %}
   </nav>
@@ -45,4 +48,5 @@
 </main>
 <footer class="page-footer"><span>{{ site_content.footer_text }}</span><span><a href="{{ url_for('public.about') }}">About</a> · <a href="{{ url_for('public.info',page='privacy') }}">Privacy</a> · <a href="{{ url_for('public.info',page='terms') }}">Terms</a> · <a href="{{ url_for('public.info',page='faq') }}">FAQ</a> · <a href="{{ url_for('public.info',page='contact_details') }}">Contact</a></span></footer>
 {% if current_user and not public_layout %}</div>{% endif %}
+{% include 'components/project_chat.html' %}
 </body></html>

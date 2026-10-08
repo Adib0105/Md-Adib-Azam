@@ -25,6 +25,9 @@ recs = Blueprint("recs", __name__)
 def listing():
     all_rows = recommendations(g.user)
     rows, pager = pagination(all_rows)
+    from ml.experiments.assignment import record_exposure
+
+    record_exposure(g.user, rows)
     return render_template(
         "jobs.html",
         rows=rows,
@@ -94,13 +97,16 @@ def simulator():
         except ValidationError as exc:
             flash(str(exc), "error")
             status = 400
-    return render_template(
-        "career_simulator.html",
-        simulations=simulations,
-        selected=selected,
-        gaps=analytics["gaps"],
-        skill_dictionary=SKILLS,
-    ), status
+    return (
+        render_template(
+            "career_simulator.html",
+            simulations=simulations,
+            selected=selected,
+            gaps=analytics["gaps"],
+            skill_dictionary=SKILLS,
+        ),
+        status,
+    )
 
 
 @recs.get("/history")
@@ -172,6 +178,10 @@ def serialized_recommendations(rows):
             "missing_skills": r["missing"],
             "reasons": r["reasons"],
             "confidence": r["confidence"],
+            "model": r.get("model", {}),
+            "personalization": r.get("personalization", {}),
+            "strongest_factors": r.get("strongest", []),
+            "weakest_factors": r.get("weakest", []),
         }
         for r in rows
     ]
@@ -181,6 +191,9 @@ def serialized_recommendations(rows):
 @login_required
 def api_recommendations():
     rows, pager = pagination(recommendations(g.user), per_page=20)
+    from ml.experiments.assignment import record_exposure
+
+    record_exposure(g.user, rows)
     return jsonify(
         items=serialized_recommendations(rows),
         total=pager["total"],
@@ -193,6 +206,8 @@ def api_recommendations():
 @login_required
 def api_recommend():
     run = snapshot(g.user, "API refresh")
-    return jsonify(
-        run_id=run.id, items=serialized_recommendations(recommendations(g.user)[:20])
-    )
+    from ml.experiments.assignment import record_exposure
+
+    rows = recommendations(g.user)[:20]
+    record_exposure(g.user, rows)
+    return jsonify(run_id=run.id, items=serialized_recommendations(rows))

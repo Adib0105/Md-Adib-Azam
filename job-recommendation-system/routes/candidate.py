@@ -22,7 +22,9 @@ from models.database import (
     JobView,
     SearchEvent,
 )
-from models.resume_parser import parse_resume, ResumeError
+from models.resume_parser import ResumeError
+from services.resume_service import parse_resume_isolated
+from services.interaction_service import record_application_status
 from models.skill_extractor import SKILLS
 from routes.auth import login_required
 from services.recommendation_service import recommendations, snapshot, active_jobs
@@ -148,12 +150,15 @@ def profile():
             fields, skills = validate_profile(request.form)
         except ValidationError as exc:
             flash(str(exc), "error")
-            return render_template(
-                "profile.html",
-                skill_dictionary=SKILLS,
-                employment_types=EMPLOYMENT_TYPES,
-                levels=PROFICIENCIES,
-            ), 400
+            return (
+                render_template(
+                    "profile.html",
+                    skill_dictionary=SKILLS,
+                    employment_types=EMPLOYMENT_TYPES,
+                    levels=PROFICIENCIES,
+                ),
+                400,
+            )
         for field, value in fields.items():
             setattr(g.user, field, value)
         replace_skills(g.user, skills, request.form)
@@ -176,7 +181,9 @@ def upload_resume():
     try:
         if not upload:
             raise ResumeError("Choose a PDF or DOCX file first.")
-        extracted = parse_resume(upload.filename, upload.read(5 * 1024 * 1024 + 1))
+        extracted = parse_resume_isolated(
+            upload.filename, upload.read(5 * 1024 * 1024 + 1)
+        )
     except ResumeError as exc:
         flash(str(exc), "error")
         return redirect(url_for("candidate.profile"))
@@ -296,6 +303,7 @@ def update_status(application_id):
     if status not in APPLICATION_STATUSES:
         abort(400, description="Choose a valid application status.")
     record.status = status
+    record_application_status(g.user, record)
     db.session.commit()
     flash("Application status updated.", "success")
     return redirect(url_for("candidate.applications"))

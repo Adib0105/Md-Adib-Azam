@@ -1,0 +1,21 @@
+<section class="panel college-project" id="college-project" aria-labelledby="college-project-title">
+  <p class="eyebrow">COLLEGE PROJECT</p>
+  <h2 id="college-project-title">{{ college_project.name }}</h2>
+  <p class="college-project-description">{{ college_project.description }}</p>
+  <dl class="college-project-details">
+    <div class="college-project-wide"><dt>College</dt><dd>{{ college_project.college }}</dd></div>
+    <div><dt>Location</dt><dd>{{ college_project.location }}</dd></div>
+    <div class="college-project-full"><dt>Department / Branch</dt><dd>{{ college_project.department }}</dd></div>
+    <div><dt>Year</dt><dd>{{ college_project.year }}</dd></div>
+    <div><dt>Semester</dt><dd>{{ college_project.semester }}</dd></div>
+    <div><dt>Session</dt><dd>{{ college_project.session }}</dd></div>
+    <div class="college-project-full"><dt>Submitted To</dt><dd>{{ college_project.submitted_to }}</dd></div>
+  </dl>
+  <div class="college-project-team" id="project-team">
+    <article class="college-project-lead" aria-labelledby="project-lead-name">
+      <span class="college-project-monogram" aria-hidden="true">AA</span>
+      <div><p class="eyebrow">HEAD OF GROUP / PROJECT LEAD</p><h3 id="project-lead-name">{{ college_project.lead }}</h3><div class="college-project-roles"><span>Head of Group</span><span>Project Lead</span></div></div>
+    </article>
+    <div class="college-project-members"><h3>Project team members</h3><ul>{% for member in college_project.members %}<li>{{ member }}</li>{% endfor %}</ul></div>
+  </div>
+</section>

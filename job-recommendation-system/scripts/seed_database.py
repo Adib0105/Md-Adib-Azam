@@ -61,9 +61,9 @@ def main():
                 user.skills.append(
                     CandidateSkill(
                         skill_name=name,
-                        proficiency_level="Advanced"
-                        if name in {"SQL", "Excel"}
-                        else "Intermediate",
+                        proficiency_level=(
+                            "Advanced" if name in {"SQL", "Excel"} else "Intermediate"
+                        ),
                     )
                 )
             db.session.add(user)

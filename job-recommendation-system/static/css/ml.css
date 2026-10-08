@@ -1,0 +1,7 @@
+.ml-path-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.ml-stats{display:flex;flex-wrap:wrap;gap:24px;margin:20px 0}
+.ml-stats>div{display:flex;flex-direction:column;min-width:110px}
+.ml-stats strong{font-size:1.65rem}.ml-stats span{font-size:.8rem;color:var(--muted)}
+.ml-hash{overflow-wrap:anywhere}.ml-learning-list{padding-left:24px}.ml-learning-list li{padding:8px 0}
+.ml-feedback{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+@media(max-width:900px){.ml-path-grid{grid-template-columns:1fr}}

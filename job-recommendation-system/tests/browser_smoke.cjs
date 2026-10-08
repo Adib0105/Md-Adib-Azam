@@ -80,7 +80,7 @@ const path = require('node:path');
     await checkWidth(`dashboard-${width}`);
     if (width === 390) await screenshot('dashboard-mobile.png');
   }
-  for (const url of ['/jobs','/real-jobs','/about','/profile','/skills','/simulator','/insights','/applications','/history','/account','/alerts','/notifications']) {
+  for (const url of ['/jobs','/real-jobs','/about','/profile','/skills','/simulator','/insights','/applications','/history','/account','/alerts','/notifications','/resume/intelligence','/career/path']) {
     await go(url); await checkWidth(`${url}-390`);
   }
   await page.setViewportSize({width:1440,height:1050});
@@ -114,6 +114,12 @@ const path = require('node:path');
     await page.waitForURL('**/profile');
     assert.ok(await page.getByText('Reviewed resume details saved.',{exact:false}).isVisible());
   }
+  await go('/resume/intelligence');
+  assert.ok(await page.getByRole('heading',{name:'Skill Inventory',exact:true}).isVisible());
+  await screenshot('resume-intelligence-desktop.png');
+  await go('/career/path');
+  assert.equal(await page.locator('.ml-path-grid > section').count(),6);
+  await screenshot('career-path-desktop.png');
   await go('/account');
   assert.ok(await page.getByRole('heading',{name:'Active sessions'}).isVisible());
   await go('/alerts');
@@ -181,8 +187,14 @@ const path = require('node:path');
   await row.getByRole('button',{name:'Update',exact:true}).click();
   await page.waitForLoadState('networkidle');
   assert.ok(await page.getByRole('row').filter({hasText:jobTitle + ' Updated'}).getByText('Deleted',{exact:true}).isVisible());
-  for (const url of ['/admin/providers','/admin/users','/admin/applications','/admin/analytics','/admin/settings','/admin/content','/admin/security','/admin/health','/admin/backups']) {
+  for (const url of ['/admin/providers','/admin/users','/admin/applications','/admin/analytics','/admin/settings','/admin/content','/admin/security','/admin/health','/admin/backups','/admin/ml-lab']) {
     await go(url);
+    if (url === '/admin/ml-lab') {
+      assert.equal(await page.locator('canvas[data-chart]').count(),6);
+      assert.equal(await page.evaluate(() => Object.keys(Chart.instances).length),6, 'ML Lab constructs all six charts');
+      assert.ok(await page.evaluate(() => Object.values(Chart.instances).every(chart => chart.width > 0 && chart.height > 0 && chart.data.datasets[0].data.length > 0)), 'ML Lab charts have dimensions and data');
+      await screenshot('ml-lab-desktop.png');
+    }
     await page.setViewportSize({width:390,height:900});
     await checkWidth(`${url}-390`);
     await page.setViewportSize({width:1440,height:1050});
@@ -198,7 +210,7 @@ const path = require('node:path');
   assert.deepEqual(external, [], 'No requests to external services');
   assert.deepEqual(failures, [], 'No failed HTTP resources');
   const report = {status:'passed',browser:await browser.version(),viewportChecks:reports,jsErrors:errors,externalRequests:external,failedResources:failures,
-    workflow:['landing','offline fonts','normal motion','live reduced-motion cancellation','JavaScript-disabled landing','demo dashboard','job explanation','8 charts','responsive layouts','registration','profile save','resume review','recommendations','save','apply locally','Interview status','what-if simulation','history','logout','admin login','admin create/edit/delete','real discovery labeled fallback','account sessions','alert creation','resume-job comparison','application notes','About and credits','admin control pages at mobile width']};
+    workflow:['landing','offline fonts','normal motion','live reduced-motion cancellation','JavaScript-disabled landing','demo dashboard','job explanation','8 charts','responsive layouts','registration','profile save','resume review','recommendations','save','apply locally','Interview status','what-if simulation','history','logout','admin login','admin create/edit/delete','real discovery labeled fallback','account sessions','alert creation','resume-job comparison','application notes','About and credits','admin control pages at mobile width','Resume Intelligence','Career Path','ML Lab charts']};
   fs.writeFileSync(path.join(output,'browser-results.json'),JSON.stringify(report,null,2));
   console.log(JSON.stringify(report,null,2));
   await browser.close();

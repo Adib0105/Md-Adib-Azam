@@ -34,6 +34,7 @@ from utils.validators import (
     ValidationError,
 )
 from utils.constants import APPLICATION_STATUSES
+from services.interaction_service import record_application_status
 
 workspace = Blueprint("workspace", __name__)
 
@@ -132,12 +133,15 @@ def alerts():
             )
         except ValidationError as exc:
             flash(str(exc), "error")
-            return render_template(
-                "alerts.html",
-                records=db.session.scalars(
-                    db.select(JobAlert).where(JobAlert.user_id == g.user.id)
-                ).all(),
-            ), 400
+            return (
+                render_template(
+                    "alerts.html",
+                    records=db.session.scalars(
+                        db.select(JobAlert).where(JobAlert.user_id == g.user.id)
+                    ).all(),
+                ),
+                400,
+            )
         return redirect(url_for("workspace.alerts"))
     records = db.session.scalars(
         db.select(JobAlert)
@@ -186,6 +190,7 @@ def application_details(application_id):
         abort(400, description=str(exc))
     for key, value in values.items():
         setattr(record, key, value)
+    record_application_status(g.user, record)
     db.session.commit()
     flash("Application details saved.", "success")
     return redirect(url_for("candidate.applications"))

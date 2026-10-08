@@ -40,21 +40,27 @@ def market_analytics(jobs):
         locations[job.location] += 1
         industries[job.industry] += 1
         remote[
-            "Remote"
-            if job.remote_allowed or job.location.casefold() == "remote"
-            else job.remote_type.title()
+            (
+                "Remote"
+                if job.remote_allowed or job.location.casefold() == "remote"
+                else job.remote_type.title()
+            )
         ] += 1
         experience = job.experience_min
         experiences[
-            "Unknown"
-            if not job.experience_known
-            else "Fresher (0)"
-            if experience == 0
-            else "Early career (1–2)"
-            if experience <= 2
-            else "Mid career (3–5)"
-            if experience <= 5
-            else "Senior (6+)"
+            (
+                "Unknown"
+                if not job.experience_known
+                else (
+                    "Fresher (0)"
+                    if experience == 0
+                    else (
+                        "Early career (1–2)"
+                        if experience <= 2
+                        else "Mid career (3–5)" if experience <= 5 else "Senior (6+)"
+                    )
+                )
+            )
         ] += 1
         if (
             job.salary_currency == "INR"
@@ -65,15 +71,19 @@ def market_analytics(jobs):
             midpoint = (job.min_salary + job.max_salary) / 2 / 100000
             salaries_by_role[job.job_title].append(midpoint)
             salary_bands[
-                "< 3 LPA"
-                if midpoint < 3
-                else "3–6 LPA"
-                if midpoint < 6
-                else "6–10 LPA"
-                if midpoint < 10
-                else "10–15 LPA"
-                if midpoint < 15
-                else "15+ LPA"
+                (
+                    "< 3 LPA"
+                    if midpoint < 3
+                    else (
+                        "3–6 LPA"
+                        if midpoint < 6
+                        else (
+                            "6–10 LPA"
+                            if midpoint < 10
+                            else "10–15 LPA" if midpoint < 15 else "15+ LPA"
+                        )
+                    )
+                )
             ] += 1
     charts = {
         "Most demanded skills": chart("bar", skills.most_common(10)),
@@ -112,9 +122,11 @@ def skill_analytics(user, rows):
             "jobs": number,
             "percent": round(100 * number / max(len(jobs), 1), 1),
             "owned": name.casefold() in owned,
-            "level": owned[name.casefold()].proficiency_level
-            if name.casefold() in owned
-            else "Missing",
+            "level": (
+                owned[name.casefold()].proficiency_level
+                if name.casefold() in owned
+                else "Missing"
+            ),
         }
         for name, number in demand.most_common(18)
     ]

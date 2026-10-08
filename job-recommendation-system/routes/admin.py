@@ -129,12 +129,15 @@ def job_form(job=None):
 
         except (ValidationError, ValueError) as exc:
             flash(str(exc), "error")
-            return render_template(
-                "admin/job_form.html",
-                job=job,
-                types=EMPLOYMENT_TYPES,
-                today=date.today(),
-            ), 400
+            return (
+                render_template(
+                    "admin/job_form.html",
+                    job=job,
+                    types=EMPLOYMENT_TYPES,
+                    today=date.today(),
+                ),
+                400,
+            )
         if job is None:
             job = Job(source_id="ADMIN-" + str(uuid4()))
             db.session.add(job)

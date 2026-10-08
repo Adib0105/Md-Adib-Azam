@@ -98,10 +98,27 @@ def section_lines(text, headings):
         "contact",
         "interests",
     }
+    aliases = {
+        "technical skills": "skills",
+        "soft skills": "skills",
+        "tools": "skills",
+        "programming languages": "skills",
+        "professional experience": "experience",
+        "employment": "experience",
+        "work history": "experience",
+        "academic projects": "projects",
+        "selected projects": "projects",
+        "certifications and training": "certifications",
+        "certifications & training": "certifications",
+        "academic qualifications": "education",
+    }
     for line in lines:
-        key = line.casefold().strip(": ")
+        prefix, separator, remainder = line.partition(":")
+        key = aliases.get(prefix.casefold().strip(), prefix.casefold().strip())
         if key in all_headings:
             capturing = key in headings
+            if capturing and separator and remainder.strip():
+                result.append(remainder.strip())
         elif capturing:
             result.append(line)
     return "\n".join(result)[:5000]

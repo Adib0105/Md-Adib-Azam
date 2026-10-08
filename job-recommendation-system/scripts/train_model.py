@@ -17,7 +17,7 @@ if __name__ == "__main__":
                 f"Indexed {len(jobs)} active jobs, {features[1].shape[1]} TF-IDF features."
             )
             print(
-                f"Local artifact: {Path(app.instance_path) / 'model.joblib'} (private; never load untrusted model files)."
+                f"Local artifact: {Path(app.instance_path) / 'tfidf-cache.npz'} (non-executable; no pickle loading)."
             )
         else:
             print("No active jobs to index.")
