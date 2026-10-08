@@ -143,11 +143,14 @@ def test_real_snapshot_preserves_unknown_and_noncomparable_fields(tmp_path):
 
 
 def test_blind_review_export_is_private_unlabeled_and_preserves_provenance(app):
+    import os
     from scripts.export_relevance_template import export_review_template
 
     path, count, kind = export_review_template(app, max_candidates=1, max_jobs=2)
     rows = [json.loads(line) for line in path.read_text().splitlines()]
-    assert count == 2 and kind == "synthetic" and path.stat().st_mode & 0o777 == 0o600
+    assert count == 2 and kind == "synthetic"
+    if os.name == "posix":
+        assert path.stat().st_mode & 0o777 == 0o600
     assert all(
         row["relevance_label"] is None and row["dataset_kind"] == kind for row in rows
     )

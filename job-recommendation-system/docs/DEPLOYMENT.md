@@ -65,6 +65,8 @@ rankers remain disabled unless an operator explicitly sets the demo flag. Exact
 feature/dependency/embedding representation checks prevent incompatible loading;
 JSON coefficients/trees are bounded and never executed as code. Changing dependency
 versions requires retraining. Keep the instance directory private and backed up.
+POSIX exports use owner-only file modes; on Windows, restrict the instance folder
+with the operator account's NTFS ACLs because `chmod` is not an ACL privacy guarantee.
 
 ## Security and production checks
 
