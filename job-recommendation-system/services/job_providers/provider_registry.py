@@ -47,18 +47,18 @@ def provider_summaries(private=False):
             "name": provider.name,
             "configured": provider.configured,
             "enabled": bool(state and state.enabled),
-            "status": state.status
-            if provider.configured and state
-            else "not_configured",
+            "status": (
+                state.status if provider.configured and state else "not_configured"
+            ),
         }
         if private and state:
             row.update(
-                last_success=state.last_success.isoformat() + "Z"
-                if state.last_success
-                else None,
-                last_attempt=state.last_attempt.isoformat() + "Z"
-                if state.last_attempt
-                else None,
+                last_success=(
+                    state.last_success.isoformat() + "Z" if state.last_success else None
+                ),
+                last_attempt=(
+                    state.last_attempt.isoformat() + "Z" if state.last_attempt else None
+                ),
                 last_error=state.last_error,
                 response_ms=state.response_ms,
                 requests=state.requests,

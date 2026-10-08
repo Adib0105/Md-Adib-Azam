@@ -77,6 +77,16 @@ def normalize_skills(values):
     return sorted(result.values(), key=str.casefold)
 
 
+def ranking_skills(values):
+    """Keep concrete tools while recognizing their broader skill family."""
+    result = set(normalize_skills(values))
+    if result & {"MySQL", "PostgreSQL", "SQL Server", "SQLite", "Advanced SQL"}:
+        result.add("SQL")
+    if result & {"Advanced Excel", "Excel VBA"}:
+        result.add("Excel")
+    return sorted(result, key=str.casefold)
+
+
 def extract_skills(text):
     text = str(text or "")
     found = {skill for pattern, skill in PATTERNS if pattern.search(text)}

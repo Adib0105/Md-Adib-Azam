@@ -85,9 +85,7 @@ class USAJobsProvider(JobProviderBase):
         remote = (
             "remote"
             if remote_value == "true" or context.get("remote_search")
-            else "onsite"
-            if remote_value == "false"
-            else "unknown"
+            else "onsite" if remote_value == "false" else "unknown"
         )
         url = (data.get("ApplyURI") or [data.get("PositionURI")])[0]
         category = (data.get("JobCategory") or [{}])[0]
@@ -122,13 +120,17 @@ class USAJobsProvider(JobProviderBase):
                 "control_number": str(raw.get("MatchedObjectId", ""))[:180],
                 "position_id": plain(data.get("PositionID"), 180),
                 "eligibility": plain(
-                    eligibility.get("Name", "")
-                    if isinstance(eligibility, dict)
-                    else eligibility,
+                    (
+                        eligibility.get("Name", "")
+                        if isinstance(eligibility, dict)
+                        else eligibility
+                    ),
                     300,
                 ),
-                "remote_basis": "provider remote flag/filter"
-                if remote != "unknown"
-                else "not supplied",
+                "remote_basis": (
+                    "provider remote flag/filter"
+                    if remote != "unknown"
+                    else "not supplied"
+                ),
             },
         )

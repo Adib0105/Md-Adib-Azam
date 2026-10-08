@@ -420,9 +420,11 @@ def clean_job_rows(rows):
             cleaned.append(
                 {
                     "source_id": clean_text(row.get("job_id"), 80) or None,
-                    "remote_type": "remote"
-                    if clean_text(row.get("location"), 100).casefold() == "remote"
-                    else "onsite",
+                    "remote_type": (
+                        "remote"
+                        if clean_text(row.get("location"), 100).casefold() == "remote"
+                        else "onsite"
+                    ),
                     "remote_allowed": clean_text(row.get("location"), 100).casefold()
                     == "remote",
                     "job_title": title,

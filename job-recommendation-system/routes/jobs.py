@@ -28,6 +28,8 @@ from services.job_providers.provider_registry import provider_summaries
 from services.security_service import rate_limit
 from utils.constants import EMPLOYMENT_TYPES
 from utils.validators import ValidationError
+from services.interaction_service import record_interaction
+from ml.experiments.assignment import record_exposure
 
 jobs = Blueprint("jobs", __name__)
 
@@ -80,7 +82,11 @@ def query_rows(filters, ids=None):
     pool = db.session.scalars(
         statement.limit(current_app.config["MAX_RANKING_JOBS"])
     ).all()
-    rows = engine().rank(profile_data(g.user) if g.user else {"skills": []}, pool)
+    rows = (
+        recommendations(g.user, jobs=pool)
+        if g.user
+        else engine().rank({"skills": []}, pool)
+    )
     if filters.get("q") and sort == "relevance":
         rows = engine().search(filters["q"], rows)
     if g.user and filters.get("min_match"):
@@ -151,6 +157,8 @@ def listing():
     all_rows = query_rows(filters)
     record_search(filters, len(all_rows))
     rows, pager = pagination(all_rows)
+    if g.user:
+        record_exposure(g.user, rows)
     return render_template(
         "jobs.html",
         rows=rows,
@@ -186,6 +194,8 @@ def live_results():
 @jobs.get("/real-jobs")
 def real_jobs():
     filters, rows, live = live_results()
+    if g.user:
+        record_exposure(g.user, rows)
     page = filters["page"]
     from math import ceil
 
@@ -220,6 +230,8 @@ def real_jobs():
 @jobs.get("/api/jobs/live")
 def api_live():
     filters, rows, live = live_results()
+    if g.user:
+        record_exposure(g.user, rows)
     return jsonify(items=[public_item(r) for r in rows], page=filters["page"], **live)
 
 
@@ -236,6 +248,7 @@ def detail(job_id):
     )
     db.session.commit()
     if g.user:
+        record_interaction(g.user, job_id, "viewed", "job_detail")
         viewed = db.session.scalar(
             db.select(JobView).where(
                 JobView.user_id == g.user.id, JobView.job_id == job_id
@@ -291,9 +304,11 @@ def save(job_id):
     )
     if record:
         db.session.delete(record)
+        record_interaction(g.user, job_id, "unsaved", "shortlist")
         message = "Job removed from saved jobs."
     else:
         db.session.add(SavedJob(user_id=g.user.id, job_id=job_id))
+        record_interaction(g.user, job_id, "saved", "shortlist")
         message = "Job saved to your shortlist."
     try:
         db.session.commit()
@@ -320,6 +335,7 @@ def apply(job_id):
         )
     )
     if not record:
+        record_interaction(g.user, job_id, "applied", "local_tracker")
         db.session.add(
             Application(
                 user_id=g.user.id,
@@ -371,6 +387,8 @@ def saved():
 def api_jobs():
     filters = request_filters()
     rows, pager = pagination(query_rows(filters))
+    if g.user:
+        record_exposure(g.user, rows)
     return jsonify(
         items=[public_item(r) for r in rows],
         page=pager["page"],

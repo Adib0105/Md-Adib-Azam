@@ -6,17 +6,17 @@
 
 **AI Job Discovery & Career Intelligence Platform**
 
-[Quick start](#run-locally) · [Hinglish guide](START_HERE_HINGLISH.md) · [Upgrade report A–P](docs/UPGRADE_REPORT.md) · [Architecture](docs/ARCHITECTURE.md) · [Validation](docs/VALIDATION.md)
+[Quick start](#run-locally) · [Hinglish guide](START_HERE_HINGLISH.md) · [AI/ML report](docs/FINAL_AI_ML_REPORT.md) · [ML architecture](docs/AI_ML_ARCHITECTURE.md) · [Evaluation](docs/MODEL_EVALUATION.md)
 
-`Flask` · `SQLite` · `Explainable TF-IDF` · `Adzuna + USAJOBS` · `640 offline demo jobs`
+`Flask` · `SQLite` · `Hybrid recommendations` · `Experimental ML ranking` · `Adzuna + USAJOBS` · `640 offline demo jobs`
 
 </div>
 
-Find the right job. Build the right skills. JobMatch combines source-labeled job discovery, reviewed resume extraction, seven-factor recommendations, skill-gap insights and application planning. It retains the original local application and adds optional official-provider integrations.
+Find the right job. Build the right skills. JobMatch combines source-labeled job discovery, reviewed resume extraction, explainable hybrid recommendations, skill-gap insights and application planning. Its modular ML pipeline retains the seven-factor baseline and existing local application, with optional official-provider integrations.
 
 Developed by **Md Adib Azam**, **Computer Science and Technology**, **Bengal College of Polytechnic, Durgapur**. This is a college/portfolio project and an early-stage application prototype.
 
-**Demo listings are fictional.** Real listings carry their provider name and original apply link. JobMatch does not submit applications. Matching scores are explainable model estimates, not hiring probabilities, ATS scores or employment guarantees. “AI-assisted” means dictionary NLP and TF-IDF cosine similarity, not a deep-learning model.
+**Demo listings are fictional.** Real listings carry their provider name and original apply link. JobMatch does not submit applications. Matching scores are ranking utilities, not hiring probabilities, ATS scores or employment guarantees. The default runtime uses dictionary NLP, TF-IDF and transparent rules. Experimental logistic/Random Forest rankers train on ordinal relevance labels. Optional pretrained Sentence Transformer inference requires separately prepared local weights; it is not fine-tuned here. The committed evaluation is synthetic, with no claim of real-world accuracy.
 
 ![Candidate dashboard](docs/screenshots/dashboard-desktop.png)
 
@@ -48,6 +48,52 @@ python app.py
 ```
 
 Register a candidate at `/register`. Optionally run `python scripts/seed_database.py --demo` to create a local candidate at `demo@jobmatch.com`; a **random password is displayed once in your private terminal**. There is no fixed demo administrator. Re-running the seed preserves existing accounts/jobs. Demo account creation is refused in production. Dependencies need installation access; demo search and bundled frontend assets work offline afterward.
+
+## AI/ML features and evaluation
+
+The default `ML_STRATEGY=hybrid` combines normalized skills, TF-IDF, role,
+experience, education, location, comparable salary, employment, remote preference
+and freshness. Semantic similarity is a separate feature and is omitted, with
+weights renormalized, when its local model is unavailable. Five distinct job
+interactions and three meaningful actions enable a decayed behavior adjustment
+of at most 10%; new users retain profile-based ranking. `ML_STRATEGY=weighted`
+keeps the original seven-factor baseline available.
+
+- **Resume Intelligence** (`/resume/intelligence`): reviewed profile, technical/soft skills, tools/languages/domains, extraction confidence and explained Resume Strength.
+- **Career Path** (`/career/path`): target role gaps, partial skills, prerequisite-ordered learning and six career stages with readiness/difficulty estimates.
+- **AI Match Breakdown**: distinct lexical/semantic factors, strongest/weakest contributions, model versions and explicit preference feedback.
+- **Admin ML Lab** (`/admin/ml-lab`): actual database counts, clearly labeled evaluation metrics, six charts, ranker feature importance and recorded A/B assignment/exposure analytics.
+
+Reproduce the held-out evaluation and train an experimental model:
+
+```bash
+python -m pip install -r requirements-dev.txt
+python -m ml.evaluation.evaluate_models --dataset data/relevance_demo.jsonl
+python scripts/train_ranker.py --dataset data/relevance_demo.jsonl --model logistic
+python scripts/train_ranker.py --dataset data/relevance_demo.jsonl --model random_forest
+python -m pytest -q
+python -m ruff check .
+python -m black --check .
+```
+
+The fixture contains 240 independently authored synthetic judgments: 12 fictional
+candidate snapshots × 20 jobs. A candidate-group split trains on 180 pairs and
+evaluates 60 pairs from three unseen candidates against the known catalog.
+Precision, Recall and NDCG at 5/10/20, MRR and MAP compare TF-IDF, the weighted
+baseline, hybrid and two rankers. Embedding metrics remain unavailable when no
+real model is loaded. Best-on-fixture results do not establish a production winner.
+
+Artifacts use private validated JSON/NPZ, not executable pickle. Synthetic rankers
+are disabled by default; an explicit local demonstration requires
+`ALLOW_SYNTHETIC_RANKER=true` and `ML_STRATEGY=ltr`. Existing-profile training data
+must be independently reviewed before use. The blind review exporter supplies
+null labels and never writes predictions as targets.
+
+See [data pipeline](docs/DATA_PIPELINE.md), [methodology](docs/RECOMMENDER_METHODOLOGY.md),
+[fairness](docs/FAIRNESS.md), [experiments](docs/EXPERIMENTS.md),
+[deployment and optional embeddings](docs/DEPLOYMENT.md), and
+[viva notes](PROJECT_DEFENSE_NOTES.md). Older [A–P upgrade](docs/UPGRADE_REPORT.md)
+and [validation](docs/VALIDATION.md) reports remain historical records.
 
 ## Create or recover the administrator
 
@@ -110,8 +156,8 @@ Account settings include current-password-checked password changes, verified ema
 
 - Profile: education, experience, skills/proficiency, projects, interests, location, annual salary currency, employment/remote/relocation preferences and completeness.
 - Resume: bounded PDF/DOCX parsing, owner-only review, explicit confirmation and removal. File bytes are discarded after extraction; confirmed text stays in the operator's database.
-- Recommendations: seven original weighted components, explained contributions, matching/missing skills, similar jobs and immutable history. Default weights: skills .35, semantic .25, experience .15, education .10, location .05, salary .05, role .05.
-- Equal-score tie-breakers use employment fit, remote preference, freshness and information availability. The displayed seven-factor score is unchanged. Unknown external experience/education and noncomparable salaries receive neutral 50s.
+- Recommendations: hybrid component contributions, matching/missing skills, similar jobs, bounded behavior and immutable history. The selectable original baseline keeps weights: skills .35, lexical similarity .25, experience .15, education .10, location .05, salary .05, role .05. Its legacy field name `semantic` means TF-IDF; hybrid exposes these separately.
+- Hybrid includes employment fit, remote preference and freshness directly. Unknown external experience/education and noncomparable salaries receive neutral 50s.
 - Resume versus job: reviewed-resume skill coverage plus text similarity, missing keywords and truthful improvement suggestions. No ATS claim.
 - Dashboard: strongest current opportunity, profile completion, gaps, saved/tracked jobs, recent searches/views and career paths.
 - Tracker: Saved, Applied, legacy Screening, Assessment, Interview, Offer, Rejected and Withdrawn; notes, dates, contact, source URL and visible follow-up reminders.
@@ -178,6 +224,6 @@ python scripts/evaluate_model.py
 
 See [validation evidence](docs/VALIDATION.md) and the [A–P upgrade report](docs/UPGRADE_REPORT.md). The real-provider adapters are fixture-tested; this delivery does not include API credentials or claim verified live provider/SMTP calls. The synthetic evaluation is a sanity check, not proof of real-world recommendation quality.
 
-Catalog ranking uses SQL filters and a bounded pool (default 2,000 recent eligible jobs). Cross-provider fingerprints can collapse similar jobs; snippets may miss requirements. SQLite, background recovery-email threads and lexical ranking suit a college prototype; they are not a claim of large-scale production capacity. Process untrusted documents in a separately limited worker/container for a hostile public deployment. No public hosting/deployment is performed by updating this repository.
+Catalog ranking uses SQL filters and a bounded pool (default 2,000 recent eligible jobs). Cross-provider fingerprints can collapse similar jobs; snippets may miss requirements. SQLite and background recovery-email threads suit a college prototype; they are not a claim of large-scale production capacity. Resume parsing now runs in a private bounded subprocess, with Linux CPU/address-space limits; a hardened container remains appropriate for a hostile public deployment. No public hosting/deployment is performed by updating this repository.
 
 For HTTPS deployment, set `APP_ENV=production`, a random `SECRET_KEY` of at least 32 characters, a trusted HTTPS `APP_BASE_URL`, production mail settings and `AUTO_UPGRADE_SCHEMA=false`. The app enforces Secure/HttpOnly/SameSite cookies, HSTS, trusted Host, CSP, CSRF and DB-backed rate limits. Keep Waitress behind your trusted HTTPS proxy; configure proxy address trust explicitly rather than trusting arbitrary forwarded headers. Rate limits use the observed remote address. Redact reset/verification query strings in any proxy access logs. Restrict instance/backups/mail permissions, define retention/privacy policy, monitor failures and remove any old demo accounts before public deployment. Review and test your own deployment; the repository is not a penetration-test certification.

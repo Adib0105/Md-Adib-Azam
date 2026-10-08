@@ -9,7 +9,7 @@ from urllib.parse import urlsplit
 from flask_wtf.csrf import CSRFProtect
 from werkzeug.exceptions import HTTPException
 from werkzeug.security import generate_password_hash
-from config import Config, ROOT, validate_weights
+from config import Config, ROOT, validate_weights, validate_ml_config
 from models.database import db, Job, Notification
 from services.recommendation_service import RecommendationEngine, active_jobs
 
@@ -76,14 +76,31 @@ def create_app(test_config=None):
                 pass
         app.config["SECRET_KEY"] = secret_path.read_text().strip()
     validate_weights(app.config["RECOMMENDATION_WEIGHTS"])
+    validate_ml_config(app.config)
+    import models.ml_data as ml_data  # noqa: F401
+    from ml.models.embeddings import EmbeddingService
+    from ml.models.rankers import RankerRegistry
+    from ml.pipelines.hybrid import HybridRecommender
+
     db.init_app(app)
     CSRFProtect(app)
     app.extensions["recommendation_engine"] = RecommendationEngine()
+    app.extensions["embedding_service"] = EmbeddingService(
+        app.config, app.instance_path
+    )
+    app.extensions["ranker_registry"] = RankerRegistry(
+        app.instance_path, app.config["ALLOW_SYNTHETIC_RANKER"]
+    )
+    app.extensions["hybrid_recommender"] = HybridRecommender(
+        app.extensions["embedding_service"], app.extensions["ranker_registry"]
+    )
     app.extensions["dummy_password_hash"] = generate_password_hash(
         secrets.token_urlsafe(32),
-        method=(app.config.get("TEST_PASSWORD_HASH_METHOD") or "scrypt")
-        if app.testing
-        else "scrypt",
+        method=(
+            (app.config.get("TEST_PASSWORD_HASH_METHOD") or "scrypt")
+            if app.testing
+            else "scrypt"
+        ),
     )
 
     from routes.auth import auth
@@ -95,6 +112,7 @@ def create_app(test_config=None):
     from routes.workspace import workspace
     from routes.control import control, admin_api
     from routes.public import public
+    from routes.ml import ml_pages
 
     for blueprint in [
         auth,
@@ -106,6 +124,7 @@ def create_app(test_config=None):
         control,
         admin_api,
         public,
+        ml_pages,
     ]:
         app.register_blueprint(blueprint)
 
@@ -149,13 +168,16 @@ def create_app(test_config=None):
             "current_user": g.get("user"),
             "site_content": content(),
             "google_jobs_url": google_jobs_url,
-            "notification_count": db.session.scalar(
-                db.select(db.func.count(Notification.id)).where(
-                    Notification.user_id == g.user.id, Notification.read_at.is_(None)
+            "notification_count": (
+                db.session.scalar(
+                    db.select(db.func.count(Notification.id)).where(
+                        Notification.user_id == g.user.id,
+                        Notification.read_at.is_(None),
+                    )
                 )
-            )
-            if g.get("user")
-            else 0,
+                if g.get("user")
+                else 0
+            ),
             "completion": profile_completion(g.user) if g.get("user") else None,
         }
 

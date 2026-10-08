@@ -3,7 +3,7 @@
 import re
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
-from models.skill_extractor import normalize_skills
+from models.skill_extractor import normalize_skills, ranking_skills
 from utils.constants import CITY_STATES
 
 
@@ -12,12 +12,12 @@ def bounded(number):
 
 
 def get_matching_skills(candidate, required):
-    names = {s.casefold() for s in normalize_skills(candidate)}
+    names = {s.casefold() for s in ranking_skills(candidate)}
     return [s for s in normalize_skills(required) if s.casefold() in names]
 
 
 def get_missing_skills(candidate, required):
-    names = {s.casefold() for s in normalize_skills(candidate)}
+    names = {s.casefold() for s in ranking_skills(candidate)}
     return [s for s in normalize_skills(required) if s.casefold() not in names]
 
 
@@ -214,11 +214,13 @@ def match_label(score):
     return (
         "Excellent match"
         if score >= 90
-        else "Strong match"
-        if score >= 80
-        else "Good match"
-        if score >= 70
-        else "Moderate match"
-        if score >= 60
-        else "Low match"
+        else (
+            "Strong match"
+            if score >= 80
+            else (
+                "Good match"
+                if score >= 70
+                else "Moderate match" if score >= 60 else "Low match"
+            )
+        )
     )

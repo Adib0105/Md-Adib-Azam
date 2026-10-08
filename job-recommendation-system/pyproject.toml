@@ -1,0 +1,12 @@
+[tool.black]
+line-length = 88
+target-version = ['py311']
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+# CLI modules add the project root before importing the application.
+ignore = ["E402"]

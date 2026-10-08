@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-08",
+  "python": "3.12.14",
+  "platform": "Linux",
+  "scenario": "Fresh local SQLite instance; 640 synthetic demo jobs; profile-based hybrid; embeddings disabled; no external services; one process. Not a throughput/SLA benchmark.",
+  "schema_version": 3,
+  "startup_with_seed_seconds": 0.7807,
+  "cold_rank_seconds": 0.4002,
+  "five_warm_rank_seconds": [
+    0.2321,
+    0.2343,
+    0.2525,
+    0.2479,
+    0.3537
+  ],
+  "tfidf_fit_count": 2,
+  "startup_http_status": 200,
+  "ranked_jobs": 640
+}

@@ -106,18 +106,21 @@ def perform_login(admin_mode=False):
         rate_limit("login_identity", 8, 900, f"{email}|{admin_mode}")
         user = db.session.scalar(db.select(User).where(User.email == email))
         valid = check_password_hash(
-            user.password_hash
-            if user
-            else current_app.extensions["dummy_password_hash"],
+            (
+                user.password_hash
+                if user
+                else current_app.extensions["dummy_password_hash"]
+            ),
             password,
         )
         if not user or not valid or user.is_admin != admin_mode or not user.is_active:
             audit("login_failed", actor_id=user.id if user else None)
             db.session.commit()
             flash("Email or password is incorrect for this sign-in page.", "error")
-            return render_template(
-                "auth.html", mode="admin" if admin_mode else "login"
-            ), 401
+            return (
+                render_template("auth.html", mode="admin" if admin_mode else "login"),
+                401,
+            )
         start_session(user, request.form.get("remember") == "on")
         audit("admin_login" if admin_mode else "login_succeeded", actor_id=user.id)
         db.session.commit()
@@ -187,9 +190,10 @@ def reset_password_view():
             if request.path.startswith("/api/"):
                 return jsonify(error=str(exc)), 400
             flash(str(exc), "error")
-            return render_template(
-                "account/recovery.html", mode="reset", token=token
-            ), 400
+            return (
+                render_template("account/recovery.html", mode="reset", token=token),
+                400,
+            )
         session.clear()
         if request.path.startswith("/api/"):
             return jsonify(message="Password reset. Sign in with your new password.")
@@ -280,9 +284,10 @@ def verify_email():
             changed = confirm_email(str(request.form.get("token", ""))[:129])
         except ValidationError as exc:
             flash(str(exc), "error")
-            return render_template(
-                "account/recovery.html", mode="verify", token=""
-            ), 400
+            return (
+                render_template("account/recovery.html", mode="verify", token=""),
+                400,
+            )
         if changed:
             session.clear()
         flash("Email confirmed. You can now use verified-email alerts.", "success")

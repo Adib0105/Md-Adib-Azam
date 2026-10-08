@@ -73,9 +73,7 @@ class AdzunaProvider(JobProviderBase):
         remote = (
             "remote"
             if re.search(r"\b(?:remote|work from home)\b", wording, re.I)
-            else "hybrid"
-            if re.search(r"\bhybrid\b", wording, re.I)
-            else "unknown"
+            else "hybrid" if re.search(r"\bhybrid\b", wording, re.I) else "unknown"
         )
         employment = {"full_time": "Full-time", "part_time": "Part-time"}.get(
             raw.get("contract_time"),
@@ -105,8 +103,10 @@ class AdzunaProvider(JobProviderBase):
                 "category": plain(raw.get("category", {}).get("tag", ""), 80),
                 "salary_is_predicted": str(raw.get("salary_is_predicted", "0")) == "1",
                 "description_is_snippet": True,
-                "remote_basis": "explicit title/location wording"
-                if remote != "unknown"
-                else "not supplied",
+                "remote_basis": (
+                    "explicit title/location wording"
+                    if remote != "unknown"
+                    else "not supplied"
+                ),
             },
         )

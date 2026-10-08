@@ -15,6 +15,21 @@ RECOMMENDATION_WEIGHTS = {
     "role": 0.05,
 }
 
+HYBRID_WEIGHTS = {
+    "skills": 0.30,
+    "tfidf": 0.19,
+    "semantic": 0.14,
+    "experience": 0.12,
+    "education": 0.08,
+    "location": 0.05,
+    "salary": 0.04,
+    "role": 0.035,
+    "employment": 0.015,
+    "remote": 0.015,
+    "freshness": 0.015,
+    "behavior": 0.0,
+}
+
 
 class Config:
     APP_ENV = os.getenv("APP_ENV", "development")
@@ -44,6 +59,22 @@ class Config:
     SEED_ON_START = True
     RECOMMENDATION_WEIGHTS = RECOMMENDATION_WEIGHTS
     MODEL_CACHE = True
+    ML_STRATEGY = os.getenv("ML_STRATEGY", "hybrid")
+    HYBRID_WEIGHTS = HYBRID_WEIGHTS
+    EMBEDDINGS_ENABLED = os.getenv("EMBEDDINGS_ENABLED", "false").lower() == "true"
+    EMBEDDING_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
+    EMBEDDING_MODEL_PATH = os.getenv("EMBEDDING_MODEL_PATH", "")
+    EMBEDDING_MODEL_REVISION = os.getenv("EMBEDDING_MODEL_REVISION", "unprepared")
+    EMBEDDING_DIMENSION = 384
+    EMBEDDING_BATCH_SIZE = 32
+    BEHAVIOR_MIN_JOBS = 5
+    BEHAVIOR_MIN_ACTIONS = 3
+    BEHAVIOR_MAX_WEIGHT = 0.10
+    ALLOW_SYNTHETIC_RANKER = (
+        os.getenv("ALLOW_SYNTHETIC_RANKER", "false").lower() == "true"
+    )
+    ML_EXPERIMENT = os.getenv("ML_EXPERIMENT", "")
+    RESUME_PARSE_TIMEOUT = 15
     TESTING = False
     TEST_PASSWORD_HASH_METHOD = None
     ADZUNA_APP_ID = os.getenv("ADZUNA_APP_ID", "")
@@ -81,3 +112,39 @@ def validate_weights(weights):
         raise ValueError("Weights must be finite values from 0 to 1.")
     if abs(sum(weights.values()) - 1) > 1e-9:
         raise ValueError("Recommendation weights must sum to 1.")
+
+
+def validate_ml_config(config):
+    import math
+
+    values = config["HYBRID_WEIGHTS"]
+    if (
+        set(values) != set(HYBRID_WEIGHTS)
+        or any(
+            isinstance(w, bool)
+            or not isinstance(w, (int, float))
+            or not math.isfinite(w)
+            or not 0 <= w <= 1
+            for w in values.values()
+        )
+        or abs(sum(values.values()) - 1) > 1e-9
+    ):
+        raise ValueError(
+            "Hybrid weights must match the feature contract and sum to one."
+        )
+    if values["behavior"] != 0:
+        raise ValueError(
+            "Behavior starts at zero; only sufficient history enables its bounded adjustment."
+        )
+    if config["ML_STRATEGY"] not in {"weighted", "hybrid", "ltr"}:
+        raise ValueError("ML_STRATEGY must be weighted, hybrid or ltr.")
+    if (
+        not 0 <= config["BEHAVIOR_MAX_WEIGHT"] <= 0.10
+        or config["BEHAVIOR_MIN_JOBS"] < 5
+        or config["BEHAVIOR_MIN_ACTIONS"] < 3
+    ):
+        raise ValueError(
+            "Personalization requires five jobs, three meaningful actions, and at most 10% weight."
+        )
+    if not 1 <= config["EMBEDDING_BATCH_SIZE"] <= 128:
+        raise ValueError("Embedding batch size must be 1–128.")

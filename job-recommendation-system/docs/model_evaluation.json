@@ -1,0 +1,652 @@
+{
+  "report_version": "evaluation-v1",
+  "pipeline_version": "jobmatch-hybrid-v1",
+  "feature_version": "jobmatch-features-v1",
+  "dataset": {
+    "version": "4819b53cebb0200ebf54415d59c92b5935aecd9d6d1c56bb188ed93f1b6acd8e",
+    "kind": "synthetic",
+    "samples": 240,
+    "candidates": 12,
+    "jobs": 20,
+    "label_counts": {
+      "3": 16,
+      "2": 31,
+      "0": 131,
+      "1": 62
+    },
+    "training_samples": 180,
+    "evaluation_samples": 60,
+    "training_candidates": 9,
+    "evaluation_candidates": 3,
+    "training_candidate_ids": [
+      "analyst-junior",
+      "analyst-senior",
+      "backend",
+      "cloud",
+      "designer",
+      "finance",
+      "frontend",
+      "marketing",
+      "scientist"
+    ],
+    "evaluation_candidate_ids": [
+      "analyst-student",
+      "security",
+      "support"
+    ]
+  },
+  "dependency_versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0"
+  },
+  "ks": [
+    5,
+    10,
+    20
+  ],
+  "relevance_threshold": 2,
+  "models": {
+    "tfidf": {
+      "status": "evaluated",
+      "version": "tfidf-lexical-v2",
+      "metrics": {
+        "mrr": 1.0,
+        "map": 1.0,
+        "precision@5": 0.533333,
+        "recall@5": 1.0,
+        "ndcg@5": 0.934855,
+        "precision@10": 0.266667,
+        "recall@10": 1.0,
+        "ndcg@10": 0.940174,
+        "precision@20": 0.133333,
+        "recall@20": 1.0,
+        "ndcg@20": 0.974335
+      },
+      "queries": [
+        {
+          "candidate_id": "analyst-student",
+          "mrr": 1.0,
+          "map": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 1.0,
+          "ndcg@5": 0.9686416646471538,
+          "precision@10": 0.3,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9530474974530658,
+          "precision@20": 0.15,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9888734587766175,
+          "top_job_ids": [
+            "fixture-job-01",
+            "fixture-job-17",
+            "fixture-job-02",
+            "fixture-job-03",
+            "fixture-job-05"
+          ]
+        },
+        {
+          "candidate_id": "security",
+          "mrr": 1.0,
+          "map": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 1.0,
+          "ndcg@5": 0.9270734942885372,
+          "precision@10": 0.3,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9528590973531,
+          "precision@20": 0.15,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9756914568380183,
+          "top_job_ids": [
+            "fixture-job-09",
+            "fixture-job-08",
+            "fixture-job-11",
+            "fixture-job-02",
+            "fixture-job-01"
+          ]
+        },
+        {
+          "candidate_id": "support",
+          "mrr": 1.0,
+          "map": 1.0,
+          "precision@5": 0.4,
+          "recall@5": 1.0,
+          "ndcg@5": 0.9088494108595744,
+          "precision@10": 0.2,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9146157261696964,
+          "precision@20": 0.1,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9584392510683578,
+          "top_job_ids": [
+            "fixture-job-10",
+            "fixture-job-11",
+            "fixture-job-09",
+            "fixture-job-02",
+            "fixture-job-15"
+          ]
+        }
+      ]
+    },
+    "weighted": {
+      "status": "evaluated",
+      "version": "seven-factor-v2",
+      "metrics": {
+        "mrr": 1.0,
+        "map": 1.0,
+        "precision@5": 0.533333,
+        "recall@5": 1.0,
+        "ndcg@5": 0.94322,
+        "precision@10": 0.266667,
+        "recall@10": 1.0,
+        "ndcg@10": 0.945102,
+        "precision@20": 0.133333,
+        "recall@20": 1.0,
+        "ndcg@20": 0.97985
+      },
+      "queries": [
+        {
+          "candidate_id": "analyst-student",
+          "mrr": 1.0,
+          "map": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 1.0,
+          "ndcg@5": 0.9404742154697056,
+          "precision@10": 0.3,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9466682749675729,
+          "precision@20": 0.15,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9819991908776333,
+          "top_job_ids": [
+            "fixture-job-01",
+            "fixture-job-17",
+            "fixture-job-02",
+            "fixture-job-10",
+            "fixture-job-12"
+          ]
+        },
+        {
+          "candidate_id": "security",
+          "mrr": 1.0,
+          "map": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 1.0,
+          "ndcg@5": 0.9270734942885372,
+          "precision@10": 0.3,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9568080044709304,
+          "precision@20": 0.15,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9802372702928234,
+          "top_job_ids": [
+            "fixture-job-09",
+            "fixture-job-08",
+            "fixture-job-11",
+            "fixture-job-15",
+            "fixture-job-01"
+          ]
+        },
+        {
+          "candidate_id": "support",
+          "mrr": 1.0,
+          "map": 1.0,
+          "precision@5": 0.4,
+          "recall@5": 1.0,
+          "ndcg@5": 0.9621115832518098,
+          "precision@10": 0.2,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9318284773814127,
+          "precision@20": 0.1,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9773125964618684,
+          "top_job_ids": [
+            "fixture-job-10",
+            "fixture-job-11",
+            "fixture-job-13",
+            "fixture-job-15",
+            "fixture-job-02"
+          ]
+        }
+      ]
+    },
+    "embedding": {
+      "status": "unavailable",
+      "reason": "disabled",
+      "metrics": null
+    },
+    "hybrid": {
+      "status": "evaluated",
+      "version": "jobmatch-hybrid-v1",
+      "metrics": {
+        "mrr": 1.0,
+        "map": 1.0,
+        "precision@5": 0.533333,
+        "recall@5": 1.0,
+        "ndcg@5": 0.963062,
+        "precision@10": 0.266667,
+        "recall@10": 1.0,
+        "ndcg@10": 0.947885,
+        "precision@20": 0.133333,
+        "recall@20": 1.0,
+        "ndcg@20": 0.982633
+      },
+      "queries": [
+        {
+          "candidate_id": "analyst-student",
+          "mrr": 1.0,
+          "map": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 1.0,
+          "ndcg@5": 1.0,
+          "precision@10": 0.3,
+          "recall@10": 1.0,
+          "ndcg@10": 0.955017658086149,
+          "precision@20": 0.15,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9903485739962097,
+          "top_job_ids": [
+            "fixture-job-01",
+            "fixture-job-17",
+            "fixture-job-02",
+            "fixture-job-05",
+            "fixture-job-15"
+          ]
+        },
+        {
+          "candidate_id": "security",
+          "mrr": 1.0,
+          "map": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 1.0,
+          "ndcg@5": 0.9270734942885372,
+          "precision@10": 0.3,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9568080044709304,
+          "precision@20": 0.15,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9802372702928234,
+          "top_job_ids": [
+            "fixture-job-09",
+            "fixture-job-08",
+            "fixture-job-11",
+            "fixture-job-15",
+            "fixture-job-01"
+          ]
+        },
+        {
+          "candidate_id": "support",
+          "mrr": 1.0,
+          "map": 1.0,
+          "precision@5": 0.4,
+          "recall@5": 1.0,
+          "ndcg@5": 0.9621115832518098,
+          "precision@10": 0.2,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9318284773814127,
+          "precision@20": 0.1,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9773125964618684,
+          "top_job_ids": [
+            "fixture-job-10",
+            "fixture-job-11",
+            "fixture-job-13",
+            "fixture-job-15",
+            "fixture-job-02"
+          ]
+        }
+      ]
+    },
+    "ltr_logistic": {
+      "status": "evaluated",
+      "metrics": {
+        "mrr": 1.0,
+        "map": 1.0,
+        "precision@5": 0.533333,
+        "recall@5": 1.0,
+        "ndcg@5": 0.963062,
+        "precision@10": 0.266667,
+        "recall@10": 1.0,
+        "ndcg@10": 0.962348,
+        "precision@20": 0.133333,
+        "recall@20": 1.0,
+        "ndcg@20": 0.986156
+      },
+      "queries": [
+        {
+          "candidate_id": "analyst-student",
+          "mrr": 1.0,
+          "map": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 1.0,
+          "ndcg@5": 1.0,
+          "precision@10": 0.3,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "precision@20": 0.15,
+          "recall@20": 1.0,
+          "ndcg@20": 1.0,
+          "top_job_ids": [
+            "fixture-job-01",
+            "fixture-job-17",
+            "fixture-job-02",
+            "fixture-job-05",
+            "fixture-job-15"
+          ]
+        },
+        {
+          "candidate_id": "security",
+          "mrr": 1.0,
+          "map": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 1.0,
+          "ndcg@5": 0.9270734942885372,
+          "precision@10": 0.3,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9552140750614552,
+          "precision@20": 0.15,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9800967706347662,
+          "top_job_ids": [
+            "fixture-job-09",
+            "fixture-job-08",
+            "fixture-job-11",
+            "fixture-job-15",
+            "fixture-job-16"
+          ]
+        },
+        {
+          "candidate_id": "support",
+          "mrr": 1.0,
+          "map": 1.0,
+          "precision@5": 0.4,
+          "recall@5": 1.0,
+          "ndcg@5": 0.9621115832518098,
+          "precision@10": 0.2,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9318284773814127,
+          "precision@20": 0.1,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9783703702938552,
+          "top_job_ids": [
+            "fixture-job-10",
+            "fixture-job-11",
+            "fixture-job-15",
+            "fixture-job-13",
+            "fixture-job-02"
+          ]
+        }
+      ],
+      "metadata": {
+        "feature_version": "jobmatch-features-v1",
+        "feature_names": [
+          "skills",
+          "tfidf",
+          "semantic",
+          "role",
+          "experience",
+          "education",
+          "location",
+          "salary",
+          "employment",
+          "remote",
+          "freshness",
+          "behavior",
+          "semantic_available"
+        ],
+        "artifact_version": "jobmatch-ranker-v1",
+        "model_name": "jobmatch-logistic",
+        "model_type": "logistic",
+        "version": "1.0.0",
+        "training_date": "2026-10-08T09:36:44.654824+00:00",
+        "dataset_version": "4819b53cebb0200ebf54415d59c92b5935aecd9d6d1c56bb188ed93f1b6acd8e",
+        "dataset_kind": "synthetic",
+        "training_samples": 180,
+        "dependency_versions": {
+          "numpy": "2.3.5",
+          "scipy": "1.17.0",
+          "scikit-learn": "1.8.0"
+        },
+        "metrics": {
+          "held_out": {
+            "mrr": 1.0,
+            "map": 1.0,
+            "precision@5": 0.533333,
+            "recall@5": 1.0,
+            "ndcg@5": 0.963062,
+            "precision@10": 0.266667,
+            "recall@10": 1.0,
+            "ndcg@10": 0.962348,
+            "precision@20": 0.133333,
+            "recall@20": 1.0,
+            "ndcg@20": 0.986156
+          },
+          "evaluation_samples": 60,
+          "methodology": "Candidate-group held-out 75/25 split (seed 2026); disjoint candidate snapshots, known job catalogue. TF-IDF/role vocabularies fitted only on training job snapshots."
+        },
+        "parameters": {
+          "C": 1.0,
+          "class_weight": "balanced",
+          "dual": false,
+          "fit_intercept": true,
+          "intercept_scaling": 1,
+          "l1_ratio": 0.0,
+          "max_iter": 1500,
+          "n_jobs": null,
+          "penalty": "deprecated",
+          "random_state": 2026,
+          "solver": "lbfgs",
+          "tol": 0.0001,
+          "verbose": 0,
+          "warm_start": false
+        },
+        "feature_importance": {
+          "skills": 1.90343448,
+          "tfidf": 0.90400979,
+          "semantic": 0.0,
+          "role": 0.91206759,
+          "experience": 0.40405693,
+          "education": 0.00646539,
+          "location": 0.45275231,
+          "salary": 0.00646539,
+          "employment": 0.17979733,
+          "remote": 0.0032327,
+          "freshness": 0.00596253,
+          "behavior": 0.0032327,
+          "semantic_available": 0.0
+        },
+        "importance_method": "mean absolute logistic coefficients",
+        "output": "expected ordinal relevance / 3; uncalibrated ranking utility"
+      }
+    },
+    "ltr_random_forest": {
+      "status": "evaluated",
+      "metrics": {
+        "mrr": 1.0,
+        "map": 0.944444,
+        "precision@5": 0.466667,
+        "recall@5": 0.888889,
+        "ndcg@5": 0.938791,
+        "precision@10": 0.266667,
+        "recall@10": 1.0,
+        "ndcg@10": 0.946167,
+        "precision@20": 0.133333,
+        "recall@20": 1.0,
+        "ndcg@20": 0.976754
+      },
+      "queries": [
+        {
+          "candidate_id": "analyst-student",
+          "mrr": 1.0,
+          "map": 0.8333333333333334,
+          "precision@5": 0.4,
+          "recall@5": 0.6666666666666666,
+          "ndcg@5": 0.9271882001353271,
+          "precision@10": 0.3,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9812392824423973,
+          "precision@20": 0.15,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9812392824423973,
+          "top_job_ids": [
+            "fixture-job-01",
+            "fixture-job-17",
+            "fixture-job-15",
+            "fixture-job-14",
+            "fixture-job-16"
+          ]
+        },
+        {
+          "candidate_id": "security",
+          "mrr": 1.0,
+          "map": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 1.0,
+          "ndcg@5": 0.9270734942885372,
+          "precision@10": 0.3,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9270734942885372,
+          "precision@20": 0.15,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9733483085489528,
+          "top_job_ids": [
+            "fixture-job-09",
+            "fixture-job-08",
+            "fixture-job-11",
+            "fixture-job-02",
+            "fixture-job-14"
+          ]
+        },
+        {
+          "candidate_id": "support",
+          "mrr": 1.0,
+          "map": 1.0,
+          "precision@5": 0.4,
+          "recall@5": 1.0,
+          "ndcg@5": 0.9621115832518098,
+          "precision@10": 0.2,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9301891482572926,
+          "precision@20": 0.1,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9756732673377483,
+          "top_job_ids": [
+            "fixture-job-10",
+            "fixture-job-11",
+            "fixture-job-13",
+            "fixture-job-15",
+            "fixture-job-02"
+          ]
+        }
+      ],
+      "metadata": {
+        "feature_version": "jobmatch-features-v1",
+        "feature_names": [
+          "skills",
+          "tfidf",
+          "semantic",
+          "role",
+          "experience",
+          "education",
+          "location",
+          "salary",
+          "employment",
+          "remote",
+          "freshness",
+          "behavior",
+          "semantic_available"
+        ],
+        "artifact_version": "jobmatch-ranker-v1",
+        "model_name": "jobmatch-random_forest",
+        "model_type": "random_forest",
+        "version": "1.0.0",
+        "training_date": "2026-10-08T09:36:44.709229+00:00",
+        "dataset_version": "4819b53cebb0200ebf54415d59c92b5935aecd9d6d1c56bb188ed93f1b6acd8e",
+        "dataset_kind": "synthetic",
+        "training_samples": 180,
+        "dependency_versions": {
+          "numpy": "2.3.5",
+          "scipy": "1.17.0",
+          "scikit-learn": "1.8.0"
+        },
+        "metrics": {
+          "held_out": {
+            "mrr": 1.0,
+            "map": 0.944444,
+            "precision@5": 0.466667,
+            "recall@5": 0.888889,
+            "ndcg@5": 0.938791,
+            "precision@10": 0.266667,
+            "recall@10": 1.0,
+            "ndcg@10": 0.946167,
+            "precision@20": 0.133333,
+            "recall@20": 1.0,
+            "ndcg@20": 0.976754
+          },
+          "evaluation_samples": 60,
+          "methodology": "Candidate-group held-out 75/25 split (seed 2026); disjoint candidate snapshots, known job catalogue. TF-IDF/role vocabularies fitted only on training job snapshots."
+        },
+        "parameters": {
+          "bootstrap": true,
+          "ccp_alpha": 0.0,
+          "criterion": "squared_error",
+          "max_depth": 6,
+          "max_features": 1.0,
+          "max_leaf_nodes": null,
+          "max_samples": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 2,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "n_estimators": 48,
+          "n_jobs": 1,
+          "oob_score": false,
+          "random_state": 2026,
+          "verbose": 0,
+          "warm_start": false
+        },
+        "feature_importance": {
+          "skills": 0.60970567,
+          "tfidf": 0.28961819,
+          "semantic": 0.0,
+          "role": 0.05514386,
+          "experience": 0.02920824,
+          "education": 0.0,
+          "location": 0.01256458,
+          "salary": 0.0,
+          "employment": 0.00375945,
+          "remote": 0.0,
+          "freshness": 0.0,
+          "behavior": 0.0,
+          "semantic_available": 0.0
+        },
+        "importance_method": "training impurity importance (can be biased)",
+        "output": "expected ordinal relevance / 3; uncalibrated ranking utility"
+      }
+    }
+  },
+  "best_model": null,
+  "best_model_on_fixture": "ltr_logistic",
+  "limitations": [
+    "No real-world hiring accuracy, ATS score or placement prediction is measured.",
+    "A pointwise ordinal classifier/regressor is experimental learning-to-rank, not pairwise or listwise training.",
+    "Unjudged pairs are excluded, never manufactured as negative labels.",
+    "Binary relevance uses labels >=2; graded NDCG uses 0\u20133 labels. Precision@K divides by K even when fewer jobs are returned.",
+    "Fictional author-created labels and narrow scenarios can favor title/skill matching. They are not independent human judgments or real behavioral evidence. No model is selected for production from this fixture.",
+    "Fewer than 20 held-out candidates: estimates are unstable; collect a larger independent reviewed dataset before choosing a model."
+  ],
+  "methodology": "Candidate-group held-out 75/25 split (seed 2026); disjoint candidate snapshots, known job catalogue. TF-IDF/role vocabularies fitted only on training job snapshots.",
+  "embedding_backend": {
+    "enabled": false,
+    "available": false,
+    "status": "disabled",
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "unprepared",
+    "dimension": 384,
+    "encoded": 0,
+    "cache_hits": 0
+  },
+  "status": "evaluated_with_limitations"
+}
